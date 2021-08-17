@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>openStack on MengZe Blog</title>
+    <link>https://blog.jjmengze.website/categories/openstack/</link>
+    <description>Recent content in openStack on MengZe Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <managingEditor>jason.meng.lee@gmail.com (Meng Ze Li)</managingEditor>
+    <webMaster>jason.meng.lee@gmail.com (Meng Ze Li)</webMaster>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Sat, 21 Apr 2018 23:25:20 +0800</lastBuildDate>
+    
+        <atom:link href="https://blog.jjmengze.website/categories/openstack/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+
+      
+      <item>
+        <title>Kolla Kubernetes</title>
+        <link>https://blog.jjmengze.website/posts/openstack/kolla-kubernetes/</link>
+        <pubDate>Sat, 21 Apr 2018 23:25:20 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        <atom:modified>Sat, 21 Apr 2018 23:25:20 +0800</atom:modified>
+        <guid>https://blog.jjmengze.website/posts/openstack/kolla-kubernetes/</guid>
+        <description>&lt;figure&gt;
+    &lt;img src=&#34;https://blog.jjmengze.website/images/theme/kolla-openstack.jpg&#34;/&gt; 
+&lt;/figure&gt;
+
+&lt;p&gt;kolla是為了提供production-ready的 OpenStack Cloud 之container和deployment tools。&lt;/p&gt;</description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>openStack</category>
+            
+          
+            
+              <category>kubernetes</category>
+            
+          
+        
+        
+          
+            
+              <category>openStack</category>
+            
+          
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

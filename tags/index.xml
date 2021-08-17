@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Tags on MengZe Blog</title>
+    <link>https://blog.jjmengze.website/tags/</link>
+    <description>Recent content in Tags on MengZe Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <managingEditor>jason.meng.lee@gmail.com (Meng Ze Li)</managingEditor>
+    <webMaster>jason.meng.lee@gmail.com (Meng Ze Li)</webMaster>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Thu, 12 Aug 2021 10:29:32 +0800</lastBuildDate>
+    
+        <atom:link href="https://blog.jjmengze.website/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+
+      
+      <item>
+        <title>kubernetes</title>
+        <link>https://blog.jjmengze.website/tags/kubernetes/</link>
+        <pubDate>Thu, 12 Aug 2021 10:29:32 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        
+        <guid>https://blog.jjmengze.website/tags/kubernetes/</guid>
+        <description></description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>source-code</title>
+        <link>https://blog.jjmengze.website/tags/source-code/</link>
+        <pubDate>Thu, 12 Aug 2021 10:29:32 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        
+        <guid>https://blog.jjmengze.website/tags/source-code/</guid>
+        <description></description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>cache</title>
+        <link>https://blog.jjmengze.website/tags/cache/</link>
+        <pubDate>Mon, 05 Jul 2021 10:29:32 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        
+        <guid>https://blog.jjmengze.website/tags/cache/</guid>
+        <description></description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>utils</title>
+        <link>https://blog.jjmengze.website/tags/utils/</link>
+        <pubDate>Thu, 25 Feb 2021 10:29:32 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        
+        <guid>https://blog.jjmengze.website/tags/utils/</guid>
+        <description></description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>controller</title>
+        <link>https://blog.jjmengze.website/tags/controller/</link>
+        <pubDate>Fri, 19 Feb 2021 10:29:32 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        
+        <guid>https://blog.jjmengze.website/tags/controller/</guid>
+        <description></description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>life</title>
+        <link>https://blog.jjmengze.website/tags/life/</link>
+        <pubDate>Thu, 31 Dec 2020 17:11:32 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        
+        <guid>https://blog.jjmengze.website/tags/life/</guid>
+        <description></description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>kafka</title>
+        <link>https://blog.jjmengze.website/tags/kafka/</link>
+        <pubDate>Tue, 01 Dec 2020 02:12:05 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        
+        <guid>https://blog.jjmengze.website/tags/kafka/</guid>
+        <description></description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>queue</title>
+        <link>https://blog.jjmengze.website/tags/queue/</link>
+        <pubDate>Tue, 01 Dec 2020 02:12:05 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        
+        <guid>https://blog.jjmengze.website/tags/queue/</guid>
+        <description></description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Go</title>
+        <link>https://blog.jjmengze.website/tags/go/</link>
+        <pubDate>Mon, 21 Sep 2020 14:25:58 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        
+        <guid>https://blog.jjmengze.website/tags/go/</guid>
+        <description></description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>TDD</title>
+        <link>https://blog.jjmengze.website/tags/tdd/</link>
+        <pubDate>Mon, 21 Sep 2020 14:25:58 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        
+        <guid>https://blog.jjmengze.website/tags/tdd/</guid>
+        <description></description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>http2</title>
+        <link>https://blog.jjmengze.website/tags/http2/</link>
+        <pubDate>Sat, 19 Sep 2020 12:00:02 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        
+        <guid>https://blog.jjmengze.website/tags/http2/</guid>
+        <description></description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>openshift</title>
+        <link>https://blog.jjmengze.website/tags/openshift/</link>
+        <pubDate>Tue, 21 Jul 2020 16:06:29 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        
+        <guid>https://blog.jjmengze.website/tags/openshift/</guid>
+        <description></description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>talk</title>
+        <link>https://blog.jjmengze.website/tags/talk/</link>
+        <pubDate>Tue, 21 Jul 2020 16:06:29 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        
+        <guid>https://blog.jjmengze.website/tags/talk/</guid>
+        <description></description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>devops</title>
+        <link>https://blog.jjmengze.website/tags/devops/</link>
+        <pubDate>Thu, 30 Apr 2020 12:07:34 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        
+        <guid>https://blog.jjmengze.website/tags/devops/</guid>
+        <description></description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>servicemesh</title>
+        <link>https://blog.jjmengze.website/tags/servicemesh/</link>
+        <pubDate>Sat, 04 Aug 2018 17:39:26 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        
+        <guid>https://blog.jjmengze.website/tags/servicemesh/</guid>
+        <description></description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>serverless</title>
+        <link>https://blog.jjmengze.website/tags/serverless/</link>
+        <pubDate>Fri, 04 May 2018 17:39:26 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        
+        <guid>https://blog.jjmengze.website/tags/serverless/</guid>
+        <description></description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>openStack</title>
+        <link>https://blog.jjmengze.website/tags/openstack/</link>
+        <pubDate>Sat, 21 Apr 2018 23:25:20 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        
+        <guid>https://blog.jjmengze.website/tags/openstack/</guid>
+        <description></description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>GRPC</title>
+        <link>https://blog.jjmengze.website/tags/grpc/</link>
+        <pubDate>Thu, 15 Mar 2018 02:12:05 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        
+        <guid>https://blog.jjmengze.website/tags/grpc/</guid>
+        <description></description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>proto</title>
+        <link>https://blog.jjmengze.website/tags/proto/</link>
+        <pubDate>Thu, 15 Mar 2018 02:12:05 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        
+        <guid>https://blog.jjmengze.website/tags/proto/</guid>
+        <description></description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>SDN</title>
+        <link>https://blog.jjmengze.website/tags/sdn/</link>
+        <pubDate>Tue, 06 Mar 2018 22:20:02 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        
+        <guid>https://blog.jjmengze.website/tags/sdn/</guid>
+        <description></description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>ci/cd</title>
+        <link>https://blog.jjmengze.website/tags/ci/cd/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        
+        <guid>https://blog.jjmengze.website/tags/ci/cd/</guid>
+        <description></description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>posts</title>
+        <link>https://blog.jjmengze.website/tags/posts/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        
+        <guid>https://blog.jjmengze.website/tags/posts/</guid>
+        <description></description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>
