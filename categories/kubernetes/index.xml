@@ -14,13 +14,61 @@
     <managingEditor>jason.meng.lee@gmail.com (Meng Ze Li)</managingEditor>
     <webMaster>jason.meng.lee@gmail.com (Meng Ze Li)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Thu, 12 Aug 2021 10:29:32 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 20 Aug 2021 10:29:32 +0800</lastBuildDate>
     
         <atom:link href="https://blog.jjmengze.website/categories/kubernetes/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
+      
+      <item>
+        <title>Kubernetes kubelet cache pod status 怎麼一回事</title>
+        <link>https://blog.jjmengze.website/posts/kubernetes/source-code/kubelet/cache/pod_status_cache/</link>
+        <pubDate>Fri, 20 Aug 2021 10:29:32 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        <atom:modified>Fri, 20 Aug 2021 10:29:32 +0800</atom:modified>
+        <guid>https://blog.jjmengze.website/posts/kubernetes/source-code/kubelet/cache/pod_status_cache/</guid>
+        <description>&lt;figure&gt;
+    &lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-kubelet-podstatuscache.png&#34;/&gt; 
+&lt;/figure&gt;</description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>source-code</category>
+            
+          
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>kubelet</category>
+            
+          
+            
+              <category>cache</category>
+            
+          
+            
+              <category>source-code</category>
+            
+          
+        
+        
+      </item>
       
       <item>
         <title>隱藏在kubelet的WorkQueue</title>
