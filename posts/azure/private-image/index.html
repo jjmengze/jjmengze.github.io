@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.efa35f4c090622130b3f4cfae6971448b5ffb61c5f0a8f21cdfd157fa712abc4.js"></script>
+<script defer src="/js/helper/fadeinout.min.1d13d3e810c3940e80cbba6216a1c76fbf42b5431fc83537ea6997863802362b.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1341,7 +1341,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Meng Learning Note">
 
-<meta name="generator" content="Hugo 0.80.0" />
+<meta name="generator" content="Hugo 0.91.2" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1380,7 +1380,7 @@
     "datePublished": "2020-05-26T15:07:18+08:00",
     "dateModified": "2020-05-26T15:07:18+08:00",
     "url" : "https://blog.jjmengze.website/posts/azure/private-image/",
-    "description": "\u003cfigure\u003e     \u003cimg src=\"/images/theme/azure-private-image.jpg\"/\u003e  \u003c/figure\u003e  \u003cp\u003e記錄一下之前在工作上遇到的 Gitlab domain 沒有簽憑證，但是外部服務(Azure Kubernetes Service)又需要存取 Gitlab Container Registry 會遇到的問題。\u003c/p\u003e",
+    "description": "\u003cfigure\u003e\u003cimg src=\"/images/theme/azure-private-image.jpg\"/\u003e \u003c/figure\u003e  \u003cp\u003e記錄一下之前在工作上遇到的 Gitlab domain 沒有簽憑證，但是外部服務(Azure Kubernetes Service)又需要存取 Gitlab Container Registry 會遇到的問題。\u003c/p\u003e",
     "keywords": ["kubernetes"],
     "mainEntityOfPage": {
       "@type": "WebPage",
@@ -1673,8 +1673,7 @@
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      <figure>
-    <img src="/images/theme/azure-private-image.jpg"/> 
+      <figure><img src="/images/theme/azure-private-image.jpg"/>
 </figure>
 
 <p>記錄一下之前在工作上遇到的 Gitlab domain 沒有簽憑證，但是外部服務(Azure Kubernetes Service)又需要存取 Gitlab Container Registry 會遇到的問題。</p>
@@ -1692,15 +1691,14 @@
 </ol>
 <h3 id="檢視各項問題">檢視各項問題</h3>
 <h4 id="gitlab-domain-沒有ssl">Gitlab domain 沒有ssl</h4>
-<figure>
-    <img src="/images/post/azure-private-image-1.png"/> 
+<figure><img src="/images/post/azure-private-image-1.png"/>
 </figure>
 
 <p>如果我們在 host 上透過 docker 拉取該 Container Registry 的 image 可能會出現的狀況。</p>
 <p>先看一下我使用的 docker 測試環境</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1730,7 +1728,7 @@
 </span><span class="lnt">28
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$docker</span> version
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$docker</span> version
 Client:
  Version:           19.03.6
  API version:       1.40
@@ -1763,11 +1761,11 @@ Server:
 </div><p>接著我透過 Docker CLI 去拉 Gitlab Container Registry  上的 private image，由於&hellip;一些公司政策問題我把公司的位置替換掉了請見諒。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$docker</span> pull registry-gitlab.com.tw/repo/image-cli:v4.4.0
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$docker</span> pull registry-gitlab.com.tw/repo/image-cli:v4.4.0
 Error response from daemon: Get registry-gitlab.com.tw/v2/: x509: certificate is not authorized to sign other certificates
 </code></pre></td></tr></table>
 </div>
@@ -1775,7 +1773,7 @@ Error response from daemon: Get registry-gitlab.com.tw/v2/: x509: certificate is
 <p>在那之前我們先來看一下相關的 docker 設定檔</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1825,7 +1823,7 @@ Error response from daemon: Get registry-gitlab.com.tw/v2/: x509: certificate is
 </span><span class="lnt">48
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$cat</span> /lib/systemd/system/docker.service
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$cat</span> /lib/systemd/system/docker.service
 <span class="o">[</span>Unit<span class="o">]</span>
 <span class="nv">Description</span><span class="o">=</span>Docker Application Container Engine
 <span class="nv">Documentation</span><span class="o">=</span>https://docs.docker.com
@@ -1879,24 +1877,24 @@ Error response from daemon: Get registry-gitlab.com.tw/v2/: x509: certificate is
 <p>也同時在 /etc 底下看看 Docker 的設定</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$ls</span> /etc/docker/
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$ls</span> /etc/docker/
 key.json
 </code></pre></td></tr></table>
 </div>
 </div><p>這邊我們可以看到 Docker 完全沒有設定任何繞過 insecure 的選項後，使用docker login 後再看看有沒有任何的改變。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">docker login registry-gitlab.com.tw
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker login registry-gitlab.com.tw
 Username <span class="o">(</span><span class="nb">test</span><span class="o">)</span>:        
 Password: 
 Error response from daemon: Get https://registry-gitlab.com.tw/v2/: x509: certificate is not authorized to sign other certificates
@@ -1905,14 +1903,14 @@ Error response from daemon: Get https://registry-gitlab.com.tw/v2/: x509: certif
 </div><p>這時候我們又觀察到新的問題了，在 login 的時候發現我們的Gitlab Registry 的憑證有問題，在繼續 Google 會看到原來要把憑證有問題的 domain 設定到 /etc/docker/daemon.json 下面，這邊我很快的設定起來，並且重啟dockerd。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">cat &lt;&lt;EOF <span class="p">|</span> &gt;&gt; /etc/docker/daemon.json
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">cat &lt;&lt;EOF <span class="p">|</span> &gt;&gt; /etc/docker/daemon.json
 <span class="o">{</span>
     <span class="s2">&#34;insecure-registries&#34;</span>:<span class="o">[</span><span class="s2">&#34;registry-gitlab.com.tw&#34;</span><span class="o">]</span>
 <span class="o">}</span>
@@ -1922,7 +1920,7 @@ systemctl restart docker
 </div><p>接著再嘗試透過docker login 登入並且拉取 Gitlab container registry 的 image。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1941,7 +1939,7 @@ systemctl restart docker
 </span><span class="lnt">17
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$docker</span> login registry-gitlab.com.tw
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$docker</span> login registry-gitlab.com.tw
 Username <span class="o">(</span><span class="nb">test</span><span class="o">)</span>:        
 Password: 
 WARNING! Your password will be stored unencrypted in /root/.docker/config.json.
@@ -1965,7 +1963,7 @@ cf5693de4d3c: Download <span class="nb">complete</span>
 <p>接著來看看在公有雲環境中( Azure Kubernetes Service , AKS )會出現的問題，我在 AKS 部署一個三個節點的環境，Kubernetes 版本為 1.15.11。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1988,7 +1986,7 @@ cf5693de4d3c: Download <span class="nb">complete</span>
 </span><span class="lnt">21
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">bash-5.0# kubectl get node
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">bash-5.0# kubectl get node
 NAME                                STATUS   ROLES   AGE   VERSION
 aks-agentpool-20139558-vmss000000   Ready    agent   11m   v1.15.11
 aks-agentpool-20139558-vmss000001   Ready    agent   11m   v1.15.11
@@ -2014,21 +2012,21 @@ kube-system   tunnelfront-98c8b5dc6-b56d5             1/1     Running   <span cl
 </div><p>在AKS的環境上我直接透過kubectl CLI 建立一個非常簡單的Deployment Resource，測試拉取 Container registry 上的 private image 會有什麼問題。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">bash-5.0# kubectl run -ti --rm  <span class="nb">test</span> --image registry-gitlab.com.tw/repo/image-cli:v4.4.0 bash
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">bash-5.0# kubectl run -ti --rm  <span class="nb">test</span> --image registry-gitlab.com.tw/repo/image-cli:v4.4.0 bash
 </code></pre></td></tr></table>
 </div>
 </div><p>接著觀察 pod 是否有成功被建立起起來。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">bash-5.0# kubectl get pod
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">bash-5.0# kubectl get pod
 NAME READY STATUS RESTARTS AGE
 <span class="nb">test</span> 0/1 ErrImagePull <span class="m">0</span> 12s
 </code></pre></td></tr></table>
@@ -2036,7 +2034,7 @@ NAME READY STATUS RESTARTS AGE
 </div><p>可以看到 pod 出現 ErrImagePull 的 status 此時，需要更進步一分析出現ErrImagePull的原因。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -2046,7 +2044,7 @@ NAME READY STATUS RESTARTS AGE
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">bash-5.0# kubectl describe pod <span class="nb">test</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">bash-5.0# kubectl describe pod <span class="nb">test</span>
 
 ...
   Normal   BackOff    16s <span class="o">(</span>x3 over 45s<span class="o">)</span>  kubelet, aks-agentpool-20139558-vmss000000  Back-off pulling image <span class="s2">&#34;registry-gitlab.com.tw/repo/image-cli:v4.4.0&#34;</span>
@@ -2061,7 +2059,7 @@ NAME READY STATUS RESTARTS AGE
 x509: certificate is not authorized to sign other certificates</p>
 <hr />
 <p>Google 可以搜尋到很多 Kubernetes pull private 的解決方法，這邊直接使用看看還會遇到什麼問題。大致上就是設定 kubernetes 的某個 namespace 如果要拉某一個位置上的 private image 可以透過這一個使用者帳密去執行。</p>
-<pre><code class="language-ㄘ" data-lang="ㄘ">kubectl create secret docker-registry gitlab-registry \
+<pre tabindex="0"><code class="language-ㄘ" data-lang="ㄘ">kubectl create secret docker-registry gitlab-registry \
     --docker-username=jason \
     --docker-password=RmgmeG4K-1oD4j3XW5A- \
     --docker-email=jason@hello.com.tw \
@@ -2071,14 +2069,14 @@ secret/gitlab-registry created
 </code></pre><p>這一步做完我們可以再來看看是不是可以成功pull到image，我們先把原本的 pod delete 再重新 執行一個。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">bash-5.0# kubectl delete pod <span class="nb">test</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">bash-5.0# kubectl delete pod <span class="nb">test</span>
 pod <span class="s2">&#34;test&#34;</span> deleted
 
 kubectl run -ti --rm  <span class="nb">test</span> --image registry-gitlab.com.tw/repo/image-cli:v4.4.0 bash
@@ -2088,12 +2086,12 @@ kubectl run -ti --rm  <span class="nb">test</span> --image registry-gitlab.com.t
 </div><p>這時候持續觀察 pod 的狀態是不是running</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">bash-5.0# kubectl get pod
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">bash-5.0# kubectl get pod
 NAME   READY   STATUS         RESTARTS   AGE
 <span class="nb">test</span>   0/1     ErrImagePull   <span class="m">0</span>          12s
 </code></pre></td></tr></table>
@@ -2101,7 +2099,7 @@ NAME   READY   STATUS         RESTARTS   AGE
 </div><p>什麼竟然還不是 running 那我們繼續順藤摸瓜看看 pod 到底錯了什麼。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -2111,7 +2109,7 @@ NAME   READY   STATUS         RESTARTS   AGE
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">bash-5.0# kubectl describe pod <span class="nb">test</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">bash-5.0# kubectl describe pod <span class="nb">test</span>
 
 ...
   Normal   BackOff    16s <span class="o">(</span>x3 over 45s<span class="o">)</span>  kubelet, aks-agentpool-20139558-vmss000000  Back-off pulling image <span class="s2">&#34;registry-gitlab.com.tw/repo/image-cli:v4.4.0&#34;</span>
@@ -2124,7 +2122,7 @@ NAME   READY   STATUS         RESTARTS   AGE
 </div><p>怎麼還是樣的錯，這時候不得不去看看 pod 的 spec 到底定義了什麼有沒有使用我們指定的 image pull secret 。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2137,7 +2135,7 @@ NAME   READY   STATUS         RESTARTS   AGE
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">bash-5.0# kubectl get pod <span class="nb">test</span> -o yaml
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">bash-5.0# kubectl get pod <span class="nb">test</span> -o yaml
 ...
       name: default-token-wvgsq
       readOnly: <span class="nb">true</span>
@@ -2153,18 +2151,18 @@ NAME   READY   STATUS         RESTARTS   AGE
 </div><p>怎麼沒有 image pull secret 呢&hellip;，找了一下文件 pod 再啟動時都會去用 default service account 的一些設定。</p>
 <p>ref:https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/#add-imagepullsecrets-to-a-service-account</p>
 <p>這邊就偷懶讓 default namesapce 都用同一個 image pull secret 吧 xDD</p>
-<pre><code>kubectl patch serviceaccount default -p '{&quot;imagePullSecrets&quot;: [{&quot;name&quot;: &quot;gitlab-registry&quot;}]}'
+<pre tabindex="0"><code>kubectl patch serviceaccount default -p '{&quot;imagePullSecrets&quot;: [{&quot;name&quot;: &quot;gitlab-registry&quot;}]}'
 </code></pre><p>這邊再把 Pod 刪掉再重新測試一次看看 image 能不能正確的拉取到。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">bash-5.0# kubectl delete pod <span class="nb">test</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">bash-5.0# kubectl delete pod <span class="nb">test</span>
 pod <span class="s2">&#34;test&#34;</span> deleted
 
 kubectl run -ti --rm  <span class="nb">test</span> --image registry-gitlab.com.tw/repo/image-cli:v4.4.0 bash
@@ -2174,18 +2172,18 @@ kubectl run -ti --rm  <span class="nb">test</span> --image registry-gitlab.com.t
 </div><p>這時候持續觀察 pod 的狀態是不是running</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">bash-5.0# kubectl get pod
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">bash-5.0# kubectl get pod
 NAME   READY   STATUS         RESTARTS   AGE
 <span class="nb">test</span>   0/1     ErrImagePull   <span class="m">0</span>          12s
 </code></pre></td></tr></table>
 </div>
 </div><p>還是不行啊，繼續透過kubectl CLI 找尋錯誤的原因。</p>
-<pre><code>bash-5.0# kubectl describe pod test
+<pre tabindex="0"><code>bash-5.0# kubectl describe pod test
 
 ...
   Normal   BackOff    21s                kubelet, aks-agentpool-20139558-vmss000002  Back-off pulling image &quot;registry-gitlab.com.tw/repo/image-cli:v4.4.0&quot;
@@ -2198,7 +2196,7 @@ NAME   READY   STATUS         RESTARTS   AGE
 <p>這邊我解決的方法透過 daemonset 讓 pod 部署到所有的 node 上，該 pod 把 host 的 /etc mount 出來。讓我可以觀察AKS host docker 的 config。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2232,7 +2230,7 @@ NAME   READY   STATUS         RESTARTS   AGE
 </span><span class="lnt">32
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">apps/v1</span><span class="w">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">apps/v1</span><span class="w">
 </span><span class="w"></span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">DaemonSet</span><span class="w">
 </span><span class="w"></span><span class="nt">metadata</span><span class="p">:</span><span class="w">
 </span><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">registry-ca</span><span class="w">
@@ -2268,7 +2266,7 @@ NAME   READY   STATUS         RESTARTS   AGE
 </div>
 </div><p>這邊眼尖得觀眾可能會發現為什麼我用了，securityContext以及hostPID這邊後續會講為什麼我要這樣做。</p>
 <p>好的廢話不多說，部署完這個 daemset 後直接進入 pod 裡面看他的設定。</p>
-<pre><code class="language-bash=" data-lang="bash=">root@registry-ca-rdzbv:/# cat /etc/docker/daemon.json
+<pre tabindex="0"><code class="language-bash=" data-lang="bash=">root@registry-ca-rdzbv:/# cat /etc/docker/daemon.json
 {
    &quot;live-restore&quot;: true,
    &quot;log-driver&quot;: &quot;json-file&quot;,
@@ -2280,12 +2278,12 @@ NAME   READY   STATUS         RESTARTS   AGE
 </code></pre><p>發現！他竟然沒有設定 insecure-registries 這邊我只好手動幫他做設定，設定完後直接送給 host pid reload dockerd。這邊你會好奇說為什麼可動到 host 上的 pid ，因為上面的 yaml 有設定  securityContext 以及 hostPID ，所以 container 可以直皆碰到 host 的 process 並且可以下一些需要 security 的指令。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">root@registry-ca-rdzbv:/#pidof dockerd
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">root@registry-ca-rdzbv:/#pidof dockerd
 <span class="m">3322</span>
 root@registry-ca-rdzbv:/#kill -1 <span class="m">3322</span>
 </code></pre></td></tr></table>
@@ -2293,14 +2291,14 @@ root@registry-ca-rdzbv:/#kill -1 <span class="m">3322</span>
 </div><p>這邊完成後，直接delete test pod 看看重新 run 一個能不能成功pull 到 private image 。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">bash-5.0# kubectl delete pod <span class="nb">test</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">bash-5.0# kubectl delete pod <span class="nb">test</span>
 pod <span class="s2">&#34;test&#34;</span> deleted
 
 kubectl run -ti --rm  <span class="nb">test</span> --image registry-gitlab.com.tw/repo/image-cli:v4.4.0 bash
@@ -2310,12 +2308,12 @@ kubectl run -ti --rm  <span class="nb">test</span> --image registry-gitlab.com.t
 </div><p>這時候持續觀察 pod 的狀態是不是running</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">bash-5.0# kubectl get pod
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">bash-5.0# kubectl get pod
 NAME   READY   STATUS         RESTARTS   AGE
 <span class="nb">test</span>   1/1     Running        <span class="m">0</span>          30s
 </code></pre></td></tr></table>
@@ -2323,7 +2321,7 @@ NAME   READY   STATUS         RESTARTS   AGE
 </div><p>此時還有一個問題，剛剛只有修改一個節點如果 Pod 今天部署到其他節點上，還是會出現<code>x509: certificate is not authorized to sign other certificates</code>的問題。有沒有方式可以一勞永逸呢？我這邊直接沿用剛剛的daemset 並且修改一下 yaml file讓這個 pod 可以處理這個問題。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2362,7 +2360,7 @@ NAME   READY   STATUS         RESTARTS   AGE
 </span><span class="lnt">37
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">apps/v1</span><span class="w">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">apps/v1</span><span class="w">
 </span><span class="w"></span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">DaemonSet</span><span class="w">
 </span><span class="w"></span><span class="nt">metadata</span><span class="p">:</span><span class="w">
 </span><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">registry-ca</span><span class="w">
@@ -2845,7 +2843,7 @@ NAME   READY   STATUS         RESTARTS   AGE
 </div>
 
 
-<script defer src="/js/swipe.min.b4b82839155519d9ca67746615a4c86ccbc1061c196fe6d8aa26e4fe22902718.js"></script>
+<script defer src="/js/swipe.min.989e074dfb92ce7f57a92c1df7027f88b53c50a54fd9ad450a673a64aa91bfa4.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
@@ -3852,7 +3850,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 
             <p class="caption">
                 
-                    ©2021, All Rights Reserved
+                    ©2022, All Rights Reserved
                 
             </p>
         

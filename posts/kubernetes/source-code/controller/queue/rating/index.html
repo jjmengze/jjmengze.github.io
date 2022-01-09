@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.efa35f4c090622130b3f4cfae6971448b5ffb61c5f0a8f21cdfd157fa712abc4.js"></script>
+<script defer src="/js/helper/fadeinout.min.1d13d3e810c3940e80cbba6216a1c76fbf42b5431fc83537ea6997863802362b.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1341,7 +1341,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Meng Learning Note">
 
-<meta name="generator" content="Hugo 0.80.0" />
+<meta name="generator" content="Hugo 0.91.2" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1380,7 +1380,7 @@
     "datePublished": "2020-12-14T12:29:32+08:00",
     "dateModified": "2020-12-14T12:29:32+08:00",
     "url" : "https://blog.jjmengze.website/posts/kubernetes/source-code/controller/queue/rating/",
-    "description": "\u003cfigure\u003e     \u003cimg src=\"/images/theme/kubernetes-rating-work-queue.jpg\"/\u003e  \u003c/figure\u003e",
+    "description": "\u003cfigure\u003e\u003cimg src=\"/images/theme/kubernetes-rating-work-queue.jpg\"/\u003e \u003c/figure\u003e",
     "keywords": ["kubernetes","controller","source-code"],
     "mainEntityOfPage": {
       "@type": "WebPage",
@@ -1677,16 +1677,14 @@
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      <figure>
-    <img src="/images/theme/kubernetes-rating-work-queue.jpg"/> 
+      <figure><img src="/images/theme/kubernetes-rating-work-queue.jpg"/>
 </figure>
 
 <p>首先本文所以 source code 基於 kubernetes 1.19 版本，所有 source code 的為了版面的整潔會精簡掉部分 log 相關的程式碼，僅保留核心邏輯，如果有見解錯誤的地方，還麻煩觀看本文的大大們提出，感謝！</p>
 <h2 id="kubernetes-work-queue">kubernetes work queue</h2>
 <p>在前一篇 kubernetes delaying work queue 設計真d不錯一文中分享 kubernetes work queue最基礎的實作方式，再複習一次！Kubernetes 為什麼要實踐一個 work queue 呢？</p>
 <p>就我們所知 kubernetes 是用 go 撰寫應該可以使用 channel 的機制直接將物件送給要用的元件(thread)啊，原因其實非常簡單，go channel 的設計功能非常單一無法滿足 kubernetes 所要的場景，例如帶有延遲時間物件需要根據延遲時間排序的queue，例如限制物件取出速度的queue。</p>
-<figure>
-    <img src="/images/post/kubernetes-controller-arch.png"/> 
+<figure><img src="/images/post/kubernetes-controller-arch.png"/>
 </figure>
 
 <p>圖片來源：<a href="https://itnext.io/how-to-create-a-kubernetes-custom-controller-using-client-go-f36a7a7536cc">How to Create a Kubernetes Custom Controller Using client-go</a></p>
@@ -1699,7 +1697,7 @@
 <p><a href="https://github.com/kubernetes/client-go/blob/master/util/workqueue/rate_limiting_queue.go">source code</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1718,7 +1716,7 @@
 </span><span class="lnt">17
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// RateLimitingInterface is an interface that rate limits items being added to the queue.
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// RateLimitingInterface is an interface that rate limits items being added to the queue.
 </span><span class="c1">//RateLimiting interface 結合了 delaying work queue ，透過一些方法計算 物件的延遲速率
 </span><span class="c1">// 再交由 delaying work queue 丟入Heap 最後放入 common queue中。
 </span><span class="c1"></span><span class="kd">type</span> <span class="nx">RateLimitingInterface</span> <span class="kd">interface</span> <span class="p">{</span>
@@ -1742,7 +1740,7 @@
 <p><a href="https://github.com/kubernetes/client-go/blob/master/util/workqueue/rate_limiting_queue.go">source code</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1751,7 +1749,7 @@
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// rateLimitingType wraps an Interface and provides rateLimited re-enquing
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// rateLimitingType wraps an Interface and provides rateLimited re-enquing
 </span><span class="c1"></span><span class="kd">type</span> <span class="nx">rateLimitingType</span> <span class="kd">struct</span> <span class="p">{</span>
 	<span class="nx">DelayingInterface</span>      <span class="c1">// 嵌入 delaying work queue 表示 rateLimitingType 也有 delay work queue的能力
 </span><span class="c1"></span>                              <span class="c1">//（不一定需要傳入實作的物件，本身就是DelayingInterface的一種）
@@ -1767,7 +1765,7 @@
 <a href="https://github.com/kubernetes/client-go/blob/master/util/workqueue/default_rate_limiters.go">source code</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1785,7 +1783,7 @@
 </span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">type</span> <span class="nx">RateLimiter</span> <span class="kd">interface</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">type</span> <span class="nx">RateLimiter</span> <span class="kd">interface</span> <span class="p">{</span>
 	<span class="c1">// When gets an item and gets to decide how long that item should wait
 </span><span class="c1"></span>    <span class="c1">//當一個物件放入的時候，需要回傳延遲多久（可自定義規則，等等會看到）
 </span><span class="c1"></span>	<span class="nf">When</span><span class="p">(</span><span class="nx">item</span> <span class="kd">interface</span><span class="p">{})</span> <span class="nx">time</span><span class="p">.</span><span class="nx">Duration</span>
@@ -1827,7 +1825,7 @@ Interface 繼承關係</p>
 <p><a href="https://github.com/kubernetes/client-go/blob/master/util/workqueue/rate_limiting_queue.go">source code</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1849,7 +1847,7 @@ Interface 繼承關係</p>
 </span><span class="lnt">20
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go">
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go">
 <span class="c1">// AddRateLimited AddAfter&#39;s the item based on the time when the rate limiter says it&#39;s ok
 </span><span class="c1">// rateLimitingType 本身實作了 RateLimitingInterface 
 </span><span class="c1"></span><span class="kd">func</span> <span class="p">(</span><span class="nx">q</span> <span class="o">*</span><span class="nx">rateLimitingType</span><span class="p">)</span> <span class="nf">AddRateLimited</span><span class="p">(</span><span class="nx">item</span> <span class="kd">interface</span><span class="p">{})</span> <span class="p">{</span>
@@ -1877,7 +1875,7 @@ Interface 繼承關係</p>
 <p><a href="https://github.com/kubernetes/client-go/blob/master/util/workqueue/rate_limiting_queue.go">source code</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1897,7 +1895,7 @@ Interface 繼承關係</p>
 </span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// NewRateLimitingQueue constructs a new workqueue with rateLimited queuing ability
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// NewRateLimitingQueue constructs a new workqueue with rateLimited queuing ability
 </span><span class="c1">// Remember to call Forget!  If you don&#39;t, you may end up tracking failures forever.
 </span><span class="c1">//使用者在使用RateLimiting的時候可以傳入自己實作的RateLimiter，此時使用預設的delay work queue。
 </span><span class="c1"></span><span class="kd">func</span> <span class="nf">NewRateLimitingQueue</span><span class="p">(</span><span class="nx">rateLimiter</span> <span class="nx">RateLimiter</span><span class="p">)</span> <span class="nx">RateLimitingInterface</span> <span class="p">{</span>
@@ -2360,7 +2358,7 @@ Interface 繼承關係</p>
 </div>
 
 
-<script defer src="/js/swipe.min.b4b82839155519d9ca67746615a4c86ccbc1061c196fe6d8aa26e4fe22902718.js"></script>
+<script defer src="/js/swipe.min.989e074dfb92ce7f57a92c1df7027f88b53c50a54fd9ad450a673a64aa91bfa4.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
@@ -3367,7 +3365,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 
             <p class="caption">
                 
-                    ©2021, All Rights Reserved
+                    ©2022, All Rights Reserved
                 
             </p>
         

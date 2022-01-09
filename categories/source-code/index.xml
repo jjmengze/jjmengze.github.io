@@ -29,8 +29,7 @@
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Fri, 20 Aug 2021 10:29:32 +0800</atom:modified>
         <guid>https://blog.jjmengze.website/posts/kubernetes/source-code/kubelet/cache/pod_status_cache/</guid>
-        <description>&lt;figure&gt;
-    &lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-kubelet-podstatuscache.png&#34;/&gt; 
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-kubelet-podstatuscache.png&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -77,8 +76,7 @@
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Thu, 12 Aug 2021 10:29:32 +0800</atom:modified>
         <guid>https://blog.jjmengze.website/posts/kubernetes/source-code/kubelet/queue/work-queue/</guid>
-        <description>&lt;figure&gt;
-    &lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-kubelet-workqueue.jpg&#34;/&gt; 
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-kubelet-workqueue.jpg&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -125,8 +123,7 @@
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Sun, 01 Aug 2021 10:29:32 +0800</atom:modified>
         <guid>https://blog.jjmengze.website/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-probe-obj2/</guid>
-        <description>&lt;figure&gt;
-    &lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-kubelet-livenessManager2.jpg&#34;/&gt; 
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-kubelet-livenessManager2.jpg&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -173,8 +170,7 @@
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Fri, 23 Jul 2021 10:29:32 +0800</atom:modified>
         <guid>https://blog.jjmengze.website/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-probe-obj/</guid>
-        <description>&lt;figure&gt;
-    &lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-kubelet-livenessManager.png&#34;/&gt; 
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-kubelet-livenessManager.png&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -221,8 +217,7 @@
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Fri, 18 Jun 2021 10:29:32 +0800</atom:modified>
         <guid>https://blog.jjmengze.website/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-tcp-socket/</guid>
-        <description>&lt;figure&gt;
-    &lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-kubelet-liveness-tcp-socket.png&#34;/&gt; 
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-kubelet-liveness-tcp-socket.png&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -269,8 +264,7 @@
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Thu, 10 Jun 2021 10:29:32 +0800</atom:modified>
         <guid>https://blog.jjmengze.website/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-exec/</guid>
-        <description>&lt;figure&gt;
-    &lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-kubelet-liveness-exec.png&#34;/&gt; 
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-kubelet-liveness-exec.png&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -317,8 +311,7 @@
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Tue, 25 May 2021 10:29:32 +0800</atom:modified>
         <guid>https://blog.jjmengze.website/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-http-get/</guid>
-        <description>&lt;figure&gt;
-    &lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-kubelet-liveness.png&#34;/&gt; 
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-kubelet-liveness.png&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -365,8 +358,7 @@
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Thu, 20 May 2021 10:29:32 +0800</atom:modified>
         <guid>https://blog.jjmengze.website/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-secret-overlay/</guid>
-        <description>&lt;figure&gt;
-    &lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-kubelet-secret-overlay.png&#34;/&gt; 
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-kubelet-secret-overlay.png&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -417,8 +409,7 @@
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Thu, 15 Apr 2021 10:29:32 +0800</atom:modified>
         <guid>https://blog.jjmengze.website/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-configmap-overlay/</guid>
-        <description>&lt;figure&gt;
-    &lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-kubelet-configmap-overlay.png&#34;/&gt; 
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-kubelet-configmap-overlay.png&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -469,8 +460,7 @@
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Wed, 07 Apr 2021 10:29:32 +0800</atom:modified>
         <guid>https://blog.jjmengze.website/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-cacheobject/</guid>
-        <description>&lt;figure&gt;
-    &lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-kubelet-cacheBasedManager-objectcache.png&#34;/&gt; 
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-kubelet-cacheBasedManager-objectcache.png&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -521,8 +511,7 @@
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Mon, 15 Mar 2021 10:29:32 +0800</atom:modified>
         <guid>https://blog.jjmengze.website/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-cachebasedmanager/</guid>
-        <description>&lt;figure&gt;
-    &lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-kubelet.png&#34;/&gt; 
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-kubelet.png&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -573,8 +562,7 @@
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Fri, 19 Feb 2021 10:29:32 +0800</atom:modified>
         <guid>https://blog.jjmengze.website/posts/kubernetes/source-code/controller/redlector/reflector-3/</guid>
-        <description>&lt;figure&gt;
-    &lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-reflector-3.jpg&#34;/&gt; 
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-reflector-3.jpg&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -621,8 +609,7 @@
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Thu, 18 Feb 2021 10:29:32 +0800</atom:modified>
         <guid>https://blog.jjmengze.website/posts/kubernetes/source-code/controller/redlector/reflector-2/</guid>
-        <description>&lt;figure&gt;
-    &lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-reflector-2.jpg&#34;/&gt; 
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-reflector-2.jpg&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -669,8 +656,7 @@
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Sun, 14 Feb 2021 10:29:32 +0800</atom:modified>
         <guid>https://blog.jjmengze.website/posts/kubernetes/source-code/controller/redlector/reflector-1/</guid>
-        <description>&lt;figure&gt;
-    &lt;img src=&#34;https://blog.jjmengze.website/images/theme/Kubernetes-Reflector-1.jpg&#34;/&gt; 
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/Kubernetes-Reflector-1.jpg&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -717,8 +703,7 @@
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Wed, 13 Jan 2021 09:29:32 +0800</atom:modified>
         <guid>https://blog.jjmengze.website/posts/kubernetes/source-code/controller/deltafifo/kubernetes-delta-fifo-queue/</guid>
-        <description>&lt;figure&gt;
-    &lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-delta-fifo.jpg&#34;/&gt; 
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-delta-fifo.jpg&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -765,8 +750,7 @@
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Wed, 06 Jan 2021 09:29:32 +0800</atom:modified>
         <guid>https://blog.jjmengze.website/posts/kubernetes/source-code/controller/indexer/kubernetes-indexers-local-cache-2/</guid>
-        <description>&lt;figure&gt;
-    &lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-indexer-1.jpg&#34;/&gt; 
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-indexer-1.jpg&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -813,8 +797,7 @@
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Sun, 03 Jan 2021 09:29:32 +0800</atom:modified>
         <guid>https://blog.jjmengze.website/posts/kubernetes/source-code/controller/indexer/kubernetes-indexers-local-cache-1/</guid>
-        <description>&lt;figure&gt;
-    &lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-indexer-1.jpg&#34;/&gt; 
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-indexer-1.jpg&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -861,8 +844,7 @@
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Tue, 29 Dec 2020 13:29:32 +0800</atom:modified>
         <guid>https://blog.jjmengze.website/posts/kubernetes/source-code/errors/kubernetes-errors-handle/</guid>
-        <description>&lt;figure&gt;
-    &lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-errors-handle.jpg&#34;/&gt; 
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-errors-handle.jpg&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -901,8 +883,7 @@
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Wed, 23 Dec 2020 10:29:32 +0800</atom:modified>
         <guid>https://blog.jjmengze.website/posts/kubernetes/source-code/controller/dig-kubernetes-controller/</guid>
-        <description>&lt;figure&gt;
-    &lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-dig-controller.jpg&#34;/&gt; 
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-dig-controller.jpg&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -949,8 +930,7 @@
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Mon, 21 Dec 2020 10:29:32 +0800</atom:modified>
         <guid>https://blog.jjmengze.website/posts/kubernetes/source-code/controller/queue/bucket-ratelimiter/</guid>
-        <description>&lt;figure&gt;
-    &lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-Bucket-Rate-Limiter.jpg&#34;/&gt; 
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-Bucket-Rate-Limiter.jpg&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -997,8 +977,7 @@
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Sat, 19 Dec 2020 12:29:32 +0800</atom:modified>
         <guid>https://blog.jjmengze.website/posts/kubernetes/source-code/controller/queue/item-max-of-ratelimiter/</guid>
-        <description>&lt;figure&gt;
-    &lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-Item-Max-of-RateLimiter.jpg&#34;/&gt; 
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-Item-Max-of-RateLimiter.jpg&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -1045,8 +1024,7 @@
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Thu, 17 Dec 2020 12:29:32 +0800</atom:modified>
         <guid>https://blog.jjmengze.website/posts/kubernetes/source-code/controller/queue/item-fast-slow-ratelimiter/</guid>
-        <description>&lt;figure&gt;
-    &lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-Item-Fast-Slow-RateLimiter.jpg&#34;/&gt; 
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-Item-Fast-Slow-RateLimiter.jpg&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -1093,8 +1071,7 @@
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Tue, 15 Dec 2020 12:29:32 +0800</atom:modified>
         <guid>https://blog.jjmengze.website/posts/kubernetes/source-code/controller/queue/item-exponential-failure-ratelimiter/</guid>
-        <description>&lt;figure&gt;
-    &lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-Item-Exponential-Failure-RateLimiter.jpg&#34;/&gt; 
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-Item-Exponential-Failure-RateLimiter.jpg&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -1141,8 +1118,7 @@
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Mon, 14 Dec 2020 12:29:32 +0800</atom:modified>
         <guid>https://blog.jjmengze.website/posts/kubernetes/source-code/controller/queue/rating/</guid>
-        <description>&lt;figure&gt;
-    &lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-rating-work-queue.jpg&#34;/&gt; 
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-rating-work-queue.jpg&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -1189,8 +1165,7 @@
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Fri, 11 Dec 2020 12:29:32 +0800</atom:modified>
         <guid>https://blog.jjmengze.website/posts/kubernetes/source-code/controller/queue/delaying/</guid>
-        <description>&lt;figure&gt;
-    &lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-delaying-queue.jpg&#34;/&gt; 
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-delaying-queue.jpg&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -1237,8 +1212,7 @@
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Thu, 10 Dec 2020 10:29:32 +0800</atom:modified>
         <guid>https://blog.jjmengze.website/posts/kubernetes/source-code/controller/queue/common/</guid>
-        <description>&lt;figure&gt;
-    &lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-common-work-queue.jpg&#34;/&gt; 
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-common-work-queue.jpg&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>

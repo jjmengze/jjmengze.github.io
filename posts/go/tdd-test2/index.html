@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.efa35f4c090622130b3f4cfae6971448b5ffb61c5f0a8f21cdfd157fa712abc4.js"></script>
+<script defer src="/js/helper/fadeinout.min.1d13d3e810c3940e80cbba6216a1c76fbf42b5431fc83537ea6997863802362b.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1341,7 +1341,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Meng Learning Note">
 
-<meta name="generator" content="Hugo 0.80.0" />
+<meta name="generator" content="Hugo 0.91.2" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1380,7 +1380,7 @@
     "datePublished": "2020-09-21T14:25:58+08:00",
     "dateModified": "2020-09-21T14:25:58+08:00",
     "url" : "https://blog.jjmengze.website/posts/go/tdd-test2/",
-    "description": "\u003cfigure\u003e     \u003cimg src=\"/images/theme/tdd-test2.png\"/\u003e  \u003c/figure\u003e",
+    "description": "\u003cfigure\u003e\u003cimg src=\"/images/theme/tdd-test2.png\"/\u003e \u003c/figure\u003e",
     "keywords": ["Go","TDD"],
     "mainEntityOfPage": {
       "@type": "WebPage",
@@ -1675,8 +1675,7 @@
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      <figure>
-    <img src="/images/theme/tdd-test2.png"/> 
+      <figure><img src="/images/theme/tdd-test2.png"/>
 </figure>
 
 <p>記錄一下，在強迫使用TDD模式開發的情境與心得。</p>
@@ -1687,35 +1686,31 @@
 <p>比如我在<code>download</code> package 先定義一個 NewDownloader 的方法，透過 IDE 指引幫我們建立他的測試。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nf">NewDownloader</span><span class="p">()</span> <span class="o">*</span><span class="nx">Downloader</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nf">NewDownloader</span><span class="p">()</span> <span class="o">*</span><span class="nx">Downloader</span> <span class="p">{</span>
 
 <span class="p">}</span>
 </code></pre></td></tr></table>
 </div>
-</div><p><figure>
-    <img src="/images/post/tdd-test2-1.png"/> 
+</div><p><figure><img src="/images/post/tdd-test2-1.png"/>
 </figure>
 <br />
 IDE會幫我們建立 Test Function 如下圖所示。<br />
-<figure>
-    <img src="/images/post/tdd-test2-2.png"/> 
+<figure><img src="/images/post/tdd-test2-2.png"/>
 </figure>
 </p>
 <p>這時候我們會受到IDE的提示，告訴我們 <code>Downloader</code> 這個類型沒有定義。<br />
 另外也告訴我們這裡有 <code>TODO List</code> 要我們加入一些 test cases 。<br />
 我們先完成最少測試所需要的物件 <code>Downloader</code> ，透過IDE快速地建立所需要的物件。</p>
-<figure>
-    <img src="/images/post/tdd-test2-3.png"/> 
+<figure><img src="/images/post/tdd-test2-3.png"/>
 </figure>
 
 <p>其實 IDE 也只是簡單幫你打幾個字而已，像是這是一個 interface 還是一個 struct  還是一個 function 還是其他物件這邊就需要自己定義。</p>
-<figure>
-    <img src="/images/post/tdd-test2-4.png"/> 
+<figure><img src="/images/post/tdd-test2-4.png"/>
 </figure>
 
 <p>我們需要的是一個 struct ，為什麼？</p>
@@ -1725,7 +1720,7 @@ IDE會幫我們建立 Test Function 如下圖所示。<br />
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1746,7 +1741,7 @@ IDE會幫我們建立 Test Function 如下圖所示。<br />
 </span><span class="lnt">19
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">type</span> <span class="nx">Downloader</span> <span class="kd">struct</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">type</span> <span class="nx">Downloader</span> <span class="kd">struct</span> <span class="p">{</span>
 
 <span class="p">}</span>
 
@@ -1772,7 +1767,7 @@ IDE會幫我們建立 Test Function 如下圖所示。<br />
 這裡只要因為我們只是 New 一個 NewDownloader 出來而已所以 Test Case 很間單的建立一個物，這時候程式碼可能會長這樣子。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1792,7 +1787,7 @@ IDE會幫我們建立 Test Function 如下圖所示。<br />
 </span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nf">TestNewDownloader</span><span class="p">(</span><span class="nx">t</span> <span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">T</span><span class="p">)</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nf">TestNewDownloader</span><span class="p">(</span><span class="nx">t</span> <span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">T</span><span class="p">)</span> <span class="p">{</span>
 	<span class="nx">tests</span> <span class="o">:=</span> <span class="p">[]</span><span class="kd">struct</span> <span class="p">{</span>
 		<span class="nx">name</span> <span class="kt">string</span>
 		<span class="nx">want</span> <span class="o">*</span><span class="nx">Downloader</span>
@@ -1813,21 +1808,18 @@ IDE會幫我們建立 Test Function 如下圖所示。<br />
 </code></pre></td></tr></table>
 </div>
 </div><p>可以看到 IDE 還有紅色的字表示有問題<br />
-<figure>
-    <img src="/images/post/tdd-test2-5.png"/> 
+<figure><img src="/images/post/tdd-test2-5.png"/>
 </figure>
 </p>
 <p>於是我們到 download.go 去觀察有什麼問題。<br />
-<figure>
-    <img src="/images/post/tdd-test2-6.png"/> 
+<figure><img src="/images/post/tdd-test2-6.png"/>
 </figure>
 </p>
 <p>原來這邊告訴我們沒有定義 Download 的型別</p>
 <p>疑！奇怪，我們不是在 Test 已經定義過了嗎？<br />
 是這樣的，在 test 定義過的 Download struct 是沒有辦法再不是 test 的 package 所使用的。</p>
 <p>所以我們需要把 Test 定義過的 Download struct 過移過來到這裡，看看還有什麼其他問題。<br />
-<figure>
-    <img src="/images/post/tdd-test2-7.png"/> 
+<figure><img src="/images/post/tdd-test2-7.png"/>
 </figure>
 <br />
 搬移過來了， Download 型別已經沒有出現紅字了，這時候 IDE 告訴我們 NewDownloader 這個 function 沒有寫 return 回傳值。那我們就寫一個給他吧。<br />
@@ -1835,7 +1827,7 @@ IDE會幫我們建立 Test Function 如下圖所示。<br />
 <p>download.go</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1845,7 +1837,7 @@ IDE會幫我們建立 Test Function 如下圖所示。<br />
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">download</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">download</span>
 
 <span class="kd">type</span> <span class="nx">Downloader</span> <span class="kd">struct</span> <span class="p">{</span>
 <span class="p">}</span>
@@ -1858,7 +1850,7 @@ IDE會幫我們建立 Test Function 如下圖所示。<br />
 </div><p>download_test.go</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1887,7 +1879,7 @@ IDE會幫我們建立 Test Function 如下圖所示。<br />
 </span><span class="lnt">27
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">download</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">download</span>
 
 <span class="kn">import</span> <span class="p">(</span>
 	<span class="s">&#34;reflect&#34;</span>
@@ -1917,7 +1909,7 @@ IDE會幫我們建立 Test Function 如下圖所示。<br />
 </code></pre></td></tr></table>
 </div>
 </div><p>這時候跑test 應該會看到一個完美的 Test 成功</p>
-<pre><code>go test .                                                         
+<pre tabindex="0"><code>go test .                                                         
 ok      kata-go-example/download        0.239s
 </code></pre><h2 id="持續迭代">持續迭代</h2>
 <p>雖然你可能會覺得很煩，為什麼要寫這些有的沒的，這些步驟 IDE 可以幫你大量處理，不過當我們習慣之後 IDE 會變成輔助你哪裡忘記寫，記住一個要點 <code>小步驟的迭代</code>。</p>
@@ -1927,67 +1919,63 @@ ok      kata-go-example/download        0.239s
 <p>現定義一個最簡單的download function ，我們預期輸入一串網址，下載器會幫我處理，這串網址對應的IP位置，最簡單function 可能會是長這樣子。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">d</span> <span class="o">*</span><span class="nx">Downloader</span><span class="p">)</span> <span class="nf">Download</span><span class="p">(</span><span class="nx">url</span> <span class="kt">string</span><span class="p">)</span> <span class="kt">string</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">d</span> <span class="o">*</span><span class="nx">Downloader</span><span class="p">)</span> <span class="nf">Download</span><span class="p">(</span><span class="nx">url</span> <span class="kt">string</span><span class="p">)</span> <span class="kt">string</span> <span class="p">{</span>
 	
 <span class="p">}</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>定義完成之後透過 IDE 幫忙補齊 Test function</p>
-<figure>
-    <img src="/images/post/tdd-test2-8.png"/> 
+<figure><img src="/images/post/tdd-test2-8.png"/>
 </figure>
 
 <p>IDE 建立完成的 Code 大概會長以下這樣子，也會期待你幫他補完test case 。</p>
-<figure>
-    <img src="/images/post/tdd-test2-9.png"/> 
+<figure><img src="/images/post/tdd-test2-9.png"/>
 </figure>
 
 <p>到這裡不知道大家有沒有發現還是還沒實作 download 的 function， test code 看起來除了要我們加入一些 test case 之外好像就沒有別的錯誤了。</p>
 <p>這邊需要使用到一些小技巧例如 function type ，我們可以定義一個 Download 的function type 如下所示</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">type</span> <span class="nx">DownloadFunc</span> <span class="kd">func</span><span class="p">(</span><span class="nx">url</span> <span class="kt">string</span><span class="p">)</span> <span class="kt">string</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">type</span> <span class="nx">DownloadFunc</span> <span class="kd">func</span><span class="p">(</span><span class="nx">url</span> <span class="kt">string</span><span class="p">)</span> <span class="kt">string</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>定義了 DownloadFunc 我們可能會希望這個 Function  在 Downloader 的struct 裡面讓 Downloader 的結構擁有外部的傳進來的下載方法，如此一來就不會強依賴 Downloader 裡面寫什麼。</p>
 <p>既然我改了 NewDownloader 勢必會導致 NewDownloader 的測試方法不會通過</p>
-<figure>
-    <img src="/images/post/tdd-test2-10.png"/> 
+<figure><img src="/images/post/tdd-test2-10.png"/>
 </figure>
 
 <p>這邊IDE就提示我們參數不正確，我們這邊就簡單地補上一個 Download function 就行，要訣修改到之前的 test code 需要先保證舊的 test code 是可以正確執行的！</p>
 <p>好，那就繼續回到 Download function 測試這個部分，我們在 struct 中新增了 DownloadFunc 就可以讓 Downloader 直接使用，code 可能會像是以下範例。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">d</span> <span class="o">*</span><span class="nx">Downloader</span><span class="p">)</span> <span class="nf">Download</span><span class="p">(</span><span class="nx">url</span> <span class="kt">string</span><span class="p">)</span> <span class="kt">string</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">d</span> <span class="o">*</span><span class="nx">Downloader</span><span class="p">)</span> <span class="nf">Download</span><span class="p">(</span><span class="nx">url</span> <span class="kt">string</span><span class="p">)</span> <span class="kt">string</span> <span class="p">{</span>
 	<span class="k">return</span> <span class="nx">d</span><span class="p">.</span><span class="nf">downloadFunc</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>那麼 test code 會變成怎樣樣子呢？</p>
 <p>原本是長這樣子的test code</p>
-<figure>
-    <img src="/images/post/tdd-test2-11.png"/> 
+<figure><img src="/images/post/tdd-test2-11.png"/>
 </figure>
 
 <p>但我們新增了在 struct 裡新增了 DownloadFunc 讓 Download 的邏輯被抽離了，這邊我們只要簡單的驗證一下 DownloadFunc 是否正確被使用即可，記得最後還需要補上test case 呦！</p>
 <p>最後我們的Download Function  的test code 應該會長這樣子</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2021,7 +2009,7 @@ ok      kata-go-example/download        0.239s
 </span><span class="lnt">32
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nf">TestDownloader_Download</span><span class="p">(</span><span class="nx">t</span> <span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">T</span><span class="p">)</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nf">TestDownloader_Download</span><span class="p">(</span><span class="nx">t</span> <span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">T</span><span class="p">)</span> <span class="p">{</span>
 	<span class="kd">type</span> <span class="nx">args</span> <span class="kd">struct</span> <span class="p">{</span>
 		<span class="nx">url</span> <span class="kt">string</span>
 	<span class="p">}</span>
@@ -2058,7 +2046,7 @@ ok      kata-go-example/download        0.239s
 </div><p>而我們 package 裡面的 code 應該會是長這樣子</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2073,7 +2061,7 @@ ok      kata-go-example/download        0.239s
 </span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">type</span> <span class="nx">DownloadFunc</span> <span class="kd">func</span><span class="p">(</span><span class="nx">url</span> <span class="kt">string</span><span class="p">)</span> <span class="kt">string</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">type</span> <span class="nx">DownloadFunc</span> <span class="kd">func</span><span class="p">(</span><span class="nx">url</span> <span class="kt">string</span><span class="p">)</span> <span class="kt">string</span>
 
 <span class="kd">type</span> <span class="nx">Downloader</span> <span class="kd">struct</span> <span class="p">{</span>
 	<span class="nx">downloadFunc</span> <span class="nx">DownloadFunc</span>
@@ -2093,44 +2081,42 @@ ok      kata-go-example/download        0.239s
 <p>一樣定義一個 function type</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">type</span> <span class="nx">DownloadFunc</span> <span class="kd">func</span><span class="p">(</span><span class="nx">url</span> <span class="kt">string</span><span class="p">)</span> <span class="kt">string</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">type</span> <span class="nx">DownloadFunc</span> <span class="kd">func</span><span class="p">(</span><span class="nx">url</span> <span class="kt">string</span><span class="p">)</span> <span class="kt">string</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>這一次我們不在 Struct 裡面接收這個 function ，改用在functnion 裡面接收這個function ，例如說我們會定義一個 function 他要求攜帶一個 function 進來。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">d</span> <span class="o">*</span><span class="nx">Downloader</span><span class="p">)</span> <span class="nf">DownloadWithFunc</span><span class="p">(</span><span class="nx">url</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">downloadFunc</span> <span class="nx">DownloadFunc</span><span class="p">)</span> <span class="kt">string</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">d</span> <span class="o">*</span><span class="nx">Downloader</span><span class="p">)</span> <span class="nf">DownloadWithFunc</span><span class="p">(</span><span class="nx">url</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">downloadFunc</span> <span class="nx">DownloadFunc</span><span class="p">)</span> <span class="kt">string</span> <span class="p">{</span>
 
 <span class="p">}</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>這時候我們一樣用 IDE 幫我們撰寫 test code<br />
-<figure>
-    <img src="/images/post/tdd-test2-12.png"/> 
+<figure><img src="/images/post/tdd-test2-12.png"/>
 </figure>
 </p>
 <p>長出來的code 大概是會如下方圖片所示，一樣要求你加入一些test case 。<br />
-<figure>
-    <img src="/images/post/tdd-test2-13.png"/> 
+<figure><img src="/images/post/tdd-test2-13.png"/>
 </figure>
 </p>
 <p>這時候我們先來修正 package ，比如說我希望外面function 處理完成後之後我要加入一點東西，範例如下所示。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">d</span> <span class="o">*</span><span class="nx">Downloader</span><span class="p">)</span> <span class="nf">DownloadWithFunc</span><span class="p">(</span><span class="nx">url</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">downloadFunc</span> <span class="nx">DownloadFunc</span><span class="p">)</span> <span class="kt">string</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">d</span> <span class="o">*</span><span class="nx">Downloader</span><span class="p">)</span> <span class="nf">DownloadWithFunc</span><span class="p">(</span><span class="nx">url</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">downloadFunc</span> <span class="nx">DownloadFunc</span><span class="p">)</span> <span class="kt">string</span> <span class="p">{</span>
 	<span class="k">return</span> <span class="nf">downloadFunc</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span><span class="o">+</span><span class="s">&#34;WithFunc&#34;</span>
 <span class="p">}</span>
 </code></pre></td></tr></table>
@@ -2140,7 +2126,7 @@ ok      kata-go-example/download        0.239s
 大致上的test code會像是下面範例的樣子。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2208,7 +2194,7 @@ ok      kata-go-example/download        0.239s
 </span><span class="lnt">66
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nf">TestDownloader_Download</span><span class="p">(</span><span class="nx">t</span> <span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">T</span><span class="p">)</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nf">TestDownloader_Download</span><span class="p">(</span><span class="nx">t</span> <span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">T</span><span class="p">)</span> <span class="p">{</span>
 	<span class="kd">type</span> <span class="nx">args</span> <span class="kd">struct</span> <span class="p">{</span>
 		<span class="nx">url</span> <span class="kt">string</span>
 	<span class="p">}</span>
@@ -2703,7 +2689,7 @@ ok      kata-go-example/download        0.239s
 </div>
 
 
-<script defer src="/js/swipe.min.b4b82839155519d9ca67746615a4c86ccbc1061c196fe6d8aa26e4fe22902718.js"></script>
+<script defer src="/js/swipe.min.989e074dfb92ce7f57a92c1df7027f88b53c50a54fd9ad450a673a64aa91bfa4.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
@@ -3710,7 +3696,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 
             <p class="caption">
                 
-                    ©2021, All Rights Reserved
+                    ©2022, All Rights Reserved
                 
             </p>
         

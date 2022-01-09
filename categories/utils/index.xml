@@ -29,8 +29,7 @@
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Thu, 25 Feb 2021 10:29:32 +0800</atom:modified>
         <guid>https://blog.jjmengze.website/posts/kubernetes/source-code/utils/kubernetes-utils-tool-wait-backoff/</guid>
-        <description>&lt;figure&gt;
-    &lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-utils-wait-backoff.jpg&#34;/&gt; 
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-utils-wait-backoff.jpg&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -69,8 +68,7 @@
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Mon, 22 Feb 2021 10:29:32 +0800</atom:modified>
         <guid>https://blog.jjmengze.website/posts/kubernetes/source-code/utils/kubernetes-utils-tool-wiat/</guid>
-        <description>&lt;figure&gt;
-    &lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-utils-wait.jpg&#34;/&gt; 
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-utils-wait.jpg&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -109,8 +107,7 @@
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Tue, 09 Feb 2021 10:29:32 +0800</atom:modified>
         <guid>https://blog.jjmengze.website/posts/kubernetes/source-code/utils/kubernetes-utils-tool-wait-exponential/</guid>
-        <description>&lt;figure&gt;
-    &lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-utils-wait-exponential.jpg&#34;/&gt; 
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-utils-wait-exponential.jpg&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -149,8 +146,7 @@
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Fri, 05 Feb 2021 10:29:32 +0800</atom:modified>
         <guid>https://blog.jjmengze.website/posts/kubernetes/source-code/utils/kubernetes-utils-tool-wait-jitterbackoff/</guid>
-        <description>&lt;figure&gt;
-    &lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-utils-wait-jitterbackoff.jpg&#34;/&gt; 
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-utils-wait-jitterbackoff.jpg&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -189,8 +185,7 @@
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Thu, 04 Feb 2021 10:29:32 +0800</atom:modified>
         <guid>https://blog.jjmengze.website/posts/kubernetes/source-code/utils/kubernetes-utils-tool-lru/</guid>
-        <description>&lt;figure&gt;
-    &lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-utils-cache.jpg&#34;/&gt; 
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-utils-cache.jpg&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -229,8 +224,7 @@
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Wed, 03 Feb 2021 10:29:32 +0800</atom:modified>
         <guid>https://blog.jjmengze.website/posts/kubernetes/source-code/utils/kubernetes-util-tool/</guid>
-        <description>&lt;figure&gt;
-    &lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-utils.jpg&#34;/&gt; 
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-utils.jpg&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>

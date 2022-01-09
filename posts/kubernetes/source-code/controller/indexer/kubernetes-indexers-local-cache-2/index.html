@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.efa35f4c090622130b3f4cfae6971448b5ffb61c5f0a8f21cdfd157fa712abc4.js"></script>
+<script defer src="/js/helper/fadeinout.min.1d13d3e810c3940e80cbba6216a1c76fbf42b5431fc83537ea6997863802362b.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1341,7 +1341,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Meng Learning Note">
 
-<meta name="generator" content="Hugo 0.80.0" />
+<meta name="generator" content="Hugo 0.91.2" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1380,7 +1380,7 @@
     "datePublished": "2021-01-06T09:29:32+08:00",
     "dateModified": "2021-01-06T09:29:32+08:00",
     "url" : "https://blog.jjmengze.website/posts/kubernetes/source-code/controller/indexer/kubernetes-indexers-local-cache-2/",
-    "description": "\u003cfigure\u003e     \u003cimg src=\"/images/theme/kubernetes-indexer-1.jpg\"/\u003e  \u003c/figure\u003e",
+    "description": "\u003cfigure\u003e\u003cimg src=\"/images/theme/kubernetes-indexer-1.jpg\"/\u003e \u003c/figure\u003e",
     "keywords": ["kubernetes","controller","source-code"],
     "mainEntityOfPage": {
       "@type": "WebPage",
@@ -1677,8 +1677,7 @@
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      <figure>
-    <img src="/images/theme/kubernetes-indexer-1.jpg"/> 
+      <figure><img src="/images/theme/kubernetes-indexer-1.jpg"/>
 </figure>
 
 <p>首先本文所有的 source code 基於 kubernetes 1.19 版本，所有 source code 為了版面的整潔會精簡掉部分 log 相關的程式碼，僅保留核心邏輯，如果有見解錯誤的地方，還麻煩觀看本文的大大們提出，感謝！</p>
@@ -1688,7 +1687,7 @@
 <p>先來看他的 cache 的資料結構， <code>cache</code> 組合了 ThreadSafeStore 以及 KeyFunc</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1699,7 +1698,7 @@
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// `*cache` implements Indexer in terms of a ThreadSafeStore and an
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// `*cache` implements Indexer in terms of a ThreadSafeStore and an
 </span><span class="c1">// associated KeyFunc.
 </span><span class="c1"></span><span class="kd">type</span> <span class="nx">cache</span> <span class="kd">struct</span> <span class="p">{</span>
 	<span class="c1">// cacheStorage bears the burden of thread safety for the cache
@@ -1723,7 +1722,7 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1740,7 +1739,7 @@
 </span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// NewStore returns a Store implemented simply with a map and a lock.
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// NewStore returns a Store implemented simply with a map and a lock.
 </span><span class="c1"></span><span class="kd">func</span> <span class="nf">NewStore</span><span class="p">(</span><span class="nx">keyFunc</span> <span class="nx">KeyFunc</span><span class="p">)</span> <span class="nx">Store</span> <span class="p">{</span>
 	<span class="k">return</span> <span class="o">&amp;</span><span class="nx">cache</span><span class="p">{</span>
 		<span class="nx">cacheStorage</span><span class="p">:</span> <span class="nf">NewThreadSafeStore</span><span class="p">(</span><span class="nx">Indexers</span><span class="p">{},</span> <span class="nx">Indices</span><span class="p">{}),</span>
@@ -1763,7 +1762,7 @@
 <h4 id="add">Add</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1777,7 +1776,7 @@
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// Add inserts an item into the cache.
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// Add inserts an item into the cache.
 </span><span class="c1"></span><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">cache</span><span class="p">)</span> <span class="nf">Add</span><span class="p">(</span><span class="nx">obj</span> <span class="kd">interface</span><span class="p">{})</span> <span class="kt">error</span> <span class="p">{</span>
     <span class="c1">//透過 key function 計算出 object 所對應的 key
 </span><span class="c1"></span>	<span class="nx">key</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">c</span><span class="p">.</span><span class="nf">keyFunc</span><span class="p">(</span><span class="nx">obj</span><span class="p">)</span>
@@ -1794,7 +1793,7 @@
 </div><h4 id="update">Update</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1808,7 +1807,7 @@
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// Update sets an item in the cache to its updated state.
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// Update sets an item in the cache to its updated state.
 </span><span class="c1"></span><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">cache</span><span class="p">)</span> <span class="nf">Update</span><span class="p">(</span><span class="nx">obj</span> <span class="kd">interface</span><span class="p">{})</span> <span class="kt">error</span> <span class="p">{</span>
     <span class="c1">//透過 key function 計算出 object 所對應的 key
 </span><span class="c1"></span>	<span class="nx">key</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">c</span><span class="p">.</span><span class="nf">keyFunc</span><span class="p">(</span><span class="nx">obj</span><span class="p">)</span>
@@ -1825,7 +1824,7 @@
 </div><h4 id="delete">Delete</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1839,7 +1838,7 @@
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// Delete removes an item from the cache.
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// Delete removes an item from the cache.
 </span><span class="c1"></span><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">cache</span><span class="p">)</span> <span class="nf">Delete</span><span class="p">(</span><span class="nx">obj</span> <span class="kd">interface</span><span class="p">{})</span> <span class="kt">error</span> <span class="p">{</span>
     <span class="c1">//透過 key function 計算出 object 所對應的 key
 </span><span class="c1"></span>	<span class="nx">key</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">c</span><span class="p">.</span><span class="nf">keyFunc</span><span class="p">(</span><span class="nx">obj</span><span class="p">)</span>
@@ -1856,7 +1855,7 @@
 </div><h4 id="list">List</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1865,7 +1864,7 @@
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// List returns a list of all the items.
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// List returns a list of all the items.
 </span><span class="c1">// List is completely threadsafe as long as you treat all items as immutable.
 </span><span class="c1"></span><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">cache</span><span class="p">)</span> <span class="nf">List</span><span class="p">()</span> <span class="p">[]</span><span class="kd">interface</span><span class="p">{}</span> <span class="p">{</span>
     <span class="c1">//委任給 cacheStorage 也就是 threadSafeStore 去做處理，threadSafeStore List 這裡的細節可以去上一章節複習。
@@ -1877,7 +1876,7 @@
 </div><h4 id="listkeys">ListKeys</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1886,7 +1885,7 @@
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// ListKeys returns a list of all the keys of the objects currently
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// ListKeys returns a list of all the keys of the objects currently
 </span><span class="c1">// in the cache.
 </span><span class="c1"></span><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">cache</span><span class="p">)</span> <span class="nf">ListKeys</span><span class="p">()</span> <span class="p">[]</span><span class="kt">string</span> <span class="p">{</span>
     <span class="c1">//委任給 cacheStorage 也就是 threadSafeStore 去做處理，threadSafeStore ListKeys 這裡的細節可以去上一章節複習。
@@ -1898,7 +1897,7 @@
 </div><h4 id="getindexers">GetIndexers</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1906,7 +1905,7 @@
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// GetIndexers returns the indexers of cache
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// GetIndexers returns the indexers of cache
 </span><span class="c1"></span><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">cache</span><span class="p">)</span> <span class="nf">GetIndexers</span><span class="p">()</span> <span class="nx">Indexers</span> <span class="p">{</span>
     <span class="c1">//委任給 cacheStorage 也就是 threadSafeStore 去做處理，threadSafeStore GetIndexers 這裡的細節可以去上一章節複習。
 </span><span class="c1"></span>    <span class="c1">//簡單來說就是列出 loacl cache 目前有的所有 Indexer
@@ -1917,7 +1916,7 @@
 </div><h4 id="index">Index</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1926,7 +1925,7 @@
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// Index returns a list of items that match on the index function
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// Index returns a list of items that match on the index function
 </span><span class="c1">// Index is thread-safe so long as you treat all items as immutable
 </span><span class="c1"></span><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">cache</span><span class="p">)</span> <span class="nf">Index</span><span class="p">(</span><span class="nx">indexName</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">obj</span> <span class="kd">interface</span><span class="p">{})</span> <span class="p">([]</span><span class="kd">interface</span><span class="p">{},</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">//委任給 cacheStorage 也就是 threadSafeStore 去做處理，threadSafeStore Index 這裡的細節可以去上一章節複習。
@@ -1938,14 +1937,14 @@
 </div><h4 id="list-1">List</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">cache</span><span class="p">)</span> <span class="nf">IndexKeys</span><span class="p">(</span><span class="nx">indexName</span><span class="p">,</span> <span class="nx">indexKey</span> <span class="kt">string</span><span class="p">)</span> <span class="p">([]</span><span class="kt">string</span><span class="p">,</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">cache</span><span class="p">)</span> <span class="nf">IndexKeys</span><span class="p">(</span><span class="nx">indexName</span><span class="p">,</span> <span class="nx">indexKey</span> <span class="kt">string</span><span class="p">)</span> <span class="p">([]</span><span class="kt">string</span><span class="p">,</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">//委任給 cacheStorage 也就是 threadSafeStore 去做處理，threadSafeStore IndexKeys 這裡的細節可以去上一章節複習。
 </span><span class="c1"></span>    <span class="c1">//簡單來說就是透過已知道 index name 以及 indexkey 合作幫忙分類列出 loacl cache 上相關的 Objecy Key
 </span><span class="c1"></span>	<span class="k">return</span> <span class="nx">c</span><span class="p">.</span><span class="nx">cacheStorage</span><span class="p">.</span><span class="nf">IndexKeys</span><span class="p">(</span><span class="nx">indexName</span><span class="p">,</span> <span class="nx">indexKey</span><span class="p">)</span>
@@ -1955,7 +1954,7 @@
 </div><h4 id="list-2">List</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1963,7 +1962,7 @@
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// ListIndexFuncValues returns the list of generated values of an Index func
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// ListIndexFuncValues returns the list of generated values of an Index func
 </span><span class="c1"></span><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">cache</span><span class="p">)</span> <span class="nf">ListIndexFuncValues</span><span class="p">(</span><span class="nx">indexName</span> <span class="kt">string</span><span class="p">)</span> <span class="p">[]</span><span class="kt">string</span> <span class="p">{</span>
     <span class="c1">//委任給 cacheStorage 也就是 threadSafeStore 去做處理，threadSafeStore ListIndexFuncValues 這裡的細節可以去上一章節複習。
 </span><span class="c1"></span>    <span class="c1">//簡單來說就是透過已知道 index name 幫忙分類列出 loacl cache 上負責計算Object key 的名字也就是 indexed function name
@@ -1974,14 +1973,14 @@
 </div><h4 id="byindex">ByIndex</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">cache</span><span class="p">)</span> <span class="nf">ByIndex</span><span class="p">(</span><span class="nx">indexName</span><span class="p">,</span> <span class="nx">indexKey</span> <span class="kt">string</span><span class="p">)</span> <span class="p">([]</span><span class="kd">interface</span><span class="p">{},</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">cache</span><span class="p">)</span> <span class="nf">ByIndex</span><span class="p">(</span><span class="nx">indexName</span><span class="p">,</span> <span class="nx">indexKey</span> <span class="kt">string</span><span class="p">)</span> <span class="p">([]</span><span class="kd">interface</span><span class="p">{},</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">//委任給 cacheStorage 也就是 threadSafeStore 去做處理，threadSafeStore ByIndex 這裡的細節可以去上一章節複習。
 </span><span class="c1"></span>    <span class="c1">//簡單來說就是透過已知道 index name 以及 index key 合作幫忙分類列出 loacl cache 上所有有關的 Object 
 </span><span class="c1"></span>	<span class="k">return</span> <span class="nx">c</span><span class="p">.</span><span class="nx">cacheStorage</span><span class="p">.</span><span class="nf">ByIndex</span><span class="p">(</span><span class="nx">indexName</span><span class="p">,</span> <span class="nx">indexKey</span><span class="p">)</span>
@@ -1991,14 +1990,14 @@
 </div><h4 id="addindexers">AddIndexers</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">cache</span><span class="p">)</span> <span class="nf">AddIndexers</span><span class="p">(</span><span class="nx">newIndexers</span> <span class="nx">Indexers</span><span class="p">)</span> <span class="kt">error</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">cache</span><span class="p">)</span> <span class="nf">AddIndexers</span><span class="p">(</span><span class="nx">newIndexers</span> <span class="nx">Indexers</span><span class="p">)</span> <span class="kt">error</span> <span class="p">{</span>
     <span class="c1">//委任給 cacheStorage 也就是 threadSafeStore 去做處理，threadSafeStore AddIndexers 這裡的細節可以去上一章節複習。
 </span><span class="c1"></span>    <span class="c1">//簡單來說就是新增一個 Indexer
 </span><span class="c1"></span>	<span class="k">return</span> <span class="nx">c</span><span class="p">.</span><span class="nx">cacheStorage</span><span class="p">.</span><span class="nf">AddIndexers</span><span class="p">(</span><span class="nx">newIndexers</span><span class="p">)</span>
@@ -2008,7 +2007,7 @@
 </div><h4 id="get">Get</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2021,7 +2020,7 @@
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// Get returns the requested item, or sets exists=false.
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// Get returns the requested item, or sets exists=false.
 </span><span class="c1">// Get is completely threadsafe as long as you treat all items as immutable.
 </span><span class="c1"></span><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">cache</span><span class="p">)</span> <span class="nf">Get</span><span class="p">(</span><span class="nx">obj</span> <span class="kd">interface</span><span class="p">{})</span> <span class="p">(</span><span class="nx">item</span> <span class="kd">interface</span><span class="p">{},</span> <span class="nx">exists</span> <span class="kt">bool</span><span class="p">,</span> <span class="nx">err</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">//透過 key function 計算出 Object 所代表的 object key
@@ -2037,7 +2036,7 @@
 </div><h4 id="getbykey">GetByKey</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -2047,7 +2046,7 @@
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// GetByKey returns the request item, or exists=false.
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// GetByKey returns the request item, or exists=false.
 </span><span class="c1">// GetByKey is completely threadsafe as long as you treat all items as immutable.
 </span><span class="c1"></span><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">cache</span><span class="p">)</span> <span class="nf">GetByKey</span><span class="p">(</span><span class="nx">key</span> <span class="kt">string</span><span class="p">)</span> <span class="p">(</span><span class="nx">item</span> <span class="kd">interface</span><span class="p">{},</span> <span class="nx">exists</span> <span class="kt">bool</span><span class="p">,</span> <span class="nx">err</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">//委任給 cacheStorage 也就是 threadSafeStore 去做處理，threadSafeStore Get 這裡的細節可以去上一章節複習。
@@ -2060,7 +2059,7 @@
 </div><h4 id="replacelist">ReplaceList</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2081,7 +2080,7 @@
 </span><span class="lnt">19
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// Replace will delete the contents of &#39;c&#39;, using instead the given list.
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// Replace will delete the contents of &#39;c&#39;, using instead the given list.
 </span><span class="c1">// &#39;c&#39; takes ownership of the list, you should not reference the list again
 </span><span class="c1">// after calling this function.
 </span><span class="c1"></span><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">cache</span><span class="p">)</span> <span class="nf">Replace</span><span class="p">(</span><span class="nx">list</span> <span class="p">[]</span><span class="kd">interface</span><span class="p">{},</span> <span class="nx">resourceVersion</span> <span class="kt">string</span><span class="p">)</span> <span class="kt">error</span> <span class="p">{</span>
@@ -2105,14 +2104,14 @@
 </div><h4 id="resync">Resync</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// Resync is meaningless for one of these
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// Resync is meaningless for one of these
 </span><span class="c1"></span><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">cache</span><span class="p">)</span> <span class="nf">Resync</span><span class="p">()</span> <span class="kt">error</span> <span class="p">{</span>
     <span class="c1">//沒做事xD
 </span><span class="c1"></span>	<span class="k">return</span> <span class="kc">nil</span>
@@ -2126,7 +2125,7 @@
 <a href="https://github.com/kubernetes/client-go/blob/master/examples/workqueue/main.go#L177">source code </a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2138,7 +2137,7 @@
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">//cache package 中的 NewIndexerInformer是我們要關注的重點
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">//cache package 中的 NewIndexerInformer是我們要關注的重點
 </span><span class="c1">//傳入的參數我們先不要管那麼多菜後續的章節會慢慢的頗析到
 </span><span class="c1"></span><span class="nx">indexer</span><span class="p">,</span> <span class="nx">informer</span> <span class="o">:=</span> <span class="nx">cache</span><span class="p">.</span><span class="nf">NewIndexerInformer</span><span class="p">(</span>
     <span class="nx">podListWatcher</span><span class="p">,</span>
@@ -2153,7 +2152,7 @@
 </div><p>上段 source code 中提到的 cache package 中的 NewIndexerInformer 是我們要關注的重點是一個重要的 function ，我們先來看看這個 function 裡面寫了什麼吧</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2170,7 +2169,7 @@
 </span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">//傳入數值目前不是很重要，我們需要把重要放到 NewIndexer 來
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">//傳入數值目前不是很重要，我們需要把重要放到 NewIndexer 來
 </span><span class="c1">//可以看到 NewIndexer 傳入了 DeletionHandlingMetaNamespaceKeyFunc 以及 cache package 中預設的 indexers。
 </span><span class="c1">//表示所有的物件都會透過 DeletionHandlingMetaNamespaceKeyFunc 來計算Object key 並且存放在 local cache 中。
 </span><span class="c1"></span><span class="kd">func</span> <span class="nf">NewIndexerInformer</span><span class="p">(</span>
@@ -2190,7 +2189,7 @@
 </div><p>我們再來看看其他用法，雖然這個方法在 Kubernetes 中非常少被用到但值得我們去了解。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2205,7 +2204,7 @@
 </span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">//傳入數值目前不是很重要，我們需要把重要放到 NewStore 來
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">//傳入數值目前不是很重要，我們需要把重要放到 NewStore 來
 </span><span class="c1">//一樣這邊傳入DeletionHandlingMetaNamespaceKeyFunc 來處理 Object  Key 的計算
 </span><span class="c1"></span><span class="kd">func</span> <span class="nf">NewInformer</span><span class="p">(</span>
 	<span class="nx">lw</span> <span class="nx">ListerWatcher</span><span class="p">,</span>
@@ -2228,7 +2227,7 @@
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -2238,7 +2237,7 @@
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// MetaNamespaceIndexFunc is a default index function that indexes based on an object&#39;s namespace
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// MetaNamespaceIndexFunc is a default index function that indexes based on an object&#39;s namespace
 </span><span class="c1"></span><span class="kd">func</span> <span class="nf">MetaNamespaceIndexFunc</span><span class="p">(</span><span class="nx">obj</span> <span class="kd">interface</span><span class="p">{})</span> <span class="p">([]</span><span class="kt">string</span><span class="p">,</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{</span>
 	<span class="nx">meta</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">meta</span><span class="p">.</span><span class="nf">Accessor</span><span class="p">(</span><span class="nx">obj</span><span class="p">)</span>
 	<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
@@ -2692,7 +2691,7 @@
 </div>
 
 
-<script defer src="/js/swipe.min.b4b82839155519d9ca67746615a4c86ccbc1061c196fe6d8aa26e4fe22902718.js"></script>
+<script defer src="/js/swipe.min.989e074dfb92ce7f57a92c1df7027f88b53c50a54fd9ad450a673a64aa91bfa4.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
@@ -3699,7 +3698,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 
             <p class="caption">
                 
-                    ©2021, All Rights Reserved
+                    ©2022, All Rights Reserved
                 
             </p>
         

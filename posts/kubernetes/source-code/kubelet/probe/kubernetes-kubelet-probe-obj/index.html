@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.efa35f4c090622130b3f4cfae6971448b5ffb61c5f0a8f21cdfd157fa712abc4.js"></script>
+<script defer src="/js/helper/fadeinout.min.1d13d3e810c3940e80cbba6216a1c76fbf42b5431fc83537ea6997863802362b.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1341,7 +1341,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Meng Learning Note">
 
-<meta name="generator" content="Hugo 0.80.0" />
+<meta name="generator" content="Hugo 0.91.2" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1380,7 +1380,7 @@
     "datePublished": "2021-07-23T10:29:32+08:00",
     "dateModified": "2021-07-23T10:29:32+08:00",
     "url" : "https://blog.jjmengze.website/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-probe-obj/",
-    "description": "\u003cfigure\u003e     \u003cimg src=\"/images/theme/kubernetes-kubelet-livenessManager.png\"/\u003e  \u003c/figure\u003e",
+    "description": "\u003cfigure\u003e\u003cimg src=\"/images/theme/kubernetes-kubelet-livenessManager.png\"/\u003e \u003c/figure\u003e",
     "keywords": ["kubernetes","source-code"],
     "mainEntityOfPage": {
       "@type": "WebPage",
@@ -1675,8 +1675,7 @@
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      <figure>
-    <img src="/images/theme/kubernetes-kubelet-livenessManager.png"/> 
+      <figure><img src="/images/theme/kubernetes-kubelet-livenessManager.png"/>
 </figure>
 
 <p>首先本文所有的 source code 基於 kubernetes 1.19 版本，所有 source code 為了版面的整潔會精簡掉部分 log 相關的程式碼，僅保留核心邏輯，如果有見解錯誤的地方，還麻煩觀看本文的大大們提出，感謝！</p>
@@ -1687,7 +1686,7 @@
 <a href="pkg/kubelet/kubelet.go">source code</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1703,7 +1702,7 @@
 </span><span class="lnt">14
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// Kubelet is the main kubelet implementation.
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// Kubelet is the main kubelet implementation.
 </span><span class="c1"></span><span class="kd">type</span> <span class="nx">Kubelet</span> <span class="kd">struct</span> 
 	<span class="c1">//用來控制哪些 pod 要加入到 probe manager
 </span><span class="c1"></span>	<span class="c1">// Handles container probing.
@@ -1724,7 +1723,7 @@
 <a href="pkg/kubelet/kubelet.go">source code</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1747,7 +1746,7 @@
 </span><span class="lnt">21
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nf">NewMainKubelet</span><span class="p">(</span><span class="nx">kubeCfg</span> <span class="o">*</span><span class="nx">kubeletconfiginternal</span><span class="p">.</span><span class="nx">KubeletConfiguration</span><span class="p">,</span><span class="o">...</span><span class="p">)(</span><span class="o">*</span><span class="nx">Kubelet</span><span class="p">,</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nf">NewMainKubelet</span><span class="p">(</span><span class="nx">kubeCfg</span> <span class="o">*</span><span class="nx">kubeletconfiginternal</span><span class="p">.</span><span class="nx">KubeletConfiguration</span><span class="p">,</span><span class="o">...</span><span class="p">)(</span><span class="o">*</span><span class="nx">Kubelet</span><span class="p">,</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{</span>
 
 	<span class="o">...</span>
 	<span class="c1">//在這裡透過 proberesults.NewManager() 生成 並且設定 kubelet 的 livenessManager readinessManager startupManager，用來儲存 container 探測 liveness 、 readiness 、  startup prob 的結果
@@ -1773,7 +1772,7 @@
 </div><p>了解完 livenessManager readinessManager startupManager 以及 probeManager 的物件是從哪裡生成的後，我們就要來看看這四個物件作用在什麼地方，以及作用在哪裡。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1807,7 +1806,7 @@
 </span><span class="lnt">32
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go">
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go">
 <span class="c1">//kubelet 會透過 syncLoopIteration 去&#34;得到&#34; container 的狀態並且作出相應的行為，
 </span><span class="c1">//至於怎麼跑到 syncLoopIteration 這一段的，我之後再做一篇整理，以減少文章的複雜xD
 </span><span class="c1"></span><span class="kd">func</span> <span class="p">(</span><span class="nx">kl</span> <span class="o">*</span><span class="nx">Kubelet</span><span class="p">)</span> <span class="nf">syncLoopIteration</span><span class="p">(</span><span class="nx">configCh</span> <span class="o">&lt;-</span><span class="kd">chan</span> <span class="nx">kubetypes</span><span class="p">.</span><span class="nx">PodUpdate</span><span class="p">,</span> <span class="nx">handler</span> <span class="nx">SyncHandler</span><span class="p">,</span>
@@ -1847,7 +1846,7 @@
 <p><a href="pkg/kubelet/prober/results/results_manager.go">source code</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1861,7 +1860,7 @@
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// Manager interface 定義了一些行為，讓實作的物件可以透過 container id 將 pod 的結果儲存起來，並且透過 channel 獲取探測的結果。
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// Manager interface 定義了一些行為，讓實作的物件可以透過 container id 將 pod 的結果儲存起來，並且透過 channel 獲取探測的結果。
 </span><span class="c1"></span><span class="kd">type</span> <span class="nx">Manager</span> <span class="kd">interface</span> <span class="p">{</span>
 	<span class="c1">// 透過 container id 從 實作者身上得到 result 結果
 </span><span class="c1"></span>	<span class="nf">Get</span><span class="p">(</span><span class="nx">kubecontainer</span><span class="p">.</span><span class="nx">ContainerID</span><span class="p">)</span> <span class="p">(</span><span class="nx">Result</span><span class="p">,</span> <span class="kt">bool</span><span class="p">)</span>
@@ -1881,7 +1880,7 @@
 <a href="pkg/kubelet/prober/results/results_manager.go">source code</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1919,7 +1918,7 @@
 </span><span class="lnt">36
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// 實作 manager interface 的物件
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// 實作 manager interface 的物件
 </span><span class="c1"></span><span class="kd">type</span> <span class="nx">manager</span> <span class="kd">struct</span> <span class="p">{</span>
 	<span class="c1">// 用來保證 map 的一致性的鎖
 </span><span class="c1"></span>	<span class="nx">sync</span><span class="p">.</span><span class="nx">RWMutex</span>
@@ -1961,7 +1960,7 @@
 <h3 id="new-function">New function</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1971,7 +1970,7 @@
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// Manager 的 new function 回傳一個空的 manger 物件
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// Manager 的 new function 回傳一個空的 manger 物件
 </span><span class="c1"></span><span class="kd">func</span> <span class="nf">NewManager</span><span class="p">()</span> <span class="nx">Manager</span> <span class="p">{</span>
 	<span class="c1">//回傳初始化過後的 manager 物件
 </span><span class="c1"></span>	<span class="k">return</span> <span class="o">&amp;</span><span class="nx">manager</span><span class="p">{</span>
@@ -1985,7 +1984,7 @@
 <p>manger 物件實作了 prober.Manager interface ，我們來看每一個 function 實作的內容吧。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2037,7 +2036,7 @@
 </span><span class="lnt">50
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">//傳入 container 從 map 中取的儲存的 prob result 
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">//傳入 container 從 map 中取的儲存的 prob result 
 </span><span class="c1"></span><span class="kd">func</span> <span class="p">(</span><span class="nx">m</span> <span class="o">*</span><span class="nx">manager</span><span class="p">)</span> <span class="nf">Get</span><span class="p">(</span><span class="nx">id</span> <span class="nx">kubecontainer</span><span class="p">.</span><span class="nx">ContainerID</span><span class="p">)</span> <span class="p">(</span><span class="nx">Result</span><span class="p">,</span> <span class="kt">bool</span><span class="p">)</span> <span class="p">{</span>
 	<span class="c1">//防止競爭加入 rw 鎖
 </span><span class="c1"></span>	<span class="nx">m</span><span class="p">.</span><span class="nf">RLock</span><span class="p">()</span>
@@ -2095,7 +2094,7 @@
 <p>這邊雖然我們開始在 <code>syncLoopIteration</code> 小節已經看過，我想想再提一次，原來 livenessManager readinessManager startupManager 三個物件在 <code>syncLoopIteration</code> 時候會用到。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2126,7 +2125,7 @@
 </span><span class="lnt">29
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">kl</span> <span class="o">*</span><span class="nx">Kubelet</span><span class="p">)</span> <span class="nf">syncLoopIteration</span><span class="p">(</span><span class="nx">configCh</span> <span class="o">&lt;-</span><span class="kd">chan</span> <span class="nx">kubetypes</span><span class="p">.</span><span class="nx">PodUpdate</span><span class="p">,</span> <span class="nx">handler</span> <span class="nx">SyncHandler</span><span class="p">,</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">kl</span> <span class="o">*</span><span class="nx">Kubelet</span><span class="p">)</span> <span class="nf">syncLoopIteration</span><span class="p">(</span><span class="nx">configCh</span> <span class="o">&lt;-</span><span class="kd">chan</span> <span class="nx">kubetypes</span><span class="p">.</span><span class="nx">PodUpdate</span><span class="p">,</span> <span class="nx">handler</span> <span class="nx">SyncHandler</span><span class="p">,</span>
 	<span class="nx">syncCh</span> <span class="o">&lt;-</span><span class="kd">chan</span> <span class="nx">time</span><span class="p">.</span><span class="nx">Time</span><span class="p">,</span> <span class="nx">housekeepingCh</span> <span class="o">&lt;-</span><span class="kd">chan</span> <span class="nx">time</span><span class="p">.</span><span class="nx">Time</span><span class="p">,</span> <span class="nx">plegCh</span> <span class="o">&lt;-</span><span class="kd">chan</span> <span class="o">*</span><span class="nx">pleg</span><span class="p">.</span><span class="nx">PodLifecycleEvent</span><span class="p">)</span> <span class="kt">bool</span> <span class="p">{</span>
     
 	<span class="k">select</span> <span class="p">{</span>
@@ -2162,7 +2161,7 @@
 <p>在 <code>prob 在哪裏絕對難不倒你</code> 章節有看過 <code>probeManager</code> 是由其他三種 manager 組合再一起生成的，那魔鬼一定就藏在這裡面。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2175,7 +2174,7 @@
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go">	<span class="o">...</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go">	<span class="o">...</span>
 	<span class="c1">// kubelet 的 probemanager 則是需要組合上面提到的三種 manager 以及 runner 與 recorder 透過 prober.NewManager 新增對應的物件，用以用來控制哪些 pod 要加入到 prob manager。
 </span><span class="c1"></span>	<span class="c1">//後面會繼續解析 prober.NewManager 實作    
 </span><span class="c1"></span>	<span class="nx">klet</span><span class="p">.</span><span class="nx">probeManager</span> <span class="p">=</span> <span class="nx">prober</span><span class="p">.</span><span class="nf">NewManager</span><span class="p">(</span>
@@ -2637,7 +2636,7 @@ kubelet 資料結構中型態為 <code>probeManager</code> 的 probeManager 到�
 </div>
 
 
-<script defer src="/js/swipe.min.b4b82839155519d9ca67746615a4c86ccbc1061c196fe6d8aa26e4fe22902718.js"></script>
+<script defer src="/js/swipe.min.989e074dfb92ce7f57a92c1df7027f88b53c50a54fd9ad450a673a64aa91bfa4.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
@@ -3644,7 +3643,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 
             <p class="caption">
                 
-                    ©2021, All Rights Reserved
+                    ©2022, All Rights Reserved
                 
             </p>
         

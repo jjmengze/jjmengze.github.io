@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.efa35f4c090622130b3f4cfae6971448b5ffb61c5f0a8f21cdfd157fa712abc4.js"></script>
+<script defer src="/js/helper/fadeinout.min.1d13d3e810c3940e80cbba6216a1c76fbf42b5431fc83537ea6997863802362b.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1341,7 +1341,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Meng Learning Note">
 
-<meta name="generator" content="Hugo 0.80.0" />
+<meta name="generator" content="Hugo 0.91.2" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1380,7 +1380,7 @@
     "datePublished": "2021-02-04T10:29:32+08:00",
     "dateModified": "2021-02-04T10:29:32+08:00",
     "url" : "https://blog.jjmengze.website/posts/kubernetes/source-code/utils/kubernetes-utils-tool-lru/",
-    "description": "\u003cfigure\u003e     \u003cimg src=\"/images/theme/kubernetes-utils-cache.jpg\"/\u003e  \u003c/figure\u003e",
+    "description": "\u003cfigure\u003e\u003cimg src=\"/images/theme/kubernetes-utils-cache.jpg\"/\u003e \u003c/figure\u003e",
     "keywords": ["kubernetes","utils"],
     "mainEntityOfPage": {
       "@type": "WebPage",
@@ -1675,16 +1675,14 @@
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      <figure>
-    <img src="/images/theme/kubernetes-utils-cache.jpg"/> 
+      <figure><img src="/images/theme/kubernetes-utils-cache.jpg"/>
 </figure>
 
 <h2 id="lru">LRU</h2>
 <p>今天先從 kubernetes util tool 工具裡面一把抓，抓出 cache 這個工具要使用這個工局前我們要先了解 <code>LRU</code> 是什麼，實際上很間單，我這邊簡單帶過 LRU 是什麼。</p>
 <p>LRU 全名 Least Recently Used（最近最少使用策略），顧名思義是根據使用的記錄來淘汰資料，A資料被存取過那A資料在未來被存取的機率相對來高。</p>
 <p>LRU 整體結構是依靠 Doubly linked list  作為 CRUD 的後盾，我們可以看一下圖來了解整體結構!</p>
-<figure>
-    <img src="/images/post/kubernetes-utils-cache.png"/> 
+<figure><img src="/images/post/kubernetes-utils-cache.png"/>
 </figure>
 
 <ol>
@@ -1710,7 +1708,7 @@ hashicorp 的 LRU 基於 <code>hashicorp/golang-lru/simplelru</code> 封裝成�
 <h3 id="interface">interface</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1744,7 +1742,7 @@ hashicorp 的 LRU 基於 <code>hashicorp/golang-lru/simplelru</code> 封裝成�
 </span><span class="lnt">32
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// LRUCache is the interface for simple LRU cache.
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// LRUCache is the interface for simple LRU cache.
 </span><span class="c1"></span><span class="kd">type</span> <span class="nx">LRUCache</span> <span class="kd">interface</span> <span class="p">{</span>
 	
 	<span class="nf">Add</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="nx">value</span> <span class="kd">interface</span><span class="p">{})</span> <span class="kt">bool</span>                         <span class="c1">//向 cache add 一個 key value paire ，如果發生逐出，需要回傳 true 同時更新 lru 狀態。
@@ -1782,7 +1780,7 @@ hashicorp 的 LRU 基於 <code>hashicorp/golang-lru/simplelru</code> 封裝成�
 <h3 id="struct">struct</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1800,7 +1798,7 @@ hashicorp 的 LRU 基於 <code>hashicorp/golang-lru/simplelru</code> 封裝成�
 </span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go">
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go">
 <span class="kd">type</span> <span class="nx">EvictCallback</span> <span class="kd">func</span><span class="p">(</span><span class="nx">key</span> <span class="kd">interface</span><span class="p">{},</span> <span class="nx">value</span> <span class="kd">interface</span><span class="p">{})</span>    <span class="c1">//用於在 LRU 在 Evict entry 時call back 給使用者知道
 </span><span class="c1"></span>
 <span class="c1">// 實作了none thread safhe 的固定大小 LRU cahe 
@@ -1824,7 +1822,7 @@ hashicorp 的 LRU 基於 <code>hashicorp/golang-lru/simplelru</code> 封裝成�
 <h3 id="new-function">New Function</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1840,7 +1838,7 @@ hashicorp 的 LRU 基於 <code>hashicorp/golang-lru/simplelru</code> 封裝成�
 </span><span class="lnt">14
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// NewLRU constructs an LRU of the given size
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// NewLRU constructs an LRU of the given size
 </span><span class="c1"></span><span class="kd">func</span> <span class="nf">NewLRU</span><span class="p">(</span><span class="nx">size</span> <span class="kt">int</span><span class="p">,</span> <span class="nx">onEvict</span> <span class="nx">EvictCallback</span><span class="p">)</span> <span class="p">(</span><span class="o">*</span><span class="nx">LRU</span><span class="p">,</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{</span>
 	<span class="c1">//由於是固定 size 的 cahce 所以 size 不能小於0
 </span><span class="c1"></span>	<span class="k">if</span> <span class="nx">size</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="p">{</span>
@@ -1860,7 +1858,7 @@ hashicorp 的 LRU 基於 <code>hashicorp/golang-lru/simplelru</code> 封裝成�
 <h3 id="add">Add</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1889,7 +1887,7 @@ hashicorp 的 LRU 基於 <code>hashicorp/golang-lru/simplelru</code> 封裝成�
 </span><span class="lnt">27
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// Add adds a value to the cache.  Returns true if an eviction occurred.
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// Add adds a value to the cache.  Returns true if an eviction occurred.
 </span><span class="c1"></span><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">LRU</span><span class="p">)</span> <span class="nf">Add</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="nx">value</span> <span class="kd">interface</span><span class="p">{})</span> <span class="p">(</span><span class="nx">evicted</span> <span class="kt">bool</span><span class="p">)</span> <span class="p">{</span>
 	<span class="c1">// Check for existing item
 </span><span class="c1"></span>	<span class="c1">//檢查物件是否存在於 map 中，若是存在的話我們需要把 LRU 中 物件所在的位置移動到 list 的 header 
@@ -1921,7 +1919,7 @@ hashicorp 的 LRU 基於 <code>hashicorp/golang-lru/simplelru</code> 封裝成�
 </div><h3 id="get">Get</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1934,7 +1932,7 @@ hashicorp 的 LRU 基於 <code>hashicorp/golang-lru/simplelru</code> 封裝成�
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go">
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go">
 <span class="c1">// Get looks up a key&#39;s value from the cache.
 </span><span class="c1"></span><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">LRU</span><span class="p">)</span> <span class="nf">Get</span><span class="p">(</span><span class="nx">key</span> <span class="kd">interface</span><span class="p">{})</span> <span class="p">(</span><span class="nx">value</span> <span class="kd">interface</span><span class="p">{},</span> <span class="nx">ok</span> <span class="kt">bool</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// 會先從 map 搜尋物件是否存在，不存在就不用拿拉xD
@@ -1950,7 +1948,7 @@ hashicorp 的 LRU 基於 <code>hashicorp/golang-lru/simplelru</code> 封裝成�
 </div><h3 id="contains">Contains</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1959,7 +1957,7 @@ hashicorp 的 LRU 基於 <code>hashicorp/golang-lru/simplelru</code> 封裝成�
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go">
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go">
 <span class="c1">// Contains checks if a key is in the cache, without updating the recent-ness
 </span><span class="c1">// or deleting it for being stale.
 </span><span class="c1"></span><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">LRU</span><span class="p">)</span> <span class="nf">Contains</span><span class="p">(</span><span class="nx">key</span> <span class="kd">interface</span><span class="p">{})</span> <span class="p">(</span><span class="nx">ok</span> <span class="kt">bool</span><span class="p">)</span> <span class="p">{</span>
@@ -1971,7 +1969,7 @@ hashicorp 的 LRU 基於 <code>hashicorp/golang-lru/simplelru</code> 封裝成�
 </div><h3 id="peek">Peek</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1982,7 +1980,7 @@ hashicorp 的 LRU 基於 <code>hashicorp/golang-lru/simplelru</code> 封裝成�
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// Peek returns the key value (or undefined if not found) without updating
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// Peek returns the key value (or undefined if not found) without updating
 </span><span class="c1">// the &#34;recently used&#34;-ness of the key.
 </span><span class="c1"></span><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">LRU</span><span class="p">)</span> <span class="nf">Peek</span><span class="p">(</span><span class="nx">key</span> <span class="kd">interface</span><span class="p">{})</span> <span class="p">(</span><span class="nx">value</span> <span class="kd">interface</span><span class="p">{},</span> <span class="nx">ok</span> <span class="kt">bool</span><span class="p">)</span> <span class="p">{</span>
 	<span class="kd">var</span> <span class="nx">ent</span> <span class="o">*</span><span class="nx">list</span><span class="p">.</span><span class="nx">Element</span>                            <span class="c1">//先建立一個 element 等著承裝 LRU 的資料
@@ -1996,7 +1994,7 @@ hashicorp 的 LRU 基於 <code>hashicorp/golang-lru/simplelru</code> 封裝成�
 </div><h3 id="remove">Remove</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2009,7 +2007,7 @@ hashicorp 的 LRU 基於 <code>hashicorp/golang-lru/simplelru</code> 封裝成�
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// Remove removes the provided key from the cache, returning if the
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// Remove removes the provided key from the cache, returning if the
 </span><span class="c1">// key was contained.
 </span><span class="c1"></span><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">LRU</span><span class="p">)</span> <span class="nf">Remove</span><span class="p">(</span><span class="nx">key</span> <span class="kd">interface</span><span class="p">{})</span> <span class="p">(</span><span class="nx">present</span> <span class="kt">bool</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// 會先從 map 搜尋物件是否存在，不存在就不用拿拉xD
@@ -2025,7 +2023,7 @@ hashicorp 的 LRU 基於 <code>hashicorp/golang-lru/simplelru</code> 封裝成�
 </div><h3 id="removeoldest">RemoveOldest</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2038,7 +2036,7 @@ hashicorp 的 LRU 基於 <code>hashicorp/golang-lru/simplelru</code> 封裝成�
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// RemoveOldest removes the oldest item from the cache.
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// RemoveOldest removes the oldest item from the cache.
 </span><span class="c1"></span><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">LRU</span><span class="p">)</span> <span class="nf">RemoveOldest</span><span class="p">()</span> <span class="p">(</span><span class="nx">key</span> <span class="kd">interface</span><span class="p">{},</span> <span class="nx">value</span> <span class="kd">interface</span><span class="p">{},</span> <span class="nx">ok</span> <span class="kt">bool</span><span class="p">)</span> <span class="p">{</span>
 	<span class="nx">ent</span> <span class="o">:=</span> <span class="nx">c</span><span class="p">.</span><span class="nx">evictList</span><span class="p">.</span><span class="nf">Back</span><span class="p">()</span>                      <span class="c1">//取得LRU list 最最舊的資料
 </span><span class="c1"></span>	<span class="c1">//如果有找到資料就刪除最舊的資料
@@ -2054,7 +2052,7 @@ hashicorp 的 LRU 基於 <code>hashicorp/golang-lru/simplelru</code> 封裝成�
 </div><h3 id="getoldest">GetOldest</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2066,7 +2064,7 @@ hashicorp 的 LRU 基於 <code>hashicorp/golang-lru/simplelru</code> 封裝成�
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// GetOldest returns the oldest entry
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// GetOldest returns the oldest entry
 </span><span class="c1"></span><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">LRU</span><span class="p">)</span> <span class="nf">GetOldest</span><span class="p">()</span> <span class="p">(</span><span class="nx">key</span> <span class="kd">interface</span><span class="p">{},</span> <span class="nx">value</span> <span class="kd">interface</span><span class="p">{},</span> <span class="nx">ok</span> <span class="kt">bool</span><span class="p">)</span> <span class="p">{</span>
 	<span class="nx">ent</span> <span class="o">:=</span> <span class="nx">c</span><span class="p">.</span><span class="nx">evictList</span><span class="p">.</span><span class="nf">Back</span><span class="p">()</span>                        <span class="c1">//取得LRU list 最最舊的資料
 </span><span class="c1"></span>	<span class="c1">//如果有找到資料就回傳
@@ -2081,7 +2079,7 @@ hashicorp 的 LRU 基於 <code>hashicorp/golang-lru/simplelru</code> 封裝成�
 </div><h3 id="keys">Keys</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2097,7 +2095,7 @@ hashicorp 的 LRU 基於 <code>hashicorp/golang-lru/simplelru</code> 封裝成�
 </span><span class="lnt">14
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// Keys returns a slice of the keys in the cache, from oldest to newest.
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// Keys returns a slice of the keys in the cache, from oldest to newest.
 </span><span class="c1"></span><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">LRU</span><span class="p">)</span> <span class="nf">Keys</span><span class="p">()</span> <span class="p">[]</span><span class="kd">interface</span><span class="p">{}</span> <span class="p">{</span>
 	<span class="c1">//先建立一個 slice 等等用來 copy LRU 資料用
 </span><span class="c1"></span>	<span class="nx">keys</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">([]</span><span class="kd">interface</span><span class="p">{},</span> <span class="nb">len</span><span class="p">(</span><span class="nx">c</span><span class="p">.</span><span class="nx">items</span><span class="p">))</span>
@@ -2116,13 +2114,13 @@ hashicorp 的 LRU 基於 <code>hashicorp/golang-lru/simplelru</code> 封裝成�
 </div><h3 id="len">Len</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// Len returns the number of items in the cache.
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// Len returns the number of items in the cache.
 </span><span class="c1"></span><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">LRU</span><span class="p">)</span> <span class="nf">Len</span><span class="p">()</span> <span class="kt">int</span> <span class="p">{</span>
 	<span class="k">return</span> <span class="nx">c</span><span class="p">.</span><span class="nx">evictList</span><span class="p">.</span><span class="nf">Len</span><span class="p">()</span>            <span class="c1">//回傳 LRU list 長度
 </span><span class="c1"></span><span class="p">}</span>
@@ -2131,7 +2129,7 @@ hashicorp 的 LRU 基於 <code>hashicorp/golang-lru/simplelru</code> 封裝成�
 </div><h3 id="removeoldestremoveelement">removeOldest/removeElement</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2152,7 +2150,7 @@ hashicorp 的 LRU 基於 <code>hashicorp/golang-lru/simplelru</code> 封裝成�
 </span><span class="lnt">19
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// removeOldest removes the oldest item from the cache.
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// removeOldest removes the oldest item from the cache.
 </span><span class="c1"></span><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">LRU</span><span class="p">)</span> <span class="nf">removeOldest</span><span class="p">()</span> <span class="p">{</span>
 	<span class="nx">ent</span> <span class="o">:=</span> <span class="nx">c</span><span class="p">.</span><span class="nx">evictList</span><span class="p">.</span><span class="nf">Back</span><span class="p">()</span>                    <span class="c1">//從 LRU list  中取得最舊的資料
 </span><span class="c1"></span>    
@@ -2179,14 +2177,14 @@ hashicorp 的 LRU 基於 <code>hashicorp/golang-lru/simplelru</code> 封裝成�
 <h3 id="struct-1">struct</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// Cache is a thread-safe fixed size LRU cache.
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// Cache is a thread-safe fixed size LRU cache.
 </span><span class="c1"></span><span class="kd">type</span> <span class="nx">Cache</span> <span class="kd">struct</span> <span class="p">{</span>
 	<span class="nx">lru</span>  <span class="nx">simplelru</span><span class="p">.</span><span class="nx">LRUCache</span>           <span class="c1">//組合了 simple lru 的功能
 </span><span class="c1"></span>	<span class="nx">lock</span> <span class="nx">sync</span><span class="p">.</span><span class="nx">RWMutex</span>                 <span class="c1">//多了讀寫鎖
@@ -2197,7 +2195,7 @@ hashicorp 的 LRU 基於 <code>hashicorp/golang-lru/simplelru</code> 封裝成�
 <h3 id="new-function-1">New function</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2218,7 +2216,7 @@ hashicorp 的 LRU 基於 <code>hashicorp/golang-lru/simplelru</code> 封裝成�
 </span><span class="lnt">19
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// New creates an LRU of the given size.
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// New creates an LRU of the given size.
 </span><span class="c1"></span><span class="kd">func</span> <span class="nf">New</span><span class="p">(</span><span class="nx">size</span> <span class="kt">int</span><span class="p">)</span> <span class="p">(</span><span class="o">*</span><span class="nx">Cache</span><span class="p">,</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{</span>
 	<span class="k">return</span> <span class="nf">NewWithEvict</span><span class="p">(</span><span class="nx">size</span><span class="p">,</span> <span class="kc">nil</span><span class="p">)</span>                <span class="c1">//最簡單的方法就是直接就入  cahce size ，不指定 Evict call  back function 
 </span><span class="c1"></span><span class="p">}</span>
@@ -2244,7 +2242,7 @@ hashicorp 的 LRU 基於 <code>hashicorp/golang-lru/simplelru</code> 封裝成�
 <p>這個部分相單的簡單，我只舉幾個作為例子有興趣的營有可以到 github 看其他的實作。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2281,7 +2279,7 @@ hashicorp 的 LRU 基於 <code>hashicorp/golang-lru/simplelru</code> 封裝成�
 </span><span class="lnt">35
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// Purge is used to completely clear the cache.
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// Purge is used to completely clear the cache.
 </span><span class="c1"></span><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">Cache</span><span class="p">)</span> <span class="nf">Purge</span><span class="p">()</span> <span class="p">{</span>
 	<span class="nx">c</span><span class="p">.</span><span class="nx">lock</span><span class="p">.</span><span class="nf">Lock</span><span class="p">()</span>                        <span class="c1">//全部移除前上鎖
 </span><span class="c1"></span>	<span class="nx">c</span><span class="p">.</span><span class="nx">lru</span><span class="p">.</span><span class="nf">Purge</span><span class="p">()</span>                        <span class="c1">//lru 移除
@@ -2325,7 +2323,7 @@ hashicorp 的 LRU 基於 <code>hashicorp/golang-lru/simplelru</code> 封裝成�
 <p>資料結構的部分相當簡單，比剛剛看到的 <code>hashicorp/golang-lru</code> 多加了 clock 以及 sync Mutex ，不過為什麼不復用 <code>hashicorp/golang-lru</code> 就好了。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -2336,7 +2334,7 @@ hashicorp 的 LRU 基於 <code>hashicorp/golang-lru/simplelru</code> 封裝成�
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// LRUExpireCache is a cache that ensures the mostly recently accessed keys are returned with
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// LRUExpireCache is a cache that ensures the mostly recently accessed keys are returned with
 </span><span class="c1">// a ttl beyond which keys are forcibly expired.
 </span><span class="c1"></span><span class="kd">type</span> <span class="nx">LRUExpireCache</span> <span class="kd">struct</span> <span class="p">{</span>
 	<span class="c1">// clock is used to obtain the current time
@@ -2350,13 +2348,13 @@ hashicorp 的 LRU 基於 <code>hashicorp/golang-lru/simplelru</code> 封裝成�
 </div><p>放入的物件除了 key 所代表的 value 之外還多加了 expireTime 來看， cache 是否過期。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">type</span> <span class="nx">cacheEntry</span> <span class="kd">struct</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">type</span> <span class="nx">cacheEntry</span> <span class="kd">struct</span> <span class="p">{</span>
 	<span class="nx">value</span>      <span class="kd">interface</span><span class="p">{}</span>
 	<span class="nx">expireTime</span> <span class="nx">time</span><span class="p">.</span><span class="nx">Time</span>
 <span class="p">}</span>
@@ -2366,7 +2364,7 @@ hashicorp 的 LRU 基於 <code>hashicorp/golang-lru/simplelru</code> 封裝成�
 <h3 id="new-function-2">New Function</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2383,7 +2381,7 @@ hashicorp 的 LRU 基於 <code>hashicorp/golang-lru/simplelru</code> 封裝成�
 </span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// NewLRUExpireCache creates an expiring cache with the given size
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// NewLRUExpireCache creates an expiring cache with the given size
 </span><span class="c1"></span><span class="kd">func</span> <span class="nf">NewLRUExpireCache</span><span class="p">(</span><span class="nx">maxSize</span> <span class="kt">int</span><span class="p">)</span> <span class="o">*</span><span class="nx">LRUExpireCache</span> <span class="p">{</span>
     <span class="c1">//套入 kubernetes 的 real clock ，有機會再來看 clock ，這裡就當作他是 times就好了
 </span><span class="c1"></span>	<span class="k">return</span> <span class="nf">NewLRUExpireCacheWithClock</span><span class="p">(</span><span class="nx">maxSize</span><span class="p">,</span> <span class="nx">realClock</span><span class="p">{})</span>
@@ -2404,14 +2402,14 @@ hashicorp 的 LRU 基於 <code>hashicorp/golang-lru/simplelru</code> 封裝成�
 <h3 id="add-1">Add</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">LRUExpireCache</span><span class="p">)</span> <span class="nf">Add</span><span class="p">(</span><span class="nx">key</span> <span class="kd">interface</span><span class="p">{},</span> <span class="nx">value</span> <span class="kd">interface</span><span class="p">{},</span> <span class="nx">ttl</span> <span class="nx">time</span><span class="p">.</span><span class="nx">Duration</span><span class="p">)</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">LRUExpireCache</span><span class="p">)</span> <span class="nf">Add</span><span class="p">(</span><span class="nx">key</span> <span class="kd">interface</span><span class="p">{},</span> <span class="nx">value</span> <span class="kd">interface</span><span class="p">{},</span> <span class="nx">ttl</span> <span class="nx">time</span><span class="p">.</span><span class="nx">Duration</span><span class="p">)</span> <span class="p">{</span>
 	<span class="nx">c</span><span class="p">.</span><span class="nx">lock</span><span class="p">.</span><span class="nf">Lock</span><span class="p">()</span>                                                  <span class="c1">//不重用hashicorp/golang-lru 的 lock 真難受xD
 </span><span class="c1"></span>	<span class="k">defer</span> <span class="nx">c</span><span class="p">.</span><span class="nx">lock</span><span class="p">.</span><span class="nf">Unlock</span><span class="p">()</span>
 	<span class="nx">c</span><span class="p">.</span><span class="nx">cache</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="o">&amp;</span><span class="nx">cacheEntry</span><span class="p">{</span><span class="nx">value</span><span class="p">,</span> <span class="nx">c</span><span class="p">.</span><span class="nx">clock</span><span class="p">.</span><span class="nf">Now</span><span class="p">().</span><span class="nf">Add</span><span class="p">(</span><span class="nx">ttl</span><span class="p">)})</span>   <span class="c1">//重用hashicorp/golang-lru 的 add 放入的物件多了 ttl 的過期時間。
@@ -2421,7 +2419,7 @@ hashicorp 的 LRU 基於 <code>hashicorp/golang-lru/simplelru</code> 封裝成�
 </div><h3 id="get-1">Get</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2450,7 +2448,7 @@ hashicorp 的 LRU 基於 <code>hashicorp/golang-lru/simplelru</code> 封裝成�
 </span><span class="lnt">27
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">LRUExpireCache</span><span class="p">)</span> <span class="nf">Get</span><span class="p">(</span><span class="nx">key</span> <span class="kd">interface</span><span class="p">{})</span> <span class="p">(</span><span class="kd">interface</span><span class="p">{},</span> <span class="kt">bool</span><span class="p">)</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">LRUExpireCache</span><span class="p">)</span> <span class="nf">Get</span><span class="p">(</span><span class="nx">key</span> <span class="kd">interface</span><span class="p">{})</span> <span class="p">(</span><span class="kd">interface</span><span class="p">{},</span> <span class="kt">bool</span><span class="p">)</span> <span class="p">{</span>
 	<span class="nx">c</span><span class="p">.</span><span class="nx">lock</span><span class="p">.</span><span class="nf">Lock</span><span class="p">()</span>                                        
 	<span class="k">defer</span> <span class="nx">c</span><span class="p">.</span><span class="nx">lock</span><span class="p">.</span><span class="nf">Unlock</span><span class="p">()</span>
 	<span class="nx">e</span><span class="p">,</span> <span class="nx">ok</span> <span class="o">:=</span> <span class="nx">c</span><span class="p">.</span><span class="nx">cache</span><span class="p">.</span><span class="nf">Get</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span>                    <span class="c1">//重用hashicorp/golang-lru 的 get 取得物件
@@ -2482,7 +2480,7 @@ hashicorp 的 LRU 基於 <code>hashicorp/golang-lru/simplelru</code> 封裝成�
 </div><h3 id="remove-1">Remove</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -2490,7 +2488,7 @@ hashicorp 的 LRU 基於 <code>hashicorp/golang-lru/simplelru</code> 封裝成�
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// Remove removes the specified key from the cache if it exists
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// Remove removes the specified key from the cache if it exists
 </span><span class="c1"></span><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">LRUExpireCache</span><span class="p">)</span> <span class="nf">Remove</span><span class="p">(</span><span class="nx">key</span> <span class="kd">interface</span><span class="p">{})</span> <span class="p">{</span>
 	<span class="nx">c</span><span class="p">.</span><span class="nx">lock</span><span class="p">.</span><span class="nf">Lock</span><span class="p">()</span>
 	<span class="k">defer</span> <span class="nx">c</span><span class="p">.</span><span class="nx">lock</span><span class="p">.</span><span class="nf">Unlock</span><span class="p">()</span>
@@ -2501,7 +2499,7 @@ hashicorp 的 LRU 基於 <code>hashicorp/golang-lru/simplelru</code> 封裝成�
 </div><h3 id="keys-1">Keys</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -2511,7 +2509,7 @@ hashicorp 的 LRU 基於 <code>hashicorp/golang-lru/simplelru</code> 封裝成�
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go">
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go">
 <span class="c1">// Keys returns all the keys in the cache, even if they are expired. Subsequent calls to
 </span><span class="c1">// get may return not found. It returns all keys from oldest to newest.
 </span><span class="c1"></span><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">LRUExpireCache</span><span class="p">)</span> <span class="nf">Keys</span><span class="p">()</span> <span class="p">[]</span><span class="kd">interface</span><span class="p">{}</span> <span class="p">{</span>
@@ -2965,7 +2963,7 @@ hashicorp 的 LRU 基於 <code>hashicorp/golang-lru/simplelru</code> 封裝成�
 </div>
 
 
-<script defer src="/js/swipe.min.b4b82839155519d9ca67746615a4c86ccbc1061c196fe6d8aa26e4fe22902718.js"></script>
+<script defer src="/js/swipe.min.989e074dfb92ce7f57a92c1df7027f88b53c50a54fd9ad450a673a64aa91bfa4.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
@@ -3972,7 +3970,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 
             <p class="caption">
                 
-                    ©2021, All Rights Reserved
+                    ©2022, All Rights Reserved
                 
             </p>
         

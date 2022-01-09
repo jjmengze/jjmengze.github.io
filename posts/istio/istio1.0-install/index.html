@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.efa35f4c090622130b3f4cfae6971448b5ffb61c5f0a8f21cdfd157fa712abc4.js"></script>
+<script defer src="/js/helper/fadeinout.min.1d13d3e810c3940e80cbba6216a1c76fbf42b5431fc83537ea6997863802362b.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1341,7 +1341,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Meng Learning Note">
 
-<meta name="generator" content="Hugo 0.80.0" />
+<meta name="generator" content="Hugo 0.91.2" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1380,7 +1380,7 @@
     "datePublished": "2018-08-04T17:39:26+08:00",
     "dateModified": "2018-08-04T17:39:26+08:00",
     "url" : "https://blog.jjmengze.website/posts/istio/istio1.0-install/",
-    "description": "\u003cfigure\u003e     \u003cimg src=\"/images/theme/istio.png\"/\u003e  \u003c/figure\u003e",
+    "description": "\u003cfigure\u003e\u003cimg src=\"/images/theme/istio.png\"/\u003e \u003c/figure\u003e",
     "keywords": ["servicemesh","kubernetes"],
     "mainEntityOfPage": {
       "@type": "WebPage",
@@ -1675,8 +1675,7 @@
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      <figure>
-    <img src="/images/theme/istio.png"/> 
+      <figure><img src="/images/theme/istio.png"/>
 </figure>
 
 <h2 id="istio-簡介">Istio 簡介</h2>
@@ -1719,7 +1718,7 @@
 <p>安裝 Kubernetes latest version and docker and other package dependencies:<br />
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1729,7 +1728,7 @@
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$apt</span>-get update <span class="o">&amp;&amp;</span> apt-get install -y apt-transport-https curl
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$apt</span>-get update <span class="o">&amp;&amp;</span> apt-get install -y apt-transport-https curl
 <span class="nv">$curl</span> -s https://packages.cloud.google.com/apt/doc/apt-key.gpg <span class="p">|</span> sudo -E apt-key add -
 <span class="nv">$cat</span> <span class="s">&lt;&lt;EOF &gt;/etc/apt/sources.list.d/kubernetes.list
 </span><span class="s">deb http://apt.kubernetes.io/ kubernetes-xenial main
@@ -1742,25 +1741,25 @@
 <p>Kubernetes v1.8+ 要求關閉系統 Swap，如果不想關閉系統的Swap需要修改 kubelet 設定參數，我們利用以下指令關閉系統Swap：<br />
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$swapoff</span> -a <span class="o">&amp;&amp;</span> sysctl -w vm.swappiness<span class="o">=</span><span class="m">0</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$swapoff</span> -a <span class="o">&amp;&amp;</span> sysctl -w vm.swappiness<span class="o">=</span><span class="m">0</span></code></pre></td></tr></table>
 </div>
 </div></p>
 <p>透過以下指令啟動Docker Daemon。<br />
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$systemctl</span> <span class="nb">enable</span> docker <span class="o">&amp;&amp;</span> systemctl start docker</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$systemctl</span> <span class="nb">enable</span> docker <span class="o">&amp;&amp;</span> systemctl start docker</code></pre></td></tr></table>
 </div>
 </div></p>
 <p>將橋接的IPv4流量傳遞給iptables<br />
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1768,7 +1767,7 @@
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$cat</span> <span class="s">&lt;&lt;EOF &gt; /etc/sysctl.d/k8s.conf
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$cat</span> <span class="s">&lt;&lt;EOF &gt; /etc/sysctl.d/k8s.conf
 </span><span class="s">net.ipv4.ip_forward = 1
 </span><span class="s">net.bridge.bridge-nf-call-ip6tables = 1
 </span><span class="s">net.bridge.bridge-nf-call-iptables = 1
@@ -1779,22 +1778,22 @@
 <p>在master節點上使用kubeadm進行kubernetes叢集的初始化<br />
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$sudo</span> kubeadm init --pod-network-cidr<span class="o">=</span>192.168.0.0/16</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$sudo</span> kubeadm init --pod-network-cidr<span class="o">=</span>192.168.0.0/16</code></pre></td></tr></table>
 </div>
 </div></p>
 <p>會得到下列輸出，我們利用下列輸出的資訊將其他節點加入叢集。<br />
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">You can now join any number of machines by running the following on each node
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">You can now join any number of machines by running the following on each node
 as root:
 
 kubeadm join 172.24.0.3:6443 --token i67sjb.0nvjxbldwuh342of --discovery-token-ca-cert-hash sha256:aa23e1e7a4d55d06fbdf34fa2a1c703dd7e7cfff735b0b0fe800b4335aff68b5</code></pre></td></tr></table>
@@ -1803,21 +1802,21 @@ kubeadm join 172.24.0.3:6443 --token i67sjb.0nvjxbldwuh342of --discovery-token-c
 <p>在其他節點上我們可以利用以下指令加入叢集。<br />
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubeadm</span> join 172.24.0.3:6443 --token i67sjb.0nvjxbldwuh342of --discovery-token-ca-cert-hash sha256:aa23e1e7a4d55d06fbdf34fa2a1c703dd7e7cfff735b0b0fe800b4335aff68b5</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubeadm</span> join 172.24.0.3:6443 --token i67sjb.0nvjxbldwuh342of --discovery-token-ca-cert-hash sha256:aa23e1e7a4d55d06fbdf34fa2a1c703dd7e7cfff735b0b0fe800b4335aff68b5</code></pre></td></tr></table>
 </div>
 </div></p>
 <p>在master節點設定kube config。<br />
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$mkdir</span> -p <span class="nv">$HOME</span>/.kube
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$mkdir</span> -p <span class="nv">$HOME</span>/.kube
 <span class="nv">$sudo</span> -H cp /etc/kubernetes/admin.conf <span class="nv">$HOME</span>/.kube/config
 <span class="nv">$sudo</span> -H chown <span class="k">$(</span>id -u<span class="k">)</span>:<span class="k">$(</span>id -g<span class="k">)</span> <span class="nv">$HOME</span>/.kube/config</code></pre></td></tr></table>
 </div>
@@ -1825,18 +1824,18 @@ kubeadm join 172.24.0.3:6443 --token i67sjb.0nvjxbldwuh342of --discovery-token-c
 <p>在master 安裝Kubernetes CNI，這邊採用的是Calico。<br />
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubectl</span> apply -f https://docs.projectcalico.org/v3.1/getting-started/kubernetes/installation/hosted/rbac-kdd.yaml
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubectl</span> apply -f https://docs.projectcalico.org/v3.1/getting-started/kubernetes/installation/hosted/rbac-kdd.yaml
 <span class="nv">$kubectl</span> apply -f https://docs.projectcalico.org/v3.1/getting-started/kubernetes/installation/hosted/kubernetes-datastore/calico-networking/1.7/calico.yaml</code></pre></td></tr></table>
 </div>
 </div></p>
 <p>等所有的pod都完成，在master上操作kubectl指令即可看到所有node呈現ready的狀態<br />
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1857,7 +1856,7 @@ kubeadm join 172.24.0.3:6443 --token i67sjb.0nvjxbldwuh342of --discovery-token-c
 </span><span class="lnt">19
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubectl</span> get pod -n kube-system
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubectl</span> get pod -n kube-system
 NAME                             READY     STATUS    RESTARTS   AGE
 calico-node-cgtxh                2/2       Running   <span class="m">0</span>          1m
 calico-node-qjrbm                2/2       Running   <span class="m">0</span>          1m
@@ -1881,12 +1880,12 @@ node-2    Ready     &lt;none&gt;    2m        v1.11.1</code></pre></td></tr></ta
 <p>在master節點上，下載並且安裝helm<br />
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$wget</span> https://storage.googleapis.com/kubernetes-helm/helm-v2.9.1-linux-amd64.tar.gz
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$wget</span> https://storage.googleapis.com/kubernetes-helm/helm-v2.9.1-linux-amd64.tar.gz
 <span class="nv">$tar</span> zxvf helm-v2.9.1-linux-amd64.tar.gz
 <span class="nv">$mv</span> linux-amd64/helm /usr/bin</code></pre></td></tr></table>
 </div>
@@ -1894,7 +1893,7 @@ node-2    Ready     &lt;none&gt;    2m        v1.11.1</code></pre></td></tr></ta
 <p>為kubernetes Helm 建立Tiller Service Account以及綁定Cluster-Admin Role，最後在初始化helm 。<br />
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1929,7 +1928,7 @@ node-2    Ready     &lt;none&gt;    2m        v1.11.1</code></pre></td></tr></ta
 </span><span class="lnt">33
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubectl</span> create serviceaccount tiller --namespace kube-system
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubectl</span> create serviceaccount tiller --namespace kube-system
 <span class="nv">$cat</span> <span class="s">&lt;&lt;EOF | kubectl create -f -
 </span><span class="s">kind: ClusterRoleBinding
 </span><span class="s">apiVersion: rbac.authorization.k8s.io/v1beta1
@@ -1967,7 +1966,7 @@ Happy Helming!</code></pre></td></tr></table>
 完後成後可透過kubectl指令確認<br />
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1975,7 +1974,7 @@ Happy Helming!</code></pre></td></tr></table>
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubectl</span> get pod,svc  -l <span class="nv">app</span><span class="o">=</span>helm -n kube-system
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubectl</span> get pod,svc  -l <span class="nv">app</span><span class="o">=</span>helm -n kube-system
 NAME                                READY     STATUS    RESTARTS   AGE
 pod/tiller-deploy-759cb9df9-b7n7j   1/1       Running   <span class="m">0</span>          4m
 
@@ -1987,12 +1986,12 @@ service/tiller-deploy   ClusterIP   10.107.71.110   &lt;none&gt;        44134/TC
 <p>透過官方提供的腳本，下載Istio並安裝istioctl binary<br />
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$curl</span> -L https://git.io/getLatestIstio <span class="p">|</span> sh -
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$curl</span> -L https://git.io/getLatestIstio <span class="p">|</span> sh -
 <span class="nv">$cd</span> istio-1.0.0/
 <span class="nv">$cp</span> bin/istioctl /usr/bin/</code></pre></td></tr></table>
 </div>
@@ -2000,18 +1999,18 @@ service/tiller-deploy   ClusterIP   10.107.71.110   &lt;none&gt;        44134/TC
 <p>在helm version 2.10.0以前的版本Istio還是需要手安裝Istio CRD<br />
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubectl</span> apply -f install/kubernetes/helm/istio/templates/crds.yaml
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubectl</span> apply -f install/kubernetes/helm/istio/templates/crds.yaml
 <span class="nv">$kubectl</span> apply -f install/kubernetes/helm/istio/charts/certmanager/templates/crds.yaml</code></pre></td></tr></table>
 </div>
 </div></p>
 <p>透過kubectl指令檢查Istio是否安裝成功<br />
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2059,7 +2058,7 @@ service/tiller-deploy   ClusterIP   10.107.71.110   &lt;none&gt;        44134/TC
 </span><span class="lnt">46
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubectl</span> get pod -n istio-system
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubectl</span> get pod -n istio-system
 NAME                                        READY     STATUS    RESTARTS   AGE
 istio-citadel-7d8f9748c5-zd4vb              1/1       Running   <span class="m">0</span>          4m
 istio-egressgateway-676c8546c5-fq55b        1/1       Running   <span class="m">0</span>          4m
@@ -2111,7 +2110,7 @@ prometheus                 ClusterIP   10.104.3.226     &lt;none&gt;        9090
 <p>這邊示範Istio官方提供的範例：Bookinfo Application<br />
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2124,7 +2123,7 @@ prometheus                 ClusterIP   10.104.3.226     &lt;none&gt;        9090
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubectl</span> apply -f &lt;<span class="o">(</span>istioctl kube-inject -f samples/bookinfo/platform/kube/bookinfo.yaml<span class="o">)</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubectl</span> apply -f &lt;<span class="o">(</span>istioctl kube-inject -f samples/bookinfo/platform/kube/bookinfo.yaml<span class="o">)</span>
 service/details created
 deployment.extensions/details-v1 created
 service/ratings created
@@ -2140,7 +2139,7 @@ deployment.extensions/productpage-v1 created</code></pre></td></tr></table>
 <p>透過kubectl指令確認安裝的pod及service<br />
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2157,7 +2156,7 @@ deployment.extensions/productpage-v1 created</code></pre></td></tr></table>
 </span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubectl</span> get pod
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubectl</span> get pod
 NAME                              READY     STATUS    RESTARTS   AGE
 details-v1-fc9649d9c-tqbcn        2/2       Running   <span class="m">0</span>          1m
 productpage-v1-58845c779c-2lqxg   2/2       Running   <span class="m">0</span>          27m
@@ -2177,16 +2176,15 @@ reviews       ClusterIP   10.103.199.76    &lt;none&gt;        9080/TCP   1m</co
 <p>建立一個Gateway讓叢及外部可以存取<br />
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubectl</span> apply -f samples/bookinfo/networking/bookinfo-gateway.yaml</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubectl</span> apply -f samples/bookinfo/networking/bookinfo-gateway.yaml</code></pre></td></tr></table>
 </div>
 </div></p>
 <p>接著我們透過瀏覽器去存取我們服務，在網址的地方輸入<code>http://&lt;node or master ip&gt;:31380/productpage</code>，網頁會顯下圖的網站內容。<br />
-<figure>
-    <img src="/images/post/istio-bookinfo.png"
-         alt="Bookinfo Application 網頁服務"/> <figcaption>
+<figure><img src="/images/post/istio-bookinfo.png"
+         alt="Bookinfo Application 網頁服務"/><figcaption>
             <p>Bookinfo Application 網頁服務</p>
         </figcaption>
 </figure>
@@ -2195,10 +2193,10 @@ reviews       ClusterIP   10.103.199.76    &lt;none&gt;        9080/TCP   1m</co
 <p>設定destination rule，此時還是輪詢法<br />
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubectl</span> apply -f samples/bookinfo/networking/destination-rule-all.yaml</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubectl</span> apply -f samples/bookinfo/networking/destination-rule-all.yaml</code></pre></td></tr></table>
 </div>
 </div></p>
 <h2 id="intelligent-routing">Intelligent Routing</h2>
@@ -2206,14 +2204,14 @@ reviews       ClusterIP   10.103.199.76    &lt;none&gt;        9080/TCP   1m</co
 <h2 id="依照版本進行路由管理">依照版本進行路由管理</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubectl</span> apply -f samples/bookinfo/networking/virtual-service-all-v1.yaml
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubectl</span> apply -f samples/bookinfo/networking/virtual-service-all-v1.yaml
 virtualservice.networking.istio.io/productpage created
 virtualservice.networking.istio.io/reviews created
 virtualservice.networking.istio.io/ratings created
@@ -2224,11 +2222,11 @@ virtualservice.networking.istio.io/details created</code></pre></td></tr></table
 <h2 id="依照用戶進行路由管理">依照用戶進行路由管理</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubectl</span> apply -f samples/bookinfo/networking/virtual-service-reviews-test-v2.yaml
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubectl</span> apply -f samples/bookinfo/networking/virtual-service-reviews-test-v2.yaml
 virtualservice.networking.istio.io/reviews create</code></pre></td></tr></table>
 </div>
 </div>
@@ -2241,27 +2239,26 @@ virtualservice.networking.istio.io/reviews create</code></pre></td></tr></table>
 <p>剛剛的路由規則，如果已經被您刪除掉。請再利用以下指令加回他的路由規則。<br />
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubectl</span> apply -f samples/bookinfo/networking/virtual-service-all-v1.yaml
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubectl</span> apply -f samples/bookinfo/networking/virtual-service-all-v1.yaml
 <span class="nv">$kubectl</span> apply -f samples/bookinfo/networking/virtual-service-reviews-test-v2.yaml</code></pre></td></tr></table>
 </div>
 </div></p>
 <p>使用以下指令注入一個http delay ，該指令在reviews:v2和ratings以及用戶jason之間注入七秒http delay<br />
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubectl</span> apply -f samples/bookinfo/networking/virtual-service-ratings-test-delay.yaml</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubectl</span> apply -f samples/bookinfo/networking/virtual-service-ratings-test-delay.yaml</code></pre></td></tr></table>
 </div>
 </div></p>
 <p>這時我們去存取網頁會拋出一個異常的錯誤，因為我們把服務與服務之間的存取的時間拉長，我們可以透過注入錯誤的方式發現一個存取延遲的bug。</p>
-<figure>
-    <img src="/images/post/istio-bookinfo-fault-inject.png"
-         alt="注入延遲後的Bookinfo Application網頁服務"/> <figcaption>
+<figure><img src="/images/post/istio-bookinfo-fault-inject.png"
+         alt="注入延遲後的Bookinfo Application網頁服務"/><figcaption>
             <p>注入延遲後的Bookinfo Application網頁服務</p>
         </figcaption>
 </figure>
@@ -2711,7 +2708,7 @@ virtualservice.networking.istio.io/reviews create</code></pre></td></tr></table>
 </div>
 
 
-<script defer src="/js/swipe.min.b4b82839155519d9ca67746615a4c86ccbc1061c196fe6d8aa26e4fe22902718.js"></script>
+<script defer src="/js/swipe.min.989e074dfb92ce7f57a92c1df7027f88b53c50a54fd9ad450a673a64aa91bfa4.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
@@ -3718,7 +3715,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 
             <p class="caption">
                 
-                    ©2021, All Rights Reserved
+                    ©2022, All Rights Reserved
                 
             </p>
         

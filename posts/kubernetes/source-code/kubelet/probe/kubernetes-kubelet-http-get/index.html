@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.efa35f4c090622130b3f4cfae6971448b5ffb61c5f0a8f21cdfd157fa712abc4.js"></script>
+<script defer src="/js/helper/fadeinout.min.1d13d3e810c3940e80cbba6216a1c76fbf42b5431fc83537ea6997863802362b.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1341,7 +1341,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Meng Learning Note">
 
-<meta name="generator" content="Hugo 0.80.0" />
+<meta name="generator" content="Hugo 0.91.2" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1380,7 +1380,7 @@
     "datePublished": "2021-05-25T10:29:32+08:00",
     "dateModified": "2021-05-25T10:29:32+08:00",
     "url" : "https://blog.jjmengze.website/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-http-get/",
-    "description": "\u003cfigure\u003e     \u003cimg src=\"/images/theme/kubernetes-kubelet-liveness.png\"/\u003e  \u003c/figure\u003e",
+    "description": "\u003cfigure\u003e\u003cimg src=\"/images/theme/kubernetes-kubelet-liveness.png\"/\u003e \u003c/figure\u003e",
     "keywords": ["kubernetes","source-code"],
     "mainEntityOfPage": {
       "@type": "WebPage",
@@ -1675,8 +1675,7 @@
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      <figure>
-    <img src="/images/theme/kubernetes-kubelet-liveness.png"/> 
+      <figure><img src="/images/theme/kubernetes-kubelet-liveness.png"/>
 </figure>
 
 <p>首先本文所有的 source code 基於 kubernetes 1.19 版本，所有 source code 為了版面的整潔會精簡掉部分 log 相關的程式碼，僅保留核心邏輯，如果有見解錯誤的地方，還麻煩觀看本文的大大們提出，感謝！</p>
@@ -1693,7 +1692,7 @@
 <p><a href="pkg/kubelet/prober/prober.go">source code</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1750,7 +1749,7 @@
 </span><span class="lnt">55
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// probe probes the container.
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// probe probes the container.
 </span><span class="c1"></span><span class="kd">func</span> <span class="p">(</span><span class="nx">pb</span> <span class="o">*</span><span class="nx">prober</span><span class="p">)</span> <span class="nf">probe</span><span class="p">(</span><span class="nx">probeType</span> <span class="nx">probeType</span><span class="p">,</span> <span class="nx">pod</span> <span class="o">*</span><span class="nx">v1</span><span class="p">.</span><span class="nx">Pod</span><span class="p">,</span> <span class="nx">status</span> <span class="nx">v1</span><span class="p">.</span><span class="nx">PodStatus</span><span class="p">,</span> <span class="nx">container</span> <span class="nx">v1</span><span class="p">.</span><span class="nx">Container</span><span class="p">,</span> <span class="nx">containerID</span> <span class="nx">kubecontainer</span><span class="p">.</span><span class="nx">ContainerID</span><span class="p">)</span> <span class="p">(</span><span class="nx">results</span><span class="p">.</span><span class="nx">Result</span><span class="p">,</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{</span>
 	<span class="kd">var</span> <span class="nx">probeSpec</span> <span class="o">*</span><span class="nx">v1</span><span class="p">.</span><span class="nx">Probe</span>
 	<span class="c1">//首先判斷這次要執行探真的是哪一種類別，分別有readiness、liveness、startup
@@ -1811,7 +1810,7 @@
 <a href="pkg/kubelet/prober/prober.go">source code</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1834,7 +1833,7 @@
 </span><span class="lnt">21
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// runProbeWithRetries tries to probe the container in a finite loop, it returns the last result
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// runProbeWithRetries tries to probe the container in a finite loop, it returns the last result
 </span><span class="c1">// if it never succeeds.
 </span><span class="c1"></span><span class="kd">func</span> <span class="p">(</span><span class="nx">pb</span> <span class="o">*</span><span class="nx">prober</span><span class="p">)</span> <span class="nf">runProbeWithRetries</span><span class="p">(</span><span class="nx">probeType</span> <span class="nx">probeType</span><span class="p">,</span> <span class="nx">p</span> <span class="o">*</span><span class="nx">v1</span><span class="p">.</span><span class="nx">Probe</span><span class="p">,</span> <span class="nx">pod</span> <span class="o">*</span><span class="nx">v1</span><span class="p">.</span><span class="nx">Pod</span><span class="p">,</span> <span class="nx">status</span> <span class="nx">v1</span><span class="p">.</span><span class="nx">PodStatus</span><span class="p">,</span> <span class="nx">container</span> <span class="nx">v1</span><span class="p">.</span><span class="nx">Container</span><span class="p">,</span> <span class="nx">containerID</span> <span class="nx">kubecontainer</span><span class="p">.</span><span class="nx">ContainerID</span><span class="p">,</span> <span class="nx">retries</span> <span class="kt">int</span><span class="p">)</span> <span class="p">(</span><span class="nx">probe</span><span class="p">.</span><span class="nx">Result</span><span class="p">,</span> <span class="kt">string</span><span class="p">,</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{</span>
 	<span class="c1">//探針錯誤訊息
@@ -1861,7 +1860,7 @@
 <a href="pkg/kubelet/prober/prober.go">source code</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1955,7 +1954,7 @@
 </span><span class="lnt">92
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">pb</span> <span class="o">*</span><span class="nx">prober</span><span class="p">)</span> <span class="nf">runProbe</span><span class="p">(</span><span class="nx">probeType</span> <span class="nx">probeType</span><span class="p">,</span> <span class="nx">p</span> <span class="o">*</span><span class="nx">v1</span><span class="p">.</span><span class="nx">Probe</span><span class="p">,</span> <span class="nx">pod</span> <span class="o">*</span><span class="nx">v1</span><span class="p">.</span><span class="nx">Pod</span><span class="p">,</span> <span class="nx">status</span> <span class="nx">v1</span><span class="p">.</span><span class="nx">PodStatus</span><span class="p">,</span> <span class="nx">container</span> <span class="nx">v1</span><span class="p">.</span><span class="nx">Container</span><span class="p">,</span> <span class="nx">containerID</span> <span class="nx">kubecontainer</span><span class="p">.</span><span class="nx">ContainerID</span><span class="p">)</span> <span class="p">(</span><span class="nx">probe</span><span class="p">.</span><span class="nx">Result</span><span class="p">,</span> <span class="kt">string</span><span class="p">,</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">pb</span> <span class="o">*</span><span class="nx">prober</span><span class="p">)</span> <span class="nf">runProbe</span><span class="p">(</span><span class="nx">probeType</span> <span class="nx">probeType</span><span class="p">,</span> <span class="nx">p</span> <span class="o">*</span><span class="nx">v1</span><span class="p">.</span><span class="nx">Probe</span><span class="p">,</span> <span class="nx">pod</span> <span class="o">*</span><span class="nx">v1</span><span class="p">.</span><span class="nx">Pod</span><span class="p">,</span> <span class="nx">status</span> <span class="nx">v1</span><span class="p">.</span><span class="nx">PodStatus</span><span class="p">,</span> <span class="nx">container</span> <span class="nx">v1</span><span class="p">.</span><span class="nx">Container</span><span class="p">,</span> <span class="nx">containerID</span> <span class="nx">kubecontainer</span><span class="p">.</span><span class="nx">ContainerID</span><span class="p">)</span> <span class="p">(</span><span class="nx">probe</span><span class="p">.</span><span class="nx">Result</span><span class="p">,</span> <span class="kt">string</span><span class="p">,</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{</span>
 	<span class="c1">//設定太測多久會 timeout
 </span><span class="c1"></span>	<span class="nx">timeout</span> <span class="o">:=</span> <span class="nx">time</span><span class="p">.</span><span class="nf">Duration</span><span class="p">(</span><span class="nx">p</span><span class="p">.</span><span class="nx">TimeoutSeconds</span><span class="p">)</span> <span class="o">*</span> <span class="nx">time</span><span class="p">.</span><span class="nx">Second</span>
     
@@ -2053,7 +2052,7 @@
 <a href="pkg/kubelet/prober/prober.go">source code</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2142,7 +2141,7 @@
 </span><span class="lnt">87
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">//仔細觀察參數的話，第一個輸入的 param 型態為 intstr.IntOrString，這個型態是什麼東西呢？
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">//仔細觀察參數的話，第一個輸入的 param 型態為 intstr.IntOrString，這個型態是什麼東西呢？
 </span><span class="c1">//依照文件的註解為IntOrString是可以含有 int32 或  string 的類型。在 JSON / YAML marshalling and unmarshalling 時使用，簡單來說使用者可以傳入 string 或是 int 的型態進來。
 </span><span class="c1"></span><span class="kd">func</span> <span class="nf">extractPort</span><span class="p">(</span><span class="nx">param</span> <span class="nx">intstr</span><span class="p">.</span><span class="nx">IntOrString</span><span class="p">,</span> <span class="nx">container</span> <span class="nx">v1</span><span class="p">.</span><span class="nx">Container</span><span class="p">)</span> <span class="p">(</span><span class="kt">int</span><span class="p">,</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{</span>
 	<span class="nx">port</span> <span class="o">:=</span> <span class="o">-</span><span class="mi">1</span>
@@ -2237,7 +2236,7 @@
 範例是擷取自 kubernetes 官方網站，撰寫一個 yaml 檔送給 kubernetes 告訴 kubernetes 幫忙啟動一個 pod 並且建立一個 livenessProbe ， livenessProbe 會透過 http get 方法去判斷 pod:8080/healthz 並且 header 加上 http header key:Custom-Header value:Awesome。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2261,7 +2260,7 @@
 </span><span class="lnt">22
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">v1</span><span class="w">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">v1</span><span class="w">
 </span><span class="w"></span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">Pod</span><span class="w">
 </span><span class="w"></span><span class="nt">metadata</span><span class="p">:</span><span class="w">
 </span><span class="w">  </span><span class="nt">labels</span><span class="p">:</span><span class="w">
@@ -2288,7 +2287,7 @@
 </div><p>我們就以這個範例 kubelet livenessProbe 的 httpGet 底層是如何實現的吧，先從觸發點來看</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2306,7 +2305,7 @@
 </span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">pb</span> <span class="o">*</span><span class="nx">prober</span><span class="p">)</span> <span class="nf">runProbe</span><span class="p">(</span><span class="nx">probeType</span> <span class="nx">probeType</span><span class="p">,</span> <span class="nx">p</span> <span class="o">*</span><span class="nx">v1</span><span class="p">.</span><span class="nx">Probe</span><span class="p">,</span> <span class="nx">pod</span> <span class="o">*</span><span class="nx">v1</span><span class="p">.</span><span class="nx">Pod</span><span class="p">,</span> <span class="nx">status</span> <span class="nx">v1</span><span class="p">.</span><span class="nx">PodStatus</span><span class="p">,</span> <span class="nx">container</span> <span class="nx">v1</span><span class="p">.</span><span class="nx">Container</span><span class="p">,</span> <span class="nx">containerID</span> <span class="nx">kubecontainer</span><span class="p">.</span><span class="nx">ContainerID</span><span class="p">)</span> <span class="p">(</span><span class="nx">probe</span><span class="p">.</span><span class="nx">Result</span><span class="p">,</span> <span class="kt">string</span><span class="p">,</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">pb</span> <span class="o">*</span><span class="nx">prober</span><span class="p">)</span> <span class="nf">runProbe</span><span class="p">(</span><span class="nx">probeType</span> <span class="nx">probeType</span><span class="p">,</span> <span class="nx">p</span> <span class="o">*</span><span class="nx">v1</span><span class="p">.</span><span class="nx">Probe</span><span class="p">,</span> <span class="nx">pod</span> <span class="o">*</span><span class="nx">v1</span><span class="p">.</span><span class="nx">Pod</span><span class="p">,</span> <span class="nx">status</span> <span class="nx">v1</span><span class="p">.</span><span class="nx">PodStatus</span><span class="p">,</span> <span class="nx">container</span> <span class="nx">v1</span><span class="p">.</span><span class="nx">Container</span><span class="p">,</span> <span class="nx">containerID</span> <span class="nx">kubecontainer</span><span class="p">.</span><span class="nx">ContainerID</span><span class="p">)</span> <span class="p">(</span><span class="nx">probe</span><span class="p">.</span><span class="nx">Result</span><span class="p">,</span> <span class="kt">string</span><span class="p">,</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{</span>
 <span class="o">...</span>
 	<span class="c1">//如果 pod 有設定 HTTPGet 的話，就會透過 pb.HTTPGet.Probe 進行探測
 </span><span class="c1"></span>	<span class="k">if</span> <span class="nx">p</span><span class="p">.</span><span class="nx">HTTPGet</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
@@ -2328,7 +2327,7 @@
 <a href="pkg/probe/http/http.go">source code</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">  1
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
 </span><span class="lnt">  2
 </span><span class="lnt">  3
 </span><span class="lnt">  4
@@ -2457,7 +2456,7 @@
 </span><span class="lnt">127
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// Probe returns a ProbeRunner capable of running an HTTP check.
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// Probe returns a ProbeRunner capable of running an HTTP check.
 </span><span class="c1"></span><span class="kd">func</span> <span class="p">(</span><span class="nx">pr</span> <span class="nx">httpProber</span><span class="p">)</span> <span class="nf">Probe</span><span class="p">(</span><span class="nx">url</span> <span class="o">*</span><span class="nx">url</span><span class="p">.</span><span class="nx">URL</span><span class="p">,</span> <span class="nx">headers</span> <span class="nx">http</span><span class="p">.</span><span class="nx">Header</span><span class="p">,</span> <span class="nx">timeout</span> <span class="nx">time</span><span class="p">.</span><span class="nx">Duration</span><span class="p">)</span> <span class="p">(</span><span class="nx">probe</span><span class="p">.</span><span class="nx">Result</span><span class="p">,</span> <span class="kt">string</span><span class="p">,</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{</span>
 	<span class="c1">//會從外部帶入要 prob 的 url 物件， header timeout 等參數。
 </span><span class="c1"></span>    
@@ -3032,7 +3031,7 @@
 </div>
 
 
-<script defer src="/js/swipe.min.b4b82839155519d9ca67746615a4c86ccbc1061c196fe6d8aa26e4fe22902718.js"></script>
+<script defer src="/js/swipe.min.989e074dfb92ce7f57a92c1df7027f88b53c50a54fd9ad450a673a64aa91bfa4.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
@@ -4039,7 +4038,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 
             <p class="caption">
                 
-                    ©2021, All Rights Reserved
+                    ©2022, All Rights Reserved
                 
             </p>
         

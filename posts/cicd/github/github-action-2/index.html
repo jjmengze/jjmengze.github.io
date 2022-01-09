@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.efa35f4c090622130b3f4cfae6971448b5ffb61c5f0a8f21cdfd157fa712abc4.js"></script>
+<script defer src="/js/helper/fadeinout.min.1d13d3e810c3940e80cbba6216a1c76fbf42b5431fc83537ea6997863802362b.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1339,7 +1339,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Meng Learning Note">
 
-<meta name="generator" content="Hugo 0.80.0" />
+<meta name="generator" content="Hugo 0.91.2" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1378,7 +1378,7 @@
     "datePublished": "2020-06-02T14:17:22+08:00",
     "dateModified": "2020-06-02T14:17:22+08:00",
     "url" : "https://blog.jjmengze.website/posts/cicd/github/github-action-2/",
-    "description": "\u003cfigure\u003e     \u003cimg src=\"/images/theme/github-action-heroku.png\"/\u003e  \u003c/figure\u003e",
+    "description": "\u003cfigure\u003e\u003cimg src=\"/images/theme/github-action-heroku.png\"/\u003e \u003c/figure\u003e",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://blog.jjmengze.website/"
@@ -1666,8 +1666,7 @@
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      <figure>
-    <img src="/images/theme/github-action-heroku.png"/> 
+      <figure><img src="/images/theme/github-action-heroku.png"/>
 </figure>
 
 <p>前面有一篇文章，在描述 Github Action 做 CI/CD 的好處，對於 Github Action 還不太了解的朋友可以參考<a href="https://blog.jjmengze.website/post/cicd/github-action-1/"> Github Action 起步走第一式</a>了解一下最基礎的東西怎麼用吧～</p>
@@ -1675,19 +1674,17 @@
 <p>這篇文章主要是一個小範例，我們可以在 Github Action 中嵌入一個 Job 讓服務部署到 Heroku上～</p>
 <h2 id="申請-heroku-帳號">申請 Heroku 帳號</h2>
 <p>首先我們要去申請 <a href="https://signup.heroku.com/">Heroku 帳號 </a>，這邊非常簡單把他打米字號的欄位填一填寫一寫就沒問題了～</p>
-<figure>
-    <img src="/images/post/github-action-heroku-1.png"/> 
+<figure><img src="/images/post/github-action-heroku-1.png"/>
 </figure>
 
 <hr />
 <p>完成這個完成這個申請帳號的步驟之後，接著開一個 Heroku 的應用程式，透過介面上的 New 的 Create new app 建立一個應用程式，需要注意的是App name 只能用小寫的英文，而且是沒有被使用過的，基本上這樣就完成了跟在 Github 上建立一個 Repository 一樣簡單。</p>
-<figure>
-    <img src="/images/post/github-action-heroku-2.png"/> 
+<figure><img src="/images/post/github-action-heroku-2.png"/>
 </figure>
 
 <h2 id="安裝-heroku-cli">安裝 Heroku CLI</h2>
 <p>安裝 Heroku CLI 這個部分也相當的簡單安裝過程可以參考<a href="https://devcenter.heroku.com/articles/heroku-cli">官方的教學</a>，我這邊以 MACOS 作為示範有其他作業系統需求的請麻煩請參考官網囉～</p>
-<pre><code class="language-bash=" data-lang="bash=">brew tap heroku/brew &amp;&amp; brew install heroku
+<pre tabindex="0"><code class="language-bash=" data-lang="bash=">brew tap heroku/brew &amp;&amp; brew install heroku
 
 Updating Homebrew...
 ==&gt; Auto-updated Homebrew!
@@ -1702,7 +1699,7 @@ Updated 3 taps (homebrew/core, homebrew/cask and homebrew/cask-fonts).
 </code></pre><p>測試一下 Heroku CLI 是不是已經裝好了</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1757,7 +1754,7 @@ Updated 3 taps (homebrew/core, homebrew/cask and homebrew/cask-fonts).
 </span><span class="lnt">53
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">heroku
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">heroku
 
 CLI to interact with Heroku
 
@@ -1816,7 +1813,7 @@ COMMANDS
 <p>這邊以一個簡單的 go server 作為範例，程式碼如下所示。當我們對這個 server 發起請求他會回應你 現在 server 是使用哪一個 port 跟你做溝通。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1835,7 +1832,7 @@ COMMANDS
 </span><span class="lnt">17
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
 
 <span class="kn">import</span> <span class="p">(</span>
 	<span class="s">&#34;net/http&#34;</span>
@@ -1857,7 +1854,7 @@ COMMANDS
 </div><p>透過 Heroku CLI 登入 Heroku ，驗證完身份後，就能夠透過 Git 把source code 推到 Heroku 上囉～</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1865,7 +1862,7 @@ COMMANDS
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">heroku login
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">heroku login
 
 heroku: Press any key to open up the browser to login or q to exit:
 Opening browser to https://cli-auth.heroku.com/auth/cli/browser/5e83cd9d-51cc-4676-b0be-d240a1f5c480
@@ -1874,19 +1871,19 @@ Logging in... <span class="k">done</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>接著設定 heroku git 把git remote url 設定好</p>
-<pre><code class="language-bash=" data-lang="bash=">heroku git:remote -a example-githubaction
+<pre tabindex="0"><code class="language-bash=" data-lang="bash=">heroku git:remote -a example-githubaction
 set git remote heroku to https://git.heroku.com/example-githubaction.git
 </code></pre><p>先看看 Heroku 有沒有加到 git remote url</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">git remote -v
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">git remote -v
 heroku	https://git.heroku.com/example-githubaction.git <span class="o">(</span>fetch<span class="o">)</span>
 heroku	https://git.heroku.com/example-githubaction.git <span class="o">(</span>push<span class="o">)</span>
 origin	https://github.com/jjmengze/heroku-go.git <span class="o">(</span>fetch<span class="o">)</span>
@@ -1896,7 +1893,7 @@ origin	https://github.com/jjmengze/heroku-go.git <span class="o">(</span>push<sp
 </div><p>最後透過git push 指令將source code上傳到 Heroku</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1918,7 +1915,7 @@ origin	https://github.com/jjmengze/heroku-go.git <span class="o">(</span>push<sp
 </span><span class="lnt">20
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">git push heroku master
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">git push heroku master
 Enumerating objects: 10, <span class="k">done</span>.
 Counting objects: 100% <span class="o">(</span>10/10<span class="o">)</span>, <span class="k">done</span>.
 Delta compression using up to <span class="m">8</span> threads
@@ -1941,23 +1938,21 @@ To https://git.heroku.com/example-githubaction.git
 </code></pre></td></tr></table>
 </div>
 </div><p>完成後回到之前在 Heroku 上建立的應用程式，並且在上方的選項點選 Settings<br />
-<figure>
-    <img src="/images/post/github-action-3.png"/> 
+<figure><img src="/images/post/github-action-3.png"/>
 </figure>
 </p>
 <p>最下方 Heroku 會告訴你這個應用程式的 Domain ，一般來說會是 <code>https://&lt;appname&gt;.herokuapp.com/</code>，所以以本篇的例子會是 <code>https://example-githubaction.herokuapp.com/</code> 。到頁面下方檢查一下 Domain是不是這個～</p>
-<figure>
-    <img src="/images/post/github-action-4.png"/> 
+<figure><img src="/images/post/github-action-4.png"/>
 </figure>
 
 <p>可以請求一下這個 domain 看看得到的結果是什麼</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">curl https://example-githubaction.herokuapp.com/
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">curl https://example-githubaction.herokuapp.com/
 <span class="m">59048</span>
 </code></pre></td></tr></table>
 </div>
@@ -1966,15 +1961,14 @@ To https://git.heroku.com/example-githubaction.git
 <p>既然純手動 ( manually setup ) 可以完成，那我相信透過 CI/CD 自動化機制也可以完成！</p>
 <p>這邊可以到 Github Marketplace 去找找有沒有人做相關的 Action ，好的工程師第一步要學會怎麼找資料 xD</p>
 <p>這邊可以看到有不少 Action 都有在做 HeroKu 相關的部署，可以參考人家怎麼實作在試試看能不能用更簡單的方法做一個出來。</p>
-<figure>
-    <img src="/images/post/github-action-5.png"/> 
+<figure><img src="/images/post/github-action-5.png"/>
 </figure>
 
 <p>這邊我直接給出一個方案所有程式碼與內容可以參考我在 Github 的<a href="https://github.com/jjmengze/heroku-go">範例專案</a>，有興趣的可以試試看，基本上的思路是透過 Heroku 提供的 container 服務直接把 source code 包成 container 並且上傳到 heroku image registry 上，相關的部署以及詳細動作可以參考<a href="https://devcenter.heroku.com/articles/container-registry-and-runtime">官方的範例</a></p>
 <p>這邊我直接上github action 整合Heroku container image 後的 ci yaml給大家參考，大家也可以依照個做變化做成自己想要的樣子。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1994,7 +1988,7 @@ To https://git.heroku.com/example-githubaction.git
 </span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="w">  </span><span class="nt">push</span><span class="p">:</span><span class="w">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="w">  </span><span class="nt">push</span><span class="p">:</span><span class="w">
 </span><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Push</span><span class="w">
 </span><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l">ubuntu-latest</span><span class="w">
 </span><span class="w">    </span><span class="nt">steps</span><span class="p">:</span><span class="w">
@@ -2440,7 +2434,7 @@ To https://git.heroku.com/example-githubaction.git
 </div>
 
 
-<script defer src="/js/swipe.min.b4b82839155519d9ca67746615a4c86ccbc1061c196fe6d8aa26e4fe22902718.js"></script>
+<script defer src="/js/swipe.min.989e074dfb92ce7f57a92c1df7027f88b53c50a54fd9ad450a673a64aa91bfa4.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
@@ -3447,7 +3441,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 
             <p class="caption">
                 
-                    ©2021, All Rights Reserved
+                    ©2022, All Rights Reserved
                 
             </p>
         

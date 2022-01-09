@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.efa35f4c090622130b3f4cfae6971448b5ffb61c5f0a8f21cdfd157fa712abc4.js"></script>
+<script defer src="/js/helper/fadeinout.min.1d13d3e810c3940e80cbba6216a1c76fbf42b5431fc83537ea6997863802362b.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1341,7 +1341,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Meng Learning Note">
 
-<meta name="generator" content="Hugo 0.80.0" />
+<meta name="generator" content="Hugo 0.91.2" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1380,7 +1380,7 @@
     "datePublished": "2018-03-06T22:20:02+08:00",
     "dateModified": "2018-03-06T22:20:02+08:00",
     "url" : "https://blog.jjmengze.website/posts/sdn/ovs-commonly-command/",
-    "description": "\u003cfigure\u003e     \u003cimg src=\"/images/theme/ovs-cli.png\"/\u003e  \u003c/figure\u003e  \u003cp\u003e記錄一下，Open vSwitch (OVS)常用的指令。\u003c/p\u003e",
+    "description": "\u003cfigure\u003e\u003cimg src=\"/images/theme/ovs-cli.png\"/\u003e \u003c/figure\u003e  \u003cp\u003e記錄一下，Open vSwitch (OVS)常用的指令。\u003c/p\u003e",
     "keywords": ["SDN"],
     "mainEntityOfPage": {
       "@type": "WebPage",
@@ -1673,25 +1673,24 @@
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      <figure>
-    <img src="/images/theme/ovs-cli.png"/> 
+      <figure><img src="/images/theme/ovs-cli.png"/>
 </figure>
 
 <p>記錄一下，Open vSwitch (OVS)常用的指令。</p>
 <p>在ubuntu上安裝ovs</p>
-<pre><code class="language-shell=bash" data-lang="shell=bash">sudo apt install openvswitch-switch -y
+<pre tabindex="0"><code class="language-shell=bash" data-lang="shell=bash">sudo apt install openvswitch-switch -y
 </code></pre><h3 id="新增一個bridge">新增一個bridge</h3>
-<pre><code class="language-shell=bash" data-lang="shell=bash">sudo ovs-vsctl add-br br0
+<pre tabindex="0"><code class="language-shell=bash" data-lang="shell=bash">sudo ovs-vsctl add-br br0
 </code></pre><h3 id="顯示所有bridge">顯示所有bridge</h3>
-<pre><code class="language-shell=bash" data-lang="shell=bash">sudo ovs-vsctl list-br
+<pre tabindex="0"><code class="language-shell=bash" data-lang="shell=bash">sudo ovs-vsctl list-br
 </code></pre><h3 id="給某個bridge新增一個port">給某個bridge新增一個port</h3>
-<pre><code class="language-shell=bash" data-lang="shell=bash">sudo ovs-vsctl add-port br0 veth1
+<pre tabindex="0"><code class="language-shell=bash" data-lang="shell=bash">sudo ovs-vsctl add-port br0 veth1
 </code></pre><h3 id="顯示綁定到該port的bridge">顯示綁定到該port的bridge</h3>
-<pre><code class="language-shell=bash" data-lang="shell=bash">sudo ovs-vsctl port-to-br veth1
+<pre tabindex="0"><code class="language-shell=bash" data-lang="shell=bash">sudo ovs-vsctl port-to-br veth1
 </code></pre><h3 id="連接controller到ovs-br0上">連接controller到ovs br0上</h3>
-<pre><code class="language-shell=bash" data-lang="shell=bash">sudo ovs-vsctl set-controller br0 tcp:&lt;controller IP&gt;
+<pre tabindex="0"><code class="language-shell=bash" data-lang="shell=bash">sudo ovs-vsctl set-controller br0 tcp:&lt;controller IP&gt;
 </code></pre><h3 id="顯示所有的bridge連接的port以及controller">顯示所有的bridge、連接的port以及controller</h3>
-<pre><code class="language-shell=bash" data-lang="shell=bash">sudo ovs-vsctl show
+<pre tabindex="0"><code class="language-shell=bash" data-lang="shell=bash">sudo ovs-vsctl show
 </code></pre>
     </article>
     
@@ -2104,7 +2103,7 @@
 </div>
 
 
-<script defer src="/js/swipe.min.b4b82839155519d9ca67746615a4c86ccbc1061c196fe6d8aa26e4fe22902718.js"></script>
+<script defer src="/js/swipe.min.989e074dfb92ce7f57a92c1df7027f88b53c50a54fd9ad450a673a64aa91bfa4.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
@@ -3111,7 +3110,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 
             <p class="caption">
                 
-                    ©2021, All Rights Reserved
+                    ©2022, All Rights Reserved
                 
             </p>
         

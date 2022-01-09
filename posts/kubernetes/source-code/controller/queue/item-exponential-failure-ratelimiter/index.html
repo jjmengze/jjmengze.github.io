@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.efa35f4c090622130b3f4cfae6971448b5ffb61c5f0a8f21cdfd157fa712abc4.js"></script>
+<script defer src="/js/helper/fadeinout.min.1d13d3e810c3940e80cbba6216a1c76fbf42b5431fc83537ea6997863802362b.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1341,7 +1341,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Meng Learning Note">
 
-<meta name="generator" content="Hugo 0.80.0" />
+<meta name="generator" content="Hugo 0.91.2" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1380,7 +1380,7 @@
     "datePublished": "2020-12-15T12:29:32+08:00",
     "dateModified": "2020-12-15T12:29:32+08:00",
     "url" : "https://blog.jjmengze.website/posts/kubernetes/source-code/controller/queue/item-exponential-failure-ratelimiter/",
-    "description": "\u003cfigure\u003e     \u003cimg src=\"/images/theme/kubernetes-Item-Exponential-Failure-RateLimiter.jpg\"/\u003e  \u003c/figure\u003e",
+    "description": "\u003cfigure\u003e\u003cimg src=\"/images/theme/kubernetes-Item-Exponential-Failure-RateLimiter.jpg\"/\u003e \u003c/figure\u003e",
     "keywords": ["kubernetes","controller","source-code"],
     "mainEntityOfPage": {
       "@type": "WebPage",
@@ -1677,15 +1677,13 @@
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      <figure>
-    <img src="/images/theme/kubernetes-Item-Exponential-Failure-RateLimiter.jpg"/> 
+      <figure><img src="/images/theme/kubernetes-Item-Exponential-Failure-RateLimiter.jpg"/>
 </figure>
 
 <p>先本文所以 source code 基於 kubernetes 1.19 版本，所有 source code 的為了版面的整潔會精簡掉部分 log 相關的程式碼，僅保留核心邏輯，如果有見解錯誤的地方，還麻煩觀看本文的大大們提出，感謝！</p>
 <h2 id="kubernetes-work-queue">kubernetes work queue</h2>
 <p>Kubernetes controller/operator 是一個非常精彩的設計模式，在了解Kubernetes controller/operator 怎麼撰寫之前，了解kubernetes work queue的實作模式是非常重要的，下面引用了How to Create a Kubernetes Custom Controller Using client-go的 controller 架構圖可以看到在 sharedindexinformer 內有引用到這個元件，這個元件實際被定義在 kubernetes 的 client-go library 中。</p>
-<figure>
-    <img src="/images/post/kubernetes-controller-arch.png"/> 
+<figure><img src="/images/post/kubernetes-controller-arch.png"/>
 </figure>
 
 <p>圖片來源：<a href="https://itnext.io/how-to-create-a-kubernetes-custom-controller-using-client-go-f36a7a7536cc">How to Create a Kubernetes Custom Controller Using client-go</a></p>
@@ -1698,7 +1696,7 @@
 <p><a href="https://github.com/kubernetes/client-go/blob/master/util/workqueue/default_rate_limiters.go">source code</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1716,7 +1714,7 @@
 </span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">type</span> <span class="nx">RateLimiter</span> <span class="kd">interface</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">type</span> <span class="nx">RateLimiter</span> <span class="kd">interface</span> <span class="p">{</span>
 	<span class="c1">// When gets an item and gets to decide how long that item should wait
 </span><span class="c1"></span>    <span class="c1">//當一個物件放入的時候，需要回傳延遲多久（可自定義規則，等等會看到）
 </span><span class="c1"></span>	<span class="nf">When</span><span class="p">(</span><span class="nx">item</span> <span class="kd">interface</span><span class="p">{})</span> <span class="nx">time</span><span class="p">.</span><span class="nx">Duration</span>
@@ -1739,7 +1737,7 @@
 <p><a href="https://github.com/kubernetes/client-go/blob/master/util/workqueue/default_rate_limiters.go">source code</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1750,7 +1748,7 @@
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// ItemExponentialFailureRateLimiter does a simple baseDelay*2^&lt;num-failures&gt; limit
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// ItemExponentialFailureRateLimiter does a simple baseDelay*2^&lt;num-failures&gt; limit
 </span><span class="c1">// dealing with max failures and expiration are up to the caller
 </span><span class="c1"></span><span class="kd">type</span> <span class="nx">ItemExponentialFailureRateLimiter</span> <span class="kd">struct</span> <span class="p">{</span>
 	<span class="nx">failuresLock</span> <span class="nx">sync</span><span class="p">.</span><span class="nx">Mutex</span>            <span class="c1">//鎖，防止資源競爭
@@ -1766,7 +1764,7 @@
 <p><a href="https://github.com/kubernetes/client-go/blob/master/util/workqueue/rate_limiting_queue.go">source code</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1784,7 +1782,7 @@
 </span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">//不知道為什麼要設定一個空的變數
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">//不知道為什麼要設定一個空的變數
 </span><span class="c1"></span><span class="kd">var</span> <span class="nx">_</span> <span class="nx">RateLimiter</span> <span class="p">=</span> <span class="o">&amp;</span><span class="nx">ItemExponentialFailureRateLimiter</span><span class="p">{}</span>
 
 <span class="c1">//傳入基礎要等待的時間，最大等待時間，以及初始化failures map資料集
@@ -1808,7 +1806,7 @@
 <p><a href="https://github.com/kubernetes/client-go/blob/master/util/workqueue/rate_limiting_queue.go">source code</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1833,7 +1831,7 @@
 </span><span class="lnt">23
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">r</span> <span class="o">*</span><span class="nx">ItemExponentialFailureRateLimiter</span><span class="p">)</span> <span class="nf">When</span><span class="p">(</span><span class="nx">item</span> <span class="kd">interface</span><span class="p">{})</span> <span class="nx">time</span><span class="p">.</span><span class="nx">Duration</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">r</span> <span class="o">*</span><span class="nx">ItemExponentialFailureRateLimiter</span><span class="p">)</span> <span class="nf">When</span><span class="p">(</span><span class="nx">item</span> <span class="kd">interface</span><span class="p">{})</span> <span class="nx">time</span><span class="p">.</span><span class="nx">Duration</span> <span class="p">{</span>
 	<span class="nx">r</span><span class="p">.</span><span class="nx">failuresLock</span><span class="p">.</span><span class="nf">Lock</span><span class="p">()</span>                    <span class="c1">//鎖不做解釋
 </span><span class="c1"></span>	<span class="k">defer</span> <span class="nx">r</span><span class="p">.</span><span class="nx">failuresLock</span><span class="p">.</span><span class="nf">Unlock</span><span class="p">()</span>            <span class="c1">//解鎖不做解釋
 </span><span class="c1"></span>
@@ -1863,7 +1861,7 @@
 <a href="https://github.com/kubernetes/client-go/blob/master/util/workqueue/rate_limiting_queue.go">source code</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1871,7 +1869,7 @@
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">r</span> <span class="o">*</span><span class="nx">ItemExponentialFailureRateLimiter</span><span class="p">)</span> <span class="nf">NumRequeues</span><span class="p">(</span><span class="nx">item</span> <span class="kd">interface</span><span class="p">{})</span> <span class="kt">int</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">r</span> <span class="o">*</span><span class="nx">ItemExponentialFailureRateLimiter</span><span class="p">)</span> <span class="nf">NumRequeues</span><span class="p">(</span><span class="nx">item</span> <span class="kd">interface</span><span class="p">{})</span> <span class="kt">int</span> <span class="p">{</span>
 	<span class="nx">r</span><span class="p">.</span><span class="nx">failuresLock</span><span class="p">.</span><span class="nf">Lock</span><span class="p">()</span>                    <span class="c1">//鎖不做解釋
 </span><span class="c1"></span>	<span class="k">defer</span> <span class="nx">r</span><span class="p">.</span><span class="nx">failuresLock</span><span class="p">.</span><span class="nf">Unlock</span><span class="p">()</span>            <span class="c1">//解鎖不做解釋
 </span><span class="c1"></span>
@@ -1884,7 +1882,7 @@
 <a href="https://github.com/kubernetes/client-go/blob/master/util/workqueue/rate_limiting_queue.go">source code</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1892,7 +1890,7 @@
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">r</span> <span class="o">*</span><span class="nx">ItemExponentialFailureRateLimiter</span><span class="p">)</span> <span class="nf">Forget</span><span class="p">(</span><span class="nx">item</span> <span class="kd">interface</span><span class="p">{})</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">r</span> <span class="o">*</span><span class="nx">ItemExponentialFailureRateLimiter</span><span class="p">)</span> <span class="nf">Forget</span><span class="p">(</span><span class="nx">item</span> <span class="kd">interface</span><span class="p">{})</span> <span class="p">{</span>
 	<span class="nx">r</span><span class="p">.</span><span class="nx">failuresLock</span><span class="p">.</span><span class="nf">Lock</span><span class="p">()</span>                    <span class="c1">//鎖不做解釋
 </span><span class="c1"></span>	<span class="k">defer</span> <span class="nx">r</span><span class="p">.</span><span class="nx">failuresLock</span><span class="p">.</span><span class="nf">Unlock</span><span class="p">()</span>            <span class="c1">//解鎖不做解釋
 </span><span class="c1"></span>
@@ -1905,7 +1903,7 @@
 <p>上一篇有提到 <code>RateLimiter</code> 的初始化方法</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1913,7 +1911,7 @@
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nf">NewRateLimitingQueue</span><span class="p">(</span><span class="nx">rateLimiter</span> <span class="nx">RateLimiter</span><span class="p">)</span> <span class="nx">RateLimitingInterface</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nf">NewRateLimitingQueue</span><span class="p">(</span><span class="nx">rateLimiter</span> <span class="nx">RateLimiter</span><span class="p">)</span> <span class="nx">RateLimitingInterface</span> <span class="p">{</span>
 	<span class="k">return</span> <span class="o">&amp;</span><span class="nx">rateLimitingType</span><span class="p">{</span>
 		<span class="nx">DelayingInterface</span><span class="p">:</span> <span class="nf">NewDelayingQueue</span><span class="p">(),</span>        <span class="c1">//前一小節有提到過delating work queue的newfunction
 </span><span class="c1"></span>		<span class="nx">rateLimiter</span><span class="p">:</span>       <span class="nx">rateLimiter</span><span class="p">,</span>               <span class="c1">//自行實作的rateLimiter
@@ -1924,10 +1922,10 @@
 </div><p>使用者可以在傳入參數帶入實作 <code>RateLimiter</code> interface的 <code>ItemExponentialFailureRateLimiter</code> 物件</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="nf">NewRateLimitingQueue</span><span class="p">(</span><span class="nf">NewItemExponentialFailureRateLimiter</span><span class="p">(</span><span class="nx">time</span><span class="p">.</span><span class="nx">Millisecond</span><span class="p">,</span> <span class="mi">1000</span><span class="o">*</span><span class="nx">time</span><span class="p">.</span><span class="nx">Second</span><span class="p">)</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="nf">NewRateLimitingQueue</span><span class="p">(</span><span class="nf">NewItemExponentialFailureRateLimiter</span><span class="p">(</span><span class="nx">time</span><span class="p">.</span><span class="nx">Millisecond</span><span class="p">,</span> <span class="mi">1000</span><span class="o">*</span><span class="nx">time</span><span class="p">.</span><span class="nx">Second</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>表示使用者要求的 Rate Limiter queue 用了 <code>DelayingQueue</code> 與 <code>ItemExponentialFailureRateLimiter</code>。</p>
@@ -2381,7 +2379,7 @@
 </div>
 
 
-<script defer src="/js/swipe.min.b4b82839155519d9ca67746615a4c86ccbc1061c196fe6d8aa26e4fe22902718.js"></script>
+<script defer src="/js/swipe.min.989e074dfb92ce7f57a92c1df7027f88b53c50a54fd9ad450a673a64aa91bfa4.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
@@ -3388,7 +3386,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 
             <p class="caption">
                 
-                    ©2021, All Rights Reserved
+                    ©2022, All Rights Reserved
                 
             </p>
         

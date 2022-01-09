@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.efa35f4c090622130b3f4cfae6971448b5ffb61c5f0a8f21cdfd157fa712abc4.js"></script>
+<script defer src="/js/helper/fadeinout.min.1d13d3e810c3940e80cbba6216a1c76fbf42b5431fc83537ea6997863802362b.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1341,7 +1341,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Meng Learning Note">
 
-<meta name="generator" content="Hugo 0.80.0" />
+<meta name="generator" content="Hugo 0.91.2" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1380,7 +1380,7 @@
     "datePublished": "2021-03-15T10:29:32+08:00",
     "dateModified": "2021-03-15T10:29:32+08:00",
     "url" : "https://blog.jjmengze.website/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-cachebasedmanager/",
-    "description": "\u003cfigure\u003e     \u003cimg src=\"/images/theme/kubernetes-kubelet.png\"/\u003e  \u003c/figure\u003e",
+    "description": "\u003cfigure\u003e\u003cimg src=\"/images/theme/kubernetes-kubelet.png\"/\u003e \u003c/figure\u003e",
     "keywords": ["kubernetes","source-code"],
     "mainEntityOfPage": {
       "@type": "WebPage",
@@ -1675,8 +1675,7 @@
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      <figure>
-    <img src="/images/theme/kubernetes-kubelet.png"/> 
+      <figure><img src="/images/theme/kubernetes-kubelet.png"/>
 </figure>
 
 <p>首先本文所有的 source code 基於 kubernetes 1.19 版本，所有 source code 為了版面的整潔會精簡掉部分 log 相關的程式碼，僅保留核心邏輯，如果有見解錯誤的地方，還麻煩觀看本文的大大們提出，感謝！</p>
@@ -1687,7 +1686,7 @@
 <p><a href="pkg/kubelet/util/manager/cache_based_manager.go">source code</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1701,7 +1700,7 @@
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">type</span> <span class="nx">Manager</span> <span class="kd">interface</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">type</span> <span class="nx">Manager</span> <span class="kd">interface</span> <span class="p">{</span>
 	<span class="c1">// 通過 pod namespace 和 pod name 就能獲得相應的 kubernetes 物件
 </span><span class="c1"></span>	<span class="nf">GetObject</span><span class="p">(</span><span class="nx">namespace</span><span class="p">,</span> <span class="nx">name</span> <span class="kt">string</span><span class="p">)</span> <span class="p">(</span><span class="nx">runtime</span><span class="p">.</span><span class="nx">Object</span><span class="p">,</span> <span class="kt">error</span><span class="p">)</span>
 
@@ -1721,7 +1720,7 @@
 <a href="pkg/kubelet/util/manager/cache_based_manager.go">source code</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1731,7 +1730,7 @@
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go">
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go">
 <span class="kd">type</span> <span class="nx">cacheBasedManager</span> <span class="kd">struct</span> <span class="p">{</span>
 	<span class="nx">objectStore</span>          <span class="nx">Store</span>						<span class="c1">//主要用來儲存 reflector 觀測到的物件狀態
 </span><span class="c1"></span>	<span class="nx">getReferencedObjects</span> <span class="kd">func</span><span class="p">(</span><span class="o">*</span><span class="nx">v1</span><span class="p">.</span><span class="nx">Pod</span><span class="p">)</span> <span class="nx">sets</span><span class="p">.</span><span class="nx">String</span>			<span class="c1">//主要用來找到 pod 內所有關聯的欄位，例如 configmap 就有可能出現在 envform configMapKeyRef 、 envform configMapRef 或是 volumes configMap  
@@ -1747,7 +1746,7 @@
 <p><a href="pkg/kubelet/util/manager/cache_based_manager.go">source code</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1756,7 +1755,7 @@
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nf">NewCacheBasedManager</span><span class="p">(</span><span class="nx">objectStore</span> <span class="nx">Store</span><span class="p">,</span> <span class="nx">getReferencedObjects</span> <span class="kd">func</span><span class="p">(</span><span class="o">*</span><span class="nx">v1</span><span class="p">.</span><span class="nx">Pod</span><span class="p">)</span> <span class="nx">sets</span><span class="p">.</span><span class="nx">String</span><span class="p">)</span> <span class="nx">Manager</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nf">NewCacheBasedManager</span><span class="p">(</span><span class="nx">objectStore</span> <span class="nx">Store</span><span class="p">,</span> <span class="nx">getReferencedObjects</span> <span class="kd">func</span><span class="p">(</span><span class="o">*</span><span class="nx">v1</span><span class="p">.</span><span class="nx">Pod</span><span class="p">)</span> <span class="nx">sets</span><span class="p">.</span><span class="nx">String</span><span class="p">)</span> <span class="nx">Manager</span> <span class="p">{</span>
 	<span class="k">return</span> <span class="o">&amp;</span><span class="nx">cacheBasedManager</span><span class="p">{</span>
 		<span class="nx">objectStore</span><span class="p">:</span>          <span class="nx">objectStore</span><span class="p">,</span>
 		<span class="nx">getReferencedObjects</span><span class="p">:</span> <span class="nx">getReferencedObjects</span><span class="p">,</span>
@@ -1772,12 +1771,12 @@
 <a href="pkg/kubelet/util/manager/cache_based_manager.go">source code</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">cacheBasedManager</span><span class="p">)</span> <span class="nf">GetObject</span><span class="p">(</span><span class="nx">namespace</span><span class="p">,</span> <span class="nx">name</span> <span class="kt">string</span><span class="p">)</span> <span class="p">(</span><span class="nx">runtime</span><span class="p">.</span><span class="nx">Object</span><span class="p">,</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">cacheBasedManager</span><span class="p">)</span> <span class="nf">GetObject</span><span class="p">(</span><span class="nx">namespace</span><span class="p">,</span> <span class="nx">name</span> <span class="kt">string</span><span class="p">)</span> <span class="p">(</span><span class="nx">runtime</span><span class="p">.</span><span class="nx">Object</span><span class="p">,</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{</span>
 	<span class="k">return</span> <span class="nx">c</span><span class="p">.</span><span class="nx">objectStore</span><span class="p">.</span><span class="nf">Get</span><span class="p">(</span><span class="nx">namespace</span><span class="p">,</span> <span class="nx">name</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre></td></tr></table>
@@ -1789,7 +1788,7 @@
 <p><a href="pkg/kubelet/util/manager/cache_based_manager.go">source code</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1829,7 +1828,7 @@
 </span><span class="lnt">38
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">cacheBasedManager</span><span class="p">)</span> <span class="nf">RegisterPod</span><span class="p">(</span><span class="nx">pod</span> <span class="o">*</span><span class="nx">v1</span><span class="p">.</span><span class="nx">Pod</span><span class="p">)</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">cacheBasedManager</span><span class="p">)</span> <span class="nf">RegisterPod</span><span class="p">(</span><span class="nx">pod</span> <span class="o">*</span><span class="nx">v1</span><span class="p">.</span><span class="nx">Pod</span><span class="p">)</span> <span class="p">{</span>
 	<span class="c1">//當 kubernetes assign 一個 pod 到 node 上的時候
 </span><span class="c1"></span>	<span class="c1">//kubelet 會取得 pod 的相關資訊，getReferencedObjects 會將 pod spec 庖丁解牛
 </span><span class="c1"></span>	<span class="c1">//檢查裡面有沒有我們要的欄位，目前追 code 只看到 configmap 與 secret 有用到，等等看範例會比較容易理解
@@ -1874,7 +1873,7 @@
 <p><a href="pkg/kubelet/util/manager/cache_based_manager_test.go">source code</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1936,7 +1935,7 @@
 </span><span class="lnt">60
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">//這個 function 等等會用來作爲 cacheBasedManager getReferencedObjects()
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">//這個 function 等等會用來作爲 cacheBasedManager getReferencedObjects()
 </span><span class="c1">//當 cacheBasedManager 呼叫 getReferencedObjects() 時會使用這一個 function 計算 pod 內用到 secret 的地方。
 </span><span class="c1"></span><span class="kd">func</span> <span class="nf">getSecretNames</span><span class="p">(</span><span class="nx">pod</span> <span class="o">*</span><span class="nx">v1</span><span class="p">.</span><span class="nx">Pod</span><span class="p">)</span> <span class="nx">sets</span><span class="p">.</span><span class="nx">String</span> <span class="p">{</span>
 	<span class="c1">//建立一個 set 
@@ -2001,7 +2000,7 @@
 </div><p><a href="pkg/api/v1/pod/util.go">source code</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2078,7 +2077,7 @@
 </span><span class="lnt">75
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// VisitPodSecretNames invokes the visitor function with the name of every secret
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// VisitPodSecretNames invokes the visitor function with the name of every secret
 </span><span class="c1">// referenced by the pod spec. If visitor returns false, visiting is short-circuited.
 </span><span class="c1">// Transitive references (e.g. pod -&gt; pvc -&gt; pv -&gt; secret) are not visited.
 </span><span class="c1">// Returns true if visiting completed, false if visiting was short-circuited.
@@ -2161,7 +2160,7 @@
 <p><a href="pkg/kubelet/util/manager/cache_based_manager.go">source code</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2185,7 +2184,7 @@
 </span><span class="lnt">22
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">cacheBasedManager</span><span class="p">)</span> <span class="nf">UnregisterPod</span><span class="p">(</span><span class="nx">pod</span> <span class="o">*</span><span class="nx">v1</span><span class="p">.</span><span class="nx">Pod</span><span class="p">)</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">cacheBasedManager</span><span class="p">)</span> <span class="nf">UnregisterPod</span><span class="p">(</span><span class="nx">pod</span> <span class="o">*</span><span class="nx">v1</span><span class="p">.</span><span class="nx">Pod</span><span class="p">)</span> <span class="p">{</span>
 	<span class="kd">var</span> <span class="nx">prev</span> <span class="o">*</span><span class="nx">v1</span><span class="p">.</span><span class="nx">Pod</span>
 	<span class="c1">//以 pod spc 中的 namespace 與 pod name 封裝為 object key     
 </span><span class="c1"></span>	<span class="nx">key</span> <span class="o">:=</span> <span class="nx">objectKey</span><span class="p">{</span><span class="nx">namespace</span><span class="p">:</span> <span class="nx">pod</span><span class="p">.</span><span class="nx">Namespace</span><span class="p">,</span> <span class="nx">name</span><span class="p">:</span> <span class="nx">pod</span><span class="p">.</span><span class="nx">Name</span><span class="p">}</span>
@@ -2657,7 +2656,7 @@
 </div>
 
 
-<script defer src="/js/swipe.min.b4b82839155519d9ca67746615a4c86ccbc1061c196fe6d8aa26e4fe22902718.js"></script>
+<script defer src="/js/swipe.min.989e074dfb92ce7f57a92c1df7027f88b53c50a54fd9ad450a673a64aa91bfa4.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
@@ -3664,7 +3663,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 
             <p class="caption">
                 
-                    ©2021, All Rights Reserved
+                    ©2022, All Rights Reserved
                 
             </p>
         

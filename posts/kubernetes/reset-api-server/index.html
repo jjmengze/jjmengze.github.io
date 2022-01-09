@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.efa35f4c090622130b3f4cfae6971448b5ffb61c5f0a8f21cdfd157fa712abc4.js"></script>
+<script defer src="/js/helper/fadeinout.min.1d13d3e810c3940e80cbba6216a1c76fbf42b5431fc83537ea6997863802362b.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1341,7 +1341,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Meng Learning Note">
 
-<meta name="generator" content="Hugo 0.80.0" />
+<meta name="generator" content="Hugo 0.91.2" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1380,7 +1380,7 @@
     "datePublished": "2020-07-20T16:07:21+08:00",
     "dateModified": "2020-07-20T16:07:21+08:00",
     "url" : "https://blog.jjmengze.website/posts/kubernetes/reset-api-server/",
-    "description": "\u003cp\u003e\u003cfigure\u003e     \u003cimg src=\"/images/theme/reset-api-server.png\"/\u003e  \u003c/figure\u003e \u003cbr /\u003e \u003ca href=\"https://phoenixnap.com/kb/understanding-kubernetes-architecture-diagrams\"\u003e圖片來源\u003c/a\u003e\u003c/p\u003e",
+    "description": "\u003cp\u003e\u003cfigure\u003e\u003cimg src=\"/images/theme/reset-api-server.png\"/\u003e \u003c/figure\u003e \u003cbr /\u003e \u003ca href=\"https://phoenixnap.com/kb/understanding-kubernetes-architecture-diagrams\"\u003e圖片來源\u003c/a\u003e\u003c/p\u003e",
     "keywords": ["kubernetes"],
     "mainEntityOfPage": {
       "@type": "WebPage",
@@ -1673,8 +1673,7 @@
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      <p><figure>
-    <img src="/images/theme/reset-api-server.png"/> 
+      <p><figure><img src="/images/theme/reset-api-server.png"/>
 </figure>
 <br />
 <a href="https://phoenixnap.com/kb/understanding-kubernetes-architecture-diagrams">圖片來源</a></p>
@@ -1690,10 +1689,10 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">openssl genrsa -out jean.key <span class="m">2048</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">openssl genrsa -out jean.key <span class="m">2048</span>
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="create-csr">create CSR</h3>
@@ -1703,12 +1702,12 @@
 </blockquote>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">openssl req -new -key jean.key <span class="se">\
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">openssl req -new -key jean.key <span class="se">\
 </span><span class="se"></span>-out jean.csr <span class="se">\
 </span><span class="se"></span>-subj <span class="s2">&#34;/CN=jean&#34;</span>
 </code></pre></td></tr></table>
@@ -1717,14 +1716,14 @@
 <p>與 Kubernetes CA 簽署 CSR ， Kubernetes CA 通常在 <code>/etc/kubernetes/pki/</code> 間單的授權100天。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">openssl x509 -req -in jean.csr <span class="se">\
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">openssl x509 -req -in jean.csr <span class="se">\
 </span><span class="se"></span>-CA /etc/kubernetes/pki/ca.crt <span class="se">\
 </span><span class="se"></span>-CAkey /etc/kubernetes/pki/ca.key <span class="se">\
 </span><span class="se"></span>-CAcreateserial <span class="se">\
@@ -1734,11 +1733,11 @@
 </div><p>檢查一下當前資料夾的檔案，應該會有三個檔案分別是 <code>jean.crt</code> 、 <code>jean.csr</code> 、 <code>jean.key</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">ls
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">ls
 jean.crt  jean.csr  jean.key
 </code></pre></td></tr></table>
 </div>
@@ -1751,12 +1750,12 @@ jean.crt  jean.csr  jean.key
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">kubectl get node jason-test -o go-template --template<span class="o">=</span><span class="s1">&#39;{{ (index .status.addresses 0).address }}&#39;</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">kubectl get node jason-test -o go-template --template<span class="o">=</span><span class="s1">&#39;{{ (index .status.addresses 0).address }}&#39;</span>
 
 172.18.0.5
 </code></pre></td></tr></table>
@@ -1766,12 +1765,12 @@ jean.crt  jean.csr  jean.key
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">kubectl get svc kubernetes -o go-template --template<span class="o">=</span><span class="s1">&#39;{{.spec.clusterIP}}&#39;</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">kubectl get svc kubernetes -o go-template --template<span class="o">=</span><span class="s1">&#39;{{.spec.clusterIP}}&#39;</span>
 
 10.96.0.1
 </code></pre></td></tr></table>
@@ -1781,7 +1780,7 @@ jean.crt  jean.csr  jean.key
 <p>例如我們可以透過 curl 指令直接存取 Master Node IP 上的 API Server</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1798,7 +1797,7 @@ jean.crt  jean.csr  jean.key
 </span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">curl https://172.18.0.5:6443/api/v1/namespaces/default/pods/ --cacert /etc/kubernetes/pki/ca.crt --cert ./jean.crt --key ./jean.key
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">curl https://172.18.0.5:6443/api/v1/namespaces/default/pods/ --cacert /etc/kubernetes/pki/ca.crt --cert ./jean.crt --key ./jean.key
 <span class="o">{</span>
   <span class="s2">&#34;kind&#34;</span>: <span class="s2">&#34;Status&#34;</span>,
   <span class="s2">&#34;apiVersion&#34;</span>: <span class="s2">&#34;v1&#34;</span>,
@@ -1821,7 +1820,7 @@ jean.crt  jean.csr  jean.key
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1832,7 +1831,7 @@ jean.crt  jean.csr  jean.key
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">rbac.authorization.k8s.io/v1</span><span class="w">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">rbac.authorization.k8s.io/v1</span><span class="w">
 </span><span class="w"></span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">Role</span><span class="w">
 </span><span class="w"></span><span class="nt">metadata</span><span class="p">:</span><span class="w">
 </span><span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l">default</span><span class="w">
@@ -1848,7 +1847,7 @@ jean.crt  jean.csr  jean.key
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1867,7 +1866,7 @@ jean.crt  jean.csr  jean.key
 </span><span class="lnt">17
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">rbac.authorization.k8s.io/v1</span><span class="w">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">rbac.authorization.k8s.io/v1</span><span class="w">
 </span><span class="w"></span><span class="c"># This role binding allows &#34;jean&#34; to read pods in the &#34;default&#34; namespace.</span><span class="w">
 </span><span class="w"></span><span class="c"># You need to already have a Role named &#34;pod-reader&#34; in that namespace.</span><span class="w">
 </span><span class="w"></span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">RoleBinding</span><span class="w">
@@ -1891,7 +1890,7 @@ jean.crt  jean.csr  jean.key
 <p>一樣透過 curl 指令存取 Kubernetes api server ，最後透過 jq 幫忙整理輸出的內容。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1904,7 +1903,7 @@ jean.crt  jean.csr  jean.key
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">curl -s https://172.18.0.5:6443/api/v1/namespaces/default/pods/ --cacert /etc/kubernetes/pki/ca.crt --cert ./jean.crt --key ./jean.key <span class="p">|</span> jq -r <span class="s1">&#39;.items[].metadata.name&#39;</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">curl -s https://172.18.0.5:6443/api/v1/namespaces/default/pods/ --cacert /etc/kubernetes/pki/ca.crt --cert ./jean.crt --key ./jean.key <span class="p">|</span> jq -r <span class="s1">&#39;.items[].metadata.name&#39;</span>
 
 greetings-run-1598345882182-pod-c7vbz
 h2c-client
@@ -2362,7 +2361,7 @@ print-date-run-1598433322555-pod-m9lqf
 </div>
 
 
-<script defer src="/js/swipe.min.b4b82839155519d9ca67746615a4c86ccbc1061c196fe6d8aa26e4fe22902718.js"></script>
+<script defer src="/js/swipe.min.989e074dfb92ce7f57a92c1df7027f88b53c50a54fd9ad450a673a64aa91bfa4.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
@@ -3369,7 +3368,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 
             <p class="caption">
                 
-                    ©2021, All Rights Reserved
+                    ©2022, All Rights Reserved
                 
             </p>
         

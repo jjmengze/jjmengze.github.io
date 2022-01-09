@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.efa35f4c090622130b3f4cfae6971448b5ffb61c5f0a8f21cdfd157fa712abc4.js"></script>
+<script defer src="/js/helper/fadeinout.min.1d13d3e810c3940e80cbba6216a1c76fbf42b5431fc83537ea6997863802362b.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1341,7 +1341,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Meng Learning Note">
 
-<meta name="generator" content="Hugo 0.80.0" />
+<meta name="generator" content="Hugo 0.91.2" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1380,7 +1380,7 @@
     "datePublished": "2018-05-04T17:39:26+08:00",
     "dateModified": "2018-05-04T17:39:26+08:00",
     "url" : "https://blog.jjmengze.website/posts/kubeless/kubeless/",
-    "description": "\u003cfigure\u003e     \u003cimg src=\"/images/theme/kubeless.png\"/\u003e  \u003c/figure\u003e",
+    "description": "\u003cfigure\u003e\u003cimg src=\"/images/theme/kubeless.png\"/\u003e \u003c/figure\u003e",
     "keywords": ["kubernetes","serverless"],
     "mainEntityOfPage": {
       "@type": "WebPage",
@@ -1675,8 +1675,7 @@
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      <figure>
-    <img src="/images/theme/kubeless.png"/> 
+      <figure><img src="/images/theme/kubeless.png"/>
 </figure>
 
 <h2 id="serverless">Serverless</h2>
@@ -1731,7 +1730,7 @@
 <p>安裝 Kubernetes latest version  and other dependencies:<br />
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1740,7 +1739,7 @@
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$curl</span> -s https://packages.cloud.google.com/apt/doc/apt-key.gpg <span class="p">|</span> apt-key add -
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$curl</span> -s https://packages.cloud.google.com/apt/doc/apt-key.gpg <span class="p">|</span> apt-key add -
 <span class="nv">$cat</span> <span class="s">&lt;&lt;EOF &gt;/etc/apt/sources.list.d/kubernetes.list
 </span><span class="s">deb http://apt.kubernetes.io/ kubernetes-xenial main
 </span><span class="s">EOF</span>
@@ -1753,27 +1752,27 @@
 <p>Kubernetes v1.8+ 要求關閉系統 Swap，如果不想關閉系統的Swap需要修改 kubelet 設定參數，我們利用以下指令關閉系統Swap：<br />
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$swapoff</span> -a <span class="o">&amp;&amp;</span> sysctl -w vm.swappiness<span class="o">=</span><span class="m">0</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$swapoff</span> -a <span class="o">&amp;&amp;</span> sysctl -w vm.swappiness<span class="o">=</span><span class="m">0</span></code></pre></td></tr></table>
 </div>
 </div></p>
 <h3 id="重啟docker">重啟Docker</h3>
 <p>透過以下指令啟動Docker Daemon。<br />
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$systemctl</span> <span class="nb">enable</span> docker <span class="o">&amp;&amp;</span> systemctl start docker</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$systemctl</span> <span class="nb">enable</span> docker <span class="o">&amp;&amp;</span> systemctl start docker</code></pre></td></tr></table>
 </div>
 </div></p>
 <h3 id="ipv4-forward設定">IPv4 forward設定</h3>
 <p>將橋接的IPv4流量傳遞給iptables<br />
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1781,7 +1780,7 @@
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$cat</span> <span class="s">&lt;&lt;EOF &gt; /etc/sysctl.d/k8s.conf
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$cat</span> <span class="s">&lt;&lt;EOF &gt; /etc/sysctl.d/k8s.conf
 </span><span class="s">net.ipv4.ip_forward = 1
 </span><span class="s">net.bridge.bridge-nf-call-ip6tables = 1
 </span><span class="s">net.bridge.bridge-nf-call-iptables = 1
@@ -1793,31 +1792,31 @@
 <p>在master節點上使用kubeadm進行kubernetes叢集的初始化</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nv">$sudo</span> kubeadm init --pod-network-cidr<span class="o">=</span>192.168.0.0/16
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="nv">$sudo</span> kubeadm init --pod-network-cidr<span class="o">=</span>192.168.0.0/16
 </code></pre></td></tr></table>
 </div>
 </div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$sudo</span> kubeadm init --pod-network-cidr<span class="o">=</span>192.168.0.0/16</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$sudo</span> kubeadm init --pod-network-cidr<span class="o">=</span>192.168.0.0/16</code></pre></td></tr></table>
 </div>
 </div>
 <p>會得到下列輸出，我們利用下列輸出的資訊將其他節點加入叢集。<br />
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">...
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">...
 You can now join any number of machines by running the following on each node
 as root:
 
@@ -1827,21 +1826,21 @@ kubeadm join 172.24.0.2:6443 --token i67sjb.0nvjxbldwuh342of --discovery-token-c
 <p>在其他節點上我們可以利用以下指令加入叢集。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubeadm</span> join 172.24.0.2:6443 --token i67sjb.0nvjxbldwuh342of --discovery-token-ca-cert-hash sha256:aa23e1e7a4d55d06fbdf34fa2a1c703dd7e7cfff735b0b0fe800b4335aff68b5</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubeadm</span> join 172.24.0.2:6443 --token i67sjb.0nvjxbldwuh342of --discovery-token-ca-cert-hash sha256:aa23e1e7a4d55d06fbdf34fa2a1c703dd7e7cfff735b0b0fe800b4335aff68b5</code></pre></td></tr></table>
 </div>
 </div>
 <p>在master節點設定kube config。<br />
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$mkdir</span> -p <span class="nv">$HOME</span>/.kube
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$mkdir</span> -p <span class="nv">$HOME</span>/.kube
 <span class="nv">$sudo</span> -H cp /etc/kubernetes/admin.conf <span class="nv">$HOME</span>/.kube/config
 <span class="nv">$sudo</span> -H chown <span class="k">$(</span>id -u<span class="k">)</span>:<span class="k">$(</span>id -g<span class="k">)</span> <span class="nv">$HOME</span>/.kube/config</code></pre></td></tr></table>
 </div>
@@ -1849,11 +1848,11 @@ kubeadm join 172.24.0.2:6443 --token i67sjb.0nvjxbldwuh342of --discovery-token-c
 <h3 id="安裝calico-cni">安裝Calico CNI</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubectl</span> apply -f https://docs.projectcalico.org/v3.1/getting-started/kubernetes/installation/hosted/rbac-kdd.yaml
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubectl</span> apply -f https://docs.projectcalico.org/v3.1/getting-started/kubernetes/installation/hosted/rbac-kdd.yaml
 <span class="nv">$kubectl</span> apply -f https://docs.projectcalico.org/v3.1/getting-started/kubernetes/installation/hosted/kubernetes-datastore/calico-networking/1.7/calico.yaml</code></pre></td></tr></table>
 </div>
 </div>
@@ -1861,7 +1860,7 @@ kubeadm join 172.24.0.2:6443 --token i67sjb.0nvjxbldwuh342of --discovery-token-c
 <p>在master上操作kubectl指令即可看到所有node呈現ready的狀態<br />
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1882,7 +1881,7 @@ kubeadm join 172.24.0.2:6443 --token i67sjb.0nvjxbldwuh342of --discovery-token-c
 </span><span class="lnt">19
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubectl</span> get pod -n kube-system
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubectl</span> get pod -n kube-system
 NAME                             READY     STATUS    RESTARTS   AGE
 calico-node-cgtxh                2/2       Running   <span class="m">0</span>          1m
 calico-node-qjrbm                2/2       Running   <span class="m">0</span>          1m
@@ -1908,13 +1907,13 @@ node-2    Ready     &lt;none&gt;    2m        v1.10.0</code></pre></td></tr></ta
 <p>安裝操作 Kubeless 的 CLI<br />
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$wget</span> https://github.com/kubeless/kubeless/releases/download/v1.0.0-alpha.7/kubeless_linux-amd64.zip
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$wget</span> https://github.com/kubeless/kubeless/releases/download/v1.0.0-alpha.7/kubeless_linux-amd64.zip
 apt install -y unzip
 unzip kubeless_linux-amd64.zip
 <span class="nv">$sudo</span> mv ~/bundles/kubeless_linux-amd64 /usr/local/bin/</code></pre></td></tr></table>
@@ -1923,7 +1922,7 @@ unzip kubeless_linux-amd64.zip
 <p>檢查CLI是否安裝完成<br />
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1944,7 +1943,7 @@ unzip kubeless_linux-amd64.zip
 </span><span class="lnt">19
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">Serverless framework <span class="k">for</span> Kubernetes
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">Serverless framework <span class="k">for</span> Kubernetes
 
 Usage:
   kubeless <span class="o">[</span>command<span class="o">]</span>
@@ -1969,7 +1968,7 @@ Use <span class="s2">&#34;kubeless [command] --help&#34;</span> <span class="k">
 <p><a href="https://github.com/kubeless/kubeless/releases">Kubeless官方</a>針對不同Kubernetes環境提供了多種腳本（非RBAC，RBAC和openshift），這邊我採用的是有<code>RBAC</code>的部署。<br />
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1984,7 +1983,7 @@ Use <span class="s2">&#34;kubeless [command] --help&#34;</span> <span class="k">
 </span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubectl</span> create ns kubeless
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubectl</span> create ns kubeless
 namespace/kubeless created
 
 <span class="nv">$kubectl</span> create -f https://github.com/kubeless/kubeless/releases/download/v1.0.0-alpha.8/kubeless-v1.0.0-alpha.8.yaml
@@ -2002,7 +2001,7 @@ customresourcedefinition.apiextensions.k8s.io/cronjobtriggers.kubeless.io create
 <p>可以透過<code>kubetl</code>指令觀察kubeless是否有被部署起來</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2016,7 +2015,7 @@ customresourcedefinition.apiextensions.k8s.io/cronjobtriggers.kubeless.io create
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">kubectl get pods -n kubeless
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">kubectl get pods -n kubeless
 NAME                                           READY     STATUS    RESTARTS   AGE
 kubeless-controller-manager-66868fb689-77fkp   3/3       Running   <span class="m">0</span>          1m
 <span class="nv">$kubectl</span> get deployment -n kubeless
@@ -2030,7 +2029,7 @@ functions.kubeless.io                         2018-08-24T12:44:57Z
 httptriggers.kubeless.io                      2018-08-24T12:44:57Z</code></pre></td></tr></table>
 </div>
 </div>
-<pre><code>### 安裝Kubeless UI
+<pre tabindex="0"><code>### 安裝Kubeless UI
 
 官方提供了操作Kubeless的Dashboard，可以透過該介面操作。
 ```bash
@@ -2038,7 +2037,7 @@ $kubectl create -f https://raw.githubusercontent.com/kubeless/kubeless-ui/master
 </code></pre><p>可以透過<code>kubetl</code>指令觀察Kubeless的Dashboard是否有被部署起來</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -2047,7 +2046,7 @@ $kubectl create -f https://raw.githubusercontent.com/kubeless/kubeless-ui/master
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">kubectl -n kubeless get pod,svc
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">kubectl -n kubeless get pod,svc
 NAME                                               READY     STATUS    RESTARTS   AGE
 pod/kubeless-controller-manager-66868fb689-77fkp   3/3       Running   <span class="m">0</span>          39m
 pod/ui-6d868664c5-kr99m                            2/2       Running   <span class="m">0</span>          1m
@@ -2057,9 +2056,8 @@ service/ui   NodePort   10.100.15.46   &lt;none&gt;        3000:30722/TCP   1m
 </code></pre></td></tr></table>
 </div>
 </div><p>可以透Browser瀏覽 Kubeless UI(172.24.0.2:30722)<br />
-<figure>
-    <img src="/images/post/kubeless-ui.png"
-         alt="Kubeless Dashboard"/> <figcaption>
+<figure><img src="/images/post/kubeless-ui.png"
+         alt="Kubeless Dashboard"/><figcaption>
             <p>Kubeless Dashboard</p>
         </figcaption>
 </figure>
@@ -2069,26 +2067,23 @@ service/ui   NodePort   10.100.15.46   &lt;none&gt;        3000:30722/TCP   1m
 <p>這邊會示範從UI上操作以及使用CLI操作</p>
 <h3 id="ui操作kubeless">UI操作Kubeless</h3>
 <p>透過Browser連進Kubeless Dashboard 後點選 <strong>Create Function</strong><br />
-<figure>
-    <img src="/images/post/kubeless-create-function.png"
-         alt="建立一個Function"/> <figcaption>
+<figure><img src="/images/post/kubeless-create-function.png"
+         alt="建立一個Function"/><figcaption>
             <p>建立一個Function</p>
         </figcaption>
 </figure>
 </p>
 <p>按下Create後，就可以撰寫我們判斷質數的程式碼。</p>
 <p>程式的撰寫畫面會如下圖所示<br />
-<figure>
-    <img src="/images/post/kubeless-create-function-1.png"
-         alt="在function內撰寫我們想要的功能"/> <figcaption>
+<figure><img src="/images/post/kubeless-create-function-1.png"
+         alt="在function內撰寫我們想要的功能"/><figcaption>
             <p>在function內撰寫我們想要的功能</p>
         </figcaption>
 </figure>
 </p>
 <p>撰寫完，質數判斷的function大致上是這個樣子<br />
-<figure>
-    <img src="/images/post/kubeless-create-function2.png"
-         alt="質數判斷的function"/> <figcaption>
+<figure><img src="/images/post/kubeless-create-function2.png"
+         alt="質數判斷的function"/><figcaption>
             <p>質數判斷的function</p>
         </figcaption>
 </figure>
@@ -2100,7 +2095,7 @@ service/ui   NodePort   10.100.15.46   &lt;none&gt;        3000:30722/TCP   1m
 <p>因為<strong>kubeless UI</strong>有<strong>RBAC</strong>的問題，這邊偷懶直接給<strong>cluster-admin</strong>。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2116,7 +2111,7 @@ service/ui   NodePort   10.100.15.46   &lt;none&gt;        3000:30722/TCP   1m
 </span><span class="lnt">14
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">   <span class="nv">$cat</span> <span class="s">&lt;&lt;EOF | kubectl create -f -
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">   <span class="nv">$cat</span> <span class="s">&lt;&lt;EOF | kubectl create -f -
 </span><span class="s">   apiVersion: rbac.authorization.k8s.io/v1beta1
 </span><span class="s">   kind: ClusterRoleBinding
 </span><span class="s">   metadata:
@@ -2138,9 +2133,8 @@ service/ui   NodePort   10.100.15.46   &lt;none&gt;        3000:30722/TCP   1m
 <p>這邊還會產生另外一個問題，在Kubeless UI 所產生的Request只能是<strong>String</strong>型態的。<br />
 在這個範例之中會看到以下輸出。</p>
 </blockquote>
-<figure>
-    <img src="/images/post/kubeless-create-function3.png"
-         alt="只能得到must be a positive integer的回應"/> <figcaption>
+<figure><img src="/images/post/kubeless-create-function3.png"
+         alt="只能得到must be a positive integer的回應"/><figcaption>
             <p>只能得到must be a positive integer的回應</p>
         </figcaption>
 </figure>
@@ -2148,7 +2142,7 @@ service/ui   NodePort   10.100.15.46   &lt;none&gt;        3000:30722/TCP   1m
 <p>要解決這個問題我們可以藉由<strong>Kubeless CLI</strong>發送請求給特定的function。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -2156,7 +2150,7 @@ service/ui   NodePort   10.100.15.46   &lt;none&gt;        3000:30722/TCP   1m
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubeless</span> <span class="k">function</span> call checkprime  --data <span class="m">9487</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubeless</span> <span class="k">function</span> call checkprime  --data <span class="m">9487</span>
 非質數
 <span class="nv">$kubeless</span> <span class="k">function</span> call checkprime  --data <span class="m">177</span>
 非質數
@@ -2169,7 +2163,7 @@ service/ui   NodePort   10.100.15.46   &lt;none&gt;        3000:30722/TCP   1m
 <p>建立一個<code>checkprime.go</code>，並且撰寫質數判斷的function。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2197,7 +2191,7 @@ service/ui   NodePort   10.100.15.46   &lt;none&gt;        3000:30722/TCP   1m
 </span><span class="lnt">26
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go">
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go">
 <span class="kn">package</span> <span class="nx">kubeless</span>
 
 <span class="kn">import</span> <span class="p">(</span>
@@ -2228,13 +2222,13 @@ service/ui   NodePort   10.100.15.46   &lt;none&gt;        3000:30722/TCP   1m
 </div><p>透過<strong>kubeless CLI</strong>幫我們建立Function到環境上</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubeless</span> <span class="k">function</span> deploy checkprime --runtime go1.10 --from-file checkprime.go --handler checkprime.IsPrime
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubeless</span> <span class="k">function</span> deploy checkprime --runtime go1.10 --from-file checkprime.go --handler checkprime.IsPrime
 INFO<span class="o">[</span>0000<span class="o">]</span> Deploying <span class="k">function</span>...
 INFO<span class="o">[</span>0000<span class="o">]</span> Function checkprime submitted <span class="k">for</span> deployment
 INFO<span class="o">[</span>0000<span class="o">]</span> Check the deployment status executing <span class="s1">&#39;kubeless function ls checkprime&#39;</span>
@@ -2243,7 +2237,7 @@ INFO<span class="o">[</span>0000<span class="o">]</span> Check the deployment st
 </div><p>透過<strong>Kubeless CLI</strong> 、 <strong>Kubectl</strong> 去確認Function 有沒有成功的被建立到環境上：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2256,7 +2250,7 @@ INFO<span class="o">[</span>0000<span class="o">]</span> Check the deployment st
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubectl</span> get functions
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubectl</span> get functions
 NAME         AGE
 checkprime   1m
 
@@ -2273,7 +2267,7 @@ checkprime-7d4f<span class="nv">$b7b64c</span>-k47w9            1/1       Runnin
 <p>透過<strong>Kubeless CLI</strong>去測試剛剛撰寫的質數判斷是否正確</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -2281,7 +2275,7 @@ checkprime-7d4f<span class="nv">$b7b64c</span>-k47w9            1/1       Runnin
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubeless</span> <span class="k">function</span> call checkprime  --data <span class="m">9487</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubeless</span> <span class="k">function</span> call checkprime  --data <span class="m">9487</span>
 非質數
 <span class="nv">$kubeless</span> <span class="k">function</span> call checkprime  --data <span class="m">177</span>
 非質數
@@ -2292,7 +2286,7 @@ checkprime-7d4f<span class="nv">$b7b64c</span>-k47w9            1/1       Runnin
 </div><p>另外也能透過kubernetes把該function proxy 出來進行測試</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -2303,7 +2297,7 @@ checkprime-7d4f<span class="nv">$b7b64c</span>-k47w9            1/1       Runnin
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubectl</span> proxy -p <span class="m">34567</span> <span class="p">&amp;</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubectl</span> proxy -p <span class="m">34567</span> <span class="p">&amp;</span>
 <span class="o">[</span>1<span class="o">]</span> <span class="m">3533</span>
 Starting to serve on 127.0.0.1:34567
 
@@ -2317,14 +2311,14 @@ Starting to serve on 127.0.0.1:34567
 </div><p>結束實驗後我們可以透過Kubeless CLI刪除掉剛剛建立的<strong>checkprime function</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubeless</span> <span class="k">function</span> delete checkprime
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubeless</span> <span class="k">function</span> delete checkprime
 
 <span class="nv">$kubeless</span> <span class="k">function</span> ls
 NAME	NAMESPACE	HANDLER	RUNTIME	DEPENDENCIES	STATUS
@@ -2775,7 +2769,7 @@ NAME	NAMESPACE	HANDLER	RUNTIME	DEPENDENCIES	STATUS
 </div>
 
 
-<script defer src="/js/swipe.min.b4b82839155519d9ca67746615a4c86ccbc1061c196fe6d8aa26e4fe22902718.js"></script>
+<script defer src="/js/swipe.min.989e074dfb92ce7f57a92c1df7027f88b53c50a54fd9ad450a673a64aa91bfa4.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
@@ -3782,7 +3776,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 
             <p class="caption">
                 
-                    ©2021, All Rights Reserved
+                    ©2022, All Rights Reserved
                 
             </p>
         

@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.efa35f4c090622130b3f4cfae6971448b5ffb61c5f0a8f21cdfd157fa712abc4.js"></script>
+<script defer src="/js/helper/fadeinout.min.1d13d3e810c3940e80cbba6216a1c76fbf42b5431fc83537ea6997863802362b.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1341,7 +1341,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Meng Learning Note">
 
-<meta name="generator" content="Hugo 0.80.0" />
+<meta name="generator" content="Hugo 0.91.2" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1380,7 +1380,7 @@
     "datePublished": "2021-07-05T10:29:32+08:00",
     "dateModified": "2021-07-05T10:29:32+08:00",
     "url" : "https://blog.jjmengze.website/posts/cache/common/cache/",
-    "description": "\u003cfigure\u003e     \u003cimg src=\"/images/theme/cache-consistency.png\"/\u003e  \u003c/figure\u003e",
+    "description": "\u003cfigure\u003e\u003cimg src=\"/images/theme/cache-consistency.png\"/\u003e \u003c/figure\u003e",
     "keywords": ["cache"],
     "mainEntityOfPage": {
       "@type": "WebPage",
@@ -1673,8 +1673,7 @@
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      <figure>
-    <img src="/images/theme/cache-consistency.png"/> 
+      <figure><img src="/images/theme/cache-consistency.png"/>
 </figure>
 
 <p>先來說說本篇文章的背景故事，鋪墊一下為什麼會想寫這篇文章。不論是同事還是朋友常常會會遇到應用服務（ Application Service ）套上快取（ Cache ）會出現一致性問題的問題，也就是資料庫( Database server) 跟 Cache 上面的資料不一致，本篇文章會簡單的討論一下為什麼會出現這樣的問題以及要如何去<code>盡量</code>防範這種不一致的情況。</p>
@@ -1692,7 +1691,7 @@
 但可以透過一些手段達成弱一致性，或是最終一致性。這邊非常建議各位朋友閱讀 Jack 大大在鐵人賽撰寫的文章<a href="https://ithelp.ithome.com.tw/users/20121042/ironman/2792">分散式系統 - 在分散的世界中保持一致 </a>，可以獲的更多啟發。</p>
 </blockquote>
 <p>我們的應用服務有可能是以下這種架構</p>
-<pre><code>Application Service
+<pre tabindex="0"><code>Application Service
         |
         |
         |
@@ -1710,8 +1709,7 @@
 <h2 id="cache-aside">Cache-Aside</h2>
 <p>最常見的 cache 架構，注意點為，在寫請求的情況會先更新 db 在刪除 cache。</p>
 <h3 id="write">write</h3>
-<figure>
-    <img src="/images/post/cache-aside.png"/> 
+<figure><img src="/images/post/cache-aside.png"/>
 </figure>
 
 <p>流程如圖所示：</p>
@@ -1721,8 +1719,7 @@
 <li>刪除 cache 資料</li>
 </ol>
 <h3 id="read">read</h3>
-<figure>
-    <img src="/images/post/cache-aside-2.png"/> 
+<figure><img src="/images/post/cache-aside-2.png"/>
 </figure>
 
 <p>流程如圖所示：</p>
@@ -1743,8 +1740,7 @@
 <h2 id="write-behind">Write-behind</h2>
 <p>比較少看到這種情 cache 設計，主要是對資料遺失不是特別在意才會採用的方案，注意點為， Application Service 內部在上一層 local cache ，主要是先更新 local cache 在批次的向 DB 寫入。</p>
 <h3 id="write-1">write</h3>
-<figure>
-    <img src="/images/post/cache-write-behind.png"/> 
+<figure><img src="/images/post/cache-write-behind.png"/>
 </figure>
 
 <p>流程如圖所示：</p>
@@ -1773,8 +1769,7 @@
 </li>
 </ol>
 <h3 id="read-1">read</h3>
-<figure>
-    <img src="/images/post/cache-read-behind.png"/> 
+<figure><img src="/images/post/cache-read-behind.png"/>
 </figure>
 
 <p>流程如圖所示：</p>
@@ -1801,8 +1796,7 @@
 <p>通常會在 local cache 上 ttl</p>
 </blockquote>
 <h3 id="write-2">write</h3>
-<figure>
-    <img src="/images/post/cache-write-through.png"/> 
+<figure><img src="/images/post/cache-write-through.png"/>
 </figure>
 
 <p>流程如圖所示：</p>
@@ -1813,8 +1807,7 @@
 <li>最後更新外部 cache</li>
 </ol>
 <h3 id="read-2">read</h3>
-<figure>
-    <img src="/images/post/cache-read-through.png"/> 
+<figure><img src="/images/post/cache-read-through.png"/>
 </figure>
 
 <p>流程如圖所示：</p>
@@ -1837,15 +1830,13 @@
 <p>你可能會說：『對，我們大多數的應用程式都是長這樣子。』，那一致性問題會出現在哪呢？</p>
 <h2 id="思考ａ-更新資料時要先-update-cache-還是-delete-cache">思考Ａ-&gt;更新資料時要先 update cache 還是 delete cache??</h2>
 <p>這個題目我們用 cache Aside 來觀察，從上面的寫的流程來看為 <code>先更新資料庫</code> 接著刪除 <code>cache</code> 。</p>
-<figure>
-    <img src="/images/post/cache-aside.png"/> 
+<figure><img src="/images/post/cache-aside.png"/>
 </figure>
 
 <p>至於為什麼要這麼設計？</p>
 <h3 id="example">example</h3>
 <p>我們來看一個有如果是先 update cache 的簡單的例子吧。<br />
-<figure>
-    <img src="/images/post/cache-aside-race.png"/> 
+<figure><img src="/images/post/cache-aside-race.png"/>
 </figure>
 </p>
 <ol>
@@ -1859,7 +1850,7 @@
 <li>A timeout 重新寫入 cache</li>
 </ol>
 <p>請問這時候使用者去讀 cache 會讀到資料 Ａ 還是資料 Ｂ 呢？</p>
-<pre><code>很顯然是資料Ａ，也就是過時的資料！
+<pre tabindex="0"><code>很顯然是資料Ａ，也就是過時的資料！
 </code></pre><h4 id="solution">solution</h4>
 <p>解法也相當簡單，只要把 update cache 的部分轉換成 delete cache 就行了，也就是標準的 cache Aside。</p>
 <ul>
@@ -1880,14 +1871,12 @@
 </ul>
 <h2 id="思考ｂ-更新資料時要先操作-db-還是先操作-cache-">思考Ｂ-&gt;更新資料時要先操作 DB 還是先操作 cache ??</h2>
 <p>這個題目我們用 cache Aside 來觀察，從上面的寫的流程來看為 <code>先更新資料庫</code> 接著刪除<code>cache</code>。<br />
-<figure>
-    <img src="/images/post/cache-aside.png"/> 
+<figure><img src="/images/post/cache-aside.png"/>
 </figure>
 </p>
 <p>為什麼不是<code>先刪除cache</code> 接著才<code>更新 DB</code> ?</p>
 <h3 id="example-1">example</h3>
-<figure>
-    <img src="/images/post/cache-aside-write-read-race.png"/> 
+<figure><img src="/images/post/cache-aside-write-read-race.png"/>
 </figure>
 
 <ol>
@@ -1908,7 +1897,7 @@
 <li>Application Service 向 DB 寫入 A 的資料</li>
 </ol>
 <p>請問這之後使用者去讀 cache 會讀到資料應該還是讀到 A' 時刻的資料，還是 A 時刻的資料？</p>
-<pre><code>很顯然是資料Ａ，也就是過時的資料！
+<pre tabindex="0"><code>很顯然是資料Ａ，也就是過時的資料！
 </code></pre><h4 id="solution-1">solution</h4>
 <p>解法也相當簡單，只要先操作 DB 的在操作 cache 就行了，也就是標準的 cache Aside。</p>
 <ul>
@@ -1952,8 +1941,7 @@
 </ol>
 <p>這裡就發生了，cache 與DB 不一致，這時候可以透過雙刪策略去<code>盡量</code>別免這件事情的發生。</p>
 <p>我們先來看一下流程圖</p>
-<p><figure>
-    <img src="/images/post/cache-double-delete.png"/> 
+<p><figure><img src="/images/post/cache-double-delete.png"/>
 </figure>
 <br />
 流程如圖所示：</p>
@@ -1982,8 +1970,7 @@
 <p>到這裡其實還有問題，刪除有可能失敗。可能導致使用者一直以為 cache 上的是最新資料，這時候該怎麼辦？</p>
 <h2 id="還可以用刪除重試策略">還可以用刪除重試策略</h2>
 <p>在上一小節中提到<code>延遲雙刪除策略</code>，只要是 api 操作就有可能遇到 timeout 、 Packet loss 等問題，那這時候<code>可能</code>會採取<code>刪除重試策略</code>，白話文可以翻譯成刪到成功為止。</p>
-<figure>
-    <img src="/images/post/cache-delete-retry.png"/> 
+<figure><img src="/images/post/cache-delete-retry.png"/>
 </figure>
 
 <p>流程如圖所示：</p>
@@ -2006,8 +1993,7 @@
 <p>如果會覺得這種方式對於對於 code 不友善（我就是不想寫扣垃xD）的話，還有什麼方式呢？</p>
 <h2 id="bindlog-刪除策略">bindlog 刪除策略</h2>
 <p>在上一小節中提到我就是不想寫扣該怎麼辦，那可以試試看採用 <code>biglog 刪除策略</code> ，只要將 DB 的 log訊息 bind 到 MQ 上面，由 MQ 的 ACK 機制確認 cache 有沒有正確處理訊息。</p>
-<figure>
-    <img src="/images/post/cache-bindlog.png"/> 
+<figure><img src="/images/post/cache-bindlog.png"/>
 </figure>
 
 <p>流程如圖所示：</p>
@@ -2444,7 +2430,7 @@
 </div>
 
 
-<script defer src="/js/swipe.min.b4b82839155519d9ca67746615a4c86ccbc1061c196fe6d8aa26e4fe22902718.js"></script>
+<script defer src="/js/swipe.min.989e074dfb92ce7f57a92c1df7027f88b53c50a54fd9ad450a673a64aa91bfa4.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
@@ -3451,7 +3437,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 
             <p class="caption">
                 
-                    ©2021, All Rights Reserved
+                    ©2022, All Rights Reserved
                 
             </p>
         

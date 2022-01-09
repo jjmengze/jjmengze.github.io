@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.efa35f4c090622130b3f4cfae6971448b5ffb61c5f0a8f21cdfd157fa712abc4.js"></script>
+<script defer src="/js/helper/fadeinout.min.1d13d3e810c3940e80cbba6216a1c76fbf42b5431fc83537ea6997863802362b.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1341,7 +1341,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Meng Learning Note">
 
-<meta name="generator" content="Hugo 0.80.0" />
+<meta name="generator" content="Hugo 0.91.2" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1380,7 +1380,7 @@
     "datePublished": "2020-06-29T16:07:21+08:00",
     "dateModified": "2020-06-29T16:07:21+08:00",
     "url" : "https://blog.jjmengze.website/posts/kubernetes/audit/",
-    "description": "\u003cfigure\u003e     \u003cimg src=\"/images/theme/audit.png\"/\u003e  \u003c/figure\u003e",
+    "description": "\u003cfigure\u003e\u003cimg src=\"/images/theme/audit.png\"/\u003e \u003c/figure\u003e",
     "keywords": ["kubernetes"],
     "mainEntityOfPage": {
       "@type": "WebPage",
@@ -1673,8 +1673,7 @@
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      <figure>
-    <img src="/images/theme/audit.png"/> 
+      <figure><img src="/images/theme/audit.png"/>
 </figure>
 
 <h2 id="就想看看你對我做什麼壞壞的事">就想看看你對我做什麼壞壞的事</h2>
@@ -1747,7 +1746,7 @@
 <p>官方有給出一個範例讓我們可以依照自己的需求進行修改，範例如下所示。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1817,7 +1816,7 @@
 </span><span class="lnt">68
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">audit.k8s.io/v1</span><span class="w"> </span><span class="c"># This is required.</span><span class="w">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">audit.k8s.io/v1</span><span class="w"> </span><span class="c"># This is required.</span><span class="w">
 </span><span class="w"></span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">Policy</span><span class="w">
 </span><span class="w"></span><span class="c"># Don&#39;t generate audit events for all requests in RequestReceived stage.</span><span class="w">
 </span><span class="w"></span><span class="nt">omitStages</span><span class="p">:</span><span class="w">
@@ -1893,7 +1892,7 @@
 <p>kubeadm 安裝方法這邊不多談 Google 有很多安裝的方法，在本次實驗需要設定 audit 的相關參數，kubeadm 目前還沒有完全支援 audit 的 feature gate 除了設定 kubeadm config 之外還需要手動設定部分參數。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1917,7 +1916,7 @@
 </span><span class="lnt">22
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">kubeadm.k8s.io/v1beta2</span><span class="w">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">kubeadm.k8s.io/v1beta2</span><span class="w">
 </span><span class="w"></span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">ClusterConfiguration</span><span class="w">
 </span><span class="w"></span><span class="c">#featureGates:</span><span class="w">
 </span><span class="w"></span><span class="c">#  not support DynamicAuditing</span><span class="w">
@@ -1943,7 +1942,7 @@
 </div>
 </div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1951,7 +1950,7 @@
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">cat &lt;&lt;EOF <span class="p">|</span> &gt;/etc/kubernetes/addon/audit-policy.yaml
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">cat &lt;&lt;EOF <span class="p">|</span> &gt;/etc/kubernetes/addon/audit-policy.yaml
 <span class="c1"># Log all requests at the Metadata level.</span>
 apiVersion: audit.k8s.io/v1
 kind: Policy
@@ -1962,7 +1961,7 @@ rules:
 </div><p>可以透過上述這個 kubeadm config 去設定部分的 audit 參數，再由 kubeadm init 啟動的時候將它自動地帶入 kube-apiserver中。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1970,7 +1969,7 @@ rules:
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">kubeadm init --config admin-apiserver.yml
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">kubeadm init --config admin-apiserver.yml
 W0629 07:46:16.046453   <span class="m">86387</span> configset.go:202<span class="o">]</span> WARNING: kubeadm cannot validate component configs <span class="k">for</span> API groups <span class="o">[</span>kubelet.config.k8s.io kubeproxy.config.k8s.io<span class="o">]</span>
 <span class="o">[</span>init<span class="o">]</span> Using Kubernetes version: v1.18.5
 <span class="o">[</span>preflight<span class="o">]</span> Running pre-flight checks
@@ -1979,16 +1978,16 @@ W0629 07:46:16.046453   <span class="m">86387</span> configset.go:202<span class
 </code></pre></td></tr></table>
 </div>
 </div><p>由於本次測試環境只有一個節點所以需要進行<code>untaint</code>的動作，讓 pod 可以在 master node 上開啟。</p>
-<pre><code>kubectl taint node jason-test node-role.kubernetes.io/master-
+<pre tabindex="0"><code>kubectl taint node jason-test node-role.kubernetes.io/master-
 </code></pre><p>當 kubeadm 執行完也設定完 CNI 後需要修改<code>/etc/kubernetes/manifests/kube-apiserver</code> 相關參數，讓 apiserver 支援 audit-dynamic-configuration 需要加入以下參數。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="w">    </span>- --<span class="l">audit-dynamic-configuration</span><span class="w">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="w">    </span>- --<span class="l">audit-dynamic-configuration</span><span class="w">
 </span><span class="w">    </span>- --<span class="l">feature-gates=DynamicAuditing=true</span><span class="w">
 </span><span class="w">    </span>- --<span class="l">runtime-config=auditregistration.k8s.io/v1alpha1=true</span><span class="w">
 </span></code></pre></td></tr></table>
@@ -1996,11 +1995,11 @@ W0629 07:46:16.046453   <span class="m">86387</span> configset.go:202<span class
 </div><p>修改完成後，可以透過 <code>kubectl</code> 指令檢查是否開啟 <code>auditregistration.k8s.io/v1alpha1</code> 的資源。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">kubectl api-resources <span class="p">|</span> grep AuditSink
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">kubectl api-resources <span class="p">|</span> grep AuditSink
 auditsinks                                     auditregistration.k8s.io       <span class="nb">false</span>        AuditSin
 </code></pre></td></tr></table>
 </div>
@@ -2009,13 +2008,13 @@ auditsinks                                     auditregistration.k8s.io       <s
 <p>事實上剛剛的流程已經把 Backend 設定好了，位置就在 <code>audit-log-path: /home/ubuntu/audit.log</code> ，只要觸發 audit 就會把紀錄儲存在這個位置上。那我們來看看設定完 Kubernetes 之後會儲存哪寫資料。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-json" data-lang="json"><span class="err">tail</span> <span class="err">-f</span> <span class="err">audit.log</span>
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="err">tail</span> <span class="err">-f</span> <span class="err">audit.log</span>
 <span class="p">{</span><span class="nt">&#34;kind&#34;</span><span class="p">:</span><span class="s2">&#34;Event&#34;</span><span class="p">,</span><span class="nt">&#34;apiVersion&#34;</span><span class="p">:</span><span class="s2">&#34;audit.k8s.io/v1&#34;</span><span class="p">,</span><span class="nt">&#34;level&#34;</span><span class="p">:</span><span class="s2">&#34;Metadata&#34;</span><span class="p">,</span><span class="nt">&#34;auditID&#34;</span><span class="p">:</span><span class="s2">&#34;caa00b7a-e564-486c-837f-219eade633dd&#34;</span><span class="p">,</span><span class="nt">&#34;stage&#34;</span><span class="p">:</span><span class="s2">&#34;RequestReceived&#34;</span><span class="p">,</span><span class="nt">&#34;requestURI&#34;</span><span class="p">:</span><span class="s2">&#34;/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager?timeout=10s&#34;</span><span class="p">,</span><span class="nt">&#34;verb&#34;</span><span class="p">:</span><span class="s2">&#34;get&#34;</span><span class="p">,</span><span class="nt">&#34;user&#34;</span><span class="p">:{</span><span class="nt">&#34;username&#34;</span><span class="p">:</span><span class="s2">&#34;system:kube-controller-manager&#34;</span><span class="p">,</span><span class="nt">&#34;groups&#34;</span><span class="p">:[</span><span class="s2">&#34;system:authenticated&#34;</span><span class="p">]},</span><span class="nt">&#34;sourceIPs&#34;</span><span class="p">:[</span><span class="s2">&#34;10.0.2.4&#34;</span><span class="p">],</span><span class="nt">&#34;userAgent&#34;</span><span class="p">:</span><span class="s2">&#34;kube-controller-manager/v1.18.5 (linux/amd64) kubernetes/e6503f8/leader-election&#34;</span><span class="p">,</span><span class="nt">&#34;objectRef&#34;</span><span class="p">:{</span><span class="nt">&#34;resource&#34;</span><span class="p">:</span><span class="s2">&#34;leases&#34;</span><span class="p">,</span><span class="nt">&#34;namespace&#34;</span><span class="p">:</span><span class="s2">&#34;kube-system&#34;</span><span class="p">,</span><span class="nt">&#34;name&#34;</span><span class="p">:</span><span class="s2">&#34;kube-controller-manager&#34;</span><span class="p">,</span><span class="nt">&#34;apiGroup&#34;</span><span class="p">:</span><span class="s2">&#34;coordination.k8s.io&#34;</span><span class="p">,</span><span class="nt">&#34;apiVersion&#34;</span><span class="p">:</span><span class="s2">&#34;v1&#34;</span><span class="p">},</span><span class="nt">&#34;requestReceivedTimestamp&#34;</span><span class="p">:</span><span class="s2">&#34;2020-07-04T15:19:21.083898Z&#34;</span><span class="p">,</span><span class="nt">&#34;stageTimestamp&#34;</span><span class="p">:</span><span class="s2">&#34;2020-07-04T15:19:21.083898Z&#34;</span><span class="p">}</span>
 <span class="p">{</span><span class="nt">&#34;kind&#34;</span><span class="p">:</span><span class="s2">&#34;Event&#34;</span><span class="p">,</span><span class="nt">&#34;apiVersion&#34;</span><span class="p">:</span><span class="s2">&#34;audit.k8s.io/v1&#34;</span><span class="p">,</span><span class="nt">&#34;level&#34;</span><span class="p">:</span><span class="s2">&#34;Metadata&#34;</span><span class="p">,</span><span class="nt">&#34;auditID&#34;</span><span class="p">:</span><span class="s2">&#34;caa00b7a-e564-486c-837f-219eade633dd&#34;</span><span class="p">,</span><span class="nt">&#34;stage&#34;</span><span class="p">:</span><span class="s2">&#34;ResponseComplete&#34;</span><span class="p">,</span><span class="nt">&#34;requestURI&#34;</span><span class="p">:</span><span class="s2">&#34;/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager?timeout=10s&#34;</span><span class="p">,</span><span class="nt">&#34;verb&#34;</span><span class="p">:</span><span class="s2">&#34;get&#34;</span><span class="p">,</span><span class="nt">&#34;user&#34;</span><span class="p">:{</span><span class="nt">&#34;username&#34;</span><span class="p">:</span><span class="s2">&#34;system:kube-controller-manager&#34;</span><span class="p">,</span><span class="nt">&#34;groups&#34;</span><span class="p">:[</span><span class="s2">&#34;system:authenticated&#34;</span><span class="p">]},</span><span class="nt">&#34;sourceIPs&#34;</span><span class="p">:[</span><span class="s2">&#34;10.0.2.4&#34;</span><span class="p">],</span><span class="nt">&#34;userAgent&#34;</span><span class="p">:</span><span class="s2">&#34;kube-controller-manager/v1.18.5 (linux/amd64) kubernetes/e6503f8/leader-election&#34;</span><span class="p">,</span><span class="nt">&#34;objectRef&#34;</span><span class="p">:{</span><span class="nt">&#34;resource&#34;</span><span class="p">:</span><span class="s2">&#34;leases&#34;</span><span class="p">,</span><span class="nt">&#34;namespace&#34;</span><span class="p">:</span><span class="s2">&#34;kube-system&#34;</span><span class="p">,</span><span class="nt">&#34;name&#34;</span><span class="p">:</span><span class="s2">&#34;kube-controller-manager&#34;</span><span class="p">,</span><span class="nt">&#34;apiGroup&#34;</span><span class="p">:</span><span class="s2">&#34;coordination.k8s.io&#34;</span><span class="p">,</span><span class="nt">&#34;apiVersion&#34;</span><span class="p">:</span><span class="s2">&#34;v1&#34;</span><span class="p">},</span><span class="nt">&#34;responseStatus&#34;</span><span class="p">:{</span><span class="nt">&#34;metadata&#34;</span><span class="p">:{},</span><span class="nt">&#34;code&#34;</span><span class="p">:</span><span class="mi">200</span><span class="p">},</span><span class="nt">&#34;requestReceivedTimestamp&#34;</span><span class="p">:</span><span class="s2">&#34;2020-07-04T15:19:21.083898Z&#34;</span><span class="p">,</span><span class="nt">&#34;stageTimestamp&#34;</span><span class="p">:</span><span class="s2">&#34;2020-07-04T15:19:21.085030Z&#34;</span><span class="p">,</span><span class="nt">&#34;annotations&#34;</span><span class="p">:{</span><span class="nt">&#34;authorization.k8s.io/decision&#34;</span><span class="p">:</span><span class="s2">&#34;allow&#34;</span><span class="p">,</span><span class="nt">&#34;authorization.k8s.io/reason&#34;</span><span class="p">:</span><span class="s2">&#34;RBAC: allowed by ClusterRoleBinding \&#34;system:kube-controller-manager\&#34; of ClusterRole \&#34;system:kube-controller-manager\&#34; to User \&#34;system:kube-controller-manager\&#34;&#34;</span><span class="p">}}</span>
 <span class="err">...</span>
@@ -2025,14 +2024,14 @@ auditsinks                                     auditregistration.k8s.io       <s
 <p>我先執行一個簡單的 <code>kubectl</code> 指令來觀察 audit 有沒有攔截到這個請求。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">kubectl get pod 
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">kubectl get pod 
 </code></pre></td></tr></table>
 </div>
 </div><p>再去看 audit 所記錄的 log 有沒有儲存這個操作</p>
-<pre><code class="language-jsonld=" data-lang="jsonld=">cat /home/ubuntu/audit/log | grep 
+<pre tabindex="0"><code class="language-jsonld=" data-lang="jsonld=">cat /home/ubuntu/audit/log | grep 
 
 {&quot;kind&quot;:&quot;Event&quot;,&quot;apiVersion&quot;:&quot;audit.k8s.io/v1&quot;,&quot;level&quot;:&quot;Metadata&quot;,&quot;auditID&quot;:&quot;0595bb26-d8a2-4b59-b3d1-7d538c2e131f&quot;,&quot;stage&quot;:&quot;RequestReceived&quot;,&quot;requestURI&quot;:&quot;/api/v1/namespaces/default/pods?limit=500&quot;,&quot;verb&quot;:&quot;list&quot;,&quot;user&quot;:{&quot;username&quot;:&quot;kubernetes-admin&quot;,&quot;groups&quot;:[&quot;system:masters&quot;,&quot;system:authenticated&quot;]},&quot;sourceIPs&quot;:[&quot;10.0.2.4&quot;],&quot;userAgent&quot;:&quot;kubectl/v1.18.5 (linux/amd64) kubernetes/e6503f8&quot;,&quot;objectRef&quot;:{&quot;resource&quot;:&quot;pods&quot;,&quot;namespace&quot;:&quot;default&quot;,&quot;apiVersion&quot;:&quot;v1&quot;},&quot;requestReceivedTimestamp&quot;:&quot;2020-07-04T15:26:20.895927Z&quot;,&quot;stageTimestamp&quot;:&quot;2020-07-04T15:26:20.895927Z&quot;}
 {&quot;kind&quot;:&quot;Event&quot;,&quot;apiVersion&quot;:&quot;audit.k8s.io/v1&quot;,&quot;level&quot;:&quot;Metadata&quot;,&quot;auditID&quot;:&quot;0595bb26-d8a2-4b59-b3d1-7d538c2e131f&quot;,&quot;stage&quot;:&quot;ResponseComplete&quot;,&quot;requestURI&quot;:&quot;/api/v1/namespaces/default/pods?limit=500&quot;,&quot;verb&quot;:&quot;list&quot;,&quot;user&quot;:{&quot;username&quot;:&quot;kubernetes-admin&quot;,&quot;groups&quot;:[&quot;system:masters&quot;,&quot;system:authenticated&quot;]},&quot;sourceIPs&quot;:[&quot;10.0.2.4&quot;],&quot;userAgent&quot;:&quot;kubectl/v1.18.5 (linux/amd64) kubernetes/e6503f8&quot;,&quot;objectRef&quot;:{&quot;resource&quot;:&quot;pods&quot;,&quot;namespace&quot;:&quot;default&quot;,&quot;apiVersion&quot;:&quot;v1&quot;},&quot;responseStatus&quot;:{&quot;metadata&quot;:{},&quot;code&quot;:200},&quot;requestReceivedTimestamp&quot;:&quot;2020-07-04T15:26:20.895927Z&quot;,&quot;stageTimestamp&quot;:&quot;2020-07-04T15:26:20.897187Z&quot;,&quot;annotations&quot;:{&quot;authorization.k8s.io/decision&quot;:&quot;allow&quot;,&quot;authorization.k8s.io/reason&quot;:&quot;&quot;}}
@@ -2058,11 +2057,11 @@ auditsinks                                     auditregistration.k8s.io       <s
 <p>確定完設定檔後我們可以透過 <code>kubectl</code> 去檢查這個資源是不是被開啟。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">kubectl api-resources <span class="p">|</span> grep AuditSink
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">kubectl api-resources <span class="p">|</span> grep AuditSink
 auditsinks                                     auditregistration.k8s.io       <span class="nb">false</span>        AuditSin
 </code></pre></td></tr></table>
 </div>
@@ -2070,7 +2069,7 @@ auditsinks                                     auditregistration.k8s.io       <s
 <p>使用上非常簡單，只要透過 <code>kubectl apply -f pod.yml -f service.yml</code>這樣就把 <code>webhook</code> 建立好了。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2084,7 +2083,7 @@ auditsinks                                     auditregistration.k8s.io       <s
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"> k apply  -f pod.yml -f service.yml
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"> k apply  -f pod.yml -f service.yml
 pod/webhook created
 service/admissionwebhook created
 ...
@@ -2101,16 +2100,16 @@ service/kubernetes         ClusterIP   10.96.0.1      &lt;none&gt;        443/TC
 </div><p>建立好 webhook pod 後我們需要建立 AuditSink 物件讓 audit 事件把資料往這個 webhook 送，</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">kubectl apply -f auditSink.yml
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">kubectl apply -f auditSink.yml
 auditsink.auditregistration.k8s.io/mysink created
 </code></pre></td></tr></table>
 </div>
 </div><p>這一個 auditSink.yml 描述了，限定 audit 觸發的事件以及要往哪個地方送資料。</p>
-<pre><code>apiVersion: auditregistration.k8s.io/v1alpha1
+<pre tabindex="0"><code>apiVersion: auditregistration.k8s.io/v1alpha1
 kind: AuditSink
 metadata:
   name: mysink
@@ -2130,7 +2129,7 @@ spec:
 </code></pre><p>這時候有觸發 audit 的事件就會往 webhook service送，可以透過 kubectl 指令去確認相關 log 。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2147,7 +2146,7 @@ spec:
 </span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">k log -f webhook
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">k log -f webhook
 ...
 
 I0707 05:47:44.205612       <span class="m">1</span> main.go:34<span class="o">]</span> this event is <span class="o">{</span>TypeMeta:<span class="o">{</span>Kind: APIVersion:<span class="o">}</span> Level:Metadata AuditID:4b6cb6dd-456b-4b77-9e63-90634a6d93eb Stage:RequestReceived RequestURI:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager?timeout<span class="o">=</span>10s Verb:update User:<span class="o">{</span>Username:system:kube-controller-manager UID: Groups:<span class="o">[</span>system:authenticated<span class="o">]</span> Extra:map<span class="o">[]}</span> ImpersonatedUser:nil SourceIPs:<span class="o">[</span>10.0.2.4<span class="o">]</span> UserAgent:kube-controller-manager/v1.18.5 <span class="o">(</span>linux/amd64<span class="o">)</span> kubernetes/e6503f8/leader-election ObjectRef:0xc000335980 ResponseStatus:nil RequestObject:nil ResponseObject:nil RequestReceivedTimestamp:2020-07-07 05:47:42.212444 +0000 UTC StageTimestamp:2020-07-07 05:47:42.212444 +0000 UTC Annotations:map<span class="o">[]}</span>
@@ -2609,7 +2608,7 @@ I0707 05:47:44.209296       <span class="m">1</span> main.go:34<span class="o">]
 </div>
 
 
-<script defer src="/js/swipe.min.b4b82839155519d9ca67746615a4c86ccbc1061c196fe6d8aa26e4fe22902718.js"></script>
+<script defer src="/js/swipe.min.989e074dfb92ce7f57a92c1df7027f88b53c50a54fd9ad450a673a64aa91bfa4.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
@@ -3616,7 +3615,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 
             <p class="caption">
                 
-                    ©2021, All Rights Reserved
+                    ©2022, All Rights Reserved
                 
             </p>
         

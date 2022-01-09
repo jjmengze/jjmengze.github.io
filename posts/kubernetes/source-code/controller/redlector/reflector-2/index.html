@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.efa35f4c090622130b3f4cfae6971448b5ffb61c5f0a8f21cdfd157fa712abc4.js"></script>
+<script defer src="/js/helper/fadeinout.min.1d13d3e810c3940e80cbba6216a1c76fbf42b5431fc83537ea6997863802362b.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1341,7 +1341,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Meng Learning Note">
 
-<meta name="generator" content="Hugo 0.80.0" />
+<meta name="generator" content="Hugo 0.91.2" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1380,7 +1380,7 @@
     "datePublished": "2021-02-18T10:29:32+08:00",
     "dateModified": "2021-02-18T10:29:32+08:00",
     "url" : "https://blog.jjmengze.website/posts/kubernetes/source-code/controller/redlector/reflector-2/",
-    "description": "\u003cfigure\u003e     \u003cimg src=\"/images/theme/kubernetes-reflector-2.jpg\"/\u003e  \u003c/figure\u003e",
+    "description": "\u003cfigure\u003e\u003cimg src=\"/images/theme/kubernetes-reflector-2.jpg\"/\u003e \u003c/figure\u003e",
     "keywords": ["kubernetes","controller","source-code"],
     "mainEntityOfPage": {
       "@type": "WebPage",
@@ -1677,8 +1677,7 @@
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      <figure>
-    <img src="/images/theme/kubernetes-reflector-2.jpg"/> 
+      <figure><img src="/images/theme/kubernetes-reflector-2.jpg"/>
 </figure>
 
 <p>首先本文所有的 source code 基於 kubernetes 1.19 版本，所有 source code 為了版面的整潔會精簡掉部分 log 相關的程式碼，僅保留核心邏輯，如果有見解錯誤的地方，還麻煩觀看本文的大大們提出，感謝！</p>
@@ -1687,7 +1686,7 @@
 <p>先來回顧一下 client go 建立 controller 的範例</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1705,7 +1704,7 @@
 </span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="nx">indexer</span><span class="p">,</span> <span class="nx">informer</span> <span class="o">:=</span> <span class="nx">cache</span><span class="p">.</span><span class="nf">NewIndexerInformer</span><span class="p">(</span><span class="nx">podListWatcher</span><span class="p">,</span> <span class="o">&amp;</span><span class="nx">v1</span><span class="p">.</span><span class="nx">Pod</span><span class="p">{},</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">cache</span><span class="p">.</span><span class="nx">ResourceEventHandlerFuncs</span><span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="nx">indexer</span><span class="p">,</span> <span class="nx">informer</span> <span class="o">:=</span> <span class="nx">cache</span><span class="p">.</span><span class="nf">NewIndexerInformer</span><span class="p">(</span><span class="nx">podListWatcher</span><span class="p">,</span> <span class="o">&amp;</span><span class="nx">v1</span><span class="p">.</span><span class="nx">Pod</span><span class="p">{},</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">cache</span><span class="p">.</span><span class="nx">ResourceEventHandlerFuncs</span><span class="p">{</span>
     <span class="o">...</span>
 <span class="p">},</span> <span class="nx">cache</span><span class="p">.</span><span class="nx">Indexers</span><span class="p">{})</span>
 
@@ -1729,7 +1728,7 @@
 <h3 id="interface">interface</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1749,7 +1748,7 @@
 </span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// Controller is a low-level controller that is parameterized by a
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// Controller is a low-level controller that is parameterized by a
 </span><span class="c1">// Config and used in sharedIndexInformer.
 </span><span class="c1"></span><span class="kd">type</span> <span class="nx">Controller</span> <span class="kd">interface</span> <span class="p">{</span>
 	<span class="c1">// Run does two things.  One is to construct and run a Reflector
@@ -1774,7 +1773,7 @@
 <p>我們透過 new function 來了解實作 controller interface 的物件需要什麼參數！</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1822,7 +1821,7 @@
 </span><span class="lnt">46
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">//傳入的參數我們在上一章節有看過，這邊再來複習一次
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">//傳入的參數我們在上一章節有看過，這邊再來複習一次
 </span><span class="c1">//傳入監控物件變化的觀察者
 </span><span class="c1">//傳入要觀察的物件資料型態
 </span><span class="c1">//傳入多久要同步一次
@@ -1874,7 +1873,7 @@
 <h3 id="struct">struct</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1926,7 +1925,7 @@
 </span><span class="lnt">50
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// `*controller` implements Controller
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// `*controller` implements Controller
 </span><span class="c1"></span><span class="kd">type</span> <span class="nx">controller</span> <span class="kd">struct</span> <span class="p">{</span>
 	<span class="nx">config</span>         <span class="nx">Config</span>                <span class="c1">//contrller 相關設定
 </span><span class="c1"></span>	<span class="nx">reflector</span>      <span class="o">*</span><span class="nx">Reflector</span>            <span class="c1">//下一章節會展開來看，本章節暫時用不到
@@ -2006,7 +2005,7 @@ Controller 知道等等pop出來的是什麼物件要如何反序列化</p>
 <p>Run function 是最主要的 function</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2084,7 +2083,7 @@ Controller 知道等等pop出來的是什麼物件要如何反序列化</p>
 </span><span class="lnt">76
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// Run begins processing items, and will continue until a value is sent down stopCh or it is closed.
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// Run begins processing items, and will continue until a value is sent down stopCh or it is closed.
 </span><span class="c1">// It&#39;s an error to call Run more than once.
 </span><span class="c1">// Run blocks; call via go.
 </span><span class="c1"></span><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">controller</span><span class="p">)</span> <span class="nf">Run</span><span class="p">(</span><span class="nx">stopCh</span> <span class="o">&lt;-</span><span class="kd">chan</span> <span class="kd">struct</span><span class="p">{})</span> <span class="p">{</span>
@@ -2165,7 +2164,7 @@ Controller 知道等等pop出來的是什麼物件要如何反序列化</p>
 </div><h4 id="hassynced">HasSynced</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -2174,7 +2173,7 @@ Controller 知道等等pop出來的是什麼物件要如何反序列化</p>
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// Returns true once this controller has completed an initial resource listing
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// Returns true once this controller has completed an initial resource listing
 </span><span class="c1">//簡單來說就是看Delta FIFO 是不是把資料同步完了
 </span><span class="c1"></span><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">controller</span><span class="p">)</span> <span class="nf">HasSynced</span><span class="p">()</span> <span class="kt">bool</span> <span class="p">{</span>
     <span class="c1">//委任給Delta FIFO QUEUE的HasSynced()
@@ -2187,7 +2186,7 @@ Controller 知道等等pop出來的是什麼物件要如何反序列化</p>
 <p>透過 reflector 得到資源最新的版本</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -2198,7 +2197,7 @@ Controller 知道等等pop出來的是什麼物件要如何反序列化</p>
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">controller</span><span class="p">)</span> <span class="nf">LastSyncResourceVersion</span><span class="p">()</span> <span class="kt">string</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">controller</span><span class="p">)</span> <span class="nf">LastSyncResourceVersion</span><span class="p">()</span> <span class="kt">string</span> <span class="p">{</span>
 	<span class="nx">c</span><span class="p">.</span><span class="nx">reflectorMutex</span><span class="p">.</span><span class="nf">RLock</span><span class="p">()</span>
 	<span class="k">defer</span> <span class="nx">c</span><span class="p">.</span><span class="nx">reflectorMutex</span><span class="p">.</span><span class="nf">RUnlock</span><span class="p">()</span>
     <span class="c1">// 透過 reflector  得到資源最新的版本 下一章節會看到！
@@ -2654,7 +2653,7 @@ Controller 知道等等pop出來的是什麼物件要如何反序列化</p>
 </div>
 
 
-<script defer src="/js/swipe.min.b4b82839155519d9ca67746615a4c86ccbc1061c196fe6d8aa26e4fe22902718.js"></script>
+<script defer src="/js/swipe.min.989e074dfb92ce7f57a92c1df7027f88b53c50a54fd9ad450a673a64aa91bfa4.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
@@ -3661,7 +3660,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 
             <p class="caption">
                 
-                    ©2021, All Rights Reserved
+                    ©2022, All Rights Reserved
                 
             </p>
         

@@ -29,8 +29,7 @@
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Tue, 06 Mar 2018 22:20:02 +0800</atom:modified>
         <guid>https://blog.jjmengze.website/posts/sdn/ovs-commonly-command/</guid>
-        <description>&lt;figure&gt;
-    &lt;img src=&#34;https://blog.jjmengze.website/images/theme/ovs-cli.png&#34;/&gt; 
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/ovs-cli.png&#34;/&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;記錄一下，Open vSwitch (OVS)常用的指令。&lt;/p&gt;</description>

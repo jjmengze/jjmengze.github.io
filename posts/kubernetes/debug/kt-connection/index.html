@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.efa35f4c090622130b3f4cfae6971448b5ffb61c5f0a8f21cdfd157fa712abc4.js"></script>
+<script defer src="/js/helper/fadeinout.min.1d13d3e810c3940e80cbba6216a1c76fbf42b5431fc83537ea6997863802362b.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1341,7 +1341,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Meng Learning Note">
 
-<meta name="generator" content="Hugo 0.80.0" />
+<meta name="generator" content="Hugo 0.91.2" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1380,7 +1380,7 @@
     "datePublished": "2020-10-26T16:07:21+08:00",
     "dateModified": "2020-10-26T16:07:21+08:00",
     "url" : "https://blog.jjmengze.website/posts/kubernetes/debug/kt-connection/",
-    "description": "\u003cfigure\u003e     \u003cimg src=\"/images/theme/kc-connection.jpg\"/\u003e  \u003c/figure\u003e",
+    "description": "\u003cfigure\u003e\u003cimg src=\"/images/theme/kc-connection.jpg\"/\u003e \u003c/figure\u003e",
     "keywords": ["kubernetes"],
     "mainEntityOfPage": {
       "@type": "WebPage",
@@ -1673,8 +1673,7 @@
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      <figure>
-    <img src="/images/theme/kc-connection.jpg"/> 
+      <figure><img src="/images/theme/kc-connection.jpg"/>
 </figure>
 
 <p>本篇文章的流程圖取自於<a href="https://ld246.com/article/1573205665774">KT Connnect 轻量级云原生测试环境治理工具</a>並加以整理與新增實驗過程。</p>
@@ -1714,7 +1713,7 @@
 <h2 id="install-kt-connect-dependency-package">install kt-connect dependency package</h2>
 <p>使用 kc connection 之前 我們需要安裝一些依賴套件。</p>
 <h3 id="install-sshuttle">install sshuttle</h3>
-<pre><code class="language-bash=" data-lang="bash=">#mac
+<pre tabindex="0"><code class="language-bash=" data-lang="bash=">#mac
 brew install sshuttle
 #linux
 pip install sshuttle
@@ -1722,7 +1721,7 @@ pip install sshuttle
 https://rdc-incubators.oss-cn-beijing.aliyuncs.com/stable/ktctl_windows_amd64.tar.gz
 </code></pre><h3 id="install-kt-connect">install kt-connect</h3>
 <p>緊接著安裝 <code>kt-connect</code> 本體。</p>
-<pre><code>#mac
+<pre tabindex="0"><code>#mac
 curl -OL https://rdc-incubators.oss-cn-beijing.aliyuncs.com/stable/ktctl_darwin_amd64.tar.gz
 tar -xzvf ktctl_darwin_amd64.tar.gz
 mv ktctl_darwin_amd64 /usr/local/bin/ktctl
@@ -1732,7 +1731,7 @@ curl -OL https://rdc-incubators.oss-cn-beijing.aliyuncs.com/stable/ktctl_linux_a
 tar -xzvf ktctl_linux_amd64.tar.gz
 mv ktctl_linux_amd64 /usr/local/bin/ktctl
 </code></pre><p>安裝完後可以下 <code>check</code> 指令確認一下依賴包是否都安裝完成</p>
-<pre><code class="language-bash=" data-lang="bash=">ktctl check
+<pre tabindex="0"><code class="language-bash=" data-lang="bash=">ktctl check
 
 1:01PM INF system info darwin-amd64
 1:01PM INF checking ssh version
@@ -1750,7 +1749,7 @@ Server Version: v1.17.1+6af3663
 <p>先來測試看看從 localhost 與 remote 建立 tunnel ，記得一定要用 sudo 不然kt connection 無法操作系統的網路。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1775,7 +1774,7 @@ Server Version: v1.17.1+6af3663
 </span><span class="lnt">23
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">sudo ktctl --namespace<span class="o">=</span>default connect
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo ktctl --namespace<span class="o">=</span>default connect
 
 Password:
 2:21PM INF Connect Start At <span class="m">28422</span>
@@ -1803,13 +1802,13 @@ server: warning: closed channel <span class="m">1</span> got <span class="nv">cm
 </div><p>當 connection 建立好後可以在 remote 到建立了一個 tunnel 的 pod ，這個 pod 專門用來跟 local端進行 vpn/socks5 的連接方式(預設vpn)</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">kubectl get pod -A                                                                           
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">kubectl get pod -A                                                                           
 NAMESPACE     NAME                                       READY   STATUS    RESTARTS   AGE
 default       kt-connect-daemon-ojbky-6484749d95-2zqnl   1/1     Running   <span class="m">0</span>          60s
 ...
@@ -1818,13 +1817,13 @@ default       kt-connect-daemon-ojbky-6484749d95-2zqnl   1/1     Running   <span
 </div><p>在 remote 環境準備一個 nginx deployment 進行測試</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">kubectl create deploy nginx --image nginx
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">kubectl create deploy nginx --image nginx
 deployment.apps/nginx created
 kubectl expose deploy nginx --port <span class="m">80</span>
 service/nginx exposed
@@ -1833,7 +1832,7 @@ service/nginx exposed
 </div><p>安裝完 nginx 之後可以透過下列指令檢視安裝成果</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1843,7 +1842,7 @@ service/nginx exposed
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">kubectl get svc,deploy
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">kubectl get svc,deploy
 NAME                 TYPE        CLUSTER-IP     EXTERNAL-IP   PORT<span class="o">(</span>S<span class="o">)</span>   AGE
 service/kubernetes   ClusterIP   10.96.0.1      &lt;none&gt;        443/TCP   24m
 service/nginx        ClusterIP   10.99.58.138   &lt;none&gt;        80/TCP    4m25s
@@ -1857,7 +1856,7 @@ deployment.apps/nginx                     1/1     <span class="m">1</span>      
 <p>我們先在本地 透過 pod ip 存取 nginx 服務 看看服務是否正常</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1865,7 +1864,7 @@ deployment.apps/nginx                     1/1     <span class="m">1</span>      
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">curl 10.32.0.5:80
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">curl 10.32.0.5:80
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -1877,7 +1876,7 @@ deployment.apps/nginx                     1/1     <span class="m">1</span>      
 <p>接著在本地透過 nginx service virtual  ip 存取 nginx 服務 看看服務是否正常</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1885,7 +1884,7 @@ deployment.apps/nginx                     1/1     <span class="m">1</span>      
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">curl 10.99.58.138:80
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">curl 10.99.58.138:80
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -1897,7 +1896,7 @@ deployment.apps/nginx                     1/1     <span class="m">1</span>      
 <p>最後在本地透過 nginx cluster DNS 存取 nginx 服務 測試 服務是否正常。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1907,7 +1906,7 @@ deployment.apps/nginx                     1/1     <span class="m">1</span>      
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">curl nginx.default.svc.cluster.local
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">curl nginx.default.svc.cluster.local
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -1925,7 +1924,7 @@ deployment.apps/nginx                     1/1     <span class="m">1</span>      
 <p>以下範例我現在本地啟動一個 apache 服務，把原本進入kubernetes nginx 流量導流到 localhost 的 apache 上。</p>
 </blockquote>
 <p>在localhost開一個簡單的服務！</p>
-<pre><code class="language-bash=" data-lang="bash=">  docker run -dit --name test-apache -p 80:80 httpd                                                                                                                                   
+<pre tabindex="0"><code class="language-bash=" data-lang="bash=">  docker run -dit --name test-apache -p 80:80 httpd                                                                                                                                   
 Unable to find image 'httpd:latest' locally
 latest: Pulling from library/httpd
 bb79b6b2107f: Pull complete
@@ -1951,7 +1950,7 @@ curl 127.0.0.1:80
 <p>透過以下指令告訴遠端要透過 80 port 進入 nginx 的流量，需要導流到本地的 80 port。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1976,7 +1975,7 @@ curl 127.0.0.1:80
 </span><span class="lnt">23
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">sudo ktctl exchange nginx --expose 80:80
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo ktctl exchange nginx --expose 80:80
 2:37PM INF <span class="s1">&#39;KT Connect&#39;</span> not runing, you can only access <span class="nb">local</span> app from cluster
 2:37PM INF Client address 192.168.51.191
 2:37PM INF deploy shadow deployment nginx-kt-rjulr in namespace default
@@ -2005,11 +2004,11 @@ Warning: Permanently added <span class="s1">&#39;[127.0.0.1]:2204&#39;</span> <s
 <p>在 remote 環境測試請求 nginx service 能不能將 traffic 導流到 localhost 上。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">curl 10.99.58.138
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">curl 10.99.58.138
 &lt;html&gt;&lt;body&gt;&lt;h1&gt;It works!&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;
 </code></pre></td></tr></table>
 </div>
@@ -2017,11 +2016,11 @@ Warning: Permanently added <span class="s1">&#39;[127.0.0.1]:2204&#39;</span> <s
 <p>測試能不能在遠端透過 nginx  dns name 把請求導流到 localhost 上。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">curl nginx.default.svc.cluster.local
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">curl nginx.default.svc.cluster.local
 &lt;html&gt;&lt;body&gt;&lt;h1&gt;It works!&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;
 </code></pre></td></tr></table>
 </div>
@@ -2030,7 +2029,7 @@ Warning: Permanently added <span class="s1">&#39;[127.0.0.1]:2204&#39;</span> <s
 <p>基本上按照官方的教學，先安裝RBAC 讓dashboard可以存取kubernetes上的資源。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2077,7 +2076,7 @@ Warning: Permanently added <span class="s1">&#39;[127.0.0.1]:2204&#39;</span> <s
 </span><span class="lnt">45
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">cat <span class="s">&lt;&lt;EOF | k apply -f -
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">cat <span class="s">&lt;&lt;EOF | k apply -f -
 </span><span class="s">apiVersion: rbac.authorization.k8s.io/v1beta1
 </span><span class="s">kind: ClusterRole
 </span><span class="s">metadata:
@@ -2127,7 +2126,7 @@ clusterrolebinding.rbac.authorization.k8s.io/ktadmin created
 </div><p>接著繼續按照官方文件安裝 dashboard 所需要的 deployment 與 service 即可。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2173,7 +2172,7 @@ clusterrolebinding.rbac.authorization.k8s.io/ktadmin created
 </span><span class="lnt">44
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">cat <span class="s">&lt;&lt;EOF | kubectl apply -f -
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">cat <span class="s">&lt;&lt;EOF | kubectl apply -f -
 </span><span class="s">apiVersion: v1
 </span><span class="s">kind: Service
 </span><span class="s">metadata:
@@ -2222,7 +2221,7 @@ deployment.apps/kt-dashboard created
 </div><p>RBAC 、 Service 與 Deployment 安裝好之後可以透過 kubectl 指令確認狀態與 kt connect dashboard 暴露出的 port 是哪個。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2234,7 +2233,7 @@ deployment.apps/kt-dashboard created
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"> kubectl get pod,svc
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"> kubectl get pod,svc
 NAME                                           READY   STATUS    RESTARTS   AGE
 pod/kt-connect-daemon-lucia-7b97887df4-d6lqx   1/1     Running   <span class="m">0</span>          3m21s
 pod/kt-dashboard-68bbc66bc6-skcsp              2/2     Running   <span class="m">0</span>          12m
@@ -2690,7 +2689,7 @@ service/nginx          ClusterIP   10.99.58.138   &lt;none&gt;        80/TCP    
 </div>
 
 
-<script defer src="/js/swipe.min.b4b82839155519d9ca67746615a4c86ccbc1061c196fe6d8aa26e4fe22902718.js"></script>
+<script defer src="/js/swipe.min.989e074dfb92ce7f57a92c1df7027f88b53c50a54fd9ad450a673a64aa91bfa4.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
@@ -3697,7 +3696,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 
             <p class="caption">
                 
-                    ©2021, All Rights Reserved
+                    ©2022, All Rights Reserved
                 
             </p>
         

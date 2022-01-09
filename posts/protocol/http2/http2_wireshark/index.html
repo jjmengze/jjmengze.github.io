@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.efa35f4c090622130b3f4cfae6971448b5ffb61c5f0a8f21cdfd157fa712abc4.js"></script>
+<script defer src="/js/helper/fadeinout.min.1d13d3e810c3940e80cbba6216a1c76fbf42b5431fc83537ea6997863802362b.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1341,7 +1341,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Meng Learning Note">
 
-<meta name="generator" content="Hugo 0.80.0" />
+<meta name="generator" content="Hugo 0.91.2" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1380,7 +1380,7 @@
     "datePublished": "2020-09-07T12:00:02+08:00",
     "dateModified": "2020-09-07T12:00:02+08:00",
     "url" : "https://blog.jjmengze.website/posts/protocol/http2/http2_wireshark/",
-    "description": "\u003cfigure\u003e     \u003cimg src=\"/images/theme/http2_wireshark.png\"/\u003e  \u003c/figure\u003e",
+    "description": "\u003cfigure\u003e\u003cimg src=\"/images/theme/http2_wireshark.png\"/\u003e \u003c/figure\u003e",
     "keywords": ["http2"],
     "mainEntityOfPage": {
       "@type": "WebPage",
@@ -1673,8 +1673,7 @@
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      <figure>
-    <img src="/images/theme/http2_wireshark.png"/> 
+      <figure><img src="/images/theme/http2_wireshark.png"/>
 </figure>
 
 <h2 id="如何確認網頁是否支援-http2">如何確認網頁是否支援 http2</h2>
@@ -1683,29 +1682,25 @@
 <p><strong>如果當前瀏覽頁面啟用了 HTTP2 則為藍色，如果啟用了 SPDY 則為綠色。</strong></p>
 <p>可以看一下我最常瀏覽的網頁他是支援什麼樣的 protocal</p>
 <p>當我瀏覽 Kubernetes.io 的時候可以看到右上角是藍色的閃電表示支援 http2<br />
-<figure>
-    <img src="/images/post/http2_wireshark-1.png"/> 
+<figure><img src="/images/post/http2_wireshark-1.png"/>
 </figure>
 </p>
 <p>那今天什麼網頁支援 SPDY 呢？</p>
 <p>當我瀏覽 google 首頁的時候發現它支援 SPDY protocal<br />
-<figure>
-    <img src="/images/post/http2_wireshark-2.png"/> 
+<figure><img src="/images/post/http2_wireshark-2.png"/>
 </figure>
 </p>
 <h3 id="dev-mod">dev mod</h3>
 <p>可以透過 chrome 的開發者模式觀察 請求是過過什麼樣的協定去進行傳輸的。</p>
 <p>當我們開啟 dev mod 的時候存取 github 的頁面可以觀察到有許多的請求是透過http2完成的，如下圖所示。<br />
-<figure>
-    <img src="/images/post/http2_wireshark-3.png"/> 
+<figure><img src="/images/post/http2_wireshark-3.png"/>
 </figure>
 </p>
 <p>從圖中我們可以觀察到 有http/1.1的請求也有 h2的請求，這兩種請求分別代表著前端網頁透過 http1.1 以及 基於 tls 的 http2 請求。</p>
 <h2 id="蝦米-wireshark-抓不到-http2-的封包">蝦米 wireshark 抓不到 http2 的封包</h2>
 <h3 id="抓不到-http2-封包">抓不到 http2 封包</h3>
 <p>先來看一張圖，是我設定 wireshark filter 只顯示 http2 的封包，並且同時存取 kubernetes.io 。</p>
-<figure>
-    <img src="/images/post/http2_wireshark-4.png"/> 
+<figure><img src="/images/post/http2_wireshark-4.png"/>
 </figure>
 
 <p>從上圖會發現&hellip;.什麼資料都沒有，那怎麼會這樣子？</p>
@@ -1715,28 +1710,27 @@
 <ol>
 <li>建立keylogfile.log 文件，更改權限。讓 chrome 啟動時能寫入攜帶sslkeylogfile</li>
 </ol>
-<pre><code class="language-shell=" data-lang="shell=">mkdir ~/sslkeylogfile 
+<pre tabindex="0"><code class="language-shell=" data-lang="shell=">mkdir ~/sslkeylogfile 
 touch ~/sslkeylogfile/keylogfile.log
 sudo chmod 777 ~/sslkeylogfile/keylogfile.log
 </code></pre><ol start="2">
 <li>設定環境變數</li>
 </ol>
-<pre><code class="language-shell=" data-lang="shell=">export SSLKEYLOGFILE=~/sslkeylogfile/keylogfile.log
+<pre tabindex="0"><code class="language-shell=" data-lang="shell=">export SSLKEYLOGFILE=~/sslkeylogfile/keylogfile.log
 echo &quot;alias chrome=\&quot;open -a 'Google Chrome'\&quot;&quot; &gt;&gt; ~/.zshrc
 source ~/.zshrc
 </code></pre><ol start="3">
 <li>如果要實驗 HTTP2 的話需要從 terminal 開啟 Chrome</li>
 </ol>
-<pre><code class="language-bash=" data-lang="bash=">chrome
+<pre tabindex="0"><code class="language-bash=" data-lang="bash=">chrome
 </code></pre><p>透過 terminal 啟動 chrome 的圖如下所示<br />
-<figure>
-    <img src="/images/post/http2_wireshark-5.png"/> 
+<figure><img src="/images/post/http2_wireshark-5.png"/>
 </figure>
 </p>
 <p>可以看一下 sslkeylogfile 的資料，裡面寫什麼不是很重要 wireshark 看得懂就好xDDD</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1747,7 +1741,7 @@ source ~/.zshrc
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">cat ~/sslkeylogfile/keylogfile.log                                 
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">cat ~/sslkeylogfile/keylogfile.log                                 
 CLIENT_HANDSHAKE_TRAFFIC_SECRET e379a0d9d454a5c80bf4d7b49dcbc6eb9055f07cda497306768b828b20380056 c0dc0b38f983aa5f1dd82f4b555c6be6195570622e90c956444938027e0dedc5
 SERVER_HANDSHAKE_TRAFFIC_SECRET e379a0d9d454a5c80bf4d7b49dcbc6eb9055f07cda497306768b828b20380056 52ff297d7a0b1705bf6a876cbb307836ecc462455b9455d5eac606a1a6b1cac1
 CLIENT_TRAFFIC_SECRET_0 e379a0d9d454a5c80bf4d7b49dcbc6eb9055f07cda497306768b828b20380056 ea654ba45d35cae4a0d81fa2eb3e795c930ea8e06caab92f4da992cba14c354b
@@ -1760,19 +1754,16 @@ SERVER_HANDSHAKE_TRAFFIC_SECRET f95d9c5cd50060635969f3a88c89c548a063e1fa74c8cdb5
 </div>
 </div><h3 id="設定wireshark">設定wireshark</h3>
 <p>開啟 wireshark 後點選wireshark  選擇 Preferences 打開設定頁面，如下圖所示。<br />
-<figure>
-    <img src="/images/post/http2_wireshark-6.png"/> 
+<figure><img src="/images/post/http2_wireshark-6.png"/>
 </figure>
 </p>
 <p>接著選擇 <code>Protocols -&gt; TLS -&gt; (Pre)-Master-Secret log filename</code> 把~/sslkeylogfile/keylogfile.log 放進去。<br />
-<figure>
-    <img src="/images/post/http2_wireshark-7.png"/> 
+<figure><img src="/images/post/http2_wireshark-7.png"/>
 </figure>
 </p>
 <h2 id="驗證-wireshark-抓取瀏覽器存取-http2-的封包">驗證 wireshark 抓取瀏覽器存取 http2 的封包</h2>
 <p>現在開啟 wireshark filter 輸入 http2 接著透過瀏覽器存取 github的網站，觀察 wireshark 是否能抓取到封包，如下圖所示。</p>
-<figure>
-    <img src="/images/post/http2_wireshark-8.png"/> 
+<figure><img src="/images/post/http2_wireshark-8.png"/>
 </figure>
 
 <p>從圖中看起來都能夠順利地抓到封包，後續會針對 http2 的欄位進一步分析與複習相關的概念。</p>
@@ -2187,7 +2178,7 @@ SERVER_HANDSHAKE_TRAFFIC_SECRET f95d9c5cd50060635969f3a88c89c548a063e1fa74c8cdb5
 </div>
 
 
-<script defer src="/js/swipe.min.b4b82839155519d9ca67746615a4c86ccbc1061c196fe6d8aa26e4fe22902718.js"></script>
+<script defer src="/js/swipe.min.989e074dfb92ce7f57a92c1df7027f88b53c50a54fd9ad450a673a64aa91bfa4.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
@@ -3194,7 +3185,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 
             <p class="caption">
                 
-                    ©2021, All Rights Reserved
+                    ©2022, All Rights Reserved
                 
             </p>
         

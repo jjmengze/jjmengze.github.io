@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.efa35f4c090622130b3f4cfae6971448b5ffb61c5f0a8f21cdfd157fa712abc4.js"></script>
+<script defer src="/js/helper/fadeinout.min.1d13d3e810c3940e80cbba6216a1c76fbf42b5431fc83537ea6997863802362b.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1341,7 +1341,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Meng Learning Note">
 
-<meta name="generator" content="Hugo 0.80.0" />
+<meta name="generator" content="Hugo 0.91.2" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1380,7 +1380,7 @@
     "datePublished": "2020-05-06T15:26:47+08:00",
     "dateModified": "2020-05-06T15:26:47+08:00",
     "url" : "https://blog.jjmengze.website/posts/ocp/gitlab-ocp/",
-    "description": "\u003cfigure\u003e     \u003cimg src=\"/images/theme/ocp-gitlab-identity.jpeg\"/\u003e  \u003c/figure\u003e",
+    "description": "\u003cfigure\u003e\u003cimg src=\"/images/theme/ocp-gitlab-identity.jpeg\"/\u003e \u003c/figure\u003e",
     "keywords": ["openshift"],
     "mainEntityOfPage": {
       "@type": "WebPage",
@@ -1673,8 +1673,7 @@
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      <figure>
-    <img src="/images/theme/ocp-gitlab-identity.jpeg"/> 
+      <figure><img src="/images/theme/ocp-gitlab-identity.jpeg"/>
 </figure>
 
 <p>ref: <a href="https://docs.openshift.com/container-platform/4.4/authentication/identity_providers/configuring-gitlab-identity-provider.html">https://docs.openshift.com/container-platform/4.4/authentication/identity_providers/configuring-gitlab-identity-provider.html</a></p>
@@ -1687,15 +1686,13 @@
 <ol>
 <li>如圖所示先選擇Gitlab網頁上右上角自己的頭像，並選擇Setting。</li>
 </ol>
-<figure>
-    <img src="/images/post/ocp-gitlab-identity-1.png"/> 
+<figure><img src="/images/post/ocp-gitlab-identity-1.png"/>
 </figure>
 
 <ol start="2">
 <li>選擇完Setting後，到左方選擇Applications，進入到設定Application的頁面。</li>
 </ol>
-<figure>
-    <img src="/images/post/ocp-gitlab-identity-2.png"/> 
+<figure><img src="/images/post/ocp-gitlab-identity-2.png"/>
 </figure>
 
 <ol start="3">
@@ -1713,29 +1710,27 @@
 因為 Openshift 需要透過 <a href="https://docs.gitlab.com/ce/integration/openid_connect_provider.html">OpenID Connect (OIDC)</a>驗證 Gitlab 使用者的登入資訊，所以我們要把 <code>openid</code> 給勾選起來。</p>
 </li>
 </ul>
-<figure>
-    <img src="/images/post/ocp-gitlab-identity-3.png"/> 
+<figure><img src="/images/post/ocp-gitlab-identity-3.png"/>
 </figure>
 
 <ol start="4">
 <li>填寫完成後按下 Save application 可以看到以下結果。</li>
 </ol>
-<figure>
-    <img src="/images/post/ocp-gitlab-identity-4.png"/> 
+<figure><img src="/images/post/ocp-gitlab-identity-4.png"/>
 </figure>
 
 <h2 id="create-secret">Create secret</h2>
 <p>要在 OCP 上面建立一個 <code>secret</code> 後續讓驗證的時候可以攜帶這個 secret 資訊。<br />
 這裡的 clientSecret 的數值就是剛剛在 Gitlab 上建立 Application 的 Secret 的數值呦！</p>
-<pre><code class="language-bash=''" data-lang="bash=''">$kubectl create secret generic gitlab-app-oath --from-literal=clientSecret=&quot;1368992d4100943938f4896d47419b4bba3c5598dce0fa15f8c4ca50fc16758f&quot; -n openshift-config
+<pre tabindex="0"><code class="language-bash=''" data-lang="bash=''">$kubectl create secret generic gitlab-app-oath --from-literal=clientSecret=&quot;1368992d4100943938f4896d47419b4bba3c5598dce0fa15f8c4ca50fc16758f&quot; -n openshift-config
 </code></pre><h2 id="create-comfigmap">Create Comfigmap</h2>
 <p>接著建立 configmap ，這裡的 configmap 是 Gitlab 的憑證，只要修改一下憑證的路徑在按照下面的命令執行就可以把憑證放到 OCP 上了。</p>
-<pre><code class="language-bash=" data-lang="bash=">$kubectl create configmap gitlab-ca --from-file=ca.crt=/mnt/gitlab-ca.crt -n openshift-config
+<pre tabindex="0"><code class="language-bash=" data-lang="bash=">$kubectl create configmap gitlab-ca --from-file=ca.crt=/mnt/gitlab-ca.crt -n openshift-config
 </code></pre><h2 id="create-oauth">Create OAuth</h2>
 <p>上面的步驟做完之後，我們還需要建立一個 yaml 案來告訴 OCP 說現在要多提供一種登入及認證方式。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1753,7 +1748,7 @@
 </span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">config.openshift.io/v1</span><span class="w">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">config.openshift.io/v1</span><span class="w">
 </span><span class="w"></span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">OAuth</span><span class="w">
 </span><span class="w"></span><span class="nt">metadata</span><span class="p">:</span><span class="w">
 </span><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">cluster</span><span class="w">
@@ -1772,20 +1767,17 @@
 </span></code></pre></td></tr></table>
 </div>
 </div><p>de re mi so ，我們可以 apply 這個設定檔案到 OCP 上囉！</p>
-<pre><code class="language-bash=" data-lang="bash=">$kubectl apply -f oath-gitlab.yml
+<pre tabindex="0"><code class="language-bash=" data-lang="bash=">$kubectl apply -f oath-gitlab.yml
 </code></pre><p>就著我們就可以到openshift console 看剛剛的設定是不是大成功了！</p>
-<figure>
-    <img src="/images/post/ocp-gitlab-identity-5.png"/> 
+<figure><img src="/images/post/ocp-gitlab-identity-5.png"/>
 </figure>
 
 <p>快樂地點進去之後，可以看看。可以看到 OCP 向你的 Gitlab 要權限登入囉。<br />
-<figure>
-    <img src="/images/post/ocp-gitlab-identity-6.png"/> 
+<figure><img src="/images/post/ocp-gitlab-identity-6.png"/>
 </figure>
 </p>
 <p>按下 Authorize 後就可進入到 Openshift 的頁面，接著開始操作你的環境囉！<br />
-<figure>
-    <img src="/images/post/ocp-gitlab-identity-7.png"/> 
+<figure><img src="/images/post/ocp-gitlab-identity-7.png"/>
 </figure>
 </p>
     </article>
@@ -2199,7 +2191,7 @@
 </div>
 
 
-<script defer src="/js/swipe.min.b4b82839155519d9ca67746615a4c86ccbc1061c196fe6d8aa26e4fe22902718.js"></script>
+<script defer src="/js/swipe.min.989e074dfb92ce7f57a92c1df7027f88b53c50a54fd9ad450a673a64aa91bfa4.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
@@ -3206,7 +3198,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 
             <p class="caption">
                 
-                    ©2021, All Rights Reserved
+                    ©2022, All Rights Reserved
                 
             </p>
         

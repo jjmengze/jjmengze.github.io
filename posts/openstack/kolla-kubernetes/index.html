@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.efa35f4c090622130b3f4cfae6971448b5ffb61c5f0a8f21cdfd157fa712abc4.js"></script>
+<script defer src="/js/helper/fadeinout.min.1d13d3e810c3940e80cbba6216a1c76fbf42b5431fc83537ea6997863802362b.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1341,7 +1341,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Meng Learning Note">
 
-<meta name="generator" content="Hugo 0.80.0" />
+<meta name="generator" content="Hugo 0.91.2" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1380,7 +1380,7 @@
     "datePublished": "2018-04-21T23:25:20+08:00",
     "dateModified": "2018-04-21T23:25:20+08:00",
     "url" : "https://blog.jjmengze.website/posts/openstack/kolla-kubernetes/",
-    "description": "\u003cfigure\u003e     \u003cimg src=\"/images/theme/kolla-openstack.jpg\"/\u003e  \u003c/figure\u003e  \u003cp\u003ekolla是為了提供production-ready的 OpenStack Cloud 之container和deployment tools。\u003c/p\u003e",
+    "description": "\u003cfigure\u003e\u003cimg src=\"/images/theme/kolla-openstack.jpg\"/\u003e \u003c/figure\u003e  \u003cp\u003ekolla是為了提供production-ready的 OpenStack Cloud 之container和deployment tools。\u003c/p\u003e",
     "keywords": ["openStack","kubernetes"],
     "mainEntityOfPage": {
       "@type": "WebPage",
@@ -1675,8 +1675,7 @@
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      <figure>
-    <img src="/images/theme/kolla-openstack.jpg"/> 
+      <figure><img src="/images/theme/kolla-openstack.jpg"/>
 </figure>
 
 <p>kolla是為了提供production-ready的 OpenStack Cloud 之container和deployment tools。</p>
@@ -1721,7 +1720,7 @@
 <p>安裝 Kubernetes latest version  and other dependencies:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1732,7 +1731,7 @@
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$curl</span> -s https://packages.cloud.google.com/apt/doc/apt-key.gpg <span class="p">|</span> sudo -E apt-key add -
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$curl</span> -s https://packages.cloud.google.com/apt/doc/apt-key.gpg <span class="p">|</span> sudo -E apt-key add -
 <span class="nv">$cat</span> <span class="s">&lt;&lt;EOF &gt; kubernetes.list
 </span><span class="s">deb http://apt.kubernetes.io/ kubernetes-xenial main
 </span><span class="s">EOF</span>
@@ -1746,36 +1745,36 @@
 </div><p>Kubernetes v1.8+ 要求關閉系統 Swap，如果不想關閉系統的Swap需要修改 kubelet 設定參數，我們利用以下指令關閉系統Swap：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$swapoff</span> -a <span class="o">&amp;&amp;</span> sysctl -w vm.swappiness<span class="o">=</span><span class="m">0</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$swapoff</span> -a <span class="o">&amp;&amp;</span> sysctl -w vm.swappiness<span class="o">=</span><span class="m">0</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>透過以下指令啟動Docker Daemon。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$systemctl</span> <span class="nb">enable</span> docker <span class="o">&amp;&amp;</span> systemctl start docker
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$systemctl</span> <span class="nb">enable</span> docker <span class="o">&amp;&amp;</span> systemctl start docker
 </code></pre></td></tr></table>
 </div>
 </div><p>確認Docker是否支援Cgroup Driver或是Systemd Driver，進一步修改 kubelet 設定參數。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$CGROUP_DRIVER</span><span class="o">=</span><span class="k">$(</span>sudo docker info <span class="p">|</span> grep <span class="s2">&#34;Cgroup Driver&#34;</span> <span class="p">|</span> awk <span class="s1">&#39;{print $3}&#39;</span><span class="k">)</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$CGROUP_DRIVER</span><span class="o">=</span><span class="k">$(</span>sudo docker info <span class="p">|</span> grep <span class="s2">&#34;Cgroup Driver&#34;</span> <span class="p">|</span> awk <span class="s1">&#39;{print $3}&#39;</span><span class="k">)</span>
 <span class="nv">$sudo</span> sed -i <span class="s2">&#34;s|KUBELET_KUBECONFIG_ARGS=|KUBELET_KUBECONFIG_ARGS=--cgroup-driver=</span><span class="nv">$CGROUP_DRIVER</span><span class="s2"> |g&#34;</span> /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
 </code></pre></td></tr></table>
 </div>
 </div><p>將橋接的IPv4流量傳遞給iptables</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1783,7 +1782,7 @@
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$cat</span> <span class="s">&lt;&lt;EOF &gt; /etc/sysctl.d/k8s.conf
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$cat</span> <span class="s">&lt;&lt;EOF &gt; /etc/sysctl.d/k8s.conf
 </span><span class="s">net.ipv4.ip_forward = 1
 </span><span class="s">net.bridge.bridge-nf-call-ip6tables = 1
 </span><span class="s">net.bridge.bridge-nf-call-iptables = 1
@@ -1794,22 +1793,22 @@
 </div><p>設置Kubernetes Server CIDR的DNS位置。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$sudo</span> sed -i <span class="s1">&#39;s/10.96.0.10/10.3.3.10/g&#39;</span> /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$sudo</span> sed -i <span class="s1">&#39;s/10.96.0.10/10.3.3.10/g&#39;</span> /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
 </code></pre></td></tr></table>
 </div>
 </div><p>利用以下重新載入kubelet相關的啟動參數</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$sudo</span> systemctl daemon-reload
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$sudo</span> systemctl daemon-reload
 <span class="nv">$sudo</span> systemctl stop kubelet
 <span class="nv">$sudo</span> systemctl <span class="nb">enable</span> kubelet
 <span class="nv">$sudo</span> systemctl start kubelet
@@ -1818,22 +1817,22 @@
 </div><p>在master節點上使用kubeadm進行kubernetes 叢集的初始化</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$sudo</span> kubeadm init --feature-gates <span class="nv">CoreDNS</span><span class="o">=</span><span class="nb">true</span> --pod-network-cidr<span class="o">=</span>10.1.0.0/16 --service-cidr<span class="o">=</span>10.3.3.0/24
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$sudo</span> kubeadm init --feature-gates <span class="nv">CoreDNS</span><span class="o">=</span><span class="nb">true</span> --pod-network-cidr<span class="o">=</span>10.1.0.0/16 --service-cidr<span class="o">=</span>10.3.3.0/24
 </code></pre></td></tr></table>
 </div>
 </div><p>會得到下列輸出，我們利用下列輸出的資訊將其他節點加入叢集。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">You can now join any number of machines by running the following on each node
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">You can now join any number of machines by running the following on each node
 as root:
 
   kubeadm join 10.0.0.181:6443 --token pieol0.2kfzpwhosxuqhe6t --discovery-token-ca-cert-hash sha256:e55b423135642404ffc60bcae4793732f18b4ce2866a8419c87b7dd92724a481
@@ -1842,21 +1841,21 @@ as root:
 </div><p>在其他節點上我們可以利用以下指令加入叢集。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubeadm</span> join 10.0.0.181:6443 --token pieol0.2kfzpwhosxuqhe6t --discovery-token-ca-cert-hash sha256:e55b423135642404ffc60bcae4793732f18b4ce2866a8419c87b7dd92724a481
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubeadm</span> join 10.0.0.181:6443 --token pieol0.2kfzpwhosxuqhe6t --discovery-token-ca-cert-hash sha256:e55b423135642404ffc60bcae4793732f18b4ce2866a8419c87b7dd92724a481
 </code></pre></td></tr></table>
 </div>
 </div><p>在master節點設定kube config。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$mkdir</span> -p <span class="nv">$HOME</span>/.kube
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$mkdir</span> -p <span class="nv">$HOME</span>/.kube
 <span class="nv">$sudo</span> -H cp /etc/kubernetes/admin.conf <span class="nv">$HOME</span>/.kube/config
 <span class="nv">$sudo</span> -H chown <span class="k">$(</span>id -u<span class="k">)</span>:<span class="k">$(</span>id -g<span class="k">)</span> <span class="nv">$HOME</span>/.kube/config
 </code></pre></td></tr></table>
@@ -1864,14 +1863,14 @@ as root:
 </div><p>在master 安裝Kubernetes CNI，這邊採用的是Canal。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$wget</span> https://docs.projectcalico.org/v3.1/getting-started/kubernetes/installation/hosted/canal/rbac.yaml
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$wget</span> https://docs.projectcalico.org/v3.1/getting-started/kubernetes/installation/hosted/canal/rbac.yaml
 <span class="nv">$kubectl</span> apply -f rbac.yaml
 <span class="nv">$wget</span> https://docs.projectcalico.org/v3.1/getting-started/kubernetes/installation/hosted/canal/canal.yaml
 <span class="nv">$sed</span> -i <span class="s2">&#34;s@10.244.0.0/16@10.1.0.0/16@&#34;</span> canal.yaml
@@ -1881,16 +1880,16 @@ as root:
 </div><p>因為我們要把kubernetes master當作openstack controller的角色，我們將kubernetes master 的節點污染拿掉。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubectl</span> taint nodes --all<span class="o">=</span><span class="nb">true</span>  node-role.kubernetes.io/master:NoSchedule-
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubectl</span> taint nodes --all<span class="o">=</span><span class="nb">true</span>  node-role.kubernetes.io/master:NoSchedule-
 </code></pre></td></tr></table>
 </div>
 </div><p>在CNI安裝完成後可透過下列指令來檢查，Node &amp; Pod是否都準備好了。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1912,7 +1911,7 @@ as root:
 </span><span class="lnt">20
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubectl</span> get pod,node -o wide --all-namespaces
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubectl</span> get pod,node -o wide --all-namespaces
 
 NAMESPACE     NAME                                READY     STATUS    RESTARTS   AGE
 kube-system   pod/canal-297sw                     3/3       Running   <span class="m">0</span>          2m
@@ -1937,7 +1936,7 @@ node3     Ready   master    8m        v1.10.3
 </div><p>利用BusyBox ，驗證Kubernetes 環境例如DNS 是否有通。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1948,7 +1947,7 @@ node3     Ready   master    8m        v1.10.3
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubectl</span> run -i -t <span class="k">$(</span>uuidgen<span class="k">)</span> --image<span class="o">=</span>busybox --restart<span class="o">=</span>Never
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubectl</span> run -i -t <span class="k">$(</span>uuidgen<span class="k">)</span> --image<span class="o">=</span>busybox --restart<span class="o">=</span>Never
 <span class="nv">$nslookup</span> kubernetes
 
 
@@ -1962,7 +1961,7 @@ Address 1: 10.3.3.1 kubernetes.default.svc.cluster.local
 </div><p>為kubernetes Helm 建立Tiller Service Account以及綁定Cluster-Admin Role</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1979,7 +1978,7 @@ Address 1: 10.3.3.1 kubernetes.default.svc.cluster.local
 </span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubectl</span> create serviceaccount tiller --namespace kube-system
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubectl</span> create serviceaccount tiller --namespace kube-system
 <span class="nv">$cat</span> <span class="s">&lt;&lt;EOF | kubectl create -f -
 </span><span class="s">kind: ClusterRoleBinding
 </span><span class="s">apiVersion: rbac.authorization.k8s.io/v1beta1
@@ -1999,13 +1998,13 @@ Address 1: 10.3.3.1 kubernetes.default.svc.cluster.local
 </div><p>接著我們安裝Kubernetes Helm，用來管理Helm package的元件。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$curl</span> -L https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get &gt; get_helm.sh
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$curl</span> -L https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get &gt; get_helm.sh
 <span class="nv">$chmod</span> <span class="m">700</span> get_helm.sh
 $./get_helm.sh
 <span class="nv">$helm</span> init --service-account tiller
@@ -2014,12 +2013,12 @@ $./get_helm.sh
 </div><p>由於kolla kubernetes 需要用到ansible git ，我們在master的節點需要安裝ansible ，其他節點需安裝python。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$sudo</span> apt-get update <span class="o">&amp;&amp;</span> sudo apt-get install -y software-properties-common git python python-pip
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$sudo</span> apt-get update <span class="o">&amp;&amp;</span> sudo apt-get install -y software-properties-common git python python-pip
 <span class="nv">$sudo</span> apt-add-repository -y ppa:ansible/ansible
 <span class="nv">$sudo</span> apt-get update <span class="o">&amp;&amp;</span>  sudo apt-get install -y ansible
 </code></pre></td></tr></table>
@@ -2027,18 +2026,18 @@ $./get_helm.sh
 </div><p>建立一個資料夾方便我們接下來的步驟</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$mkdir</span> kolla-bringup
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$mkdir</span> kolla-bringup
 <span class="nv">$cd</span> kolla-bringup
 </code></pre></td></tr></table>
 </div>
 </div><p>下載 kolla-kubernetes &amp; kolla ansible</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -2047,7 +2046,7 @@ $./get_helm.sh
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$git</span> clone http://github.com/openstack/kolla-ansible
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$git</span> clone http://github.com/openstack/kolla-ansible
 <span class="nv">$git</span> clone http://github.com/openstack/kolla-kubernetes
 <span class="nv">$cd</span> kolla-kubernetes
 <span class="nv">$git</span> checkout 22ed0c232d7666afb6e288001b8814deea664992
@@ -2059,50 +2058,50 @@ $./get_helm.sh
 </div><p>使用pip 安裝kolla-kubernetes &amp; kolla-ansible所需要的套件</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$sudo</span> pip install -U kolla-ansible/ kolla-kubernetes
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$sudo</span> pip install -U kolla-ansible/ kolla-kubernetes
 </code></pre></td></tr></table>
 </div>
 </div><p>把相關設定檔製到/etc底下</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$cp</span> -Ra  kolla-kubernetes/etc/kolla/ /etc
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$cp</span> -Ra  kolla-kubernetes/etc/kolla/ /etc
 <span class="nv">$cp</span> -Ra  kolla-kubernetes/etc/kolla-kubernetes/ /etc
 </code></pre></td></tr></table>
 </div>
 </div><p>pip剛剛安裝的項目這時候可以幫我們生成default passwords</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$sudo</span> kolla-kubernetes-genpwd
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$sudo</span> kolla-kubernetes-genpwd
 </code></pre></td></tr></table>
 </div>
 </div><p>建立一個Kubernetes namespaces來隔離Kolla deployment</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubectl</span> create namespace kolla
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubectl</span> create namespace kolla
 </code></pre></td></tr></table>
 </div>
 </div><p>使用Label標記要成為Controller及Compute的節點，我們這邊將node1當成Controller，node2 node3當成Compute</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubectl</span> label node node1 <span class="nv">kolla_controller</span><span class="o">=</span><span class="nb">true</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubectl</span> label node node1 <span class="nv">kolla_controller</span><span class="o">=</span><span class="nb">true</span>
 <span class="nv">$kubectl</span> label node node2 <span class="nv">kolla_compute</span><span class="o">=</span><span class="nb">true</span>
 <span class="nv">$kubectl</span> label node node3 <span class="nv">kolla_compute</span><span class="o">=</span><span class="nb">true</span>
 </code></pre></td></tr></table>
@@ -2113,7 +2112,7 @@ $./get_helm.sh
 <p>將相關的openstack設定加入/etc/kolla/globals.yml</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2153,7 +2152,7 @@ $./get_helm.sh
 </span><span class="lnt">38
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$cat</span> <span class="s">&lt;&lt;EOF &gt; add-to-globals.yml
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$cat</span> <span class="s">&lt;&lt;EOF &gt; add-to-globals.yml
 </span><span class="s">kolla_install_type: &#34;source&#34;
 </span><span class="s">tempest_image_alt_id: &#34;{{ tempest_image_id }}&#34;
 </span><span class="s">tempest_flavor_ref_alt_id: &#34;{{ tempest_flavor_ref_id }}&#34;
@@ -2196,25 +2195,25 @@ $./get_helm.sh
 </div><p>接下來透過ansible幫我們產生OpneStack設定檔</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$ansible</span>-playbook -e @/etc/kolla/globals.yml -e @/etc/kolla/passwords.yml -e <span class="nv">CONFIG_DIR</span><span class="o">=</span>/etc/kolla kolla-kubernetes/ansible/site.yml
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$ansible</span>-playbook -e @/etc/kolla/globals.yml -e @/etc/kolla/passwords.yml -e <span class="nv">CONFIG_DIR</span><span class="o">=</span>/etc/kolla kolla-kubernetes/ansible/site.yml
 </code></pre></td></tr></table>
 </div>
 </div><p>使用官方提供的腳本幫助我們快速的把OpenStack的password，加到Kubernetes secrets</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kolla</span>-kubernetes/tools/secret-generator.py create
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kolla</span>-kubernetes/tools/secret-generator.py create
 </code></pre></td></tr></table>
 </div>
 </div><p>使用之前在pip安裝的檔案，快速的把OpenStack的設定檔，加入Kubernetes config maps裡</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2226,7 +2225,7 @@ $./get_helm.sh
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kollakube</span> res create configmap <span class="se">\
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kollakube</span> res create configmap <span class="se">\
 </span><span class="se"></span>    mariadb keystone horizon rabbitmq memcached nova-api nova-conductor <span class="se">\
 </span><span class="se"></span>    nova-scheduler glance-api-haproxy glance-registry-haproxy glance-api <span class="se">\
 </span><span class="se"></span>    glance-registry neutron-server neutron-dhcp-agent neutron-l3-agent <span class="se">\
@@ -2241,15 +2240,15 @@ $./get_helm.sh
 </div><p>透過官方提供的腳本建立Kolla Helm Chart</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kolla</span>-kubernetes/tools/helm_build_all.sh .
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kolla</span>-kubernetes/tools/helm_build_all.sh .
 </code></pre></td></tr></table>
 </div>
 </div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2308,7 +2307,7 @@ $./get_helm.sh
 </span><span class="lnt">57
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$cat</span> <span class="s">&lt;&lt;EOF &gt; cloud.yaml
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$cat</span> <span class="s">&lt;&lt;EOF &gt; cloud.yaml
 </span><span class="s">global:
 </span><span class="s">   kolla:
 </span><span class="s">     all:
@@ -2370,34 +2369,34 @@ $./get_helm.sh
 </div><p>將該數值修改成環境上Management interface的IP。例如10.0.0.178</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$sed</span> -i <span class="s2">&#34;s@192.168.7.105@10.0.0.178@g&#34;</span> ./cloud.yaml
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$sed</span> -i <span class="s2">&#34;s@192.168.7.105@10.0.0.178@g&#34;</span> ./cloud.yaml
 </code></pre></td></tr></table>
 </div>
 </div><p>將該數值修改成環境上ext_interface_name的interface。例如：eth1</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$sed</span> -i <span class="s2">&#34;s@enp1s0f1@eth1@g&#34;</span> ./cloud.yaml
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$sed</span> -i <span class="s2">&#34;s@enp1s0f1@eth1@g&#34;</span> ./cloud.yaml
 </code></pre></td></tr></table>
 </div>
 </div><p>將該數值修改成環境上Management interface。例如：eth2</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$sed</span> -i <span class="s2">&#34;s@docker0@eth2@g&#34;</span> ./cloud.yaml
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$sed</span> -i <span class="s2">&#34;s@docker0@eth2@g&#34;</span> ./cloud.yaml
 </code></pre></td></tr></table>
 </div>
 </div><p>在這邊建立一個給Openstack rbac ，讓後來helm啟動的元件去取得Kubernetes資源不會有權限問題（OpenStack官方RBAC這一點還沒修正&hellip;）</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2413,7 +2412,7 @@ $./get_helm.sh
 </span><span class="lnt">14
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$cat</span> <span class="s">&lt;&lt;EOF | kubectl apply -f -
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$cat</span> <span class="s">&lt;&lt;EOF | kubectl apply -f -
 </span><span class="s">apiVersion: rbac.authorization.k8s.io/v1beta1
 </span><span class="s">kind: ClusterRoleBinding
 </span><span class="s">metadata:
@@ -2432,7 +2431,7 @@ $./get_helm.sh
 </div><p>一個一個把openstack的服務使用helm啟動起來。（例如mariadb,rabbitmq,memcached&hellip;等)</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2445,7 +2444,7 @@ $./get_helm.sh
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$helm</span> install --debug kolla-kubernetes/helm/service/mariadb --namespace kolla --name mariadb --values ./cloud.yaml
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$helm</span> install --debug kolla-kubernetes/helm/service/mariadb --namespace kolla --name mariadb --values ./cloud.yaml
 <span class="nv">$helm</span> install --debug kolla-kubernetes/helm/service/rabbitmq --namespace kolla --name rabbitmq --values ./cloud.yaml
 <span class="nv">$helm</span> install --debug kolla-kubernetes/helm/service/memcached --namespace kolla --name memcached --values ./cloud.yaml
 <span class="nv">$helm</span> install --debug kolla-kubernetes/helm/service/keystone --namespace kolla --name keystone --values ./cloud.yaml
@@ -2461,22 +2460,22 @@ $./get_helm.sh
 </div><p>這邊有可能遇到第一個問題，也就是nova-compute init 會卡在這個畫面。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">nova-api-create-cell-r288q  0/1    Init:2/3  <span class="m">0</span>         5min
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">nova-api-create-cell-r288q  0/1    Init:2/3  <span class="m">0</span>         5min
 </code></pre></td></tr></table>
 </div>
 </div><p>這邊發生了一些問題，官方沒有去修正他。先把這個helm chart 刪除掉，我在這邊修正了helm的設定檔案，去修改keystone的url。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$helm</span> delete --purge nova-compute
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$helm</span> delete --purge nova-compute
 <span class="nv">$vim</span> kolla-bringup/kolla-kubernetes/helm/microservice/nova-api-create-simple-cell-job/templates/nova-api-create-cell.yaml
 
 <span class="o">{{</span>- <span class="nv">$keystonePort</span> :<span class="o">=</span> include <span class="s2">&#34;kolla_val_get_str&#34;</span> <span class="o">(</span>dict <span class="s2">&#34;key&#34;</span> <span class="s2">&#34;port&#34;</span> <span class="s2">&#34;searchPath&#34;</span> <span class="nv">$keystoneSearchPath</span> <span class="s2">&#34;Values&#34;</span> .Values <span class="o">)</span><span class="p">|</span> default <span class="s2">&#34;5000&#34;</span> <span class="o">}}</span>
@@ -2485,25 +2484,25 @@ $./get_helm.sh
 </div><p>再重新build一次helm chart</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kolla</span>-kubernetes/tools/helm_build_all.sh .
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kolla</span>-kubernetes/tools/helm_build_all.sh .
 </code></pre></td></tr></table>
 </div>
 </div><p>再重新run一次修正過後的chart.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">helm install --debug kolla-kubernetes/helm/service/nova-compute --namespace kolla --name nova-compute --values ./cloud.yaml
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">helm install --debug kolla-kubernetes/helm/service/nova-compute --namespace kolla --name nova-compute --values ./cloud.yaml
 </code></pre></td></tr></table>
 </div>
 </div><p>確認所有服務運作正常</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2583,7 +2582,7 @@ $./get_helm.sh
 </span><span class="lnt">78
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ kubectl get pod -n kolla
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ kubectl get pod -n kolla
 NAME                                                    READY     STATUS      RESTARTS   AGE
 cinder-api-5d6fd874b5-tzwlr                             3/3       Running     <span class="m">0</span>          11h
 cinder-create-db-x552q                                  0/2       Completed   <span class="m">0</span>          11h
@@ -2666,21 +2665,21 @@ rabbitmq-init-element-gtvgw                             0/1       Completed   <s
 </div><p>使用官方的tool建立admin的openrc file，建立完成的檔案會存在當前使用者的home目錄下。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kolla</span>-kubernetes/tools/build_local_admin_keystonerc.sh ext
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kolla</span>-kubernetes/tools/build_local_admin_keystonerc.sh ext
 </code></pre></td></tr></table>
 </div>
 </div><p>接者安裝OpenStack clients套件</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$sudo</span> pip install <span class="s2">&#34;python-openstackclient&#34;</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$sudo</span> pip install <span class="s2">&#34;python-openstackclient&#34;</span>
 <span class="nv">$sudo</span> pip install <span class="s2">&#34;python-neutronclient&#34;</span>
 <span class="nv">$sudo</span> pip install <span class="s2">&#34;python-cinderclient&#34;</span>
 </code></pre></td></tr></table>
@@ -2688,7 +2687,7 @@ rabbitmq-init-element-gtvgw                             0/1       Completed   <s
 </div><p>使用openstack語法去產生image,network&hellip;等</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2715,7 +2714,7 @@ rabbitmq-init-element-gtvgw                             0/1       Completed   <s
 </span><span class="lnt">25
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$source</span> ~/keystonerc_admin
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$source</span> ~/keystonerc_admin
 <span class="nv">$IMAGE_URL</span><span class="o">=</span>http://download.cirros-cloud.net/0.3.5/
 <span class="nv">$IMAGE</span><span class="o">=</span>cirros-0.3.5-x86_64-disk.img
 <span class="nv">$IMAGE_NAME</span><span class="o">=</span>cirros
@@ -2745,7 +2744,7 @@ openstack flavor create --id <span class="m">5</span> --ram <span class="m">1638
 </div><p>可以使用openstack horizon操作openstack dashboard，使用admin user的帳號、密碼進行登入。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2779,7 +2778,7 @@ openstack flavor create --id <span class="m">5</span> --ram <span class="m">1638
 </span><span class="lnt">32
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubectl</span> get service -n kolla
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$kubectl</span> get service -n kolla
 NAME                 TYPE        CLUSTER-IP   EXTERNAL-IP   PORT<span class="o">(</span>S<span class="o">)</span>     AGE
 cinder-api           ClusterIP   10.3.3.125   10.0.0.182    8776/TCP    12h
 glance-api           ClusterIP   10.3.3.141   10.0.0.182    9292/TCP    12h
@@ -2814,9 +2813,8 @@ rabbitmq-mgmt        ClusterIP   10.3.3.37    &lt;none&gt;        15672/TCP   12
 </code></pre></td></tr></table>
 </div>
 </div><img src="/images/post/openstack-kolla-dashboard.png" title="登入即可看到openstack的操作畫面。">
-<!-- <figure>
-    <img src="/images/post/openstack-kolla-dashboard.png"
-         alt="登入即可看到openstack的操作畫面。"/> <figcaption>
+<!-- <figure><img src="/images/post/openstack-kolla-dashboard.png"
+         alt="登入即可看到openstack的操作畫面。"/><figcaption>
             <p>登入即可看到openstack的操作畫面。</p>
         </figcaption>
 </figure>
@@ -2825,7 +2823,7 @@ rabbitmq-mgmt        ClusterIP   10.3.3.37    &lt;none&gt;        15672/TCP   12
 <p>在你的master上，使用helm拆除OpenStack相關元件。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2842,7 +2840,7 @@ rabbitmq-mgmt        ClusterIP   10.3.3.37    &lt;none&gt;        15672/TCP   12
 </span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$helm</span> install --debug ~/kolla-bringup/kolla-kubernetes/helm/service/nova-cleanup --namespace kolla --name nova-cleanup --values ~/kolla-bringup/cloud.yaml
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$helm</span> install --debug ~/kolla-bringup/kolla-kubernetes/helm/service/nova-cleanup --namespace kolla --name nova-cleanup --values ~/kolla-bringup/cloud.yaml
 <span class="nv">$helm</span> delete mariadb --purge
 <span class="nv">$helm</span> delete mariadb --purge
 <span class="nv">$helm</span> delete rabbitmq --purge
@@ -2862,22 +2860,22 @@ rabbitmq-mgmt        ClusterIP   10.3.3.37    &lt;none&gt;        15672/TCP   12
 </div><p>在每個節點上拆除相關的OpenStack volume</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$sudo</span> rm -rf /var/lib/kolla/volumes/*
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$sudo</span> rm -rf /var/lib/kolla/volumes/*
 </code></pre></td></tr></table>
 </div>
 </div><p>在每個節點上刪除Kubernetes</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$sudo</span> kubeadm reset
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$sudo</span> kubeadm reset
 <span class="nv">$sudo</span> rm -rf /etc/kolla
 <span class="nv">$sudo</span> rm -rf /etc/kubernetes
 <span class="nv">$sudo</span> rm -rf /etc/kolla-kubernetes
@@ -3326,7 +3324,7 @@ rabbitmq-mgmt        ClusterIP   10.3.3.37    &lt;none&gt;        15672/TCP   12
 </div>
 
 
-<script defer src="/js/swipe.min.b4b82839155519d9ca67746615a4c86ccbc1061c196fe6d8aa26e4fe22902718.js"></script>
+<script defer src="/js/swipe.min.989e074dfb92ce7f57a92c1df7027f88b53c50a54fd9ad450a673a64aa91bfa4.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
@@ -4333,7 +4331,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 
             <p class="caption">
                 
-                    ©2021, All Rights Reserved
+                    ©2022, All Rights Reserved
                 
             </p>
         

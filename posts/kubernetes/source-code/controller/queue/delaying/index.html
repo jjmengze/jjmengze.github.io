@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.efa35f4c090622130b3f4cfae6971448b5ffb61c5f0a8f21cdfd157fa712abc4.js"></script>
+<script defer src="/js/helper/fadeinout.min.1d13d3e810c3940e80cbba6216a1c76fbf42b5431fc83537ea6997863802362b.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1341,7 +1341,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Meng Learning Note">
 
-<meta name="generator" content="Hugo 0.80.0" />
+<meta name="generator" content="Hugo 0.91.2" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1380,7 +1380,7 @@
     "datePublished": "2020-12-11T12:29:32+08:00",
     "dateModified": "2020-12-11T12:29:32+08:00",
     "url" : "https://blog.jjmengze.website/posts/kubernetes/source-code/controller/queue/delaying/",
-    "description": "\u003cfigure\u003e     \u003cimg src=\"/images/theme/kubernetes-delaying-queue.jpg\"/\u003e  \u003c/figure\u003e",
+    "description": "\u003cfigure\u003e\u003cimg src=\"/images/theme/kubernetes-delaying-queue.jpg\"/\u003e \u003c/figure\u003e",
     "keywords": ["kubernetes","controller","source-code"],
     "mainEntityOfPage": {
       "@type": "WebPage",
@@ -1677,16 +1677,14 @@
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      <figure>
-    <img src="/images/theme/kubernetes-delaying-queue.jpg"/> 
+      <figure><img src="/images/theme/kubernetes-delaying-queue.jpg"/>
 </figure>
 
 <p>首先本文所以 source code 基於 kubernetes 1.19 版本，所有 source code 的為了版面的整潔會精簡掉部分 log 相關的程式碼，僅保留核心邏輯，如果有見解錯誤的地方，還麻煩觀看本文的大大們提出，感謝！</p>
 <h2 id="kubernetes-work-queue">kubernetes work queue</h2>
 <p>在前一篇 kubernetes common work queue 設計真d不錯一文中分享 kubernetes work queue最基礎的實作方式，再複習一次！Kubernetes 為什麼要實踐一個 work queue 呢？</p>
 <p>就我們所知 kubernetes 是用 go 撰寫應該可以使用 channel 的機制直接將物件送給要用的元件(thread)啊，原因其實非常簡單，go channel 的設計功能非常單一無法滿足 kubernetes 所要的場景，例如帶有延遲時間物件需要根據延遲時間排序的 queue ，例如限制物件取出速度的 queue 。</p>
-<figure>
-    <img src="/images/post/kubernetes-controller-arch.png"/> 
+<figure><img src="/images/post/kubernetes-controller-arch.png"/>
 </figure>
 
 <p>圖片來源：<a href="https://itnext.io/how-to-create-a-kubernetes-custom-controller-using-client-go-f36a7a7536cc">How to Create a Kubernetes Custom Controller Using client-go</a></p>
@@ -1699,7 +1697,7 @@
 <p><a href="https://github.com/kubernetes/client-go/blob/master/util/workqueue/delaying_queue.go">source code</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1710,7 +1708,7 @@
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// DelayingInterface is an Interface that can Add an item at a later time. This makes it easier to
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// DelayingInterface is an Interface that can Add an item at a later time. This makes it easier to
 </span><span class="c1">// requeue items after failures without ending up in a hot-loop.
 </span><span class="c1">// 原生的註解寫得非常棒了，大致上意思為一個物件處理失敗，如果很快地物件在被處理一次失敗的可能性還是很高會造成 
 </span><span class="c1">// hot-loop，所以讓物件等待一下在排隊進入 queue 就是 delaying queue 的用意
@@ -1726,7 +1724,7 @@
 <p><a href="https://github.com/kubernetes/client-go/blob/master/util/workqueue/delaying_queue.go">source code</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1749,7 +1747,7 @@
 </span><span class="lnt">21
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// delayingType wraps an Interface and provides delayed re-enquing
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// delayingType wraps an Interface and provides delayed re-enquing
 </span><span class="c1"></span><span class="kd">type</span> <span class="nx">delayingType</span> <span class="kd">struct</span> <span class="p">{</span>
 	<span class="nx">Interface</span>    <span class="c1">//嵌入了一個common queue
 </span><span class="c1"></span>
@@ -1777,7 +1775,7 @@
 <a href="https://github.com/kubernetes/client-go/blob/master/util/workqueue/delaying_queue.go">source code</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1787,7 +1785,7 @@
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// waitFor holds the data to add and the time it should be added
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// waitFor holds the data to add and the time it should be added
 </span><span class="c1">// 如果需要延遲的物件都會被轉換成這個類型
 </span><span class="c1"></span><span class="kd">type</span> <span class="nx">waitFor</span> <span class="kd">struct</span> <span class="p">{</span>
 	<span class="nx">data</span>    <span class="nx">t</span>            <span class="c1">// t 在common queue介紹過，為一個泛行表示什麼都接受的物件
@@ -1803,7 +1801,7 @@
 <p><a href="https://github.com/kubernetes/client-go/blob/master/util/workqueue/delaying_queue.go">source code</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1855,7 +1853,7 @@
 </span><span class="lnt">50
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go">
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go">
 <span class="c1">// waitForPriorityQueue implements a priority queue for waitFor items.
 </span><span class="c1">//
 </span><span class="c1">// waitForPriorityQueue implements heap.Interface. The item occurring next in
@@ -1912,7 +1910,7 @@
 <p><a href="https://github.com/kubernetes/client-go/blob/master/util/workqueue/delaying_queue.go">source code</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1953,7 +1951,7 @@
 </span><span class="lnt">39
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">//給心跳用最久10秒delaying queue會檢查一次
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">//給心跳用最久10秒delaying queue會檢查一次
 </span><span class="c1"></span><span class="kd">const</span> <span class="nx">maxWait</span> <span class="p">=</span> <span class="mi">10</span> <span class="o">*</span> <span class="nx">time</span><span class="p">.</span><span class="nx">Second</span>
 
 <span class="c1">//傳入clock與common queue以及紀錄這個物件metric的名字，這是一個不公開的方法，有其他封裝好的 new function 可以用
@@ -2001,7 +1999,7 @@
 <p>使用者要放入有延遲的物件需要呼叫這個function，帶入要延遲的物件，以及該物件要延遲多久。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2025,7 +2023,7 @@
 </span><span class="lnt">22
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// AddAfter adds the given item to the work queue after the given delay
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// AddAfter adds the given item to the work queue after the given delay
 </span><span class="c1"></span><span class="kd">func</span> <span class="p">(</span><span class="nx">q</span> <span class="o">*</span><span class="nx">delayingType</span><span class="p">)</span> <span class="nf">AddAfter</span><span class="p">(</span><span class="nx">item</span> <span class="kd">interface</span><span class="p">{},</span> <span class="nx">duration</span> <span class="nx">time</span><span class="p">.</span><span class="nx">Duration</span><span class="p">)</span> <span class="p">{</span>
 	<span class="c1">// don&#39;t add if we&#39;re already shutting down
 </span><span class="c1"></span>	<span class="k">if</span> <span class="nx">q</span><span class="p">.</span><span class="nf">ShuttingDown</span><span class="p">()</span> <span class="p">{</span>    <span class="c1">//如果queue關閉了就不能放入
@@ -2053,7 +2051,7 @@
 <p>這邊是delaying queue的主要邏輯，執行檢查 waitingForAddCh channel 有沒有延遲物件，取出延遲物件看延遲時間是達到選擇加入 Heap 或是 queue，以及接收心跳包。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2154,7 +2152,7 @@
 </span><span class="lnt">99
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// waitingLoop runs until the workqueue is shutdown and keeps a check on the list of items to be added.
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// waitingLoop runs until the workqueue is shutdown and keeps a check on the list of items to be added.
 </span><span class="c1"></span><span class="kd">func</span> <span class="p">(</span><span class="nx">q</span> <span class="o">*</span><span class="nx">delayingType</span><span class="p">)</span> <span class="nf">waitingLoop</span><span class="p">()</span> <span class="p">{</span>
 	<span class="k">defer</span> <span class="nx">utilruntime</span><span class="p">.</span><span class="nf">HandleCrash</span><span class="p">()</span>
 
@@ -2259,7 +2257,7 @@
 <p>在 waitingLoop 有使用到 insert 這個 function ，他的實作也相當的簡單，簡單的來說就是把 waitfor 的物件放到 Heap 中，我們來看看他是如何實作的。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2279,7 +2277,7 @@
 </span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// insert adds the entry to the priority queue, or updates the readyAt if it already exists in the queue
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// insert adds the entry to the priority queue, or updates the readyAt if it already exists in the queue
 </span><span class="c1"></span><span class="kd">func</span> <span class="nf">insert</span><span class="p">(</span><span class="nx">q</span> <span class="o">*</span><span class="nx">waitForPriorityQueue</span><span class="p">,</span> <span class="nx">knownEntries</span> <span class="kd">map</span><span class="p">[</span><span class="nx">t</span><span class="p">]</span><span class="o">*</span><span class="nx">waitFor</span><span class="p">,</span> <span class="nx">entry</span> <span class="o">*</span><span class="nx">waitFor</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">//先判斷加入的物件有沒有重複的
 </span><span class="c1"></span>    <span class="nx">existing</span><span class="p">,</span> <span class="nx">exists</span> <span class="o">:=</span> <span class="nx">knownEntries</span><span class="p">[</span><span class="nx">entry</span><span class="p">.</span><span class="nx">data</span><span class="p">]</span>
@@ -2743,7 +2741,7 @@
 </div>
 
 
-<script defer src="/js/swipe.min.b4b82839155519d9ca67746615a4c86ccbc1061c196fe6d8aa26e4fe22902718.js"></script>
+<script defer src="/js/swipe.min.989e074dfb92ce7f57a92c1df7027f88b53c50a54fd9ad450a673a64aa91bfa4.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
@@ -3750,7 +3748,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 
             <p class="caption">
                 
-                    ©2021, All Rights Reserved
+                    ©2022, All Rights Reserved
                 
             </p>
         

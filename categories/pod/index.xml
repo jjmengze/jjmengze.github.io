@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>pod on MengZe Blog</title>
+    <link>https://blog.jjmengze.website/categories/pod/</link>
+    <description>Recent content in pod on MengZe Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <managingEditor>jason.meng.lee@gmail.com (Meng Ze Li)</managingEditor>
+    <webMaster>jason.meng.lee@gmail.com (Meng Ze Li)</webMaster>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Sat, 13 Nov 2021 10:29:32 +0800</lastBuildDate>
+    
+        <atom:link href="https://blog.jjmengze.website/categories/pod/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+
+      
+      <item>
+        <title>Kubernetes kubelet podwork 掌管 pod 變化（抽象定義）</title>
+        <link>https://blog.jjmengze.website/posts/kubernetes/source-code/kubelet/pod/pod-worker/</link>
+        <pubDate>Sat, 13 Nov 2021 10:29:32 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        <atom:modified>Sat, 13 Nov 2021 10:29:32 +0800</atom:modified>
+        <guid>https://blog.jjmengze.website/posts/kubernetes/source-code/kubelet/pod/pod-worker/</guid>
+        <description>首先本文所有的 source code 基於 kubernetes 1.22.3 版本，所有 source code 為了版面的整潔會精簡掉部分 log 相關的程式碼，僅保留核心邏輯，如果有見解錯誤的地方，還麻煩觀看本文的大大</description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>source-code</category>
+            
+          
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>kubelet</category>
+            
+          
+            
+              <category>pod</category>
+            
+          
+            
+              <category>source-code</category>
+            
+          
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

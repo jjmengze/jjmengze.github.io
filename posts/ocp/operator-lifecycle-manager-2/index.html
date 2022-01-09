@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.efa35f4c090622130b3f4cfae6971448b5ffb61c5f0a8f21cdfd157fa712abc4.js"></script>
+<script defer src="/js/helper/fadeinout.min.1d13d3e810c3940e80cbba6216a1c76fbf42b5431fc83537ea6997863802362b.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1341,7 +1341,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Meng Learning Note">
 
-<meta name="generator" content="Hugo 0.80.0" />
+<meta name="generator" content="Hugo 0.91.2" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1380,7 +1380,7 @@
     "datePublished": "2020-07-13T16:06:29+08:00",
     "dateModified": "2020-07-13T16:06:29+08:00",
     "url" : "https://blog.jjmengze.website/posts/ocp/operator-lifecycle-manager-2/",
-    "description": "\u003cfigure\u003e     \u003cimg src=\"/images/theme/olm-2.png\"/\u003e  \u003c/figure\u003e",
+    "description": "\u003cfigure\u003e\u003cimg src=\"/images/theme/olm-2.png\"/\u003e \u003c/figure\u003e",
     "keywords": ["openshift"],
     "mainEntityOfPage": {
       "@type": "WebPage",
@@ -1673,8 +1673,7 @@
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      <figure>
-    <img src="/images/theme/olm-2.png"/> 
+      <figure><img src="/images/theme/olm-2.png"/>
 </figure>
 
 <h1 id="簡單理解-operator-lifecycle-manager---2-olm">簡單理解 Operator Lifecycle Manager - 2 (OLM)</h1>
@@ -1695,16 +1694,16 @@
 <p>從 <code>CatalogSources</code> 下載一個 <code>PackageManifest</code> 之前我們要先建立一個<code>project</code>(namespaces)，讓操作都在這個 <code>project</code> 下。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">oc new-project playolm
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">oc new-project playolm
 </code></pre></td></tr></table>
 </div>
 </div><p>建立完成 project 後我們還需要建立一個 <code>OperatorGroup</code> 確認之後安裝的 <code>operator</code> 只有操作這個 namespaces 的權限，對於 <code>OperatorGroup</code> 想要多瞭解一下可以參考<a href="https://operator-framework.github.io/olm-book/docs/operator-scoping.html">olm book</a>。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1717,7 +1716,7 @@
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">cat <span class="s">&lt;&lt;EOF | oc apply -f -
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">cat <span class="s">&lt;&lt;EOF | oc apply -f -
 </span><span class="s">apiVersion: operators.coreos.com/v1
 </span><span class="s">kind: OperatorGroup
 </span><span class="s">metadata:
@@ -1733,12 +1732,12 @@ operatorgroup.operators.coreos.com/prometheus-operatorgroup created
 </div><p>透過指令確認一下剛剛部署上去的 <code>operatorgroup</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">oc get operatorgroup prometheus-operatorgroup
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">oc get operatorgroup prometheus-operatorgroup
 NAME                   AGE
 prometheus-operatorgroup   114s
 </code></pre></td></tr></table>
@@ -1748,7 +1747,7 @@ prometheus-operatorgroup   114s
 <p>這邊在執行一次看一下裡面的 yaml 檔</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">  1
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
 </span><span class="lnt">  2
 </span><span class="lnt">  3
 </span><span class="lnt">  4
@@ -1874,7 +1873,7 @@ prometheus-operatorgroup   114s
 </span><span class="lnt">124
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">oc get packagemanifests  prometheus-exporter-operator -o yaml
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">oc get packagemanifests  prometheus-exporter-operator -o yaml
 apiVersion: packages.operators.coreos.com/v1
 kind: PackageManifest
 metadata:
@@ -2012,7 +2011,7 @@ status:
 <p>進入這個 CRD <code>Subscription</code> 的重頭戲，宣告我要用哪一個<code>catalogsources</code>以及是哪一個<code>packagemanifests</code>。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2029,7 +2028,7 @@ status:
 </span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="l">cat &lt;&lt; EOF | oc apply -f -</span><span class="w">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="l">cat &lt;&lt; EOF | oc apply -f -</span><span class="w">
 </span><span class="w"></span><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">operators.coreos.com/v1alpha1</span><span class="w">
 </span><span class="w"></span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">Subscription</span><span class="w">
 </span><span class="w"></span><span class="nt">metadata</span><span class="p">:</span><span class="w">
@@ -2049,12 +2048,12 @@ status:
 </div><p>這時候可以透過指令看看這個project訂閱了哪些<code>subscription</code>。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ oc get subscription
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ oc get subscription
 NAME                           PACKAGE                        SOURCE                CHANNEL
 prometheus-exporter-operator   prometheus-exporter-operator   community-operators   alpha
 </code></pre></td></tr></table>
@@ -2064,12 +2063,12 @@ prometheus-exporter-operator   prometheus-exporter-operator   community-operator
 <p>可以透過另外一個CRD看到目前 <code>project</code> 底下有訂閱（安裝？ 抱歉找不到一個適當的中文）哪些 Operator 他的版本是多少，現在安裝了嗎等資訊。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">oc get installplan
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">oc get installplan
 NAME            CSV                                   APPROVAL   APPROVED
 install-b5tmz   prometheus-exporter-operator.v0.2.0   Manual     <span class="nb">false</span>
 </code></pre></td></tr></table>
@@ -2078,23 +2077,23 @@ install-b5tmz   prometheus-exporter-operator.v0.2.0   Manual     <span class="nb
 <p>現在我們要手動上一個 patch 讓這個安裝包被 approved ，再來觀察環境的變化。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">oc patch installplan install-b5tmz --type<span class="o">=</span><span class="s1">&#39;json&#39;</span> -p <span class="s1">&#39;[{&#34;op&#34;: &#34;replace&#34;, &#34;path&#34;: &#34;/spec/approved&#34;, &#34;value&#34;:true}]&#39;</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">oc patch installplan install-b5tmz --type<span class="o">=</span><span class="s1">&#39;json&#39;</span> -p <span class="s1">&#39;[{&#34;op&#34;: &#34;replace&#34;, &#34;path&#34;: &#34;/spec/approved&#34;, &#34;value&#34;:true}]&#39;</span>
 installplan.operators.coreos.com/install-b5tmz patched
 </code></pre></td></tr></table>
 </div>
 </div><p>再透過指令看現在<code>prometheus-exporter-operator.v0.2.0</code>是否被approved了。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">oc get installplan
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">oc get installplan
 NAME            CSV                                   APPROVAL   APPROVED
 install-b5tmz   prometheus-exporter-operator.v0.2.0   Manual     <span class="nb">true</span>
 </code></pre></td></tr></table>
@@ -2106,12 +2105,12 @@ install-b5tmz   prometheus-exporter-operator.v0.2.0   Manual     <span class="nb
 :::</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">oc get clusterserviceversion
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">oc get clusterserviceversion
 NAME                                  DISPLAY                        VERSION   REPLACES   PHASE
 prometheus-exporter-operator.v0.2.0   Prometheus Exporter Operator   0.2.0                Succeeded
 </code></pre></td></tr></table>
@@ -2120,13 +2119,13 @@ prometheus-exporter-operator.v0.2.0   Prometheus Exporter Operator   0.2.0      
 <p>觀察prometheus CRD有沒有成功安裝</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">oc get crd <span class="p">|</span> grep prometheus
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">oc get crd <span class="p">|</span> grep prometheus
 prometheuses.monitoring.coreos.com                          2020-06-20T07:24:12Z
 prometheusexporters.monitoring.3scale.net                   2020-07-24T03:20:46Z
 prometheusrules.monitoring.coreos.com                       2020-06-20T07:24:13Z
@@ -2135,13 +2134,13 @@ prometheusrules.monitoring.coreos.com                       2020-06-20T07:24:13Z
 </div><p>觀察 Prometheus CRD有沒有成功安裝</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">oc get crd <span class="p">|</span> grep prometheus
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">oc get crd <span class="p">|</span> grep prometheus
 prometheuses.monitoring.coreos.com                          2020-06-20T07:24:12Z
 prometheusexporters.monitoring.3scale.net                   2020-07-24T03:20:46Z
 prometheusrules.monitoring.coreos.com                       2020-06-20T07:24:13Z
@@ -2150,39 +2149,39 @@ prometheusrules.monitoring.coreos.com                       2020-06-20T07:24:13Z
 </div><p>觀察 Prometheus ServiceAccount 有沒有成功安裝</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">oc get sa <span class="p">|</span> grep prometheus
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">oc get sa <span class="p">|</span> grep prometheus
 prometheus-exporter-operator   <span class="m">2</span>         7m45s
 </code></pre></td></tr></table>
 </div>
 </div><p>觀察 Prometheus role rolebinding 有沒有成功安裝</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">oc get role,rolebinding <span class="p">|</span> grep prometheus
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">oc get role,rolebinding <span class="p">|</span> grep prometheus
 role.rbac.authorization.k8s.io/prometheus-exporter-operator.v0.2.0-2nb8s   8m40s
 rolebinding.rbac.authorization.k8s.io/prometheus-exporter-operator.v0.2.0-2nb8s-prometheus-exporfkbqh   8m40s
 </code></pre></td></tr></table>
 </div>
 </div><p>最後看看 Prometheus Operator 有沒有成功安裝到 Kubernetes 上</p>
-<pre><code class="language-bash=" data-lang="bash=">oc get deployments
+<pre tabindex="0"><code class="language-bash=" data-lang="bash=">oc get deployments
 NAME                           READY   UP-TO-DATE   AVAILABLE   AGE
 prometheus-exporter-operator   1/1     1            1           9m38s
 </code></pre><p>看起來一切都很正常，但魔鬼藏在細節裡是不是 prometheus-exporter-operator Deployment版本如我們預期的一樣</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">oc get deployment prometheus-exporter-operator -o go-template --template <span class="s1">&#39;{{range .spec.template.spec.containers}} {{.image}}{{end}}&#39;</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">oc get deployment prometheus-exporter-operator -o go-template --template <span class="s1">&#39;{{range .spec.template.spec.containers}} {{.image}}{{end}}&#39;</span>
  quay.io/3scale/prometheus-exporter-operator:v0.2.0
 </code></pre></td></tr></table>
 </div>
@@ -2621,7 +2620,7 @@ prometheus-exporter-operator   1/1     1            1           9m38s
 </div>
 
 
-<script defer src="/js/swipe.min.b4b82839155519d9ca67746615a4c86ccbc1061c196fe6d8aa26e4fe22902718.js"></script>
+<script defer src="/js/swipe.min.989e074dfb92ce7f57a92c1df7027f88b53c50a54fd9ad450a673a64aa91bfa4.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
@@ -3628,7 +3627,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 
             <p class="caption">
                 
-                    ©2021, All Rights Reserved
+                    ©2022, All Rights Reserved
                 
             </p>
         

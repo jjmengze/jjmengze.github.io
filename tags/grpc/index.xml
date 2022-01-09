@@ -29,8 +29,7 @@
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Thu, 15 Mar 2018 02:12:05 +0800</atom:modified>
         <guid>https://blog.jjmengze.website/posts/protocol/grpc-server-client/</guid>
-        <description>&lt;figure&gt;
-    &lt;img src=&#34;https://blog.jjmengze.website/images/theme/grpc-protobuffer.png&#34;/&gt; 
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/grpc-protobuffer.png&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -65,8 +64,7 @@
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Fri, 09 Mar 2018 02:12:05 +0800</atom:modified>
         <guid>https://blog.jjmengze.website/posts/protocol/grpc/</guid>
-        <description>&lt;figure&gt;
-    &lt;img src=&#34;https://blog.jjmengze.website/images/theme/protobuf-logo.png&#34;/&gt; 
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/protobuf-logo.png&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>

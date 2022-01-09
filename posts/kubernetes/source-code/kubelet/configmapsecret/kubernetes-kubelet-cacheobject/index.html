@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.efa35f4c090622130b3f4cfae6971448b5ffb61c5f0a8f21cdfd157fa712abc4.js"></script>
+<script defer src="/js/helper/fadeinout.min.1d13d3e810c3940e80cbba6216a1c76fbf42b5431fc83537ea6997863802362b.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1341,7 +1341,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Meng Learning Note">
 
-<meta name="generator" content="Hugo 0.80.0" />
+<meta name="generator" content="Hugo 0.91.2" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1380,7 +1380,7 @@
     "datePublished": "2021-04-07T10:29:32+08:00",
     "dateModified": "2021-04-07T10:29:32+08:00",
     "url" : "https://blog.jjmengze.website/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-cacheobject/",
-    "description": "\u003cfigure\u003e     \u003cimg src=\"/images/theme/kubernetes-kubelet-cacheBasedManager-objectcache.png\"/\u003e  \u003c/figure\u003e",
+    "description": "\u003cfigure\u003e\u003cimg src=\"/images/theme/kubernetes-kubelet-cacheBasedManager-objectcache.png\"/\u003e \u003c/figure\u003e",
     "keywords": ["kubernetes","source-code"],
     "mainEntityOfPage": {
       "@type": "WebPage",
@@ -1675,8 +1675,7 @@
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      <figure>
-    <img src="/images/theme/kubernetes-kubelet-cacheBasedManager-objectcache.png"/> 
+      <figure><img src="/images/theme/kubernetes-kubelet-cacheBasedManager-objectcache.png"/>
 </figure>
 
 <p>首先本文所有的 source code 基於 kubernetes 1.19 版本，所有 source code 為了版面的整潔會精簡掉部分 log 相關的程式碼，僅保留核心邏輯，如果有見解錯誤的地方，還麻煩觀看本文的大大們提出，感謝！</p>
@@ -1686,7 +1685,7 @@
 <p>我們先來回顧一下 <code>cacheBasedManager</code> 的資料結構定義，可以看到 <code>objectStore</code> 的資料型態是 <code>Store</code>，那這個型態是什麼？</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1695,7 +1694,7 @@
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">type</span> <span class="nx">cacheBasedManager</span> <span class="kd">struct</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">type</span> <span class="nx">cacheBasedManager</span> <span class="kd">struct</span> <span class="p">{</span>
 	<span class="nx">objectStore</span>          <span class="nx">Store</span>				<span class="c1">//主要用來儲存 reflector 觀測到的物件狀態
 </span><span class="c1"></span>	<span class="nx">getReferencedObjects</span> <span class="kd">func</span><span class="p">(</span><span class="o">*</span><span class="nx">v1</span><span class="p">.</span><span class="nx">Pod</span><span class="p">)</span> <span class="nx">sets</span><span class="p">.</span><span class="nx">String</span>	<span class="c1">//主要用來找到 pod 內所有關聯的欄位，例如 configmap 就有可能出現在 envform configMapKeyRef 、 envform configMapRef 或是 volumes configMap  
 </span><span class="c1"></span>
@@ -1716,7 +1715,7 @@
 <a href="pkg/kubelet/util/manager/manager.go">source code</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1730,7 +1729,7 @@
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">type</span> <span class="nx">Store</span> <span class="kd">interface</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">type</span> <span class="nx">Store</span> <span class="kd">interface</span> <span class="p">{</span>
 	<span class="c1">// 使用者將 pod namespace 與 pod name 透過 addreference 實作的物件應該要增加 reference  以及建立對應的 reflector。
 </span><span class="c1"></span>	<span class="nf">AddReference</span><span class="p">(</span><span class="nx">namespace</span><span class="p">,</span> <span class="nx">name</span> <span class="kt">string</span><span class="p">)</span>
     
@@ -1750,7 +1749,7 @@
 <p>這裡先賣個關子先看 code 整理一下思緒會比較清楚</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1766,7 +1765,7 @@
 </span><span class="lnt">14
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// objectCache is a local cache of objects propagated via individual watches.
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// objectCache is a local cache of objects propagated via individual watches.
 </span><span class="c1"></span><span class="kd">type</span> <span class="nx">objectCache</span> <span class="kd">struct</span> <span class="p">{</span>
 	<span class="nx">listObject</span>    <span class="nx">listObjectFunc</span>				<span class="c1">//列出 kubernetes 物件的過濾方法
 </span><span class="c1"></span>	<span class="nx">watchObject</span>   <span class="nx">watchObjectFunc</span>				<span class="c1">//監控 kubernetes 物件的過濾方法
@@ -1823,7 +1822,7 @@
 <h5 id="struct-1">struct</h5>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1834,7 +1833,7 @@
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// objectCacheItem is a single item stored in objectCache.
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// objectCacheItem is a single item stored in objectCache.
 </span><span class="c1"></span><span class="kd">type</span> <span class="nx">objectCacheItem</span> <span class="kd">struct</span> <span class="p">{</span>
 	<span class="nx">refCount</span>  <span class="kt">int</span>						<span class="c1">//用來紀錄有多少人引用這個物件，當沒有人引用的時候就可以把 reflector 關掉了
 </span><span class="c1"></span>	<span class="nx">store</span>     <span class="nx">cache</span><span class="p">.</span><span class="nx">Store</span>					<span class="c1">//用來儲存 kubernetes 物件的 local stroage（這裡的 stroe 就是 controller/operaoter 會用到的 store 囉）
@@ -1848,7 +1847,7 @@
 </div><p>當 object cache item 的 refCount 歸零，換句話說就是沒有人引用這個 reflector 了，就可以把對應的 reflector 關閉。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1866,7 +1865,7 @@
 </span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">i</span> <span class="o">*</span><span class="nx">objectCacheItem</span><span class="p">)</span> <span class="nf">stop</span><span class="p">()</span> <span class="kt">bool</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">i</span> <span class="o">*</span><span class="nx">objectCacheItem</span><span class="p">)</span> <span class="nf">stop</span><span class="p">()</span> <span class="kt">bool</span> <span class="p">{</span>
 	<span class="c1">//避免競爭上鎖
 </span><span class="c1"></span>	<span class="nx">i</span><span class="p">.</span><span class="nx">lock</span><span class="p">.</span><span class="nf">Lock</span><span class="p">()</span>
 	<span class="k">defer</span> <span class="nx">i</span><span class="p">.</span><span class="nx">lock</span><span class="p">.</span><span class="nf">Unlock</span><span class="p">()</span>
@@ -1888,7 +1887,7 @@
 <p>透過 NewObjectCache function  產出符合 store interface 的物件也就是會建立一個 ObjectCache 物件，這裡會把一些 function 帶入，例如要監控什麼物件他的 list 條件是什麼、他的 watch 條件是什麼以及 GVS 是什麼。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1907,7 +1906,7 @@
 </span><span class="lnt">17
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// NewObjectCache returns a new watch-based instance of Store interface.
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// NewObjectCache returns a new watch-based instance of Store interface.
 </span><span class="c1"></span><span class="kd">func</span> <span class="nf">NewObjectCache</span><span class="p">(</span>
 	<span class="nx">listObject</span> <span class="nx">listObjectFunc</span><span class="p">,</span>				<span class="c1">//使用者會傳入要怎麼列出物件
 </span><span class="c1"></span>	<span class="nx">watchObject</span> <span class="nx">watchObjectFunc</span><span class="p">,</span>				<span class="c1">//使用者會傳入要怎麼監控物件
@@ -1934,7 +1933,7 @@
 <a href="pkg/kubelet/util/manager/cache_based_manager.go">source code</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1949,7 +1948,7 @@
 </span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">cacheBasedManager</span><span class="p">)</span> <span class="nf">RegisterPod</span><span class="p">(</span><span class="nx">pod</span> <span class="o">*</span><span class="nx">v1</span><span class="p">.</span><span class="nx">Pod</span><span class="p">)</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">cacheBasedManager</span><span class="p">)</span> <span class="nf">RegisterPod</span><span class="p">(</span><span class="nx">pod</span> <span class="o">*</span><span class="nx">v1</span><span class="p">.</span><span class="nx">Pod</span><span class="p">)</span> <span class="p">{</span>
 	<span class="c1">//當 kubernetes assign 一個 pod 到 node 上的時候
 </span><span class="c1"></span>	<span class="c1">//kubelet 會取得 pod 的相關資訊，getReferencedObjects 會將 pod spec 庖丁解牛
 </span><span class="c1"></span>	<span class="c1">//檢查裡面有沒有我們要的欄位，目前追 code 只看到 configmap 與 secret 有用到
@@ -1968,7 +1967,7 @@
 <a href="pkg/kubelet/util/manager/watch_based_manager.go">source code</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2046,7 +2045,7 @@
 </span><span class="lnt">76
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">objectCache</span><span class="p">)</span> <span class="nf">AddReference</span><span class="p">(</span><span class="nx">namespace</span><span class="p">,</span> <span class="nx">name</span> <span class="kt">string</span><span class="p">)</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">objectCache</span><span class="p">)</span> <span class="nf">AddReference</span><span class="p">(</span><span class="nx">namespace</span><span class="p">,</span> <span class="nx">name</span> <span class="kt">string</span><span class="p">)</span> <span class="p">{</span>
 	<span class="c1">//透過使用者傳入的 namespace 以及物件的名稱 封裝為 objectKey 作為唯一值
 </span><span class="c1"></span>	<span class="nx">key</span> <span class="o">:=</span> <span class="nx">objectKey</span><span class="p">{</span><span class="nx">namespace</span><span class="p">:</span> <span class="nx">namespace</span><span class="p">,</span> <span class="nx">name</span><span class="p">:</span> <span class="nx">name</span><span class="p">}</span>
 
@@ -2127,7 +2126,7 @@
 </div><p>題外話我滿喜歡，上述 source code 中這一段處理方式。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2143,7 +2142,7 @@
 </span><span class="lnt">14
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">objectCache</span><span class="p">)</span> <span class="nf">newReflector</span><span class="p">(</span><span class="nx">namespace</span><span class="p">,</span> <span class="nx">name</span> <span class="kt">string</span><span class="p">)</span> <span class="o">*</span><span class="nx">objectCacheItem</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">objectCache</span><span class="p">)</span> <span class="nf">newReflector</span><span class="p">(</span><span class="nx">namespace</span><span class="p">,</span> <span class="nx">name</span> <span class="kt">string</span><span class="p">)</span> <span class="o">*</span><span class="nx">objectCacheItem</span> <span class="p">{</span>
 
 	<span class="o">...</span>
     
@@ -2160,7 +2159,7 @@
 </code></pre></td></tr></table>
 </div>
 </div><p>還記得我們在 <code>newObjectCache</code> 的時候有把 list object function 帶入嗎？那一個 list object function 到這裡才派上用， reflector 在用的時候會像是這樣的呼叫練。</p>
-<pre><code>當 reflector 呼叫 list function 會先經由--------&gt;newReflector裡面的listFunc&lt;加了 field selector &gt;進行處理
+<pre tabindex="0"><code>當 reflector 呼叫 list function 會先經由--------&gt;newReflector裡面的listFunc&lt;加了 field selector &gt;進行處理
 
 
 newReflector裡面的listFunc&lt;加了 field selector &gt;處理完後會再丟給--------&gt; 使用者定義的 list  watcher function 做最後的處理。
@@ -2170,7 +2169,7 @@ newReflector裡面的listFunc&lt;加了 field selector &gt;處理完後會再丟
 <p>cacheBasedManager 主要透過 UnregisterPod 這個 function 來刪除 reflector 關聯的數量。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2193,7 +2192,7 @@ newReflector裡面的listFunc&lt;加了 field selector &gt;處理完後會再丟
 </span><span class="lnt">21
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">cacheBasedManager</span><span class="p">)</span> <span class="nf">UnregisterPod</span><span class="p">(</span><span class="nx">pod</span> <span class="o">*</span><span class="nx">v1</span><span class="p">.</span><span class="nx">Pod</span><span class="p">)</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">cacheBasedManager</span><span class="p">)</span> <span class="nf">UnregisterPod</span><span class="p">(</span><span class="nx">pod</span> <span class="o">*</span><span class="nx">v1</span><span class="p">.</span><span class="nx">Pod</span><span class="p">)</span> <span class="p">{</span>
 	<span class="kd">var</span> <span class="nx">prev</span> <span class="o">*</span><span class="nx">v1</span><span class="p">.</span><span class="nx">Pod</span>
 	<span class="c1">//以 pod spc 中的 namespace 與 pod name 封裝為 object key     
 </span><span class="c1"></span>	<span class="nx">key</span> <span class="o">:=</span> <span class="nx">objectKey</span><span class="p">{</span><span class="nx">namespace</span><span class="p">:</span> <span class="nx">pod</span><span class="p">.</span><span class="nx">Namespace</span><span class="p">,</span> <span class="nx">name</span><span class="p">:</span> <span class="nx">pod</span><span class="p">.</span><span class="nx">Name</span><span class="p">}</span>
@@ -2219,7 +2218,7 @@ newReflector裡面的listFunc&lt;加了 field selector &gt;處理完後會再丟
 </div><p>cacheBasedManager 主要也是透過 getReferencedObjects 拿到 pod sepc 中有的物件交由 objectCache 刪除關聯的 reflector ，接著來看實際上怎麼刪除的。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2245,7 +2244,7 @@ newReflector裡面的listFunc&lt;加了 field selector &gt;處理完後會再丟
 </span><span class="lnt">24
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">objectCache</span><span class="p">)</span> <span class="nf">DeleteReference</span><span class="p">(</span><span class="nx">namespace</span><span class="p">,</span> <span class="nx">name</span> <span class="kt">string</span><span class="p">)</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">objectCache</span><span class="p">)</span> <span class="nf">DeleteReference</span><span class="p">(</span><span class="nx">namespace</span><span class="p">,</span> <span class="nx">name</span> <span class="kt">string</span><span class="p">)</span> <span class="p">{</span>
 	<span class="c1">//透過 namespace 與 name 建立一個 object key 用以後續刪除對應的 reference
 </span><span class="c1"></span>	<span class="nx">key</span> <span class="o">:=</span> <span class="nx">objectKey</span><span class="p">{</span><span class="nx">namespace</span><span class="p">:</span> <span class="nx">namespace</span><span class="p">,</span> <span class="nx">name</span><span class="p">:</span> <span class="nx">name</span><span class="p">}</span>
 
@@ -2275,12 +2274,12 @@ newReflector裡面的listFunc&lt;加了 field selector &gt;處理完後會再丟
 <p>一樣我們先來看 cacheBasedManager 是如何使用的，這裡非常簡單直接把想要拿到 kubernetes 物件名稱與 namespace 交給 objectStore 去處理。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">cacheBasedManager</span><span class="p">)</span> <span class="nf">GetObject</span><span class="p">(</span><span class="nx">namespace</span><span class="p">,</span> <span class="nx">name</span> <span class="kt">string</span><span class="p">)</span> <span class="p">(</span><span class="nx">runtime</span><span class="p">.</span><span class="nx">Object</span><span class="p">,</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">cacheBasedManager</span><span class="p">)</span> <span class="nf">GetObject</span><span class="p">(</span><span class="nx">namespace</span><span class="p">,</span> <span class="nx">name</span> <span class="kt">string</span><span class="p">)</span> <span class="p">(</span><span class="nx">runtime</span><span class="p">.</span><span class="nx">Object</span><span class="p">,</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{</span>
 	<span class="k">return</span> <span class="nx">c</span><span class="p">.</span><span class="nx">objectStore</span><span class="p">.</span><span class="nf">Get</span><span class="p">(</span><span class="nx">namespace</span><span class="p">,</span> <span class="nx">name</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre></td></tr></table>
@@ -2288,7 +2287,7 @@ newReflector裡面的listFunc&lt;加了 field selector &gt;處理完後會再丟
 </div><p>我們就接著來看 objectStore 是怎麼處理的 Get 的實作。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2360,7 +2359,7 @@ newReflector裡面的listFunc&lt;加了 field selector &gt;處理完後會再丟
 </span><span class="lnt">70
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">objectCache</span><span class="p">)</span> <span class="nf">Get</span><span class="p">(</span><span class="nx">namespace</span><span class="p">,</span> <span class="nx">name</span> <span class="kt">string</span><span class="p">)</span> <span class="p">(</span><span class="nx">runtime</span><span class="p">.</span><span class="nx">Object</span><span class="p">,</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">objectCache</span><span class="p">)</span> <span class="nf">Get</span><span class="p">(</span><span class="nx">namespace</span><span class="p">,</span> <span class="nx">name</span> <span class="kt">string</span><span class="p">)</span> <span class="p">(</span><span class="nx">runtime</span><span class="p">.</span><span class="nx">Object</span><span class="p">,</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{</span>
 	<span class="c1">//透過 namespace 與物件名稱 name 建立一個 object key 用以後續從 map 中查詢對應的 reference
 </span><span class="c1"></span>	<span class="nx">key</span> <span class="o">:=</span> <span class="nx">objectKey</span><span class="p">{</span><span class="nx">namespace</span><span class="p">:</span> <span class="nx">namespace</span><span class="p">,</span> <span class="nx">name</span><span class="p">:</span> <span class="nx">name</span><span class="p">}</span>
     
@@ -2437,14 +2436,14 @@ newReflector裡面的listFunc&lt;加了 field selector &gt;處理完後會再丟
 <p><a href="pkg/kubelet/util/manager/watch_based_manager.go">source code</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// objectCache is a local cache of objects propagated via individual watches.
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// objectCache is a local cache of objects propagated via individual watches.
 </span><span class="c1"></span><span class="kd">type</span> <span class="nx">objectCache</span> <span class="kd">struct</span> <span class="p">{</span>
 	<span class="nx">listObject</span>    <span class="nx">listObjectFunc</span>				<span class="c1">//列出 kubernetes 物件的過濾方法
 </span><span class="c1"></span>	<span class="nx">watchObject</span>   <span class="nx">watchObjectFunc</span>				<span class="c1">//監控 kubernetes 物件的過濾方法
@@ -2459,7 +2458,7 @@ newReflector裡面的listFunc&lt;加了 field selector &gt;處理完後會再丟
 <a href="pkg/kubelet/util/manager/watch_based_manager.go">soure code</a>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2476,20 +2475,20 @@ newReflector裡面的listFunc&lt;加了 field selector &gt;處理完後會再丟
 </span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">objectCache</span><span class="p">)</span> <span class="nf">newReflector</span><span class="p">(</span><span class="nx">namespace</span><span class="p">,</span> <span class="nx">name</span> <span class="kt">string</span><span class="p">)</span> <span class="o">*</span><span class="nx">objectCacheItem</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">objectCache</span><span class="p">)</span> <span class="nf">newReflector</span><span class="p">(</span><span class="nx">namespace</span><span class="p">,</span> <span class="nx">name</span> <span class="kt">string</span><span class="p">)</span> <span class="o">*</span><span class="nx">objectCacheItem</span> <span class="p">{</span>
 <span class="c1">//先建立一個 fieldSelector 用來過濾 kubernetes 物件
 </span><span class="c1"></span><span class="nx">fieldSelector</span> <span class="o">:=</span> <span class="nx">fields</span><span class="p">.</span><span class="nx">Set</span><span class="p">{</span><span class="s">&#34;metadata.name&#34;</span><span class="p">:</span> <span class="nx">name</span><span class="p">}.</span><span class="nf">AsSelector</span><span class="p">().</span><span class="nf">String</span><span class="p">()</span>
-   
+
 <span class="c1">//用 NewObjectCache 時建立的 list watch function 
 </span><span class="c1">//並且透過剛剛建立的 fieldSelector 過濾 kubernetes 物件
 </span><span class="c1"></span><span class="nx">listFunc</span> <span class="o">:=</span> <span class="kd">func</span><span class="p">(</span><span class="nx">options</span> <span class="nx">metav1</span><span class="p">.</span><span class="nx">ListOptions</span><span class="p">)</span> <span class="p">(</span><span class="nx">runtime</span><span class="p">.</span><span class="nx">Object</span><span class="p">,</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">options</span><span class="p">.</span><span class="nx">FieldSelector</span> <span class="p">=</span> <span class="nx">fieldSelector</span>
-    <span class="k">return</span> <span class="nx">c</span><span class="p">.</span><span class="nf">listObject</span><span class="p">(</span><span class="nx">namespace</span><span class="p">,</span> <span class="nx">options</span><span class="p">)</span>
+	<span class="nx">options</span><span class="p">.</span><span class="nx">FieldSelector</span> <span class="p">=</span> <span class="nx">fieldSelector</span>
+	<span class="k">return</span> <span class="nx">c</span><span class="p">.</span><span class="nf">listObject</span><span class="p">(</span><span class="nx">namespace</span><span class="p">,</span> <span class="nx">options</span><span class="p">)</span>
 <span class="p">}</span>
-   
+
 <span class="nx">watchFunc</span> <span class="o">:=</span> <span class="kd">func</span><span class="p">(</span><span class="nx">options</span> <span class="nx">metav1</span><span class="p">.</span><span class="nx">ListOptions</span><span class="p">)</span> <span class="p">(</span><span class="nx">watch</span><span class="p">.</span><span class="nx">Interface</span><span class="p">,</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">options</span><span class="p">.</span><span class="nx">FieldSelector</span> <span class="p">=</span> <span class="nx">fieldSelector</span>
-    <span class="k">return</span> <span class="nx">c</span><span class="p">.</span><span class="nf">watchObject</span><span class="p">(</span><span class="nx">namespace</span><span class="p">,</span> <span class="nx">options</span><span class="p">)</span>
+	<span class="nx">options</span><span class="p">.</span><span class="nx">FieldSelector</span> <span class="p">=</span> <span class="nx">fieldSelector</span>
+	<span class="k">return</span> <span class="nx">c</span><span class="p">.</span><span class="nf">watchObject</span><span class="p">(</span><span class="nx">namespace</span><span class="p">,</span> <span class="nx">options</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre></td></tr></table>
 </div>
@@ -2500,7 +2499,7 @@ newReflector裡面的listFunc&lt;加了 field selector &gt;處理完後會再丟
 <a href="pkg/kubelet/util/manager/watch_based_manager.go">soure code</a>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2512,14 +2511,14 @@ newReflector裡面的listFunc&lt;加了 field selector &gt;處理完後會再丟
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">objectCache</span><span class="p">)</span> <span class="nf">newReflector</span><span class="p">(</span><span class="nx">namespace</span><span class="p">,</span> <span class="nx">name</span> <span class="kt">string</span><span class="p">)</span> <span class="o">*</span><span class="nx">objectCacheItem</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">objectCache</span><span class="p">)</span> <span class="nf">newReflector</span><span class="p">(</span><span class="nx">namespace</span><span class="p">,</span> <span class="nx">name</span> <span class="kt">string</span><span class="p">)</span> <span class="o">*</span><span class="nx">objectCacheItem</span> <span class="p">{</span>
 <span class="o">...</span>
 <span class="nx">reflector</span> <span class="o">:=</span> <span class="nx">cache</span><span class="p">.</span><span class="nf">NewNamedReflector</span><span class="p">(</span>
-    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Sprintf</span><span class="p">(</span><span class="s">&#34;object-%q/%q&#34;</span><span class="p">,</span> <span class="nx">namespace</span><span class="p">,</span> <span class="nx">name</span><span class="p">),</span>
-    <span class="o">&amp;</span><span class="nx">cache</span><span class="p">.</span><span class="nx">ListWatch</span><span class="p">{</span><span class="nx">ListFunc</span><span class="p">:</span> <span class="nx">listFunc</span><span class="p">,</span> <span class="nx">WatchFunc</span><span class="p">:</span> <span class="nx">watchFunc</span><span class="p">},</span>
-    <span class="nx">c</span><span class="p">.</span><span class="nf">newObject</span><span class="p">(),</span>
-    <span class="nx">store</span><span class="p">,</span>
-    <span class="mi">0</span><span class="p">,</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Sprintf</span><span class="p">(</span><span class="s">&#34;object-%q/%q&#34;</span><span class="p">,</span> <span class="nx">namespace</span><span class="p">,</span> <span class="nx">name</span><span class="p">),</span>
+	<span class="o">&amp;</span><span class="nx">cache</span><span class="p">.</span><span class="nx">ListWatch</span><span class="p">{</span><span class="nx">ListFunc</span><span class="p">:</span> <span class="nx">listFunc</span><span class="p">,</span> <span class="nx">WatchFunc</span><span class="p">:</span> <span class="nx">watchFunc</span><span class="p">},</span>
+	<span class="nx">c</span><span class="p">.</span><span class="nf">newObject</span><span class="p">(),</span>
+	<span class="nx">store</span><span class="p">,</span>
+	<span class="mi">0</span><span class="p">,</span>
 <span class="p">)</span>
 <span class="o">...</span>
 </code></pre></td></tr></table>
@@ -2531,7 +2530,7 @@ newReflector裡面的listFunc&lt;加了 field selector &gt;處理完後會再丟
 <a href="pkg/kubelet/util/manager/watch_based_manager.go">soure code</a>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -2540,12 +2539,12 @@ newReflector裡面的listFunc&lt;加了 field selector &gt;處理完後會再丟
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="k">if</span> <span class="nx">utilfeature</span><span class="p">.</span><span class="nx">DefaultFeatureGate</span><span class="p">.</span><span class="nf">Enabled</span><span class="p">(</span><span class="nx">features</span><span class="p">.</span><span class="nx">ImmutableEphemeralVolumes</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="nx">c</span><span class="p">.</span><span class="nf">isImmutable</span><span class="p">(</span><span class="nx">object</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="nx">item</span><span class="p">.</span><span class="nf">stop</span><span class="p">()</span> <span class="p">{</span>
-            <span class="nx">klog</span><span class="p">.</span><span class="nf">V</span><span class="p">(</span><span class="mi">4</span><span class="p">).</span><span class="nf">Infof</span><span class="p">(</span><span class="s">&#34;Stopped watching for changes of %q/%q - object is immutable&#34;</span><span class="p">,</span> <span class="nx">namespace</span><span class="p">,</span> <span class="nx">name</span><span class="p">)</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-    <span class="k">return</span> <span class="nx">object</span><span class="p">,</span> <span class="kc">nil</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="k">if</span> <span class="nx">utilfeature</span><span class="p">.</span><span class="nx">DefaultFeatureGate</span><span class="p">.</span><span class="nf">Enabled</span><span class="p">(</span><span class="nx">features</span><span class="p">.</span><span class="nx">ImmutableEphemeralVolumes</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="nx">c</span><span class="p">.</span><span class="nf">isImmutable</span><span class="p">(</span><span class="nx">object</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">if</span> <span class="nx">item</span><span class="p">.</span><span class="nf">stop</span><span class="p">()</span> <span class="p">{</span>
+			<span class="nx">klog</span><span class="p">.</span><span class="nf">V</span><span class="p">(</span><span class="mi">4</span><span class="p">).</span><span class="nf">Infof</span><span class="p">(</span><span class="s">&#34;Stopped watching for changes of %q/%q - object is immutable&#34;</span><span class="p">,</span> <span class="nx">namespace</span><span class="p">,</span> <span class="nx">name</span><span class="p">)</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+	<span class="k">return</span> <span class="nx">object</span><span class="p">,</span> <span class="kc">nil</span>
 <span class="p">}</span> 
 </code></pre></td></tr></table>
 </div>
@@ -3022,7 +3021,7 @@ newReflector裡面的listFunc&lt;加了 field selector &gt;處理完後會再丟
 </div>
 
 
-<script defer src="/js/swipe.min.b4b82839155519d9ca67746615a4c86ccbc1061c196fe6d8aa26e4fe22902718.js"></script>
+<script defer src="/js/swipe.min.989e074dfb92ce7f57a92c1df7027f88b53c50a54fd9ad450a673a64aa91bfa4.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
@@ -4029,7 +4028,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 
             <p class="caption">
                 
-                    ©2021, All Rights Reserved
+                    ©2022, All Rights Reserved
                 
             </p>
         

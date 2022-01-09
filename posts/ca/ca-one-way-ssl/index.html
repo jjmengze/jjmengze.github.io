@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.efa35f4c090622130b3f4cfae6971448b5ffb61c5f0a8f21cdfd157fa712abc4.js"></script>
+<script defer src="/js/helper/fadeinout.min.1d13d3e810c3940e80cbba6216a1c76fbf42b5431fc83537ea6997863802362b.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1341,7 +1341,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Meng Learning Note">
 
-<meta name="generator" content="Hugo 0.80.0" />
+<meta name="generator" content="Hugo 0.91.2" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1380,7 +1380,7 @@
     "datePublished": "2020-06-04T17:22:45+08:00",
     "dateModified": "2020-06-04T17:22:45+08:00",
     "url" : "https://blog.jjmengze.website/posts/ca/ca-one-way-ssl/",
-    "description": "\u003cfigure\u003e     \u003cimg src=\"/images/theme/ca-playground.jpg\"/\u003e  \u003c/figure\u003e",
+    "description": "\u003cfigure\u003e\u003cimg src=\"/images/theme/ca-playground.jpg\"/\u003e \u003c/figure\u003e",
     "keywords": ["ci/cd"],
     "mainEntityOfPage": {
       "@type": "WebPage",
@@ -1673,8 +1673,7 @@
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      <figure>
-    <img src="/images/theme/ca-playground.jpg"/> 
+      <figure><img src="/images/theme/ca-playground.jpg"/>
 </figure>
 
 <p>前面說了一些基礎概念，本篇文章就實際來動手做做看用 OpenSSL 、 Nginx 加上 GO 開發一個簡單的 TLS 範例。</p>
@@ -1682,7 +1681,7 @@
 <p>由於我們要自己簽 SSL 所以需要透過 OpenSSL 先建立一個 CA 的私鑰。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1692,7 +1691,7 @@
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">openssl genrsa -out ca.key <span class="m">2048</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">openssl genrsa -out ca.key <span class="m">2048</span>
 Generating RSA private key, <span class="m">2048</span> bit long modulus <span class="o">(</span><span class="m">2</span> primes<span class="o">)</span>
 ........+++++
 ......+++++
@@ -1706,14 +1705,14 @@ ca.key
 <p>建立完 CA 的私鑰後，我們還需要建立 CA 的身分證 CA CRT ，這個身分證就代表 CA 公開出去的所有人都看得到。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">openssl req -x509 -new -nodes -key ca.key -days <span class="m">10000</span> -out ca.crt -subj <span class="s2">&#34;/CN=playwithca&#34;</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">openssl req -x509 -new -nodes -key ca.key -days <span class="m">10000</span> -out ca.crt -subj <span class="s2">&#34;/CN=playwithca&#34;</span>
 
 root@internalTest:/home/ca# ls
 ca.key
@@ -1725,7 +1724,7 @@ ca.crt
 <p>建立 server 的私鑰 ， 用來給 nginx server 的 TLS  private key。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1733,7 +1732,7 @@ ca.crt
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">openssl genrsa -out server.key <span class="m">2048</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">openssl genrsa -out server.key <span class="m">2048</span>
 
 Generating RSA private key, <span class="m">2048</span> bit long modulus <span class="o">(</span><span class="m">2</span> primes<span class="o">)</span>
 ...................+++++
@@ -1746,10 +1745,10 @@ e is <span class="m">65537</span> <span class="o">(</span>0x010001<span class="o
 <p>可以想像你去戶政事務所填寫申請身分證的表單</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">openssl req -new -key server.key -out server.csr -subj <span class="s2">&#34;/CN=example.com&#34;</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">openssl req -new -key server.key -out server.csr -subj <span class="s2">&#34;/CN=example.com&#34;</span>
 </code></pre></td></tr></table>
 </div>
 </div><h2 id="server-crt">Server CRT</h2>
@@ -1757,7 +1756,7 @@ e is <span class="m">65537</span> <span class="o">(</span>0x010001<span class="o
 <p>從你填寫表單的內容戶政事務所發給你對應的身分證</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1768,7 +1767,7 @@ e is <span class="m">65537</span> <span class="o">(</span>0x010001<span class="o
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">openssl x509 -req -in server.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out server.crt -days <span class="m">365</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">openssl x509 -req -in server.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out server.crt -days <span class="m">365</span>
 
 -out server.crt -days <span class="m">365</span>
 Signature ok
@@ -1782,7 +1781,7 @@ ca.crt  ca.key  ca.srl  server.crt  server.csr  server.key
 </div><hr />
 <p>這邊簡單設定一下 nginx 的 SSL ，讓 nginx 可以使用指定的證書，並且開啟 443 port 提供其他人連線。</p>
 <h3 id="nginx-config">nginx config</h3>
-<pre><code class="language-nginx=" data-lang="nginx=">...
+<pre tabindex="0"><code class="language-nginx=" data-lang="nginx=">...
          server {
                 listen 443 ssl default_server;
                 listen [::]:443 ssl default_server;
@@ -1793,16 +1792,16 @@ ca.crt  ca.key  ca.srl  server.crt  server.csr  server.key
 </code></pre><p>設定好 nginx 別忘了重新載入 nginx 設定檔（題外話我覺得 nginx graceful reload做得滿好的，有興趣的朋友可以去研究一下）</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">nginx -s reload
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">nginx -s reload
 </code></pre></td></tr></table>
 </div>
 </div><p>由於是測試環境沒有實際的 domain ，就先以修改 hostname 作為替代方案。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1813,7 +1812,7 @@ ca.crt  ca.key  ca.srl  server.crt  server.csr  server.key
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">cat /etc/hosts
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">cat /etc/hosts
 <span class="c1">##</span>
 <span class="c1"># Host Database</span>
 <span class="c1">#</span>
@@ -1827,7 +1826,7 @@ ca.crt  ca.key  ca.srl  server.crt  server.csr  server.key
 </div><p>修改完成後測試一下能不能透過 https 連線到 nginx 。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1847,7 +1846,7 @@ ca.crt  ca.key  ca.srl  server.crt  server.csr  server.key
 </span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">curl -k https://example.com                                       
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">curl -k https://example.com                                       
 
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -1875,7 +1874,7 @@ ca.crt  ca.key  ca.srl  server.crt  server.csr  server.key
 <p>以下是一個用 go 開發的單向 TLS 請求的 Client 。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1885,7 +1884,7 @@ ca.crt  ca.key  ca.srl  server.crt  server.csr  server.key
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">tree /go/src/dev/
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">tree /go/src/dev/
 .
 ├── 2.0
 │   ├── client.crt
@@ -1897,7 +1896,7 @@ ca.crt  ca.key  ca.srl  server.crt  server.csr  server.key
 </div>
 </div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1937,7 +1936,7 @@ ca.crt  ca.key  ca.srl  server.crt  server.csr  server.key
 </span><span class="lnt">38
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
 
 <span class="kn">import</span> <span class="p">(</span>
 	<span class="s">&#34;crypto/tls&#34;</span>
@@ -1980,7 +1979,7 @@ ca.crt  ca.key  ca.srl  server.crt  server.csr  server.key
 </div><p>以下是單向 TLS 請求的 Client 向 Server 請求的結果。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1998,7 +1997,7 @@ ca.crt  ca.key  ca.srl  server.crt  server.csr  server.key
 </span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">go run main.go
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">go run main.go
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -2444,7 +2443,7 @@ ca.crt  ca.key  ca.srl  server.crt  server.csr  server.key
 </div>
 
 
-<script defer src="/js/swipe.min.b4b82839155519d9ca67746615a4c86ccbc1061c196fe6d8aa26e4fe22902718.js"></script>
+<script defer src="/js/swipe.min.989e074dfb92ce7f57a92c1df7027f88b53c50a54fd9ad450a673a64aa91bfa4.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
@@ -3451,7 +3450,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 
             <p class="caption">
                 
-                    ©2021, All Rights Reserved
+                    ©2022, All Rights Reserved
                 
             </p>
         

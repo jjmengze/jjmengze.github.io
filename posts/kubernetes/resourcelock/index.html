@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.efa35f4c090622130b3f4cfae6971448b5ffb61c5f0a8f21cdfd157fa712abc4.js"></script>
+<script defer src="/js/helper/fadeinout.min.1d13d3e810c3940e80cbba6216a1c76fbf42b5431fc83537ea6997863802362b.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1341,7 +1341,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Meng Learning Note">
 
-<meta name="generator" content="Hugo 0.80.0" />
+<meta name="generator" content="Hugo 0.91.2" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1380,7 +1380,7 @@
     "datePublished": "2020-11-12T16:07:21+08:00",
     "dateModified": "2020-11-12T16:07:21+08:00",
     "url" : "https://blog.jjmengze.website/posts/kubernetes/resourcelock/",
-    "description": "\u003cfigure\u003e     \u003cimg src=\"/images/theme/resource-lock.jpg\"/\u003e  \u003c/figure\u003e",
+    "description": "\u003cfigure\u003e\u003cimg src=\"/images/theme/resource-lock.jpg\"/\u003e \u003c/figure\u003e",
     "keywords": ["kubernetes"],
     "mainEntityOfPage": {
       "@type": "WebPage",
@@ -1673,8 +1673,7 @@
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      <figure>
-    <img src="/images/theme/resource-lock.jpg"/> 
+      <figure><img src="/images/theme/resource-lock.jpg"/>
 </figure>
 
 <p>當系統中一個元件有多個副本，這些副本同時要競爭成為領導人會透過許多不同的方法，例如zk(zookeeper), raft, redis&hellip;等等，這些方法都有一個共同的特色誰先搶到誰就當領導人。</p>
@@ -1690,7 +1689,7 @@
 <p>在Controller Manger source code 中有使用到<code>resourcelock.New</code>，<code>resourcelock.New</code>使用到工廠模式在new的過程中會產出我們指定的<code>resourcelock</code>。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1714,7 +1713,7 @@
 </span><span class="lnt">22
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// Lock required for leader election
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// Lock required for leader election
 </span><span class="c1"></span>	<span class="nx">rl</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">resourcelock</span><span class="p">.</span><span class="nf">New</span><span class="p">(</span>
                <span class="c1">//在config會指定說要新增哪一種resource loack
 </span><span class="c1"></span>               <span class="nx">c</span><span class="p">.</span><span class="nx">ComponentConfig</span><span class="p">.</span><span class="nx">Generic</span><span class="p">.</span><span class="nx">LeaderElection</span><span class="p">.</span><span class="nx">ResourceLock</span><span class="p">,</span>
@@ -1756,7 +1755,7 @@
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1778,7 +1777,7 @@
 </span><span class="lnt">20
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">type</span> <span class="nx">Interface</span> <span class="kd">interface</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">type</span> <span class="nx">Interface</span> <span class="kd">interface</span> <span class="p">{</span>
 	<span class="c1">// Get returns the LeaderElectionRecord
 </span><span class="c1"></span>	<span class="nf">Get</span><span class="p">(</span><span class="nx">ctx</span> <span class="nx">context</span><span class="p">.</span><span class="nx">Context</span><span class="p">)</span> <span class="p">(</span><span class="o">*</span><span class="nx">LeaderElectionRecord</span><span class="p">,</span> <span class="p">[]</span><span class="kt">byte</span><span class="p">,</span> <span class="kt">error</span><span class="p">)</span>
 
@@ -1807,7 +1806,7 @@ LockConfig 主要操作 Kubernetes Lease 的 Client api。<br />
 cm 操作 Kubernetes configmap 實際物件，不會透露給使用者。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1829,7 +1828,7 @@ cm 操作 Kubernetes configmap 實際物件，不會透露給使用者。</p>
 </span><span class="lnt">20
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">type</span> <span class="nx">ConfigMapLock</span> <span class="kd">struct</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">type</span> <span class="nx">ConfigMapLock</span> <span class="kd">struct</span> <span class="p">{</span>
 	<span class="c1">// ConfigMapMeta should contain a Name and a Namespace of a
 </span><span class="c1"></span>	<span class="c1">// ConfigMapMeta object that the LeaderElector will attempt to lead.
 </span><span class="c1"></span>	<span class="nx">ConfigMapMeta</span> <span class="nx">metav1</span><span class="p">.</span><span class="nx">ObjectMeta</span>
@@ -1856,7 +1855,7 @@ cm 操作 Kubernetes configmap 實際物件，不會透露給使用者。</p>
 一開始一次性建立<code>EndpointsLock</code>,<code>ConfigMapLock</code>,<code>LeaseLock</code>再由lockType去選擇要回傳什麼給使用者。 例如 type 輸入 endpoints 最後回傳給使用者的就是 endpointslock ，type 輸入 configmaps 最後回傳使用者 configmaplock 。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1906,7 +1905,7 @@ cm 操作 Kubernetes configmap 實際物件，不會透露給使用者。</p>
 </span><span class="lnt">48
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// Manufacture will create a lock of a given type according to the input parameters
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// Manufacture will create a lock of a given type according to the input parameters
 </span><span class="c1"></span><span class="kd">func</span> <span class="nf">New</span><span class="p">(</span><span class="nx">lockType</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">ns</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">name</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">coreClient</span> <span class="nx">corev1</span><span class="p">.</span><span class="nx">CoreV1Interface</span><span class="p">,</span> <span class="nx">coordinationClient</span> <span class="nx">coordinationv1</span><span class="p">.</span><span class="nx">CoordinationV1Interface</span><span class="p">,</span> <span class="nx">rlc</span> <span class="nx">ResourceLockConfig</span><span class="p">)</span> <span class="p">(</span><span class="nx">Interface</span><span class="p">,</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{</span>
 	<span class="nx">endpointsLock</span> <span class="o">:=</span> <span class="o">&amp;</span><span class="nx">EndpointsLock</span><span class="p">{</span>
 		<span class="nx">EndpointsMeta</span><span class="p">:</span> <span class="nx">metav1</span><span class="p">.</span><span class="nx">ObjectMeta</span><span class="p">{</span>
@@ -1986,7 +1985,7 @@ cm 操作 Kubernetes configmap 實際物件，不會透露給使用者。</p>
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2008,7 +2007,7 @@ cm 操作 Kubernetes configmap 實際物件，不會透露給使用者。</p>
 </span><span class="lnt">20
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go">
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go">
 <span class="c1">// Try and become the leader and start cloud controller manager loops
 </span><span class="c1"></span>        <span class="c1">//使用 leaderelection package 裡的 RunOrDie function 會按照你設定的 LeaseDuration, RenewDeadline , RetryPeriod 三個時間嘗試成為領導人。
 </span><span class="c1"></span>	<span class="nx">leaderelection</span><span class="p">.</span><span class="nf">RunOrDie</span><span class="p">(</span><span class="nx">context</span><span class="p">.</span><span class="nf">TODO</span><span class="p">(),</span> 
@@ -2034,7 +2033,7 @@ cm 操作 Kubernetes configmap 實際物件，不會透露給使用者。</p>
 <p>對於使用者很方便的 RunOrDie，我們只要簡單的使用這個function 就可以定期的幫我們去競爭resource lock 勢必要去理解 RunOrDie 背後的機制。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2052,7 +2051,7 @@ cm 操作 Kubernetes configmap 實際物件，不會透露給使用者。</p>
 </span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// RunOrDie starts a client with the provided config or panics if the config
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// RunOrDie starts a client with the provided config or panics if the config
 </span><span class="c1">// fails to validate. RunOrDie blocks until leader election loop is
 </span><span class="c1">// stopped by ctx or it has stopped holding the leader lease
 </span><span class="c1"></span><span class="kd">func</span> <span class="nf">RunOrDie</span><span class="p">(</span><span class="nx">ctx</span> <span class="nx">context</span><span class="p">.</span><span class="nx">Context</span><span class="p">,</span> <span class="nx">lec</span> <span class="nx">LeaderElectionConfig</span><span class="p">)</span> <span class="p">{</span>
@@ -2075,7 +2074,7 @@ cm 操作 Kubernetes configmap 實際物件，不會透露給使用者。</p>
 <p>大致上主要是執行 建立以及續約 resourcelock ，當沒拿到 resourcelock 就對退出，拿到 resourcelock就執行續約。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2098,7 +2097,7 @@ cm 操作 Kubernetes configmap 實際物件，不會透露給使用者。</p>
 </span><span class="lnt">21
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// Run starts the leader election loop. Run will not return
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// Run starts the leader election loop. Run will not return
 </span><span class="c1">// before leader election loop is stopped by ctx or it has
 </span><span class="c1">// stopped holding the leader lease
 </span><span class="c1"></span><span class="kd">func</span> <span class="p">(</span><span class="nx">le</span> <span class="o">*</span><span class="nx">LeaderElector</span><span class="p">)</span> <span class="nf">Run</span><span class="p">(</span><span class="nx">ctx</span> <span class="nx">context</span><span class="p">.</span><span class="nx">Context</span><span class="p">)</span> <span class="p">{</span>
@@ -2125,7 +2124,7 @@ cm 操作 Kubernetes configmap 實際物件，不會透露給使用者。</p>
 <p>這邊會簡單的說明一下獲取 resource lock 的流程，這裡主要各個process會嘗試向kubernetes 要 resource lock 如果不成功就再嘗試看看（嘗試到process死掉或是拿到resource lock為止）。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2158,7 +2157,7 @@ cm 操作 Kubernetes configmap 實際物件，不會透露給使用者。</p>
 </span><span class="lnt">31
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// acquire loops calling tryAcquireOrRenew and returns true immediately when tryAcquireOrRenew succeeds.
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// acquire loops calling tryAcquireOrRenew and returns true immediately when tryAcquireOrRenew succeeds.
 </span><span class="c1">// Returns false if ctx signals done.
 </span><span class="c1"></span><span class="kd">func</span> <span class="p">(</span><span class="nx">le</span> <span class="o">*</span><span class="nx">LeaderElector</span><span class="p">)</span> <span class="nf">acquire</span><span class="p">(</span><span class="nx">ctx</span> <span class="nx">context</span><span class="p">.</span><span class="nx">Context</span><span class="p">)</span> <span class="kt">bool</span> <span class="p">{</span>
 	<span class="nx">ctx</span><span class="p">,</span> <span class="nx">cancel</span> <span class="o">:=</span> <span class="nx">context</span><span class="p">.</span><span class="nf">WithCancel</span><span class="p">(</span><span class="nx">ctx</span><span class="p">)</span>
@@ -2196,7 +2195,7 @@ cm 操作 Kubernetes configmap 實際物件，不會透露給使用者。</p>
 <p>當通過一關 LeaderElector acquire 的考驗 process 已經拿到 resource lock 接下來只要不斷的更新租約就好了 ～</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2239,7 +2238,7 @@ cm 操作 Kubernetes configmap 實際物件，不會透露給使用者。</p>
 </span><span class="lnt">41
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// renew loops calling tryAcquireOrRenew and returns immediately when tryAcquireOrRenew fails or ctx signals done.
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// renew loops calling tryAcquireOrRenew and returns immediately when tryAcquireOrRenew fails or ctx signals done.
 </span><span class="c1"></span><span class="kd">func</span> <span class="p">(</span><span class="nx">le</span> <span class="o">*</span><span class="nx">LeaderElector</span><span class="p">)</span> <span class="nf">renew</span><span class="p">(</span><span class="nx">ctx</span> <span class="nx">context</span><span class="p">.</span><span class="nx">Context</span><span class="p">)</span> <span class="p">{</span>
 	<span class="nx">ctx</span><span class="p">,</span> <span class="nx">cancel</span> <span class="o">:=</span> <span class="nx">context</span><span class="p">.</span><span class="nf">WithCancel</span><span class="p">(</span><span class="nx">ctx</span><span class="p">)</span>
 	<span class="k">defer</span> <span class="nf">cancel</span><span class="p">()</span>
@@ -2726,7 +2725,7 @@ cm 操作 Kubernetes configmap 實際物件，不會透露給使用者。</p>
 </div>
 
 
-<script defer src="/js/swipe.min.b4b82839155519d9ca67746615a4c86ccbc1061c196fe6d8aa26e4fe22902718.js"></script>
+<script defer src="/js/swipe.min.989e074dfb92ce7f57a92c1df7027f88b53c50a54fd9ad450a673a64aa91bfa4.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
@@ -3733,7 +3732,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 
             <p class="caption">
                 
-                    ©2021, All Rights Reserved
+                    ©2022, All Rights Reserved
                 
             </p>
         

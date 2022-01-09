@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.efa35f4c090622130b3f4cfae6971448b5ffb61c5f0a8f21cdfd157fa712abc4.js"></script>
+<script defer src="/js/helper/fadeinout.min.1d13d3e810c3940e80cbba6216a1c76fbf42b5431fc83537ea6997863802362b.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1341,7 +1341,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Meng Learning Note">
 
-<meta name="generator" content="Hugo 0.80.0" />
+<meta name="generator" content="Hugo 0.91.2" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1380,7 +1380,7 @@
     "datePublished": "2021-08-01T10:29:32+08:00",
     "dateModified": "2021-08-01T10:29:32+08:00",
     "url" : "https://blog.jjmengze.website/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-probe-obj2/",
-    "description": "\u003cfigure\u003e     \u003cimg src=\"/images/theme/kubernetes-kubelet-livenessManager2.jpg\"/\u003e  \u003c/figure\u003e",
+    "description": "\u003cfigure\u003e\u003cimg src=\"/images/theme/kubernetes-kubelet-livenessManager2.jpg\"/\u003e \u003c/figure\u003e",
     "keywords": ["kubernetes","source-code"],
     "mainEntityOfPage": {
       "@type": "WebPage",
@@ -1675,8 +1675,7 @@
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      <figure>
-    <img src="/images/theme/kubernetes-kubelet-livenessManager2.jpg"/> 
+      <figure><img src="/images/theme/kubernetes-kubelet-livenessManager2.jpg"/>
 </figure>
 
 <p>首先本文所有的 source code 基於 kubernetes 1.19 版本，所有 source code 為了版面的整潔會精簡掉部分 log 相關的程式碼，僅保留核心邏輯，如果有見解錯誤的地方，還麻煩觀看本文的大大們提出，感謝！</p>
@@ -1689,7 +1688,7 @@
 <a href="pkg/kubelet/kubelet.go">source code</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1726,7 +1725,7 @@
 </span><span class="lnt">35
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// Kubelet is the main kubelet implementation.
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// Kubelet is the main kubelet implementation.
 </span><span class="c1"></span><span class="kd">type</span> <span class="nx">Kubelet</span> <span class="kd">struct</span> 
 	<span class="c1">//用來控制哪些 pod 要加入到 probe manager
 </span><span class="c1"></span>	<span class="c1">// Handles container probing.
@@ -1773,7 +1772,7 @@
 <p><a href="pkg/kubelet/prober/prober_manager.go">source code</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1790,7 +1789,7 @@
 </span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">type</span> <span class="nx">Manager</span> <span class="kd">interface</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">type</span> <span class="nx">Manager</span> <span class="kd">interface</span> <span class="p">{</span>
 	<span class="c1">// 為每個 container probe 創建新的 probe worker，在建立 pod 時呼叫。
 </span><span class="c1"></span>	<span class="nf">AddPod</span><span class="p">(</span><span class="nx">pod</span> <span class="o">*</span><span class="nx">v1</span><span class="p">.</span><span class="nx">Pod</span><span class="p">)</span>
 
@@ -1811,7 +1810,7 @@
 <p>了解完 <code>prober.Manager</code> 所定義的 function 之後我們要來看實作的物件是誰囉！</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1861,7 +1860,7 @@
 </span><span class="lnt">48
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">type</span> <span class="nx">manager</span> <span class="kd">struct</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">type</span> <span class="nx">manager</span> <span class="kd">struct</span> <span class="p">{</span>
 	<span class="c1">// 用來記錄哪個 container 對應哪一個 probe worker
 </span><span class="c1"></span>	<span class="nx">workers</span> <span class="kd">map</span><span class="p">[</span><span class="nx">probeKey</span><span class="p">]</span><span class="o">*</span><span class="nx">worker</span>
 	<span class="c1">// 防止存取 worker 競爭
@@ -1915,7 +1914,7 @@
 <p>看完了資料結構是如何定義後我們來看怎麼把這個物件建立起來。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1938,7 +1937,7 @@
 </span><span class="lnt">21
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nf">NewManager</span><span class="p">(</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nf">NewManager</span><span class="p">(</span>
 	<span class="nx">statusManager</span> <span class="nx">status</span><span class="p">.</span><span class="nx">Manager</span><span class="p">,</span>
 	<span class="nx">livenessManager</span> <span class="nx">results</span><span class="p">.</span><span class="nx">Manager</span><span class="p">,</span>
 	<span class="nx">readinessManager</span> <span class="nx">results</span><span class="p">.</span><span class="nx">Manager</span><span class="p">,</span>
@@ -1964,7 +1963,7 @@
 </div><h3 id="addpod">AddPod</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1981,7 +1980,7 @@
 </span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go">
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go">
 <span class="c1">//當 kubelet 接收到有 pod 到加入到這個節點時，會觸發 HandlePodAdditions function ，並且傳入有哪些 pod 要加入。
 </span><span class="c1"></span><span class="kd">func</span> <span class="p">(</span><span class="nx">kl</span> <span class="o">*</span><span class="nx">Kubelet</span><span class="p">)</span> <span class="nf">HandlePodAdditions</span><span class="p">(</span><span class="nx">pods</span> <span class="p">[]</span><span class="o">*</span><span class="nx">v1</span><span class="p">.</span><span class="nx">Pod</span><span class="p">)</span> <span class="p">{</span>
 
@@ -2001,7 +2000,7 @@
 </div><p>處理 pod 是否需要 probe ，如果有需要則建立對應的 probe worker （worker 後面我們會看到是什麼，這邊先知道有這個事情發生即可）</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2083,7 +2082,7 @@
 </span><span class="lnt">80
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">m</span> <span class="o">*</span><span class="nx">manager</span><span class="p">)</span> <span class="nf">AddPod</span><span class="p">(</span><span class="nx">pod</span> <span class="o">*</span><span class="nx">v1</span><span class="p">.</span><span class="nx">Pod</span><span class="p">)</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">m</span> <span class="o">*</span><span class="nx">manager</span><span class="p">)</span> <span class="nf">AddPod</span><span class="p">(</span><span class="nx">pod</span> <span class="o">*</span><span class="nx">v1</span><span class="p">.</span><span class="nx">Pod</span><span class="p">)</span> <span class="p">{</span>
 	<span class="c1">//確保 map 一致性上鎖
 </span><span class="c1"></span>	<span class="nx">m</span><span class="p">.</span><span class="nx">workerLock</span><span class="p">.</span><span class="nf">Lock</span><span class="p">()</span>
 	<span class="k">defer</span> <span class="nx">m</span><span class="p">.</span><span class="nx">workerLock</span><span class="p">.</span><span class="nf">Unlock</span><span class="p">()</span>
@@ -2168,7 +2167,7 @@
 </div><h3 id="removepod">RemovePod</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -2178,7 +2177,7 @@
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// 當 kubelet 接收到有哪些 pod 要從這個節點移除，會觸發 HandlePodRemoves function ，並且傳入有哪些 pod 要從節點移除。
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// 當 kubelet 接收到有哪些 pod 要從這個節點移除，會觸發 HandlePodRemoves function ，並且傳入有哪些 pod 要從節點移除。
 </span><span class="c1"></span><span class="kd">func</span> <span class="p">(</span><span class="nx">kl</span> <span class="o">*</span><span class="nx">Kubelet</span><span class="p">)</span> <span class="nf">HandlePodRemoves</span><span class="p">(</span><span class="nx">pods</span> <span class="p">[]</span><span class="o">*</span><span class="nx">v1</span><span class="p">.</span><span class="nx">Pod</span><span class="p">)</span> <span class="p">{</span>
 	<span class="nx">start</span> <span class="o">:=</span> <span class="nx">kl</span><span class="p">.</span><span class="nx">clock</span><span class="p">.</span><span class="nf">Now</span><span class="p">()</span>
 	<span class="k">for</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">pod</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">pods</span> <span class="p">{</span>
@@ -2190,7 +2189,7 @@
 </div>
 </div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2222,7 +2221,7 @@
 </span><span class="lnt">30
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">//當 pod 被移除的時候會觸發
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">//當 pod 被移除的時候會觸發
 </span><span class="c1"></span><span class="kd">func</span> <span class="p">(</span><span class="nx">m</span> <span class="o">*</span><span class="nx">manager</span><span class="p">)</span> <span class="nf">RemovePod</span><span class="p">(</span><span class="nx">pod</span> <span class="o">*</span><span class="nx">v1</span><span class="p">.</span><span class="nx">Pod</span><span class="p">)</span> <span class="p">{</span>
 	<span class="c1">//確保 map 一致性上鎖
 </span><span class="c1"></span>	<span class="nx">m</span><span class="p">.</span><span class="nx">workerLock</span><span class="p">.</span><span class="nf">RLock</span><span class="p">()</span>
@@ -2258,7 +2257,7 @@
 <p>根據 container 運行狀態、probe 結果，針對每個 container 進行適當狀態修改。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2272,7 +2271,7 @@
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// 給定 pod 狀態，為 pod 建立最終的 API pod 狀態。這裡的狀態可以想像成 pod spec 最後的 pod status 欄位。
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// 給定 pod 狀態，為 pod 建立最終的 API pod 狀態。這裡的狀態可以想像成 pod spec 最後的 pod status 欄位。
 </span><span class="c1"></span><span class="kd">func</span> <span class="p">(</span><span class="nx">kl</span> <span class="o">*</span><span class="nx">Kubelet</span><span class="p">)</span> <span class="nf">generateAPIPodStatus</span><span class="p">(</span><span class="nx">pod</span> <span class="o">*</span><span class="nx">v1</span><span class="p">.</span><span class="nx">Pod</span><span class="p">,</span> <span class="nx">podStatus</span> <span class="o">*</span><span class="nx">kubecontainer</span><span class="p">.</span><span class="nx">PodStatus</span><span class="p">)</span> <span class="nx">v1</span><span class="p">.</span><span class="nx">PodStatus</span> <span class="p">{</span>
 	<span class="o">...</span>
 	<span class="nx">spec</span> <span class="o">:=</span> <span class="o">&amp;</span><span class="nx">pod</span><span class="p">.</span><span class="nx">Spec</span>
@@ -2288,7 +2287,7 @@
 </div>
 </div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2377,7 +2376,7 @@
 </span><span class="lnt">87
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">m</span> <span class="o">*</span><span class="nx">manager</span><span class="p">)</span> <span class="nf">UpdatePodStatus</span><span class="p">(</span><span class="nx">podUID</span> <span class="nx">types</span><span class="p">.</span><span class="nx">UID</span><span class="p">,</span> <span class="nx">podStatus</span> <span class="o">*</span><span class="nx">v1</span><span class="p">.</span><span class="nx">PodStatus</span><span class="p">)</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">m</span> <span class="o">*</span><span class="nx">manager</span><span class="p">)</span> <span class="nf">UpdatePodStatus</span><span class="p">(</span><span class="nx">podUID</span> <span class="nx">types</span><span class="p">.</span><span class="nx">UID</span><span class="p">,</span> <span class="nx">podStatus</span> <span class="o">*</span><span class="nx">v1</span><span class="p">.</span><span class="nx">PodStatus</span><span class="p">)</span> <span class="p">{</span>
 	<span class="c1">//透過傳入的 pod status 遞迴所有的 ContainerStatuses
 </span><span class="c1"></span>	<span class="k">for</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">c</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">podStatus</span><span class="p">.</span><span class="nx">ContainerStatuses</span> <span class="p">{</span>
 		<span class="kd">var</span> <span class="nx">started</span> <span class="kt">bool</span>
@@ -2470,7 +2469,7 @@
 <p>執行一系列清理工作，包括終止 pod worker、殺死不需要的 pod 以及刪除 orphaned 的volume/pod directories。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2482,7 +2481,7 @@
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// NOTE: This function is executed by the main sync loop, so it
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// NOTE: This function is executed by the main sync loop, so it
 </span><span class="c1">// should not contain any blocking calls.
 </span><span class="c1"></span><span class="kd">func</span> <span class="p">(</span><span class="nx">kl</span> <span class="o">*</span><span class="nx">Kubelet</span><span class="p">)</span> <span class="nf">HandlePodCleanups</span><span class="p">()</span> <span class="kt">error</span> <span class="p">{</span>
 	<span class="o">...</span>
@@ -2496,7 +2495,7 @@
 </div>
 </div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2509,7 +2508,7 @@
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">m</span> <span class="o">*</span><span class="nx">manager</span><span class="p">)</span> <span class="nf">CleanupPods</span><span class="p">(</span><span class="nx">desiredPods</span> <span class="kd">map</span><span class="p">[</span><span class="nx">types</span><span class="p">.</span><span class="nx">UID</span><span class="p">]</span><span class="nx">sets</span><span class="p">.</span><span class="nx">Empty</span><span class="p">)</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">m</span> <span class="o">*</span><span class="nx">manager</span><span class="p">)</span> <span class="nf">CleanupPods</span><span class="p">(</span><span class="nx">desiredPods</span> <span class="kd">map</span><span class="p">[</span><span class="nx">types</span><span class="p">.</span><span class="nx">UID</span><span class="p">]</span><span class="nx">sets</span><span class="p">.</span><span class="nx">Empty</span><span class="p">)</span> <span class="p">{</span>
 	<span class="c1">//確保 map 一致性上鎖
 </span><span class="c1"></span>	<span class="nx">m</span><span class="p">.</span><span class="nx">workerLock</span><span class="p">.</span><span class="nf">RLock</span><span class="p">()</span>
 	<span class="k">defer</span> <span class="nx">m</span><span class="p">.</span><span class="nx">workerLock</span><span class="p">.</span><span class="nf">RUnlock</span><span class="p">()</span>
@@ -2525,7 +2524,7 @@
 </div><h3 id="support">support</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2559,7 +2558,7 @@
 </span><span class="lnt">32
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">//透過 getworker 我們可以傳入 pod uid 、 container name 以及 probeType 獲得 probe worker
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">//透過 getworker 我們可以傳入 pod uid 、 container name 以及 probeType 獲得 probe worker
 </span><span class="c1"></span><span class="kd">func</span> <span class="p">(</span><span class="nx">m</span> <span class="o">*</span><span class="nx">manager</span><span class="p">)</span> <span class="nf">getWorker</span><span class="p">(</span><span class="nx">podUID</span> <span class="nx">types</span><span class="p">.</span><span class="nx">UID</span><span class="p">,</span> <span class="nx">containerName</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">probeType</span> <span class="nx">probeType</span><span class="p">)</span> <span class="p">(</span><span class="o">*</span><span class="nx">worker</span><span class="p">,</span> <span class="kt">bool</span><span class="p">)</span> <span class="p">{</span>
 	<span class="c1">//確保 map 一致性上鎖
 </span><span class="c1"></span>	<span class="nx">m</span><span class="p">.</span><span class="nx">workerLock</span><span class="p">.</span><span class="nf">RLock</span><span class="p">()</span>
@@ -2597,7 +2596,7 @@
 <p>還記得之前為了找到在 <code>proberesults.Manager</code> 定義的卻沒被用到的這三個 function 嗎？我們現在來看看都在哪裡用上了吧！</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -2605,7 +2604,7 @@
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go">	<span class="c1">// 透過 container id 從 實作者身上得到 result 結果
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go">	<span class="c1">// 透過 container id 從 實作者身上得到 result 結果
 </span><span class="c1"></span>	<span class="nf">Get</span><span class="p">(</span><span class="nx">kubecontainer</span><span class="p">.</span><span class="nx">ContainerID</span><span class="p">)</span> <span class="p">(</span><span class="nx">Result</span><span class="p">,</span> <span class="kt">bool</span><span class="p">)</span>
 	<span class="c1">// 透過 container id 設定 pod 探測的結果。實作者需要把結果儲存起來。
 </span><span class="c1"></span>	<span class="nf">Set</span><span class="p">(</span><span class="nx">kubecontainer</span><span class="p">.</span><span class="nx">ContainerID</span><span class="p">,</span> <span class="nx">Result</span><span class="p">,</span> <span class="o">*</span><span class="nx">v1</span><span class="p">.</span><span class="nx">Pod</span><span class="p">)</span>
@@ -2618,7 +2617,7 @@
 <a href="##UpdatePodStatus">UpdatePodStatus</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -2629,7 +2628,7 @@
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">m</span> <span class="o">*</span><span class="nx">manager</span><span class="p">)</span> <span class="nf">UpdatePodStatus</span><span class="p">(</span><span class="nx">podUID</span> <span class="nx">types</span><span class="p">.</span><span class="nx">UID</span><span class="p">,</span> <span class="nx">podStatus</span> <span class="o">*</span><span class="nx">v1</span><span class="p">.</span><span class="nx">PodStatus</span><span class="p">)</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">m</span> <span class="o">*</span><span class="nx">manager</span><span class="p">)</span> <span class="nf">UpdatePodStatus</span><span class="p">(</span><span class="nx">podUID</span> <span class="nx">types</span><span class="p">.</span><span class="nx">UID</span><span class="p">,</span> <span class="nx">podStatus</span> <span class="o">*</span><span class="nx">v1</span><span class="p">.</span><span class="nx">PodStatus</span><span class="p">)</span> <span class="p">{</span>
 	<span class="c1">//透過傳入的 pod status 遞迴所有的 ContainerStatuses
 </span><span class="c1"></span>	<span class="k">for</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">c</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">podStatus</span><span class="p">.</span><span class="nx">ContainerStatuses</span> <span class="p">{</span>
 		<span class="o">...</span>
@@ -2647,7 +2646,7 @@
 <h4 id="struct-1">struct</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2692,7 +2691,7 @@
 </span><span class="lnt">43
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">type</span> <span class="nx">worker</span> <span class="kd">struct</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">type</span> <span class="nx">worker</span> <span class="kd">struct</span> <span class="p">{</span>
 	<span class="c1">// 停止 worker 的 channel
 </span><span class="c1"></span>	<span class="nx">stopCh</span> <span class="kd">chan</span> <span class="kd">struct</span><span class="p">{}</span>
 
@@ -2740,7 +2739,7 @@
 </div><h4 id="new-function-1">new function</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2828,7 +2827,7 @@
 </span><span class="lnt">86
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// 建立 work 去檢測 container 狀態
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// 建立 work 去檢測 container 狀態
 </span><span class="c1"></span><span class="kd">func</span> <span class="nf">newWorker</span><span class="p">(</span>
 	<span class="nx">m</span> <span class="o">*</span><span class="nx">manager</span><span class="p">,</span>
 	<span class="nx">probeType</span> <span class="nx">probeType</span><span class="p">,</span>
@@ -2920,7 +2919,7 @@
 <p>worker 開始定時執行 probe 作業</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">  1
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
 </span><span class="lnt">  2
 </span><span class="lnt">  3
 </span><span class="lnt">  4
@@ -3134,7 +3133,7 @@
 </span><span class="lnt">212
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// run periodically probes the container.
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// run periodically probes the container.
 </span><span class="c1"></span><span class="kd">func</span> <span class="p">(</span><span class="nx">w</span> <span class="o">*</span><span class="nx">worker</span><span class="p">)</span> <span class="nf">run</span><span class="p">()</span> <span class="p">{</span>
 	<span class="c1">//透過 pod spec 設定 probe 的間隔時間 
 </span><span class="c1"></span>	<span class="nx">probeTickerPeriod</span> <span class="o">:=</span> <span class="nx">time</span><span class="p">.</span><span class="nf">Duration</span><span class="p">(</span><span class="nx">w</span><span class="p">.</span><span class="nx">spec</span><span class="p">.</span><span class="nx">PeriodSeconds</span><span class="p">)</span> <span class="o">*</span> <span class="nx">time</span><span class="p">.</span><span class="nx">Second</span>
@@ -3352,7 +3351,7 @@
 <p>還記得之前為了找到在 <code>proberesults.Manager</code> 定義的卻沒被用到的這三個 function 嗎？我們現在來看看是不是都用上了！</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -3360,7 +3359,7 @@
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go">	<span class="c1">// 透過 container id 從 實作者身上得到 result 結果
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go">	<span class="c1">// 透過 container id 從 實作者身上得到 result 結果
 </span><span class="c1"></span>	<span class="nf">Get</span><span class="p">(</span><span class="nx">kubecontainer</span><span class="p">.</span><span class="nx">ContainerID</span><span class="p">)</span> <span class="p">(</span><span class="nx">Result</span><span class="p">,</span> <span class="kt">bool</span><span class="p">)</span>
 	<span class="c1">// 透過 container id 設定 pod 探測的結果。實作者需要把結果儲存起來。
 </span><span class="c1"></span>	<span class="nf">Set</span><span class="p">(</span><span class="nx">kubecontainer</span><span class="p">.</span><span class="nx">ContainerID</span><span class="p">,</span> <span class="nx">Result</span><span class="p">,</span> <span class="o">*</span><span class="nx">v1</span><span class="p">.</span><span class="nx">Pod</span><span class="p">)</span>
@@ -3373,7 +3372,7 @@
 透過 container id 設定 pod 探測的結果。實作者需要把結果儲存起來。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -3394,7 +3393,7 @@
 </span><span class="lnt">19
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">w</span> <span class="o">*</span><span class="nx">worker</span><span class="p">)</span> <span class="nf">doProbe</span><span class="p">()</span> <span class="p">(</span><span class="nx">keepGoing</span> <span class="kt">bool</span><span class="p">)</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">w</span> <span class="o">*</span><span class="nx">worker</span><span class="p">)</span> <span class="nf">doProbe</span><span class="p">()</span> <span class="p">(</span><span class="nx">keepGoing</span> <span class="kt">bool</span><span class="p">)</span> <span class="p">{</span>
 	<span class="o">...</span>
     
 	<span class="k">if</span> <span class="nx">w</span><span class="p">.</span><span class="nx">containerID</span><span class="p">.</span><span class="nf">String</span><span class="p">()</span> <span class="o">!=</span> <span class="nx">c</span><span class="p">.</span><span class="nx">ContainerID</span> <span class="p">{</span>
@@ -3420,7 +3419,7 @@
 透過 container id 移除時實作者身上的對應的資料</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -3453,7 +3452,7 @@
 </span><span class="lnt">31
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">w</span> <span class="o">*</span><span class="nx">worker</span><span class="p">)</span> <span class="nf">run</span><span class="p">()</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">w</span> <span class="o">*</span><span class="nx">worker</span><span class="p">)</span> <span class="nf">run</span><span class="p">()</span> <span class="p">{</span>
 	<span class="o">...</span>
     
 	<span class="nx">probeTicker</span> <span class="o">:=</span> <span class="nx">time</span><span class="p">.</span><span class="nf">NewTicker</span><span class="p">(</span><span class="nx">probeTickerPeriod</span><span class="p">)</span>
@@ -3937,7 +3936,7 @@
 </div>
 
 
-<script defer src="/js/swipe.min.b4b82839155519d9ca67746615a4c86ccbc1061c196fe6d8aa26e4fe22902718.js"></script>
+<script defer src="/js/swipe.min.989e074dfb92ce7f57a92c1df7027f88b53c50a54fd9ad450a673a64aa91bfa4.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
@@ -4944,7 +4943,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 
             <p class="caption">
                 
-                    ©2021, All Rights Reserved
+                    ©2022, All Rights Reserved
                 
             </p>
         

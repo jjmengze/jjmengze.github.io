@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.efa35f4c090622130b3f4cfae6971448b5ffb61c5f0a8f21cdfd157fa712abc4.js"></script>
+<script defer src="/js/helper/fadeinout.min.1d13d3e810c3940e80cbba6216a1c76fbf42b5431fc83537ea6997863802362b.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1341,7 +1341,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Meng Learning Note">
 
-<meta name="generator" content="Hugo 0.80.0" />
+<meta name="generator" content="Hugo 0.91.2" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1380,7 +1380,7 @@
     "datePublished": "2020-10-01T20:48:52+08:00",
     "dateModified": "2020-10-01T20:48:52+08:00",
     "url" : "https://blog.jjmengze.website/posts/cicd/helm/helmv3-gogo/",
-    "description": "\u003cfigure\u003e     \u003cimg src=\"/images/theme/helmv3-gogo.jpg\"/\u003e  \u003c/figure\u003e",
+    "description": "\u003cfigure\u003e\u003cimg src=\"/images/theme/helmv3-gogo.jpg\"/\u003e \u003c/figure\u003e",
     "keywords": ["ci/cd"],
     "mainEntityOfPage": {
       "@type": "WebPage",
@@ -1673,14 +1673,13 @@
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      <figure>
-    <img src="/images/theme/helmv3-gogo.jpg"/> 
+      <figure><img src="/images/theme/helmv3-gogo.jpg"/>
 </figure>
 
 <p>由於協助自己公司內訓使用 helm 管理 Kubernetes Applicetion ，就非常的簡單的寫了怎麼看 Helm 的架構與 template 。</p>
 <h2 id="目錄結構">目錄結構</h2>
 <p>可以先看一下這一個目錄結構</p>
-<pre><code>.
+<pre tabindex="0"><code>.
 └── helm-example
     ├── Chart.yaml
     ├── charts
@@ -1699,7 +1698,7 @@
 <p>可來看一下chart.yaml 裡面寫了什麼。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1724,7 +1723,7 @@
 </span><span class="lnt">23
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">v2</span><span class="w">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">v2</span><span class="w">
 </span><span class="w"></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">helm-example</span><span class="w">
 </span><span class="w"></span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l">A Helm chart for Kubernetes</span><span class="w">
 </span><span class="w">
@@ -1754,7 +1753,7 @@
 我們來看一下value.yaml 裡面寫了些什麼</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1835,7 +1834,7 @@
 </span><span class="lnt">79
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="c"># Default values for helm-example.</span><span class="w">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="c"># Default values for helm-example.</span><span class="w">
 </span><span class="w"></span><span class="c"># This is a YAML-formatted file.</span><span class="w">
 </span><span class="w"></span><span class="c"># Declare variables to be passed into your templates.</span><span class="w">
 </span><span class="w">
@@ -1923,7 +1922,7 @@
 <p>我們可以把文件點開來看裡面裡面是什麼一回事。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1989,7 +1988,7 @@
 </span><span class="lnt">64
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="p">{{</span><span class="cm">/*
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="p">{{</span><span class="cm">/*
 </span><span class="cm">{{/*
 </span><span class="cm">Expand the name of the chart.
 </span><span class="cm">*/</span><span class="p">}}</span>
@@ -2206,13 +2205,13 @@
 <h3 id="使用-_helptertpl">使用 _helpter.tpl</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">metadata</span><span class="p">:</span><span class="w">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">metadata</span><span class="p">:</span><span class="w">
 </span><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span>{{<span class="w"> </span><span class="l">include &#34;helm-example.fullname&#34; . }}</span><span class="w">
 </span><span class="w">  </span><span class="nt">labels</span><span class="p">:</span><span class="w">
 </span><span class="w">    </span>{{- <span class="l">include &#34;helm-example.labels&#34; . | nindent 4 }}</span><span class="w">
@@ -2223,12 +2222,12 @@
 <h3 id="使用-value">使用 value</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-yaml" data-lang="yaml">{{- <span class="l">if not .Values.autoscaling.enabled }}</span><span class="w">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml">{{- <span class="l">if not .Values.autoscaling.enabled }}</span><span class="w">
 </span><span class="w">  </span><span class="nt">replicas</span><span class="p">:</span><span class="w"> </span>{{<span class="w"> </span><span class="l">.Values.replicaCount }}</span><span class="w">
 </span><span class="w"></span>{{- <span class="l">end }}</span><span class="w">
 </span></code></pre></td></tr></table>
@@ -2237,12 +2236,12 @@
 <h3 id="使用-go-template-function">使用 go template function</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">selector</span><span class="p">:</span><span class="w">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">selector</span><span class="p">:</span><span class="w">
 </span><span class="w">    </span><span class="nt">matchLabels</span><span class="p">:</span><span class="w">
 </span><span class="w">      </span>{{- <span class="l">include &#34;helm-example.selectorLabels&#34; . | nindent 6 }}</span><span class="w">
 </span></code></pre></td></tr></table>
@@ -2251,14 +2250,14 @@
 <h3 id="使用-go-template-to-yaml">使用 go template to yaml</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="w">    </span><span class="nt">metadata</span><span class="p">:</span><span class="w">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="w">    </span><span class="nt">metadata</span><span class="p">:</span><span class="w">
 </span><span class="w">    </span>{{- <span class="l">with .Values.podAnnotations }}</span><span class="w">
 </span><span class="w">      </span><span class="nt">annotations</span><span class="p">:</span><span class="w">
 </span><span class="w">        </span>{{- <span class="l">toYaml . | nindent 8 }}</span><span class="w">
@@ -2269,24 +2268,24 @@
 例如你在value內定義以下這個範例</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">podAnnotations</span><span class="p">:</span><span class="w">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">podAnnotations</span><span class="p">:</span><span class="w">
 </span><span class="w">  </span><span class="nt">prometheus.io/scrape</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;true&#34;</span><span class="w">
 </span></code></pre></td></tr></table>
 </div>
 </div><p>Helm 會幫你轉換成以下格式</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="w">  </span><span class="nt">template</span><span class="p">:</span><span class="w">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="w">  </span><span class="nt">template</span><span class="p">:</span><span class="w">
 </span><span class="w">    </span><span class="nt">metadata</span><span class="p">:</span><span class="w">
 </span><span class="w">      </span><span class="nt">annotations</span><span class="p">:</span><span class="w">
 </span><span class="w">        </span><span class="nt">prometheus.io/scrape</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;true&#34;</span><span class="w">
@@ -2297,7 +2296,7 @@
 <p>Note 是記錄這個 chart 是怎麼用的，直接來看範例。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -2308,7 +2307,7 @@
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="p">{{</span><span class="o">-</span> <span class="k">if</span> <span class="p">.</span><span class="nx">Values</span><span class="p">.</span><span class="nx">ingress</span><span class="p">.</span><span class="nx">enabled</span> <span class="p">}}</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="p">{{</span><span class="o">-</span> <span class="k">if</span> <span class="p">.</span><span class="nx">Values</span><span class="p">.</span><span class="nx">ingress</span><span class="p">.</span><span class="nx">enabled</span> <span class="p">}}</span>
 <span class="mf">1.</span> <span class="nx">Get</span> <span class="nx">the</span> <span class="nx">application</span> <span class="nx">URL</span> <span class="nx">by</span> <span class="nx">running</span> <span class="nx">these</span> <span class="nx">commands</span><span class="p">:</span>
 <span class="p">{{</span><span class="o">-</span> <span class="k">if</span> <span class="p">.</span><span class="nx">Values</span><span class="p">.</span><span class="nx">ingress</span><span class="p">.</span><span class="nx">enabled</span> <span class="p">}}</span>
 <span class="p">{{</span><span class="o">-</span> <span class="k">range</span> <span class="err">$</span><span class="nx">host</span> <span class="o">:=</span> <span class="p">.</span><span class="nx">Values</span><span class="p">.</span><span class="nx">ingress</span><span class="p">.</span><span class="nx">hosts</span> <span class="p">}}</span>
@@ -2755,7 +2754,7 @@
 </div>
 
 
-<script defer src="/js/swipe.min.b4b82839155519d9ca67746615a4c86ccbc1061c196fe6d8aa26e4fe22902718.js"></script>
+<script defer src="/js/swipe.min.989e074dfb92ce7f57a92c1df7027f88b53c50a54fd9ad450a673a64aa91bfa4.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
@@ -3762,7 +3761,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 
             <p class="caption">
                 
-                    ©2021, All Rights Reserved
+                    ©2022, All Rights Reserved
                 
             </p>
         
