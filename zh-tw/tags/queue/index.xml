@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>queue on MengZe Blog</title>
-    <link>https://blog.jjmengze.website/zh-tw/tags/queue/</link>
+    <link>https://jjmengze.github.io/zh-tw/tags/queue/</link>
     <description>Recent content in queue on MengZe Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
@@ -16,18 +16,18 @@
     <copyright>©2024, All Rights Reserved</copyright>
     <lastBuildDate>Tue, 01 Dec 2020 02:12:05 +0800</lastBuildDate>
     
-        <atom:link href="https://blog.jjmengze.website/zh-tw/tags/queue/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://jjmengze.github.io/zh-tw/tags/queue/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
         <title>Kafka consumer CommitFailedException 好煩</title>
-        <link>https://blog.jjmengze.website/zh-tw/posts/queue/kafka/kafka-commitfailed/</link>
+        <link>https://jjmengze.github.io/zh-tw/posts/queue/kafka/kafka-commitfailed/</link>
         <pubDate>Tue, 01 Dec 2020 02:12:05 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Tue, 01 Dec 2020 02:12:05 +0800</atom:modified>
-        <guid>https://blog.jjmengze.website/zh-tw/posts/queue/kafka/kafka-commitfailed/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kafka-tunning.png&#34;/&gt;
+        <guid>https://jjmengze.github.io/zh-tw/posts/queue/kafka/kafka-commitfailed/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kafka-tunning.png&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -57,12 +57,12 @@
       
       <item>
         <title>Kafka consumer CommitFailedException 好煩</title>
-        <link>https://blog.jjmengze.website/zh-tw/zh-tw/posts/queue/kafka/kafka-commitfailed/</link>
+        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/queue/kafka/kafka-commitfailed/</link>
         <pubDate>Tue, 01 Dec 2020 02:12:05 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Tue, 01 Dec 2020 02:12:05 +0800</atom:modified>
-        <guid>https://blog.jjmengze.website/zh-tw/zh-tw/posts/queue/kafka/kafka-commitfailed/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kafka-tunning.png&#34;/&gt;
+        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/queue/kafka/kafka-commitfailed/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kafka-tunning.png&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -92,12 +92,12 @@
       
       <item>
         <title>微紀錄Kafka參數調整</title>
-        <link>https://blog.jjmengze.website/zh-tw/posts/queue/kafka/kafka-tunning/</link>
+        <link>https://jjmengze.github.io/zh-tw/posts/queue/kafka/kafka-tunning/</link>
         <pubDate>Mon, 30 Nov 2020 02:12:05 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Mon, 30 Nov 2020 02:12:05 +0800</atom:modified>
-        <guid>https://blog.jjmengze.website/zh-tw/posts/queue/kafka/kafka-tunning/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kafka-tunning.png&#34;/&gt;
+        <guid>https://jjmengze.github.io/zh-tw/posts/queue/kafka/kafka-tunning/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kafka-tunning.png&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -127,12 +127,12 @@
       
       <item>
         <title>微紀錄Kafka參數調整</title>
-        <link>https://blog.jjmengze.website/zh-tw/zh-tw/posts/queue/kafka/kafka-tunning/</link>
+        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/queue/kafka/kafka-tunning/</link>
         <pubDate>Mon, 30 Nov 2020 02:12:05 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Mon, 30 Nov 2020 02:12:05 +0800</atom:modified>
-        <guid>https://blog.jjmengze.website/zh-tw/zh-tw/posts/queue/kafka/kafka-tunning/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kafka-tunning.png&#34;/&gt;
+        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/queue/kafka/kafka-tunning/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kafka-tunning.png&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>

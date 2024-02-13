@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Tags on MengZe Blog</title>
-    <link>https://blog.jjmengze.website/zh-tw/tags/</link>
+    <link>https://jjmengze.github.io/zh-tw/tags/</link>
     <description>Recent content in Tags on MengZe Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
@@ -16,17 +16,17 @@
     <copyright>©2024, All Rights Reserved</copyright>
     <lastBuildDate>Mon, 26 Dec 2022 20:48:52 +0800</lastBuildDate>
     
-        <atom:link href="https://blog.jjmengze.website/zh-tw/tags/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://jjmengze.github.io/zh-tw/tags/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
         <title>db</title>
-        <link>https://blog.jjmengze.website/zh-tw/tags/db/</link>
+        <link>https://jjmengze.github.io/zh-tw/tags/db/</link>
         <pubDate>Mon, 26 Dec 2022 20:48:52 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         
-        <guid>https://blog.jjmengze.website/zh-tw/tags/db/</guid>
+        <guid>https://jjmengze.github.io/zh-tw/tags/db/</guid>
         <description></description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -40,11 +40,11 @@
       
       <item>
         <title>life</title>
-        <link>https://blog.jjmengze.website/zh-tw/tags/life/</link>
+        <link>https://jjmengze.github.io/zh-tw/tags/life/</link>
         <pubDate>Fri, 31 Dec 2021 17:11:32 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         
-        <guid>https://blog.jjmengze.website/zh-tw/tags/life/</guid>
+        <guid>https://jjmengze.github.io/zh-tw/tags/life/</guid>
         <description></description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -58,11 +58,11 @@
       
       <item>
         <title>kubernetes</title>
-        <link>https://blog.jjmengze.website/zh-tw/tags/kubernetes/</link>
+        <link>https://jjmengze.github.io/zh-tw/tags/kubernetes/</link>
         <pubDate>Fri, 20 Aug 2021 10:29:32 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         
-        <guid>https://blog.jjmengze.website/zh-tw/tags/kubernetes/</guid>
+        <guid>https://jjmengze.github.io/zh-tw/tags/kubernetes/</guid>
         <description></description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -76,11 +76,11 @@
       
       <item>
         <title>source-code</title>
-        <link>https://blog.jjmengze.website/zh-tw/tags/source-code/</link>
+        <link>https://jjmengze.github.io/zh-tw/tags/source-code/</link>
         <pubDate>Fri, 20 Aug 2021 10:29:32 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         
-        <guid>https://blog.jjmengze.website/zh-tw/tags/source-code/</guid>
+        <guid>https://jjmengze.github.io/zh-tw/tags/source-code/</guid>
         <description></description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -94,11 +94,11 @@
       
       <item>
         <title>cache</title>
-        <link>https://blog.jjmengze.website/zh-tw/tags/cache/</link>
+        <link>https://jjmengze.github.io/zh-tw/tags/cache/</link>
         <pubDate>Mon, 05 Jul 2021 10:29:32 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         
-        <guid>https://blog.jjmengze.website/zh-tw/tags/cache/</guid>
+        <guid>https://jjmengze.github.io/zh-tw/tags/cache/</guid>
         <description></description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -112,11 +112,11 @@
       
       <item>
         <title>utils</title>
-        <link>https://blog.jjmengze.website/zh-tw/tags/utils/</link>
+        <link>https://jjmengze.github.io/zh-tw/tags/utils/</link>
         <pubDate>Thu, 25 Feb 2021 10:29:32 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         
-        <guid>https://blog.jjmengze.website/zh-tw/tags/utils/</guid>
+        <guid>https://jjmengze.github.io/zh-tw/tags/utils/</guid>
         <description></description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -130,11 +130,11 @@
       
       <item>
         <title>controller</title>
-        <link>https://blog.jjmengze.website/zh-tw/tags/controller/</link>
+        <link>https://jjmengze.github.io/zh-tw/tags/controller/</link>
         <pubDate>Fri, 19 Feb 2021 10:29:32 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         
-        <guid>https://blog.jjmengze.website/zh-tw/tags/controller/</guid>
+        <guid>https://jjmengze.github.io/zh-tw/tags/controller/</guid>
         <description></description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -148,11 +148,11 @@
       
       <item>
         <title>kafka</title>
-        <link>https://blog.jjmengze.website/zh-tw/tags/kafka/</link>
+        <link>https://jjmengze.github.io/zh-tw/tags/kafka/</link>
         <pubDate>Tue, 01 Dec 2020 02:12:05 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         
-        <guid>https://blog.jjmengze.website/zh-tw/tags/kafka/</guid>
+        <guid>https://jjmengze.github.io/zh-tw/tags/kafka/</guid>
         <description></description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -166,11 +166,11 @@
       
       <item>
         <title>queue</title>
-        <link>https://blog.jjmengze.website/zh-tw/tags/queue/</link>
+        <link>https://jjmengze.github.io/zh-tw/tags/queue/</link>
         <pubDate>Tue, 01 Dec 2020 02:12:05 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         
-        <guid>https://blog.jjmengze.website/zh-tw/tags/queue/</guid>
+        <guid>https://jjmengze.github.io/zh-tw/tags/queue/</guid>
         <description></description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -184,11 +184,11 @@
       
       <item>
         <title>Go</title>
-        <link>https://blog.jjmengze.website/zh-tw/tags/go/</link>
+        <link>https://jjmengze.github.io/zh-tw/tags/go/</link>
         <pubDate>Mon, 21 Sep 2020 14:25:58 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         
-        <guid>https://blog.jjmengze.website/zh-tw/tags/go/</guid>
+        <guid>https://jjmengze.github.io/zh-tw/tags/go/</guid>
         <description></description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -202,11 +202,11 @@
       
       <item>
         <title>TDD</title>
-        <link>https://blog.jjmengze.website/zh-tw/tags/tdd/</link>
+        <link>https://jjmengze.github.io/zh-tw/tags/tdd/</link>
         <pubDate>Mon, 21 Sep 2020 14:25:58 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         
-        <guid>https://blog.jjmengze.website/zh-tw/tags/tdd/</guid>
+        <guid>https://jjmengze.github.io/zh-tw/tags/tdd/</guid>
         <description></description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -220,11 +220,11 @@
       
       <item>
         <title>http2</title>
-        <link>https://blog.jjmengze.website/zh-tw/tags/http2/</link>
+        <link>https://jjmengze.github.io/zh-tw/tags/http2/</link>
         <pubDate>Sat, 19 Sep 2020 12:00:02 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         
-        <guid>https://blog.jjmengze.website/zh-tw/tags/http2/</guid>
+        <guid>https://jjmengze.github.io/zh-tw/tags/http2/</guid>
         <description></description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -238,11 +238,11 @@
       
       <item>
         <title>openshift</title>
-        <link>https://blog.jjmengze.website/zh-tw/tags/openshift/</link>
+        <link>https://jjmengze.github.io/zh-tw/tags/openshift/</link>
         <pubDate>Tue, 21 Jul 2020 16:06:29 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         
-        <guid>https://blog.jjmengze.website/zh-tw/tags/openshift/</guid>
+        <guid>https://jjmengze.github.io/zh-tw/tags/openshift/</guid>
         <description></description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -256,11 +256,11 @@
       
       <item>
         <title>talk</title>
-        <link>https://blog.jjmengze.website/zh-tw/tags/talk/</link>
+        <link>https://jjmengze.github.io/zh-tw/tags/talk/</link>
         <pubDate>Tue, 21 Jul 2020 16:06:29 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         
-        <guid>https://blog.jjmengze.website/zh-tw/tags/talk/</guid>
+        <guid>https://jjmengze.github.io/zh-tw/tags/talk/</guid>
         <description></description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -274,11 +274,11 @@
       
       <item>
         <title>devops</title>
-        <link>https://blog.jjmengze.website/zh-tw/tags/devops/</link>
+        <link>https://jjmengze.github.io/zh-tw/tags/devops/</link>
         <pubDate>Thu, 30 Apr 2020 12:07:34 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         
-        <guid>https://blog.jjmengze.website/zh-tw/tags/devops/</guid>
+        <guid>https://jjmengze.github.io/zh-tw/tags/devops/</guid>
         <description></description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -292,11 +292,11 @@
       
       <item>
         <title>servicemesh</title>
-        <link>https://blog.jjmengze.website/zh-tw/tags/servicemesh/</link>
+        <link>https://jjmengze.github.io/zh-tw/tags/servicemesh/</link>
         <pubDate>Sat, 04 Aug 2018 17:39:26 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         
-        <guid>https://blog.jjmengze.website/zh-tw/tags/servicemesh/</guid>
+        <guid>https://jjmengze.github.io/zh-tw/tags/servicemesh/</guid>
         <description></description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -310,11 +310,11 @@
       
       <item>
         <title>serverless</title>
-        <link>https://blog.jjmengze.website/zh-tw/tags/serverless/</link>
+        <link>https://jjmengze.github.io/zh-tw/tags/serverless/</link>
         <pubDate>Fri, 04 May 2018 17:39:26 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         
-        <guid>https://blog.jjmengze.website/zh-tw/tags/serverless/</guid>
+        <guid>https://jjmengze.github.io/zh-tw/tags/serverless/</guid>
         <description></description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -328,11 +328,11 @@
       
       <item>
         <title>openStack</title>
-        <link>https://blog.jjmengze.website/zh-tw/tags/openstack/</link>
+        <link>https://jjmengze.github.io/zh-tw/tags/openstack/</link>
         <pubDate>Sat, 21 Apr 2018 23:25:20 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         
-        <guid>https://blog.jjmengze.website/zh-tw/tags/openstack/</guid>
+        <guid>https://jjmengze.github.io/zh-tw/tags/openstack/</guid>
         <description></description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -346,11 +346,11 @@
       
       <item>
         <title>GRPC</title>
-        <link>https://blog.jjmengze.website/zh-tw/tags/grpc/</link>
+        <link>https://jjmengze.github.io/zh-tw/tags/grpc/</link>
         <pubDate>Thu, 15 Mar 2018 02:12:05 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         
-        <guid>https://blog.jjmengze.website/zh-tw/tags/grpc/</guid>
+        <guid>https://jjmengze.github.io/zh-tw/tags/grpc/</guid>
         <description></description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -364,11 +364,11 @@
       
       <item>
         <title>proto</title>
-        <link>https://blog.jjmengze.website/zh-tw/tags/proto/</link>
+        <link>https://jjmengze.github.io/zh-tw/tags/proto/</link>
         <pubDate>Thu, 15 Mar 2018 02:12:05 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         
-        <guid>https://blog.jjmengze.website/zh-tw/tags/proto/</guid>
+        <guid>https://jjmengze.github.io/zh-tw/tags/proto/</guid>
         <description></description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -382,11 +382,11 @@
       
       <item>
         <title>SDN</title>
-        <link>https://blog.jjmengze.website/zh-tw/tags/sdn/</link>
+        <link>https://jjmengze.github.io/zh-tw/tags/sdn/</link>
         <pubDate>Tue, 06 Mar 2018 22:20:02 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         
-        <guid>https://blog.jjmengze.website/zh-tw/tags/sdn/</guid>
+        <guid>https://jjmengze.github.io/zh-tw/tags/sdn/</guid>
         <description></description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -400,11 +400,11 @@
       
       <item>
         <title>ci/cd</title>
-        <link>https://blog.jjmengze.website/zh-tw/tags/ci/cd/</link>
+        <link>https://jjmengze.github.io/zh-tw/tags/ci/cd/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         
-        <guid>https://blog.jjmengze.website/zh-tw/tags/ci/cd/</guid>
+        <guid>https://jjmengze.github.io/zh-tw/tags/ci/cd/</guid>
         <description></description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -418,11 +418,11 @@
       
       <item>
         <title>posts</title>
-        <link>https://blog.jjmengze.website/zh-tw/tags/posts/</link>
+        <link>https://jjmengze.github.io/zh-tw/tags/posts/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         
-        <guid>https://blog.jjmengze.website/zh-tw/tags/posts/</guid>
+        <guid>https://jjmengze.github.io/zh-tw/tags/posts/</guid>
         <description></description>
         
         <dc:creator>Meng Ze Li</dc:creator>

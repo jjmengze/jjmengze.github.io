@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Series on Meng Ze&#39;s Blog</title>
-    <link>https://blog.jjmengze.website/en/series/</link>
+    <link>https://jjmengze.github.io/en/series/</link>
     <description>Recent content in Series on Meng Ze&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -15,7 +15,7 @@
     <webMaster>jason.meng.lee@gmail.com (Meng Ze Li)</webMaster>
     <copyright>©2024, All Rights Reserved</copyright>
     
-        <atom:link href="https://blog.jjmengze.website/en/series/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://jjmengze.github.io/en/series/index.xml" rel="self" type="application/rss+xml" />
     
 
       

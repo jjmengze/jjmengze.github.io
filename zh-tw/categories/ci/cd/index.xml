@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>ci/cd on MengZe Blog</title>
-    <link>https://blog.jjmengze.website/zh-tw/categories/ci/cd/</link>
+    <link>https://jjmengze.github.io/zh-tw/categories/ci/cd/</link>
     <description>Recent content in ci/cd on MengZe Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
@@ -15,18 +15,18 @@
     <webMaster>jason.meng.lee@gmail.com (Meng Ze Li)</webMaster>
     <copyright>©2024, All Rights Reserved</copyright>
     
-        <atom:link href="https://blog.jjmengze.website/zh-tw/categories/ci/cd/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://jjmengze.github.io/zh-tw/categories/ci/cd/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
         <title>Helm template 有講沒講差不多</title>
-        <link>https://blog.jjmengze.website/zh-tw/posts/cicd/helm/helmv3-gogo/</link>
+        <link>https://jjmengze.github.io/zh-tw/posts/cicd/helm/helmv3-gogo/</link>
         <pubDate>Thu, 01 Oct 2020 20:48:52 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Thu, 01 Oct 2020 20:48:52 +0800</atom:modified>
-        <guid>https://blog.jjmengze.website/zh-tw/posts/cicd/helm/helmv3-gogo/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/helmv3-gogo.jpg&#34;/&gt;
+        <guid>https://jjmengze.github.io/zh-tw/posts/cicd/helm/helmv3-gogo/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/helmv3-gogo.jpg&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -52,12 +52,12 @@
       
       <item>
         <title>Helm template 有講沒講差不多</title>
-        <link>https://blog.jjmengze.website/zh-tw/zh-tw/posts/cicd/helm/helmv3-gogo/</link>
+        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/cicd/helm/helmv3-gogo/</link>
         <pubDate>Thu, 01 Oct 2020 20:48:52 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Thu, 01 Oct 2020 20:48:52 +0800</atom:modified>
-        <guid>https://blog.jjmengze.website/zh-tw/zh-tw/posts/cicd/helm/helmv3-gogo/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/helmv3-gogo.jpg&#34;/&gt;
+        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/cicd/helm/helmv3-gogo/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/helmv3-gogo.jpg&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -83,12 +83,12 @@
       
       <item>
         <title>CA 動手玩</title>
-        <link>https://blog.jjmengze.website/zh-tw/posts/ca/ca-one-way-ssl/</link>
+        <link>https://jjmengze.github.io/zh-tw/posts/ca/ca-one-way-ssl/</link>
         <pubDate>Thu, 04 Jun 2020 17:22:45 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Thu, 04 Jun 2020 17:22:45 +0800</atom:modified>
-        <guid>https://blog.jjmengze.website/zh-tw/posts/ca/ca-one-way-ssl/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/ca-playground.jpg&#34;/&gt;
+        <guid>https://jjmengze.github.io/zh-tw/posts/ca/ca-one-way-ssl/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/ca-playground.jpg&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -114,12 +114,12 @@
       
       <item>
         <title>CA 動手玩</title>
-        <link>https://blog.jjmengze.website/zh-tw/zh-tw/posts/ca/ca-one-way-ssl/</link>
+        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/ca/ca-one-way-ssl/</link>
         <pubDate>Thu, 04 Jun 2020 17:22:45 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Thu, 04 Jun 2020 17:22:45 +0800</atom:modified>
-        <guid>https://blog.jjmengze.website/zh-tw/zh-tw/posts/ca/ca-one-way-ssl/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/ca-playground.jpg&#34;/&gt;
+        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/ca/ca-one-way-ssl/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/ca-playground.jpg&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -145,12 +145,12 @@
       
       <item>
         <title>Github Action 起步走第一式</title>
-        <link>https://blog.jjmengze.website/zh-tw/posts/cicd/github/github-action-1/</link>
+        <link>https://jjmengze.github.io/zh-tw/posts/cicd/github/github-action-1/</link>
         <pubDate>Sun, 26 Apr 2020 20:48:52 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Sun, 26 Apr 2020 20:48:52 +0800</atom:modified>
-        <guid>https://blog.jjmengze.website/zh-tw/posts/cicd/github/github-action-1/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/github-action.png&#34;/&gt;
+        <guid>https://jjmengze.github.io/zh-tw/posts/cicd/github/github-action-1/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/github-action.png&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -176,12 +176,12 @@
       
       <item>
         <title>Github Action 起步走第一式</title>
-        <link>https://blog.jjmengze.website/zh-tw/zh-tw/posts/cicd/github/github-action-1/</link>
+        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/cicd/github/github-action-1/</link>
         <pubDate>Sun, 26 Apr 2020 20:48:52 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Sun, 26 Apr 2020 20:48:52 +0800</atom:modified>
-        <guid>https://blog.jjmengze.website/zh-tw/zh-tw/posts/cicd/github/github-action-1/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/github-action.png&#34;/&gt;
+        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/cicd/github/github-action-1/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/github-action.png&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>

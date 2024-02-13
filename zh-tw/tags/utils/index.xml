@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>utils on MengZe Blog</title>
-    <link>https://blog.jjmengze.website/zh-tw/tags/utils/</link>
+    <link>https://jjmengze.github.io/zh-tw/tags/utils/</link>
     <description>Recent content in utils on MengZe Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
@@ -16,18 +16,18 @@
     <copyright>©2024, All Rights Reserved</copyright>
     <lastBuildDate>Thu, 25 Feb 2021 10:29:32 +0800</lastBuildDate>
     
-        <atom:link href="https://blog.jjmengze.website/zh-tw/tags/utils/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://jjmengze.github.io/zh-tw/tags/utils/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
         <title> Kubernetes util tool 常用的 backoff 組合技</title>
-        <link>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/utils/kubernetes-utils-tool-wait-backoff/</link>
+        <link>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/utils/kubernetes-utils-tool-wait-backoff/</link>
         <pubDate>Thu, 25 Feb 2021 10:29:32 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Thu, 25 Feb 2021 10:29:32 +0800</atom:modified>
-        <guid>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/utils/kubernetes-utils-tool-wait-backoff/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-utils-wait-backoff.jpg&#34;/&gt;
+        <guid>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/utils/kubernetes-utils-tool-wait-backoff/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-utils-wait-backoff.jpg&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -61,12 +61,12 @@
       
       <item>
         <title> Kubernetes util tool 常用的 backoff 組合技</title>
-        <link>https://blog.jjmengze.website/zh-tw/zh-tw/posts/kubernetes/source-code/utils/kubernetes-utils-tool-wait-backoff/</link>
+        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/utils/kubernetes-utils-tool-wait-backoff/</link>
         <pubDate>Thu, 25 Feb 2021 10:29:32 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Thu, 25 Feb 2021 10:29:32 +0800</atom:modified>
-        <guid>https://blog.jjmengze.website/zh-tw/zh-tw/posts/kubernetes/source-code/utils/kubernetes-utils-tool-wait-backoff/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-utils-wait-backoff.jpg&#34;/&gt;
+        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/utils/kubernetes-utils-tool-wait-backoff/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-utils-wait-backoff.jpg&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -100,12 +100,12 @@
       
       <item>
         <title>Kubernetes util tool 使用 wait.waitgroup 抓住 goroutine </title>
-        <link>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/utils/kubernetes-utils-tool-wiat/</link>
+        <link>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/utils/kubernetes-utils-tool-wiat/</link>
         <pubDate>Mon, 22 Feb 2021 10:29:32 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Mon, 22 Feb 2021 10:29:32 +0800</atom:modified>
-        <guid>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/utils/kubernetes-utils-tool-wiat/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-utils-wait.jpg&#34;/&gt;
+        <guid>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/utils/kubernetes-utils-tool-wiat/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-utils-wait.jpg&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -139,12 +139,12 @@
       
       <item>
         <title>Kubernetes util tool 使用 wait.waitgroup 抓住 goroutine </title>
-        <link>https://blog.jjmengze.website/zh-tw/zh-tw/posts/kubernetes/source-code/utils/kubernetes-utils-tool-wiat/</link>
+        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/utils/kubernetes-utils-tool-wiat/</link>
         <pubDate>Mon, 22 Feb 2021 10:29:32 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Mon, 22 Feb 2021 10:29:32 +0800</atom:modified>
-        <guid>https://blog.jjmengze.website/zh-tw/zh-tw/posts/kubernetes/source-code/utils/kubernetes-utils-tool-wiat/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-utils-wait.jpg&#34;/&gt;
+        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/utils/kubernetes-utils-tool-wiat/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-utils-wait.jpg&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -178,12 +178,12 @@
       
       <item>
         <title>Kubernetes util tool 使用 Backoff 指數大漲</title>
-        <link>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/utils/kubernetes-utils-tool-wait-exponential/</link>
+        <link>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/utils/kubernetes-utils-tool-wait-exponential/</link>
         <pubDate>Tue, 09 Feb 2021 10:29:32 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Tue, 09 Feb 2021 10:29:32 +0800</atom:modified>
-        <guid>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/utils/kubernetes-utils-tool-wait-exponential/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-utils-wait-exponential.jpg&#34;/&gt;
+        <guid>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/utils/kubernetes-utils-tool-wait-exponential/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-utils-wait-exponential.jpg&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -217,12 +217,12 @@
       
       <item>
         <title>Kubernetes util tool 使用 Backoff 指數大漲</title>
-        <link>https://blog.jjmengze.website/zh-tw/zh-tw/posts/kubernetes/source-code/utils/kubernetes-utils-tool-wait-exponential/</link>
+        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/utils/kubernetes-utils-tool-wait-exponential/</link>
         <pubDate>Tue, 09 Feb 2021 10:29:32 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Tue, 09 Feb 2021 10:29:32 +0800</atom:modified>
-        <guid>https://blog.jjmengze.website/zh-tw/zh-tw/posts/kubernetes/source-code/utils/kubernetes-utils-tool-wait-exponential/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-utils-wait-exponential.jpg&#34;/&gt;
+        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/utils/kubernetes-utils-tool-wait-exponential/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-utils-wait-exponential.jpg&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -256,12 +256,12 @@
       
       <item>
         <title>Kubernetes util tool 使用 Backoff 抖了一下</title>
-        <link>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/utils/kubernetes-utils-tool-wait-jitterbackoff/</link>
+        <link>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/utils/kubernetes-utils-tool-wait-jitterbackoff/</link>
         <pubDate>Fri, 05 Feb 2021 10:29:32 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Fri, 05 Feb 2021 10:29:32 +0800</atom:modified>
-        <guid>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/utils/kubernetes-utils-tool-wait-jitterbackoff/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-utils-wait-jitterbackoff.jpg&#34;/&gt;
+        <guid>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/utils/kubernetes-utils-tool-wait-jitterbackoff/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-utils-wait-jitterbackoff.jpg&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -295,12 +295,12 @@
       
       <item>
         <title>Kubernetes util tool 使用 Backoff 抖了一下</title>
-        <link>https://blog.jjmengze.website/zh-tw/zh-tw/posts/kubernetes/source-code/utils/kubernetes-utils-tool-wait-jitterbackoff/</link>
+        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/utils/kubernetes-utils-tool-wait-jitterbackoff/</link>
         <pubDate>Fri, 05 Feb 2021 10:29:32 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Fri, 05 Feb 2021 10:29:32 +0800</atom:modified>
-        <guid>https://blog.jjmengze.website/zh-tw/zh-tw/posts/kubernetes/source-code/utils/kubernetes-utils-tool-wait-jitterbackoff/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-utils-wait-jitterbackoff.jpg&#34;/&gt;
+        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/utils/kubernetes-utils-tool-wait-jitterbackoff/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-utils-wait-jitterbackoff.jpg&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -334,12 +334,12 @@
       
       <item>
         <title>Kubernetes util tool 使用 cache LRU 定格一瞬間</title>
-        <link>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/utils/kubernetes-utils-tool-lru/</link>
+        <link>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/utils/kubernetes-utils-tool-lru/</link>
         <pubDate>Thu, 04 Feb 2021 10:29:32 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Thu, 04 Feb 2021 10:29:32 +0800</atom:modified>
-        <guid>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/utils/kubernetes-utils-tool-lru/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-utils-cache.jpg&#34;/&gt;
+        <guid>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/utils/kubernetes-utils-tool-lru/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-utils-cache.jpg&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -373,12 +373,12 @@
       
       <item>
         <title>Kubernetes util tool 使用 cache LRU 定格一瞬間</title>
-        <link>https://blog.jjmengze.website/zh-tw/zh-tw/posts/kubernetes/source-code/utils/kubernetes-utils-tool-lru/</link>
+        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/utils/kubernetes-utils-tool-lru/</link>
         <pubDate>Thu, 04 Feb 2021 10:29:32 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Thu, 04 Feb 2021 10:29:32 +0800</atom:modified>
-        <guid>https://blog.jjmengze.website/zh-tw/zh-tw/posts/kubernetes/source-code/utils/kubernetes-utils-tool-lru/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-utils-cache.jpg&#34;/&gt;
+        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/utils/kubernetes-utils-tool-lru/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-utils-cache.jpg&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -412,12 +412,12 @@
       
       <item>
         <title>Kubernetes util tool 從工具包裡找工具</title>
-        <link>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/utils/kubernetes-util-tool/</link>
+        <link>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/utils/kubernetes-util-tool/</link>
         <pubDate>Wed, 03 Feb 2021 10:29:32 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Wed, 03 Feb 2021 10:29:32 +0800</atom:modified>
-        <guid>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/utils/kubernetes-util-tool/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-utils.jpg&#34;/&gt;
+        <guid>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/utils/kubernetes-util-tool/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-utils.jpg&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -451,12 +451,12 @@
       
       <item>
         <title>Kubernetes util tool 從工具包裡找工具</title>
-        <link>https://blog.jjmengze.website/zh-tw/zh-tw/posts/kubernetes/source-code/utils/kubernetes-util-tool/</link>
+        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/utils/kubernetes-util-tool/</link>
         <pubDate>Wed, 03 Feb 2021 10:29:32 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Wed, 03 Feb 2021 10:29:32 +0800</atom:modified>
-        <guid>https://blog.jjmengze.website/zh-tw/zh-tw/posts/kubernetes/source-code/utils/kubernetes-util-tool/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-utils.jpg&#34;/&gt;
+        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/utils/kubernetes-util-tool/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-utils.jpg&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>

@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Showcase overview on MengZe Blog</title>
-    <link>https://blog.jjmengze.website/zh-tw/zh-tw/showcase/</link>
+    <link>https://jjmengze.github.io/zh-tw/zh-tw/showcase/</link>
     <description>Recent content in Showcase overview on MengZe Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
@@ -16,17 +16,17 @@
     <copyright>©2024, All Rights Reserved</copyright>
     <lastBuildDate>Sun, 19 Jan 2020 15:43:38 +0900</lastBuildDate>
     
-        <atom:link href="https://blog.jjmengze.website/zh-tw/zh-tw/showcase/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://jjmengze.github.io/zh-tw/zh-tw/showcase/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
         <title>Hugo</title>
-        <link>https://blog.jjmengze.website/zh-tw/zh-tw/showcase/hugo/</link>
+        <link>https://jjmengze.github.io/zh-tw/zh-tw/showcase/hugo/</link>
         <pubDate>Sun, 19 Jan 2020 21:04:11 +0900</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Sun, 19 Jan 2020 21:04:11 +0900</atom:modified>
-        <guid>https://blog.jjmengze.website/zh-tw/zh-tw/showcase/hugo/</guid>
+        <guid>https://jjmengze.github.io/zh-tw/zh-tw/showcase/hugo/</guid>
         <description></description>
         
         <dc:creator>Meng Ze Li</dc:creator>

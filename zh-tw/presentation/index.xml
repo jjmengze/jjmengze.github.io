@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Presentations on MengZe Blog</title>
-    <link>https://blog.jjmengze.website/zh-tw/presentation/</link>
+    <link>https://jjmengze.github.io/zh-tw/presentation/</link>
     <description>Recent content in Presentations on MengZe Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
@@ -16,21 +16,21 @@
     <copyright>©2024, All Rights Reserved</copyright>
     <lastBuildDate>Wed, 30 Oct 2019 20:48:10 +0900</lastBuildDate>
     
-        <atom:link href="https://blog.jjmengze.website/zh-tw/presentation/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://jjmengze.github.io/zh-tw/presentation/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
         <title>Fourth</title>
-        <link>https://blog.jjmengze.website/zh-tw/presentation/dir/fourth/</link>
+        <link>https://jjmengze.github.io/zh-tw/presentation/dir/fourth/</link>
         <pubDate>Wed, 30 Oct 2019 20:48:10 +0900</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Wed, 30 Oct 2019 20:48:10 +0900</atom:modified>
-        <guid>https://blog.jjmengze.website/zh-tw/presentation/dir/fourth/</guid>
+        <guid>https://jjmengze.github.io/zh-tw/presentation/dir/fourth/</guid>
         <description></description>
         
         <dc:creator>Meng Ze Li</dc:creator>
-        <media:content url="https://blog.jjmengze.website/images/feature1/number-four.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://jjmengze.github.io/images/feature1/number-four.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -52,15 +52,15 @@
       
       <item>
         <title>Third</title>
-        <link>https://blog.jjmengze.website/zh-tw/presentation/third/</link>
+        <link>https://jjmengze.github.io/zh-tw/presentation/third/</link>
         <pubDate>Wed, 30 Oct 2019 20:46:30 +0900</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Wed, 30 Oct 2019 20:46:30 +0900</atom:modified>
-        <guid>https://blog.jjmengze.website/zh-tw/presentation/third/</guid>
+        <guid>https://jjmengze.github.io/zh-tw/presentation/third/</guid>
         <description></description>
         
         <dc:creator>Meng Ze Li</dc:creator>
-        <media:content url="https://blog.jjmengze.website/images/feature1/number-three.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://jjmengze.github.io/images/feature1/number-three.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -82,15 +82,15 @@
       
       <item>
         <title>Second</title>
-        <link>https://blog.jjmengze.website/zh-tw/presentation/second/</link>
+        <link>https://jjmengze.github.io/zh-tw/presentation/second/</link>
         <pubDate>Wed, 30 Oct 2019 20:45:24 +0900</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Wed, 30 Oct 2019 20:45:24 +0900</atom:modified>
-        <guid>https://blog.jjmengze.website/zh-tw/presentation/second/</guid>
+        <guid>https://jjmengze.github.io/zh-tw/presentation/second/</guid>
         <description></description>
         
         <dc:creator>Meng Ze Li</dc:creator>
-        <media:content url="https://blog.jjmengze.website/images/feature1/number-two.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://jjmengze.github.io/images/feature1/number-two.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -112,15 +112,15 @@
       
       <item>
         <title>First</title>
-        <link>https://blog.jjmengze.website/zh-tw/presentation/first/</link>
+        <link>https://jjmengze.github.io/zh-tw/presentation/first/</link>
         <pubDate>Wed, 30 Oct 2019 19:45:20 +0900</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Wed, 30 Oct 2019 19:45:20 +0900</atom:modified>
-        <guid>https://blog.jjmengze.website/zh-tw/presentation/first/</guid>
+        <guid>https://jjmengze.github.io/zh-tw/presentation/first/</guid>
         <description></description>
         
         <dc:creator>Meng Ze Li</dc:creator>
-        <media:content url="https://blog.jjmengze.website/images/feature1/number-one.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://jjmengze.github.io/images/feature1/number-one.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         

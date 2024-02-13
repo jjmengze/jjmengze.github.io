@@ -2,72 +2,72 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://blog.jjmengze.website/en/categories/</loc>
+    <loc>https://jjmengze.github.io/en/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
-                href="https://blog.jjmengze.website/zh-tw/categories/"
+                href="https://jjmengze.github.io/zh-tw/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ez-tw"
-                href="https://blog.jjmengze.website/ez-tw/categories/"
+                href="https://jjmengze.github.io/ez-tw/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://blog.jjmengze.website/en/categories/"
+                href="https://jjmengze.github.io/en/categories/"
                 />
   </url><url>
-    <loc>https://blog.jjmengze.website/en/</loc>
+    <loc>https://jjmengze.github.io/en/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
-                href="https://blog.jjmengze.website/zh-tw/"
+                href="https://jjmengze.github.io/zh-tw/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ez-tw"
-                href="https://blog.jjmengze.website/ez-tw/"
+                href="https://jjmengze.github.io/ez-tw/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://blog.jjmengze.website/en/"
+                href="https://jjmengze.github.io/en/"
                 />
   </url><url>
-    <loc>https://blog.jjmengze.website/en/series/</loc>
+    <loc>https://jjmengze.github.io/en/series/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
-                href="https://blog.jjmengze.website/zh-tw/series/"
+                href="https://jjmengze.github.io/zh-tw/series/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ez-tw"
-                href="https://blog.jjmengze.website/ez-tw/series/"
+                href="https://jjmengze.github.io/ez-tw/series/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://blog.jjmengze.website/en/series/"
+                href="https://jjmengze.github.io/en/series/"
                 />
   </url><url>
-    <loc>https://blog.jjmengze.website/en/tags/</loc>
+    <loc>https://jjmengze.github.io/en/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
-                href="https://blog.jjmengze.website/zh-tw/tags/"
+                href="https://jjmengze.github.io/zh-tw/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ez-tw"
-                href="https://blog.jjmengze.website/ez-tw/tags/"
+                href="https://jjmengze.github.io/ez-tw/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://blog.jjmengze.website/en/tags/"
+                href="https://jjmengze.github.io/en/tags/"
                 />
   </url>
 </urlset>

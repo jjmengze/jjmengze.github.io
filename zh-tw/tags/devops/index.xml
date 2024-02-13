@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>devops on MengZe Blog</title>
-    <link>https://blog.jjmengze.website/zh-tw/tags/devops/</link>
+    <link>https://jjmengze.github.io/zh-tw/tags/devops/</link>
     <description>Recent content in devops on MengZe Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
@@ -16,17 +16,17 @@
     <copyright>©2024, All Rights Reserved</copyright>
     <lastBuildDate>Thu, 30 Apr 2020 12:07:34 +0800</lastBuildDate>
     
-        <atom:link href="https://blog.jjmengze.website/zh-tw/tags/devops/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://jjmengze.github.io/zh-tw/tags/devops/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
         <title>前方高能之Opentracing</title>
-        <link>https://blog.jjmengze.website/zh-tw/posts/go/opentracing/</link>
+        <link>https://jjmengze.github.io/zh-tw/posts/go/opentracing/</link>
         <pubDate>Thu, 30 Apr 2020 12:07:34 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Thu, 30 Apr 2020 12:07:34 +0800</atom:modified>
-        <guid>https://blog.jjmengze.website/zh-tw/posts/go/opentracing/</guid>
+        <guid>https://jjmengze.github.io/zh-tw/posts/go/opentracing/</guid>
         <description>&lt;figure&gt;&lt;img src=&#34;https://i.imgur.com/sJRUXhX.png&#34;/&gt;
 &lt;/figure&gt;</description>
         
@@ -53,11 +53,11 @@
       
       <item>
         <title>前方高能之Opentracing</title>
-        <link>https://blog.jjmengze.website/zh-tw/zh-tw/posts/go/opentracing/</link>
+        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/go/opentracing/</link>
         <pubDate>Thu, 30 Apr 2020 12:07:34 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Thu, 30 Apr 2020 12:07:34 +0800</atom:modified>
-        <guid>https://blog.jjmengze.website/zh-tw/zh-tw/posts/go/opentracing/</guid>
+        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/go/opentracing/</guid>
         <description>&lt;figure&gt;&lt;img src=&#34;https://i.imgur.com/sJRUXhX.png&#34;/&gt;
 &lt;/figure&gt;</description>
         

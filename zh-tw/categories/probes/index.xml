@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>probes on MengZe Blog</title>
-    <link>https://blog.jjmengze.website/zh-tw/categories/probes/</link>
+    <link>https://jjmengze.github.io/zh-tw/categories/probes/</link>
     <description>Recent content in probes on MengZe Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
@@ -16,18 +16,18 @@
     <copyright>©2024, All Rights Reserved</copyright>
     <lastBuildDate>Thu, 12 Aug 2021 10:29:32 +0800</lastBuildDate>
     
-        <atom:link href="https://blog.jjmengze.website/zh-tw/categories/probes/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://jjmengze.github.io/zh-tw/categories/probes/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
         <title>隱藏在kubelet的WorkQueue</title>
-        <link>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/kubelet/queue/work-queue/</link>
+        <link>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/kubelet/queue/work-queue/</link>
         <pubDate>Thu, 12 Aug 2021 10:29:32 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Thu, 12 Aug 2021 10:29:32 +0800</atom:modified>
-        <guid>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/kubelet/queue/work-queue/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-kubelet-workqueue.jpg&#34;/&gt;
+        <guid>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/kubelet/queue/work-queue/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-kubelet-workqueue.jpg&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -69,12 +69,12 @@
       
       <item>
         <title>隱藏在kubelet的WorkQueue</title>
-        <link>https://blog.jjmengze.website/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/queue/work-queue/</link>
+        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/queue/work-queue/</link>
         <pubDate>Thu, 12 Aug 2021 10:29:32 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Thu, 12 Aug 2021 10:29:32 +0800</atom:modified>
-        <guid>https://blog.jjmengze.website/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/queue/work-queue/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-kubelet-workqueue.jpg&#34;/&gt;
+        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/queue/work-queue/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-kubelet-workqueue.jpg&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -116,12 +116,12 @@
       
       <item>
         <title>Kubernetes kubelet 探測 pod 的生命症狀探針得如何出生-2</title>
-        <link>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-probe-obj2/</link>
+        <link>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-probe-obj2/</link>
         <pubDate>Sun, 01 Aug 2021 10:29:32 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Sun, 01 Aug 2021 10:29:32 +0800</atom:modified>
-        <guid>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-probe-obj2/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-kubelet-livenessManager2.jpg&#34;/&gt;
+        <guid>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-probe-obj2/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-kubelet-livenessManager2.jpg&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -163,12 +163,12 @@
       
       <item>
         <title>Kubernetes kubelet 探測 pod 的生命症狀探針得如何出生-2</title>
-        <link>https://blog.jjmengze.website/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-probe-obj2/</link>
+        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-probe-obj2/</link>
         <pubDate>Sun, 01 Aug 2021 10:29:32 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Sun, 01 Aug 2021 10:29:32 +0800</atom:modified>
-        <guid>https://blog.jjmengze.website/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-probe-obj2/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-kubelet-livenessManager2.jpg&#34;/&gt;
+        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-probe-obj2/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-kubelet-livenessManager2.jpg&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -210,12 +210,12 @@
       
       <item>
         <title>Kubernetes kubelet 探測 pod 的生命症狀探針得如何出生-1</title>
-        <link>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-probe-obj/</link>
+        <link>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-probe-obj/</link>
         <pubDate>Fri, 23 Jul 2021 10:29:32 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Fri, 23 Jul 2021 10:29:32 +0800</atom:modified>
-        <guid>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-probe-obj/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-kubelet-livenessManager.png&#34;/&gt;
+        <guid>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-probe-obj/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-kubelet-livenessManager.png&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -257,12 +257,12 @@
       
       <item>
         <title>Kubernetes kubelet 探測 pod 的生命症狀探針得如何出生-1</title>
-        <link>https://blog.jjmengze.website/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-probe-obj/</link>
+        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-probe-obj/</link>
         <pubDate>Fri, 23 Jul 2021 10:29:32 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Fri, 23 Jul 2021 10:29:32 +0800</atom:modified>
-        <guid>https://blog.jjmengze.website/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-probe-obj/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-kubelet-livenessManager.png&#34;/&gt;
+        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-probe-obj/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-kubelet-livenessManager.png&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -304,12 +304,12 @@
       
       <item>
         <title>Kubernetes kubelet 探測 pod 的生命症狀 tcp socket</title>
-        <link>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-tcp-socket/</link>
+        <link>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-tcp-socket/</link>
         <pubDate>Fri, 18 Jun 2021 10:29:32 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Fri, 18 Jun 2021 10:29:32 +0800</atom:modified>
-        <guid>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-tcp-socket/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-kubelet-liveness-tcp-socket.png&#34;/&gt;
+        <guid>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-tcp-socket/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-kubelet-liveness-tcp-socket.png&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -351,12 +351,12 @@
       
       <item>
         <title>Kubernetes kubelet 探測 pod 的生命症狀 tcp socket</title>
-        <link>https://blog.jjmengze.website/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-tcp-socket/</link>
+        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-tcp-socket/</link>
         <pubDate>Fri, 18 Jun 2021 10:29:32 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Fri, 18 Jun 2021 10:29:32 +0800</atom:modified>
-        <guid>https://blog.jjmengze.website/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-tcp-socket/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-kubelet-liveness-tcp-socket.png&#34;/&gt;
+        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-tcp-socket/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-kubelet-liveness-tcp-socket.png&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -398,12 +398,12 @@
       
       <item>
         <title>Kubernetes kubelet 探測 pod 的生命症狀 Exec</title>
-        <link>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-exec/</link>
+        <link>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-exec/</link>
         <pubDate>Thu, 10 Jun 2021 10:29:32 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Thu, 10 Jun 2021 10:29:32 +0800</atom:modified>
-        <guid>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-exec/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-kubelet-liveness-exec.png&#34;/&gt;
+        <guid>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-exec/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-kubelet-liveness-exec.png&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -445,12 +445,12 @@
       
       <item>
         <title>Kubernetes kubelet 探測 pod 的生命症狀 Exec</title>
-        <link>https://blog.jjmengze.website/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-exec/</link>
+        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-exec/</link>
         <pubDate>Thu, 10 Jun 2021 10:29:32 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Thu, 10 Jun 2021 10:29:32 +0800</atom:modified>
-        <guid>https://blog.jjmengze.website/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-exec/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-kubelet-liveness-exec.png&#34;/&gt;
+        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-exec/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-kubelet-liveness-exec.png&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -492,12 +492,12 @@
       
       <item>
         <title>Kubernetes kubelet 探測 pod 的生命症狀 Http Get</title>
-        <link>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-http-get/</link>
+        <link>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-http-get/</link>
         <pubDate>Tue, 25 May 2021 10:29:32 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Tue, 25 May 2021 10:29:32 +0800</atom:modified>
-        <guid>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-http-get/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-kubelet-liveness.png&#34;/&gt;
+        <guid>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-http-get/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-kubelet-liveness.png&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -539,12 +539,12 @@
       
       <item>
         <title>Kubernetes kubelet 探測 pod 的生命症狀 Http Get</title>
-        <link>https://blog.jjmengze.website/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-http-get/</link>
+        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-http-get/</link>
         <pubDate>Tue, 25 May 2021 10:29:32 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Tue, 25 May 2021 10:29:32 +0800</atom:modified>
-        <guid>https://blog.jjmengze.website/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-http-get/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-kubelet-liveness.png&#34;/&gt;
+        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-http-get/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-kubelet-liveness.png&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>

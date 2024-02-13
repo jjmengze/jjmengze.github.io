@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>posts on MengZe Blog</title>
-    <link>https://blog.jjmengze.website/zh-tw/tags/posts/</link>
+    <link>https://jjmengze.github.io/zh-tw/tags/posts/</link>
     <description>Recent content in posts on MengZe Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
@@ -15,17 +15,17 @@
     <webMaster>jason.meng.lee@gmail.com (Meng Ze Li)</webMaster>
     <copyright>©2024, All Rights Reserved</copyright>
     
-        <atom:link href="https://blog.jjmengze.website/zh-tw/tags/posts/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://jjmengze.github.io/zh-tw/tags/posts/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
         <title>Posts</title>
-        <link>https://blog.jjmengze.website/zh-tw/posts/</link>
+        <link>https://jjmengze.github.io/zh-tw/posts/</link>
         <pubDate>Mon, 26 Dec 2022 20:48:52 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         
-        <guid>https://blog.jjmengze.website/zh-tw/posts/</guid>
+        <guid>https://jjmengze.github.io/zh-tw/posts/</guid>
         <description></description>
         
         <dc:creator>Hugo Authors</dc:creator>
@@ -45,11 +45,11 @@
       
       <item>
         <title>Posts</title>
-        <link>https://blog.jjmengze.website/zh-tw/zh-tw/posts/</link>
+        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/</link>
         <pubDate>Mon, 26 Dec 2022 20:48:52 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         
-        <guid>https://blog.jjmengze.website/zh-tw/zh-tw/posts/</guid>
+        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/</guid>
         <description></description>
         
         <dc:creator>Hugo Authors</dc:creator>

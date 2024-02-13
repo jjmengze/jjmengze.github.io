@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>TDD on MengZe Blog</title>
-    <link>https://blog.jjmengze.website/zh-tw/tags/tdd/</link>
+    <link>https://jjmengze.github.io/zh-tw/tags/tdd/</link>
     <description>Recent content in TDD on MengZe Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
@@ -16,18 +16,18 @@
     <copyright>©2024, All Rights Reserved</copyright>
     <lastBuildDate>Mon, 21 Sep 2020 14:25:58 +0800</lastBuildDate>
     
-        <atom:link href="https://blog.jjmengze.website/zh-tw/tags/tdd/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://jjmengze.github.io/zh-tw/tags/tdd/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
         <title>強迫使用 TDD 開發模式以Go為例-2</title>
-        <link>https://blog.jjmengze.website/zh-tw/posts/go/tdd-test2/</link>
+        <link>https://jjmengze.github.io/zh-tw/posts/go/tdd-test2/</link>
         <pubDate>Mon, 21 Sep 2020 14:25:58 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Mon, 21 Sep 2020 14:25:58 +0800</atom:modified>
-        <guid>https://blog.jjmengze.website/zh-tw/posts/go/tdd-test2/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/tdd-test2.png&#34;/&gt;
+        <guid>https://jjmengze.github.io/zh-tw/posts/go/tdd-test2/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/tdd-test2.png&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -61,12 +61,12 @@
       
       <item>
         <title>強迫使用 TDD 開發模式以Go為例-2</title>
-        <link>https://blog.jjmengze.website/zh-tw/zh-tw/posts/go/tdd-test2/</link>
+        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/go/tdd-test2/</link>
         <pubDate>Mon, 21 Sep 2020 14:25:58 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Mon, 21 Sep 2020 14:25:58 +0800</atom:modified>
-        <guid>https://blog.jjmengze.website/zh-tw/zh-tw/posts/go/tdd-test2/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/tdd-test2.png&#34;/&gt;
+        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/go/tdd-test2/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/tdd-test2.png&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -100,12 +100,12 @@
       
       <item>
         <title>強迫使用 TDD 開發模式以Go為例</title>
-        <link>https://blog.jjmengze.website/zh-tw/posts/go/tdd-test/</link>
+        <link>https://jjmengze.github.io/zh-tw/posts/go/tdd-test/</link>
         <pubDate>Tue, 15 Sep 2020 14:25:58 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Tue, 15 Sep 2020 14:25:58 +0800</atom:modified>
-        <guid>https://blog.jjmengze.website/zh-tw/posts/go/tdd-test/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/tdd-test.jpg&#34;/&gt;
+        <guid>https://jjmengze.github.io/zh-tw/posts/go/tdd-test/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/tdd-test.jpg&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -139,12 +139,12 @@
       
       <item>
         <title>強迫使用 TDD 開發模式以Go為例</title>
-        <link>https://blog.jjmengze.website/zh-tw/zh-tw/posts/go/tdd-test/</link>
+        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/go/tdd-test/</link>
         <pubDate>Tue, 15 Sep 2020 14:25:58 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Tue, 15 Sep 2020 14:25:58 +0800</atom:modified>
-        <guid>https://blog.jjmengze.website/zh-tw/zh-tw/posts/go/tdd-test/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/tdd-test.jpg&#34;/&gt;
+        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/go/tdd-test/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/tdd-test.jpg&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>

@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>configmap on MengZe Blog</title>
-    <link>https://blog.jjmengze.website/zh-tw/categories/configmap/</link>
+    <link>https://jjmengze.github.io/zh-tw/categories/configmap/</link>
     <description>Recent content in configmap on MengZe Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
@@ -16,18 +16,18 @@
     <copyright>©2024, All Rights Reserved</copyright>
     <lastBuildDate>Thu, 20 May 2021 10:29:32 +0800</lastBuildDate>
     
-        <atom:link href="https://blog.jjmengze.website/zh-tw/categories/configmap/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://jjmengze.github.io/zh-tw/categories/configmap/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
         <title> Kubernetes kubelet 怎麼抓住你的 secret</title>
-        <link>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-secret-overlay/</link>
+        <link>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-secret-overlay/</link>
         <pubDate>Thu, 20 May 2021 10:29:32 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Thu, 20 May 2021 10:29:32 +0800</atom:modified>
-        <guid>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-secret-overlay/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-kubelet-secret-overlay.png&#34;/&gt;
+        <guid>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-secret-overlay/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-kubelet-secret-overlay.png&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -73,12 +73,12 @@
       
       <item>
         <title> Kubernetes kubelet 怎麼抓住你的 secret</title>
-        <link>https://blog.jjmengze.website/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-secret-overlay/</link>
+        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-secret-overlay/</link>
         <pubDate>Thu, 20 May 2021 10:29:32 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Thu, 20 May 2021 10:29:32 +0800</atom:modified>
-        <guid>https://blog.jjmengze.website/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-secret-overlay/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-kubelet-secret-overlay.png&#34;/&gt;
+        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-secret-overlay/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-kubelet-secret-overlay.png&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -124,12 +124,12 @@
       
       <item>
         <title> Kubernetes kubelet 怎麼抓住你的 configmap</title>
-        <link>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-configmap-overlay/</link>
+        <link>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-configmap-overlay/</link>
         <pubDate>Thu, 15 Apr 2021 10:29:32 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Thu, 15 Apr 2021 10:29:32 +0800</atom:modified>
-        <guid>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-configmap-overlay/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-kubelet-configmap-overlay.png&#34;/&gt;
+        <guid>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-configmap-overlay/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-kubelet-configmap-overlay.png&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -175,12 +175,12 @@
       
       <item>
         <title> Kubernetes kubelet 怎麼抓住你的 configmap</title>
-        <link>https://blog.jjmengze.website/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-configmap-overlay/</link>
+        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-configmap-overlay/</link>
         <pubDate>Thu, 15 Apr 2021 10:29:32 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Thu, 15 Apr 2021 10:29:32 +0800</atom:modified>
-        <guid>https://blog.jjmengze.website/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-configmap-overlay/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-kubelet-configmap-overlay.png&#34;/&gt;
+        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-configmap-overlay/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-kubelet-configmap-overlay.png&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -226,12 +226,12 @@
       
       <item>
         <title>Kubernetes kubelet cacheBasedManager 好喜歡 objectcache 的原因</title>
-        <link>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-cacheobject/</link>
+        <link>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-cacheobject/</link>
         <pubDate>Wed, 07 Apr 2021 10:29:32 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Wed, 07 Apr 2021 10:29:32 +0800</atom:modified>
-        <guid>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-cacheobject/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-kubelet-cacheBasedManager-objectcache.png&#34;/&gt;
+        <guid>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-cacheobject/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-kubelet-cacheBasedManager-objectcache.png&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -277,12 +277,12 @@
       
       <item>
         <title>Kubernetes kubelet cacheBasedManager 好喜歡 objectcache 的原因</title>
-        <link>https://blog.jjmengze.website/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-cacheobject/</link>
+        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-cacheobject/</link>
         <pubDate>Wed, 07 Apr 2021 10:29:32 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Wed, 07 Apr 2021 10:29:32 +0800</atom:modified>
-        <guid>https://blog.jjmengze.website/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-cacheobject/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-kubelet-cacheBasedManager-objectcache.png&#34;/&gt;
+        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-cacheobject/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-kubelet-cacheBasedManager-objectcache.png&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -328,12 +328,12 @@
       
       <item>
         <title>Kubernetes kubelet configmap &amp; secret 與 cacheBasedManager 激情四射</title>
-        <link>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-cachebasedmanager/</link>
+        <link>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-cachebasedmanager/</link>
         <pubDate>Mon, 15 Mar 2021 10:29:32 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Mon, 15 Mar 2021 10:29:32 +0800</atom:modified>
-        <guid>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-cachebasedmanager/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-kubelet.png&#34;/&gt;
+        <guid>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-cachebasedmanager/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-kubelet.png&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
@@ -379,12 +379,12 @@
       
       <item>
         <title>Kubernetes kubelet configmap &amp; secret 與 cacheBasedManager 激情四射</title>
-        <link>https://blog.jjmengze.website/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-cachebasedmanager/</link>
+        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-cachebasedmanager/</link>
         <pubDate>Mon, 15 Mar 2021 10:29:32 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Mon, 15 Mar 2021 10:29:32 +0800</atom:modified>
-        <guid>https://blog.jjmengze.website/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-cachebasedmanager/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-kubelet.png&#34;/&gt;
+        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-cachebasedmanager/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-kubelet.png&#34;/&gt;
 &lt;/figure&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
