@@ -2,18 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://jjmengze.github.io/zh-tw/showcase/hugo/hugo-theme-zzo/</loc>
-    <lastmod>2020-01-19T21:13:42+09:00</lastmod>
-  </url><url>
-    <loc>https://jjmengze.github.io/zh-tw/zh-tw/showcase/hugo/hugo-theme-zzo/</loc>
-    <lastmod>2020-01-19T21:13:42+09:00</lastmod>
-  </url><url>
-    <loc>https://jjmengze.github.io/zh-tw/showcase/hugo/hugo-theme-zdoc/</loc>
-    <lastmod>2020-01-19T21:13:42+09:00</lastmod>
-  </url><url>
-    <loc>https://jjmengze.github.io/zh-tw/zh-tw/showcase/hugo/hugo-theme-zdoc/</loc>
-    <lastmod>2020-01-19T21:13:42+09:00</lastmod>
-  </url><url>
     <loc>https://jjmengze.github.io/zh-tw/</loc>
     <lastmod>2022-12-26T20:48:52+08:00</lastmod>
     <xhtml:link
@@ -535,18 +523,6 @@
   </url><url>
     <loc>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/kubernetes-garbage-collection/</loc>
     <lastmod>2020-03-02T18:08:12+08:00</lastmod>
-  </url><url>
-    <loc>https://jjmengze.github.io/zh-tw/showcase/hugo/</loc>
-    <lastmod>2020-01-19T21:04:11+09:00</lastmod>
-  </url><url>
-    <loc>https://jjmengze.github.io/zh-tw/zh-tw/showcase/hugo/</loc>
-    <lastmod>2020-01-19T21:04:11+09:00</lastmod>
-  </url><url>
-    <loc>https://jjmengze.github.io/zh-tw/showcase/</loc>
-    <lastmod>2020-01-19T15:43:38+09:00</lastmod>
-  </url><url>
-    <loc>https://jjmengze.github.io/zh-tw/zh-tw/showcase/</loc>
-    <lastmod>2020-01-19T15:43:38+09:00</lastmod>
   </url><url>
     <loc>https://jjmengze.github.io/zh-tw/presentation/dir/fourth/</loc>
     <lastmod>2019-10-30T20:48:10+09:00</lastmod>

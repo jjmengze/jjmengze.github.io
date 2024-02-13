@@ -42,42 +42,6 @@
 
       
       <item>
-        <title>Hugo Zzo Theme</title>
-        <link>https://jjmengze.github.io/zh-tw/zh-tw/showcase/hugo/hugo-theme-zzo/</link>
-        <pubDate>Sun, 19 Jan 2020 21:13:42 +0900</pubDate>
-        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
-        <atom:modified>Sun, 19 Jan 2020 21:13:42 +0900</atom:modified>
-        <guid>https://jjmengze.github.io/zh-tw/zh-tw/showcase/hugo/hugo-theme-zzo/</guid>
-        <description></description>
-        
-        <dc:creator>Meng Ze Li</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>Hugo zDoc Theme</title>
-        <link>https://jjmengze.github.io/zh-tw/zh-tw/showcase/hugo/hugo-theme-zdoc/</link>
-        <pubDate>Sun, 19 Jan 2020 21:13:42 +0900</pubDate>
-        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
-        <atom:modified>Sun, 19 Jan 2020 21:13:42 +0900</atom:modified>
-        <guid>https://jjmengze.github.io/zh-tw/zh-tw/showcase/hugo/hugo-theme-zdoc/</guid>
-        <description></description>
-        
-        <dc:creator>Meng Ze Li</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
         <title>再複習一次 Isolation Level</title>
         <link>https://jjmengze.github.io/zh-tw/posts/db/isolation-level/</link>
         <pubDate>Mon, 26 Dec 2022 20:48:52 +0800</pubDate>
@@ -4045,6 +4009,150 @@ ref:&lt;a href=&#34;https://kubernetes.io/docs/concepts/scheduling-eviction/sche
         <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/scheduler/kubernetes-scheduler/</guid>
         <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-scheduler.jpeg&#34;/&gt;
 &lt;/figure&gt;</description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Cluster Monitoring Operator</title>
+        <link>https://jjmengze.github.io/zh-tw/posts/ocp/cluster-monitoring-operator/</link>
+        <pubDate>Tue, 21 Jul 2020 16:06:29 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        <atom:modified>Tue, 21 Jul 2020 16:06:29 +0800</atom:modified>
+        <guid>https://jjmengze.github.io/zh-tw/posts/ocp/cluster-monitoring-operator/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/Cluster-Monitoring-Operator-talk.png&#34;/&gt;
+&lt;/figure&gt;</description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>openshift</category>
+            
+          
+            
+              <category>talk</category>
+            
+          
+        
+        
+          
+            
+              <category>openshift</category>
+            
+          
+            
+              <category>talk</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Cluster Monitoring Operator</title>
+        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/ocp/cluster-monitoring-operator/</link>
+        <pubDate>Tue, 21 Jul 2020 16:06:29 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        <atom:modified>Tue, 21 Jul 2020 16:06:29 +0800</atom:modified>
+        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/ocp/cluster-monitoring-operator/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/Cluster-Monitoring-Operator-talk.png&#34;/&gt;
+&lt;/figure&gt;</description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>openshift</category>
+            
+          
+            
+              <category>talk</category>
+            
+          
+        
+        
+          
+            
+              <category>openshift</category>
+            
+          
+            
+              <category>talk</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>使用reset api 存取 Kubernetes </title>
+        <link>https://jjmengze.github.io/zh-tw/posts/kubernetes/reset-api-server/</link>
+        <pubDate>Mon, 20 Jul 2020 16:07:21 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        <atom:modified>Mon, 20 Jul 2020 16:07:21 +0800</atom:modified>
+        <guid>https://jjmengze.github.io/zh-tw/posts/kubernetes/reset-api-server/</guid>
+        <description>&lt;p&gt;&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/reset-api-server.png&#34;/&gt;
+&lt;/figure&gt;
+&lt;br /&gt;
+&lt;a href=&#34;https://phoenixnap.com/kb/understanding-kubernetes-architecture-diagrams&#34;&gt;圖片來源&lt;/a&gt;&lt;/p&gt;</description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>使用reset api 存取 Kubernetes </title>
+        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/reset-api-server/</link>
+        <pubDate>Mon, 20 Jul 2020 16:07:21 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        <atom:modified>Mon, 20 Jul 2020 16:07:21 +0800</atom:modified>
+        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/reset-api-server/</guid>
+        <description>&lt;p&gt;&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/reset-api-server.png&#34;/&gt;
+&lt;/figure&gt;
+&lt;br /&gt;
+&lt;a href=&#34;https://phoenixnap.com/kb/understanding-kubernetes-architecture-diagrams&#34;&gt;圖片來源&lt;/a&gt;&lt;/p&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
         
