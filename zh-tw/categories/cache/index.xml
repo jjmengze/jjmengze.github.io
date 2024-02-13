@@ -68,12 +68,90 @@
       </item>
       
       <item>
+        <title>Kubernetes kubelet cache pod status 怎麼一回事</title>
+        <link>https://blog.jjmengze.website/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/cache/pod_status_cache/</link>
+        <pubDate>Fri, 20 Aug 2021 10:29:32 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        <atom:modified>Fri, 20 Aug 2021 10:29:32 +0800</atom:modified>
+        <guid>https://blog.jjmengze.website/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/cache/pod_status_cache/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-kubelet-podstatuscache.png&#34;/&gt;
+&lt;/figure&gt;</description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>source-code</category>
+            
+          
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>kubelet</category>
+            
+          
+            
+              <category>cache</category>
+            
+          
+            
+              <category>source-code</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
         <title>我的 cache 沒感覺了</title>
         <link>https://blog.jjmengze.website/zh-tw/posts/cache/common/cache/</link>
         <pubDate>Mon, 05 Jul 2021 10:29:32 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Mon, 05 Jul 2021 10:29:32 +0800</atom:modified>
         <guid>https://blog.jjmengze.website/zh-tw/posts/cache/common/cache/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/cache-consistency.png&#34;/&gt;
+&lt;/figure&gt;</description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>cache</category>
+            
+          
+        
+        
+          
+            
+              <category>cache</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>我的 cache 沒感覺了</title>
+        <link>https://blog.jjmengze.website/zh-tw/zh-tw/posts/cache/common/cache/</link>
+        <pubDate>Mon, 05 Jul 2021 10:29:32 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        <atom:modified>Mon, 05 Jul 2021 10:29:32 +0800</atom:modified>
+        <guid>https://blog.jjmengze.website/zh-tw/zh-tw/posts/cache/common/cache/</guid>
         <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/cache-consistency.png&#34;/&gt;
 &lt;/figure&gt;</description>
         

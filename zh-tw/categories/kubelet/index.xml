@@ -68,12 +68,106 @@
       </item>
       
       <item>
+        <title>Kubernetes kubelet cache pod status 怎麼一回事</title>
+        <link>https://blog.jjmengze.website/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/cache/pod_status_cache/</link>
+        <pubDate>Fri, 20 Aug 2021 10:29:32 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        <atom:modified>Fri, 20 Aug 2021 10:29:32 +0800</atom:modified>
+        <guid>https://blog.jjmengze.website/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/cache/pod_status_cache/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-kubelet-podstatuscache.png&#34;/&gt;
+&lt;/figure&gt;</description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>source-code</category>
+            
+          
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>kubelet</category>
+            
+          
+            
+              <category>cache</category>
+            
+          
+            
+              <category>source-code</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
         <title>隱藏在kubelet的WorkQueue</title>
         <link>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/kubelet/queue/work-queue/</link>
         <pubDate>Thu, 12 Aug 2021 10:29:32 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Thu, 12 Aug 2021 10:29:32 +0800</atom:modified>
         <guid>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/kubelet/queue/work-queue/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-kubelet-workqueue.jpg&#34;/&gt;
+&lt;/figure&gt;</description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>source-code</category>
+            
+          
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>kubelet</category>
+            
+          
+            
+              <category>probes</category>
+            
+          
+            
+              <category>source-code</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>隱藏在kubelet的WorkQueue</title>
+        <link>https://blog.jjmengze.website/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/queue/work-queue/</link>
+        <pubDate>Thu, 12 Aug 2021 10:29:32 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        <atom:modified>Thu, 12 Aug 2021 10:29:32 +0800</atom:modified>
+        <guid>https://blog.jjmengze.website/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/queue/work-queue/</guid>
         <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-kubelet-workqueue.jpg&#34;/&gt;
 &lt;/figure&gt;</description>
         
@@ -162,12 +256,106 @@
       </item>
       
       <item>
+        <title>Kubernetes kubelet 探測 pod 的生命症狀探針得如何出生-2</title>
+        <link>https://blog.jjmengze.website/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-probe-obj2/</link>
+        <pubDate>Sun, 01 Aug 2021 10:29:32 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        <atom:modified>Sun, 01 Aug 2021 10:29:32 +0800</atom:modified>
+        <guid>https://blog.jjmengze.website/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-probe-obj2/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-kubelet-livenessManager2.jpg&#34;/&gt;
+&lt;/figure&gt;</description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>source-code</category>
+            
+          
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>kubelet</category>
+            
+          
+            
+              <category>probes</category>
+            
+          
+            
+              <category>source-code</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
         <title>Kubernetes kubelet 探測 pod 的生命症狀探針得如何出生-1</title>
         <link>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-probe-obj/</link>
         <pubDate>Fri, 23 Jul 2021 10:29:32 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Fri, 23 Jul 2021 10:29:32 +0800</atom:modified>
         <guid>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-probe-obj/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-kubelet-livenessManager.png&#34;/&gt;
+&lt;/figure&gt;</description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>source-code</category>
+            
+          
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>kubelet</category>
+            
+          
+            
+              <category>probes</category>
+            
+          
+            
+              <category>source-code</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Kubernetes kubelet 探測 pod 的生命症狀探針得如何出生-1</title>
+        <link>https://blog.jjmengze.website/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-probe-obj/</link>
+        <pubDate>Fri, 23 Jul 2021 10:29:32 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        <atom:modified>Fri, 23 Jul 2021 10:29:32 +0800</atom:modified>
+        <guid>https://blog.jjmengze.website/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-probe-obj/</guid>
         <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-kubelet-livenessManager.png&#34;/&gt;
 &lt;/figure&gt;</description>
         
@@ -256,12 +444,106 @@
       </item>
       
       <item>
+        <title>Kubernetes kubelet 探測 pod 的生命症狀 tcp socket</title>
+        <link>https://blog.jjmengze.website/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-tcp-socket/</link>
+        <pubDate>Fri, 18 Jun 2021 10:29:32 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        <atom:modified>Fri, 18 Jun 2021 10:29:32 +0800</atom:modified>
+        <guid>https://blog.jjmengze.website/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-tcp-socket/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-kubelet-liveness-tcp-socket.png&#34;/&gt;
+&lt;/figure&gt;</description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>source-code</category>
+            
+          
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>kubelet</category>
+            
+          
+            
+              <category>probes</category>
+            
+          
+            
+              <category>source-code</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
         <title>Kubernetes kubelet 探測 pod 的生命症狀 Exec</title>
         <link>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-exec/</link>
         <pubDate>Thu, 10 Jun 2021 10:29:32 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Thu, 10 Jun 2021 10:29:32 +0800</atom:modified>
         <guid>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-exec/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-kubelet-liveness-exec.png&#34;/&gt;
+&lt;/figure&gt;</description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>source-code</category>
+            
+          
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>kubelet</category>
+            
+          
+            
+              <category>probes</category>
+            
+          
+            
+              <category>source-code</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Kubernetes kubelet 探測 pod 的生命症狀 Exec</title>
+        <link>https://blog.jjmengze.website/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-exec/</link>
+        <pubDate>Thu, 10 Jun 2021 10:29:32 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        <atom:modified>Thu, 10 Jun 2021 10:29:32 +0800</atom:modified>
+        <guid>https://blog.jjmengze.website/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-exec/</guid>
         <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-kubelet-liveness-exec.png&#34;/&gt;
 &lt;/figure&gt;</description>
         
@@ -350,12 +632,110 @@
       </item>
       
       <item>
+        <title>Kubernetes kubelet 探測 pod 的生命症狀 Http Get</title>
+        <link>https://blog.jjmengze.website/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-http-get/</link>
+        <pubDate>Tue, 25 May 2021 10:29:32 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        <atom:modified>Tue, 25 May 2021 10:29:32 +0800</atom:modified>
+        <guid>https://blog.jjmengze.website/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-http-get/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-kubelet-liveness.png&#34;/&gt;
+&lt;/figure&gt;</description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>source-code</category>
+            
+          
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>kubelet</category>
+            
+          
+            
+              <category>probes</category>
+            
+          
+            
+              <category>source-code</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
         <title> Kubernetes kubelet 怎麼抓住你的 secret</title>
         <link>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-secret-overlay/</link>
         <pubDate>Thu, 20 May 2021 10:29:32 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Thu, 20 May 2021 10:29:32 +0800</atom:modified>
         <guid>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-secret-overlay/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-kubelet-secret-overlay.png&#34;/&gt;
+&lt;/figure&gt;</description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>source-code</category>
+            
+          
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>kubelet</category>
+            
+          
+            
+              <category>configmap</category>
+            
+          
+            
+              <category>secret</category>
+            
+          
+            
+              <category>source-code</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title> Kubernetes kubelet 怎麼抓住你的 secret</title>
+        <link>https://blog.jjmengze.website/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-secret-overlay/</link>
+        <pubDate>Thu, 20 May 2021 10:29:32 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        <atom:modified>Thu, 20 May 2021 10:29:32 +0800</atom:modified>
+        <guid>https://blog.jjmengze.website/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-secret-overlay/</guid>
         <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-kubelet-secret-overlay.png&#34;/&gt;
 &lt;/figure&gt;</description>
         
@@ -452,6 +832,57 @@
       </item>
       
       <item>
+        <title> Kubernetes kubelet 怎麼抓住你的 configmap</title>
+        <link>https://blog.jjmengze.website/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-configmap-overlay/</link>
+        <pubDate>Thu, 15 Apr 2021 10:29:32 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        <atom:modified>Thu, 15 Apr 2021 10:29:32 +0800</atom:modified>
+        <guid>https://blog.jjmengze.website/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-configmap-overlay/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-kubelet-configmap-overlay.png&#34;/&gt;
+&lt;/figure&gt;</description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>source-code</category>
+            
+          
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>kubelet</category>
+            
+          
+            
+              <category>configmap</category>
+            
+          
+            
+              <category>secret</category>
+            
+          
+            
+              <category>source-code</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
         <title>Kubernetes kubelet cacheBasedManager 好喜歡 objectcache 的原因</title>
         <link>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-cacheobject/</link>
         <pubDate>Wed, 07 Apr 2021 10:29:32 +0800</pubDate>
@@ -503,12 +934,114 @@
       </item>
       
       <item>
+        <title>Kubernetes kubelet cacheBasedManager 好喜歡 objectcache 的原因</title>
+        <link>https://blog.jjmengze.website/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-cacheobject/</link>
+        <pubDate>Wed, 07 Apr 2021 10:29:32 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        <atom:modified>Wed, 07 Apr 2021 10:29:32 +0800</atom:modified>
+        <guid>https://blog.jjmengze.website/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-cacheobject/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-kubelet-cacheBasedManager-objectcache.png&#34;/&gt;
+&lt;/figure&gt;</description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>source-code</category>
+            
+          
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>kubelet</category>
+            
+          
+            
+              <category>configmap</category>
+            
+          
+            
+              <category>secret</category>
+            
+          
+            
+              <category>source-code</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
         <title>Kubernetes kubelet configmap &amp; secret 與 cacheBasedManager 激情四射</title>
         <link>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-cachebasedmanager/</link>
         <pubDate>Mon, 15 Mar 2021 10:29:32 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Mon, 15 Mar 2021 10:29:32 +0800</atom:modified>
         <guid>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-cachebasedmanager/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-kubelet.png&#34;/&gt;
+&lt;/figure&gt;</description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>source-code</category>
+            
+          
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>kubelet</category>
+            
+          
+            
+              <category>configmap</category>
+            
+          
+            
+              <category>secret</category>
+            
+          
+            
+              <category>source-code</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Kubernetes kubelet configmap &amp; secret 與 cacheBasedManager 激情四射</title>
+        <link>https://blog.jjmengze.website/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-cachebasedmanager/</link>
+        <pubDate>Mon, 15 Mar 2021 10:29:32 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        <atom:modified>Mon, 15 Mar 2021 10:29:32 +0800</atom:modified>
+        <guid>https://blog.jjmengze.website/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-cachebasedmanager/</guid>
         <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-kubelet.png&#34;/&gt;
 &lt;/figure&gt;</description>
         

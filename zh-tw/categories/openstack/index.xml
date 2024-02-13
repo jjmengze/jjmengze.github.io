@@ -57,6 +57,43 @@
         
       </item>
       
+      <item>
+        <title>Kolla Kubernetes</title>
+        <link>https://blog.jjmengze.website/zh-tw/zh-tw/posts/openstack/kolla-kubernetes/</link>
+        <pubDate>Sat, 21 Apr 2018 23:25:20 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        <atom:modified>Sat, 21 Apr 2018 23:25:20 +0800</atom:modified>
+        <guid>https://blog.jjmengze.website/zh-tw/zh-tw/posts/openstack/kolla-kubernetes/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kolla-openstack.jpg&#34;/&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;kolla是為了提供production-ready的 OpenStack Cloud 之container和deployment tools。&lt;/p&gt;</description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>openStack</category>
+            
+          
+            
+              <category>kubernetes</category>
+            
+          
+        
+        
+          
+            
+              <category>openStack</category>
+            
+          
+        
+        
+      </item>
+      
 
     
   </channel>

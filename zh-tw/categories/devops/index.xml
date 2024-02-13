@@ -51,6 +51,37 @@
         
       </item>
       
+      <item>
+        <title>前方高能之Opentracing</title>
+        <link>https://blog.jjmengze.website/zh-tw/zh-tw/posts/go/opentracing/</link>
+        <pubDate>Thu, 30 Apr 2020 12:07:34 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        <atom:modified>Thu, 30 Apr 2020 12:07:34 +0800</atom:modified>
+        <guid>https://blog.jjmengze.website/zh-tw/zh-tw/posts/go/opentracing/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://i.imgur.com/sJRUXhX.png&#34;/&gt;
+&lt;/figure&gt;</description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>devops</category>
+            
+          
+        
+        
+          
+            
+              <category>devops</category>
+            
+          
+        
+        
+      </item>
+      
 
     
   </channel>
