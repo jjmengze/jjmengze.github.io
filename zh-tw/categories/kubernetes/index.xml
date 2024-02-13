@@ -68,106 +68,12 @@
       </item>
       
       <item>
-        <title>Kubernetes kubelet cache pod status 怎麼一回事</title>
-        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/cache/pod_status_cache/</link>
-        <pubDate>Fri, 20 Aug 2021 10:29:32 +0800</pubDate>
-        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
-        <atom:modified>Fri, 20 Aug 2021 10:29:32 +0800</atom:modified>
-        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/cache/pod_status_cache/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-kubelet-podstatuscache.png&#34;/&gt;
-&lt;/figure&gt;</description>
-        
-        <dc:creator>Meng Ze Li</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>source-code</category>
-            
-          
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>kubelet</category>
-            
-          
-            
-              <category>cache</category>
-            
-          
-            
-              <category>source-code</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
         <title>隱藏在kubelet的WorkQueue</title>
         <link>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/kubelet/queue/work-queue/</link>
         <pubDate>Thu, 12 Aug 2021 10:29:32 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Thu, 12 Aug 2021 10:29:32 +0800</atom:modified>
         <guid>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/kubelet/queue/work-queue/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-kubelet-workqueue.jpg&#34;/&gt;
-&lt;/figure&gt;</description>
-        
-        <dc:creator>Meng Ze Li</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>source-code</category>
-            
-          
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>kubelet</category>
-            
-          
-            
-              <category>probes</category>
-            
-          
-            
-              <category>source-code</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
-        <title>隱藏在kubelet的WorkQueue</title>
-        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/queue/work-queue/</link>
-        <pubDate>Thu, 12 Aug 2021 10:29:32 +0800</pubDate>
-        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
-        <atom:modified>Thu, 12 Aug 2021 10:29:32 +0800</atom:modified>
-        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/queue/work-queue/</guid>
         <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-kubelet-workqueue.jpg&#34;/&gt;
 &lt;/figure&gt;</description>
         
@@ -256,106 +162,12 @@
       </item>
       
       <item>
-        <title>Kubernetes kubelet 探測 pod 的生命症狀探針得如何出生-2</title>
-        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-probe-obj2/</link>
-        <pubDate>Sun, 01 Aug 2021 10:29:32 +0800</pubDate>
-        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
-        <atom:modified>Sun, 01 Aug 2021 10:29:32 +0800</atom:modified>
-        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-probe-obj2/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-kubelet-livenessManager2.jpg&#34;/&gt;
-&lt;/figure&gt;</description>
-        
-        <dc:creator>Meng Ze Li</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>source-code</category>
-            
-          
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>kubelet</category>
-            
-          
-            
-              <category>probes</category>
-            
-          
-            
-              <category>source-code</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
         <title>Kubernetes kubelet 探測 pod 的生命症狀探針得如何出生-1</title>
         <link>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-probe-obj/</link>
         <pubDate>Fri, 23 Jul 2021 10:29:32 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Fri, 23 Jul 2021 10:29:32 +0800</atom:modified>
         <guid>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-probe-obj/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-kubelet-livenessManager.png&#34;/&gt;
-&lt;/figure&gt;</description>
-        
-        <dc:creator>Meng Ze Li</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>source-code</category>
-            
-          
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>kubelet</category>
-            
-          
-            
-              <category>probes</category>
-            
-          
-            
-              <category>source-code</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
-        <title>Kubernetes kubelet 探測 pod 的生命症狀探針得如何出生-1</title>
-        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-probe-obj/</link>
-        <pubDate>Fri, 23 Jul 2021 10:29:32 +0800</pubDate>
-        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
-        <atom:modified>Fri, 23 Jul 2021 10:29:32 +0800</atom:modified>
-        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-probe-obj/</guid>
         <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-kubelet-livenessManager.png&#34;/&gt;
 &lt;/figure&gt;</description>
         
@@ -444,106 +256,12 @@
       </item>
       
       <item>
-        <title>Kubernetes kubelet 探測 pod 的生命症狀 tcp socket</title>
-        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-tcp-socket/</link>
-        <pubDate>Fri, 18 Jun 2021 10:29:32 +0800</pubDate>
-        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
-        <atom:modified>Fri, 18 Jun 2021 10:29:32 +0800</atom:modified>
-        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-tcp-socket/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-kubelet-liveness-tcp-socket.png&#34;/&gt;
-&lt;/figure&gt;</description>
-        
-        <dc:creator>Meng Ze Li</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>source-code</category>
-            
-          
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>kubelet</category>
-            
-          
-            
-              <category>probes</category>
-            
-          
-            
-              <category>source-code</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
         <title>Kubernetes kubelet 探測 pod 的生命症狀 Exec</title>
         <link>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-exec/</link>
         <pubDate>Thu, 10 Jun 2021 10:29:32 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Thu, 10 Jun 2021 10:29:32 +0800</atom:modified>
         <guid>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-exec/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-kubelet-liveness-exec.png&#34;/&gt;
-&lt;/figure&gt;</description>
-        
-        <dc:creator>Meng Ze Li</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>source-code</category>
-            
-          
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>kubelet</category>
-            
-          
-            
-              <category>probes</category>
-            
-          
-            
-              <category>source-code</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
-        <title>Kubernetes kubelet 探測 pod 的生命症狀 Exec</title>
-        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-exec/</link>
-        <pubDate>Thu, 10 Jun 2021 10:29:32 +0800</pubDate>
-        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
-        <atom:modified>Thu, 10 Jun 2021 10:29:32 +0800</atom:modified>
-        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-exec/</guid>
         <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-kubelet-liveness-exec.png&#34;/&gt;
 &lt;/figure&gt;</description>
         
@@ -632,110 +350,12 @@
       </item>
       
       <item>
-        <title>Kubernetes kubelet 探測 pod 的生命症狀 Http Get</title>
-        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-http-get/</link>
-        <pubDate>Tue, 25 May 2021 10:29:32 +0800</pubDate>
-        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
-        <atom:modified>Tue, 25 May 2021 10:29:32 +0800</atom:modified>
-        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/probe/kubernetes-kubelet-http-get/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-kubelet-liveness.png&#34;/&gt;
-&lt;/figure&gt;</description>
-        
-        <dc:creator>Meng Ze Li</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>source-code</category>
-            
-          
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>kubelet</category>
-            
-          
-            
-              <category>probes</category>
-            
-          
-            
-              <category>source-code</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
         <title> Kubernetes kubelet 怎麼抓住你的 secret</title>
         <link>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-secret-overlay/</link>
         <pubDate>Thu, 20 May 2021 10:29:32 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Thu, 20 May 2021 10:29:32 +0800</atom:modified>
         <guid>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-secret-overlay/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-kubelet-secret-overlay.png&#34;/&gt;
-&lt;/figure&gt;</description>
-        
-        <dc:creator>Meng Ze Li</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>source-code</category>
-            
-          
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>kubelet</category>
-            
-          
-            
-              <category>configmap</category>
-            
-          
-            
-              <category>secret</category>
-            
-          
-            
-              <category>source-code</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
-        <title> Kubernetes kubelet 怎麼抓住你的 secret</title>
-        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-secret-overlay/</link>
-        <pubDate>Thu, 20 May 2021 10:29:32 +0800</pubDate>
-        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
-        <atom:modified>Thu, 20 May 2021 10:29:32 +0800</atom:modified>
-        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-secret-overlay/</guid>
         <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-kubelet-secret-overlay.png&#34;/&gt;
 &lt;/figure&gt;</description>
         
@@ -832,114 +452,12 @@
       </item>
       
       <item>
-        <title> Kubernetes kubelet 怎麼抓住你的 configmap</title>
-        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-configmap-overlay/</link>
-        <pubDate>Thu, 15 Apr 2021 10:29:32 +0800</pubDate>
-        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
-        <atom:modified>Thu, 15 Apr 2021 10:29:32 +0800</atom:modified>
-        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-configmap-overlay/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-kubelet-configmap-overlay.png&#34;/&gt;
-&lt;/figure&gt;</description>
-        
-        <dc:creator>Meng Ze Li</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>source-code</category>
-            
-          
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>kubelet</category>
-            
-          
-            
-              <category>configmap</category>
-            
-          
-            
-              <category>secret</category>
-            
-          
-            
-              <category>source-code</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
         <title>Kubernetes kubelet cacheBasedManager 好喜歡 objectcache 的原因</title>
         <link>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-cacheobject/</link>
         <pubDate>Wed, 07 Apr 2021 10:29:32 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Wed, 07 Apr 2021 10:29:32 +0800</atom:modified>
         <guid>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-cacheobject/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-kubelet-cacheBasedManager-objectcache.png&#34;/&gt;
-&lt;/figure&gt;</description>
-        
-        <dc:creator>Meng Ze Li</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>source-code</category>
-            
-          
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>kubelet</category>
-            
-          
-            
-              <category>configmap</category>
-            
-          
-            
-              <category>secret</category>
-            
-          
-            
-              <category>source-code</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
-        <title>Kubernetes kubelet cacheBasedManager 好喜歡 objectcache 的原因</title>
-        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-cacheobject/</link>
-        <pubDate>Wed, 07 Apr 2021 10:29:32 +0800</pubDate>
-        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
-        <atom:modified>Wed, 07 Apr 2021 10:29:32 +0800</atom:modified>
-        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-cacheobject/</guid>
         <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-kubelet-cacheBasedManager-objectcache.png&#34;/&gt;
 &lt;/figure&gt;</description>
         
@@ -1036,102 +554,12 @@
       </item>
       
       <item>
-        <title>Kubernetes kubelet configmap &amp; secret 與 cacheBasedManager 激情四射</title>
-        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-cachebasedmanager/</link>
-        <pubDate>Mon, 15 Mar 2021 10:29:32 +0800</pubDate>
-        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
-        <atom:modified>Mon, 15 Mar 2021 10:29:32 +0800</atom:modified>
-        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/kubelet/configmapsecret/kubernetes-kubelet-cachebasedmanager/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-kubelet.png&#34;/&gt;
-&lt;/figure&gt;</description>
-        
-        <dc:creator>Meng Ze Li</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>source-code</category>
-            
-          
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>kubelet</category>
-            
-          
-            
-              <category>configmap</category>
-            
-          
-            
-              <category>secret</category>
-            
-          
-            
-              <category>source-code</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
         <title> Kubernetes util tool 常用的 backoff 組合技</title>
         <link>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/utils/kubernetes-utils-tool-wait-backoff/</link>
         <pubDate>Thu, 25 Feb 2021 10:29:32 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Thu, 25 Feb 2021 10:29:32 +0800</atom:modified>
         <guid>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/utils/kubernetes-utils-tool-wait-backoff/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-utils-wait-backoff.jpg&#34;/&gt;
-&lt;/figure&gt;</description>
-        
-        <dc:creator>Meng Ze Li</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>utils</category>
-            
-          
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>utils</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
-        <title> Kubernetes util tool 常用的 backoff 組合技</title>
-        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/utils/kubernetes-utils-tool-wait-backoff/</link>
-        <pubDate>Thu, 25 Feb 2021 10:29:32 +0800</pubDate>
-        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
-        <atom:modified>Thu, 25 Feb 2021 10:29:32 +0800</atom:modified>
-        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/utils/kubernetes-utils-tool-wait-backoff/</guid>
         <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-utils-wait-backoff.jpg&#34;/&gt;
 &lt;/figure&gt;</description>
         
@@ -1204,98 +632,12 @@
       </item>
       
       <item>
-        <title>Kubernetes util tool 使用 wait.waitgroup 抓住 goroutine </title>
-        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/utils/kubernetes-utils-tool-wiat/</link>
-        <pubDate>Mon, 22 Feb 2021 10:29:32 +0800</pubDate>
-        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
-        <atom:modified>Mon, 22 Feb 2021 10:29:32 +0800</atom:modified>
-        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/utils/kubernetes-utils-tool-wiat/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-utils-wait.jpg&#34;/&gt;
-&lt;/figure&gt;</description>
-        
-        <dc:creator>Meng Ze Li</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>utils</category>
-            
-          
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>utils</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
         <title>Kubernetes Reflector 我在盯著你 （ III  ）</title>
         <link>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/controller/redlector/reflector-3/</link>
         <pubDate>Fri, 19 Feb 2021 10:29:32 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Fri, 19 Feb 2021 10:29:32 +0800</atom:modified>
         <guid>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/controller/redlector/reflector-3/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-reflector-3.jpg&#34;/&gt;
-&lt;/figure&gt;</description>
-        
-        <dc:creator>Meng Ze Li</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>controller</category>
-            
-          
-            
-              <category>source-code</category>
-            
-          
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>controller</category>
-            
-          
-            
-              <category>source-code</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
-        <title>Kubernetes Reflector 我在盯著你 （ III  ）</title>
-        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/controller/redlector/reflector-3/</link>
-        <pubDate>Fri, 19 Feb 2021 10:29:32 +0800</pubDate>
-        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
-        <atom:modified>Fri, 19 Feb 2021 10:29:32 +0800</atom:modified>
-        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/controller/redlector/reflector-3/</guid>
         <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-reflector-3.jpg&#34;/&gt;
 &lt;/figure&gt;</description>
         
@@ -1384,106 +726,12 @@
       </item>
       
       <item>
-        <title>Kubernetes Reflector 我在盯著你 （ II  ）</title>
-        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/controller/redlector/reflector-2/</link>
-        <pubDate>Thu, 18 Feb 2021 10:29:32 +0800</pubDate>
-        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
-        <atom:modified>Thu, 18 Feb 2021 10:29:32 +0800</atom:modified>
-        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/controller/redlector/reflector-2/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-reflector-2.jpg&#34;/&gt;
-&lt;/figure&gt;</description>
-        
-        <dc:creator>Meng Ze Li</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>controller</category>
-            
-          
-            
-              <category>source-code</category>
-            
-          
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>controller</category>
-            
-          
-            
-              <category>source-code</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
         <title>Kubernetes Reflector 我在盯著你 （ I ）</title>
         <link>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/controller/redlector/reflector-1/</link>
         <pubDate>Sun, 14 Feb 2021 10:29:32 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Sun, 14 Feb 2021 10:29:32 +0800</atom:modified>
         <guid>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/controller/redlector/reflector-1/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/Kubernetes-Reflector-1.jpg&#34;/&gt;
-&lt;/figure&gt;</description>
-        
-        <dc:creator>Meng Ze Li</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>controller</category>
-            
-          
-            
-              <category>source-code</category>
-            
-          
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>controller</category>
-            
-          
-            
-              <category>source-code</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
-        <title>Kubernetes Reflector 我在盯著你 （ I ）</title>
-        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/controller/redlector/reflector-1/</link>
-        <pubDate>Sun, 14 Feb 2021 10:29:32 +0800</pubDate>
-        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
-        <atom:modified>Sun, 14 Feb 2021 10:29:32 +0800</atom:modified>
-        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/controller/redlector/reflector-1/</guid>
         <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/Kubernetes-Reflector-1.jpg&#34;/&gt;
 &lt;/figure&gt;</description>
         
@@ -1564,90 +812,12 @@
       </item>
       
       <item>
-        <title>Kubernetes util tool 使用 Backoff 指數大漲</title>
-        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/utils/kubernetes-utils-tool-wait-exponential/</link>
-        <pubDate>Tue, 09 Feb 2021 10:29:32 +0800</pubDate>
-        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
-        <atom:modified>Tue, 09 Feb 2021 10:29:32 +0800</atom:modified>
-        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/utils/kubernetes-utils-tool-wait-exponential/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-utils-wait-exponential.jpg&#34;/&gt;
-&lt;/figure&gt;</description>
-        
-        <dc:creator>Meng Ze Li</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>utils</category>
-            
-          
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>utils</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
         <title>Kubernetes util tool 使用 Backoff 抖了一下</title>
         <link>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/utils/kubernetes-utils-tool-wait-jitterbackoff/</link>
         <pubDate>Fri, 05 Feb 2021 10:29:32 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Fri, 05 Feb 2021 10:29:32 +0800</atom:modified>
         <guid>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/utils/kubernetes-utils-tool-wait-jitterbackoff/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-utils-wait-jitterbackoff.jpg&#34;/&gt;
-&lt;/figure&gt;</description>
-        
-        <dc:creator>Meng Ze Li</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>utils</category>
-            
-          
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>utils</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
-        <title>Kubernetes util tool 使用 Backoff 抖了一下</title>
-        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/utils/kubernetes-utils-tool-wait-jitterbackoff/</link>
-        <pubDate>Fri, 05 Feb 2021 10:29:32 +0800</pubDate>
-        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
-        <atom:modified>Fri, 05 Feb 2021 10:29:32 +0800</atom:modified>
-        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/utils/kubernetes-utils-tool-wait-jitterbackoff/</guid>
         <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-utils-wait-jitterbackoff.jpg&#34;/&gt;
 &lt;/figure&gt;</description>
         
@@ -1720,45 +890,6 @@
       </item>
       
       <item>
-        <title>Kubernetes util tool 使用 cache LRU 定格一瞬間</title>
-        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/utils/kubernetes-utils-tool-lru/</link>
-        <pubDate>Thu, 04 Feb 2021 10:29:32 +0800</pubDate>
-        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
-        <atom:modified>Thu, 04 Feb 2021 10:29:32 +0800</atom:modified>
-        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/utils/kubernetes-utils-tool-lru/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-utils-cache.jpg&#34;/&gt;
-&lt;/figure&gt;</description>
-        
-        <dc:creator>Meng Ze Li</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>utils</category>
-            
-          
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>utils</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
         <title>Kubernetes util tool 從工具包裡找工具</title>
         <link>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/utils/kubernetes-util-tool/</link>
         <pubDate>Wed, 03 Feb 2021 10:29:32 +0800</pubDate>
@@ -1798,98 +929,12 @@
       </item>
       
       <item>
-        <title>Kubernetes util tool 從工具包裡找工具</title>
-        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/utils/kubernetes-util-tool/</link>
-        <pubDate>Wed, 03 Feb 2021 10:29:32 +0800</pubDate>
-        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
-        <atom:modified>Wed, 03 Feb 2021 10:29:32 +0800</atom:modified>
-        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/utils/kubernetes-util-tool/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-utils.jpg&#34;/&gt;
-&lt;/figure&gt;</description>
-        
-        <dc:creator>Meng Ze Li</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>utils</category>
-            
-          
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>utils</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
         <title>Kubernetes DeltaFIFO 承上啟下</title>
         <link>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/controller/deltafifo/kubernetes-delta-fifo-queue/</link>
         <pubDate>Wed, 13 Jan 2021 09:29:32 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Wed, 13 Jan 2021 09:29:32 +0800</atom:modified>
         <guid>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/controller/deltafifo/kubernetes-delta-fifo-queue/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-delta-fifo.jpg&#34;/&gt;
-&lt;/figure&gt;</description>
-        
-        <dc:creator>Meng Ze Li</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>controller</category>
-            
-          
-            
-              <category>source-code</category>
-            
-          
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>controller</category>
-            
-          
-            
-              <category>source-code</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
-        <title>Kubernetes DeltaFIFO 承上啟下</title>
-        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/controller/deltafifo/kubernetes-delta-fifo-queue/</link>
-        <pubDate>Wed, 13 Jan 2021 09:29:32 +0800</pubDate>
-        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
-        <atom:modified>Wed, 13 Jan 2021 09:29:32 +0800</atom:modified>
-        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/controller/deltafifo/kubernetes-delta-fifo-queue/</guid>
         <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-delta-fifo.jpg&#34;/&gt;
 &lt;/figure&gt;</description>
         
@@ -1978,106 +1023,12 @@
       </item>
       
       <item>
-        <title>Kubernetes Indexers localcache 之美（II）</title>
-        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/controller/indexer/kubernetes-indexers-local-cache-2/</link>
-        <pubDate>Wed, 06 Jan 2021 09:29:32 +0800</pubDate>
-        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
-        <atom:modified>Wed, 06 Jan 2021 09:29:32 +0800</atom:modified>
-        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/controller/indexer/kubernetes-indexers-local-cache-2/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-indexer-1.jpg&#34;/&gt;
-&lt;/figure&gt;</description>
-        
-        <dc:creator>Meng Ze Li</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>controller</category>
-            
-          
-            
-              <category>source-code</category>
-            
-          
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>controller</category>
-            
-          
-            
-              <category>source-code</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
         <title>Kubernetes Indexers local cache 之美 （I）</title>
         <link>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/controller/indexer/kubernetes-indexers-local-cache-1/</link>
         <pubDate>Sun, 03 Jan 2021 09:29:32 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Sun, 03 Jan 2021 09:29:32 +0800</atom:modified>
         <guid>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/controller/indexer/kubernetes-indexers-local-cache-1/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-indexer-1.jpg&#34;/&gt;
-&lt;/figure&gt;</description>
-        
-        <dc:creator>Meng Ze Li</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>controller</category>
-            
-          
-            
-              <category>source-code</category>
-            
-          
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>controller</category>
-            
-          
-            
-              <category>source-code</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
-        <title>Kubernetes Indexers local cache 之美 （I）</title>
-        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/controller/indexer/kubernetes-indexers-local-cache-1/</link>
-        <pubDate>Sun, 03 Jan 2021 09:29:32 +0800</pubDate>
-        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
-        <atom:modified>Sun, 03 Jan 2021 09:29:32 +0800</atom:modified>
-        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/controller/indexer/kubernetes-indexers-local-cache-1/</guid>
         <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-indexer-1.jpg&#34;/&gt;
 &lt;/figure&gt;</description>
         
@@ -2158,98 +1109,12 @@
       </item>
       
       <item>
-        <title>Kubernetes error handle 好吃驚</title>
-        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/errors/kubernetes-errors-handle/</link>
-        <pubDate>Tue, 29 Dec 2020 13:29:32 +0800</pubDate>
-        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
-        <atom:modified>Tue, 29 Dec 2020 13:29:32 +0800</atom:modified>
-        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/errors/kubernetes-errors-handle/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-errors-handle.jpg&#34;/&gt;
-&lt;/figure&gt;</description>
-        
-        <dc:creator>Meng Ze Li</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>source-code</category>
-            
-          
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>source-code</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
         <title>Kubernetes Controller 設計挖掘之路</title>
         <link>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/controller/dig-kubernetes-controller/</link>
         <pubDate>Wed, 23 Dec 2020 10:29:32 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Wed, 23 Dec 2020 10:29:32 +0800</atom:modified>
         <guid>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/controller/dig-kubernetes-controller/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-dig-controller.jpg&#34;/&gt;
-&lt;/figure&gt;</description>
-        
-        <dc:creator>Meng Ze Li</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>controller</category>
-            
-          
-            
-              <category>source-code</category>
-            
-          
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>controller</category>
-            
-          
-            
-              <category>source-code</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
-        <title>Kubernetes Controller 設計挖掘之路</title>
-        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/controller/dig-kubernetes-controller/</link>
-        <pubDate>Wed, 23 Dec 2020 10:29:32 +0800</pubDate>
-        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
-        <atom:modified>Wed, 23 Dec 2020 10:29:32 +0800</atom:modified>
-        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/controller/dig-kubernetes-controller/</guid>
         <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-dig-controller.jpg&#34;/&gt;
 &lt;/figure&gt;</description>
         
@@ -2338,106 +1203,12 @@
       </item>
       
       <item>
-        <title>Kubernetes Bucket Rate Limiter 設計真d不錯</title>
-        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/controller/queue/bucket-ratelimiter/</link>
-        <pubDate>Mon, 21 Dec 2020 10:29:32 +0800</pubDate>
-        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
-        <atom:modified>Mon, 21 Dec 2020 10:29:32 +0800</atom:modified>
-        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/controller/queue/bucket-ratelimiter/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-Bucket-Rate-Limiter.jpg&#34;/&gt;
-&lt;/figure&gt;</description>
-        
-        <dc:creator>Meng Ze Li</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>controller</category>
-            
-          
-            
-              <category>source-code</category>
-            
-          
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>controller</category>
-            
-          
-            
-              <category>source-code</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
         <title>Kubernetes Max Of Rate Limiter 設計真d不錯</title>
         <link>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/controller/queue/item-max-of-ratelimiter/</link>
         <pubDate>Sat, 19 Dec 2020 12:29:32 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Sat, 19 Dec 2020 12:29:32 +0800</atom:modified>
         <guid>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/controller/queue/item-max-of-ratelimiter/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-Item-Max-of-RateLimiter.jpg&#34;/&gt;
-&lt;/figure&gt;</description>
-        
-        <dc:creator>Meng Ze Li</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>controller</category>
-            
-          
-            
-              <category>source-code</category>
-            
-          
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>controller</category>
-            
-          
-            
-              <category>source-code</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
-        <title>Kubernetes Max Of Rate Limiter 設計真d不錯</title>
-        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/controller/queue/item-max-of-ratelimiter/</link>
-        <pubDate>Sat, 19 Dec 2020 12:29:32 +0800</pubDate>
-        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
-        <atom:modified>Sat, 19 Dec 2020 12:29:32 +0800</atom:modified>
-        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/controller/queue/item-max-of-ratelimiter/</guid>
         <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-Item-Max-of-RateLimiter.jpg&#34;/&gt;
 &lt;/figure&gt;</description>
         
@@ -2526,106 +1297,12 @@
       </item>
       
       <item>
-        <title>Kubernetes Item Fast Slow RateLimiter work queue 設計真d不錯</title>
-        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/controller/queue/item-fast-slow-ratelimiter/</link>
-        <pubDate>Thu, 17 Dec 2020 12:29:32 +0800</pubDate>
-        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
-        <atom:modified>Thu, 17 Dec 2020 12:29:32 +0800</atom:modified>
-        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/controller/queue/item-fast-slow-ratelimiter/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-Item-Fast-Slow-RateLimiter.jpg&#34;/&gt;
-&lt;/figure&gt;</description>
-        
-        <dc:creator>Meng Ze Li</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>controller</category>
-            
-          
-            
-              <category>source-code</category>
-            
-          
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>controller</category>
-            
-          
-            
-              <category>source-code</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
         <title>Kubernetes Item Exponential Failure RateLimiter work queue 設計真d不錯</title>
         <link>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/controller/queue/item-exponential-failure-ratelimiter/</link>
         <pubDate>Tue, 15 Dec 2020 12:29:32 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Tue, 15 Dec 2020 12:29:32 +0800</atom:modified>
         <guid>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/controller/queue/item-exponential-failure-ratelimiter/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-Item-Exponential-Failure-RateLimiter.jpg&#34;/&gt;
-&lt;/figure&gt;</description>
-        
-        <dc:creator>Meng Ze Li</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>controller</category>
-            
-          
-            
-              <category>source-code</category>
-            
-          
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>controller</category>
-            
-          
-            
-              <category>source-code</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
-        <title>Kubernetes Item Exponential Failure RateLimiter work queue 設計真d不錯</title>
-        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/controller/queue/item-exponential-failure-ratelimiter/</link>
-        <pubDate>Tue, 15 Dec 2020 12:29:32 +0800</pubDate>
-        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
-        <atom:modified>Tue, 15 Dec 2020 12:29:32 +0800</atom:modified>
-        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/controller/queue/item-exponential-failure-ratelimiter/</guid>
         <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-Item-Exponential-Failure-RateLimiter.jpg&#34;/&gt;
 &lt;/figure&gt;</description>
         
@@ -2714,106 +1391,12 @@
       </item>
       
       <item>
-        <title>Kubernetes RateLimite work queue 設計真d不錯</title>
-        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/controller/queue/rating/</link>
-        <pubDate>Mon, 14 Dec 2020 12:29:32 +0800</pubDate>
-        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
-        <atom:modified>Mon, 14 Dec 2020 12:29:32 +0800</atom:modified>
-        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/controller/queue/rating/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-rating-work-queue.jpg&#34;/&gt;
-&lt;/figure&gt;</description>
-        
-        <dc:creator>Meng Ze Li</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>controller</category>
-            
-          
-            
-              <category>source-code</category>
-            
-          
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>controller</category>
-            
-          
-            
-              <category>source-code</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
         <title>Kubernetes delaying work queue 設計真d不錯</title>
         <link>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/controller/queue/delaying/</link>
         <pubDate>Fri, 11 Dec 2020 12:29:32 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Fri, 11 Dec 2020 12:29:32 +0800</atom:modified>
         <guid>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/controller/queue/delaying/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-delaying-queue.jpg&#34;/&gt;
-&lt;/figure&gt;</description>
-        
-        <dc:creator>Meng Ze Li</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>controller</category>
-            
-          
-            
-              <category>source-code</category>
-            
-          
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>controller</category>
-            
-          
-            
-              <category>source-code</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
-        <title>Kubernetes delaying work queue 設計真d不錯</title>
-        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/controller/queue/delaying/</link>
-        <pubDate>Fri, 11 Dec 2020 12:29:32 +0800</pubDate>
-        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
-        <atom:modified>Fri, 11 Dec 2020 12:29:32 +0800</atom:modified>
-        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/controller/queue/delaying/</guid>
         <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-delaying-queue.jpg&#34;/&gt;
 &lt;/figure&gt;</description>
         
@@ -2902,90 +1485,12 @@
       </item>
       
       <item>
-        <title>Kubernetes common work queue 設計真d不錯</title>
-        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/controller/queue/common/</link>
-        <pubDate>Thu, 10 Dec 2020 10:29:32 +0800</pubDate>
-        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
-        <atom:modified>Thu, 10 Dec 2020 10:29:32 +0800</atom:modified>
-        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/controller/queue/common/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-common-work-queue.jpg&#34;/&gt;
-&lt;/figure&gt;</description>
-        
-        <dc:creator>Meng Ze Li</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>controller</category>
-            
-          
-            
-              <category>source-code</category>
-            
-          
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>controller</category>
-            
-          
-            
-              <category>source-code</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
         <title>kubernetes 分散式資源鎖</title>
         <link>https://jjmengze.github.io/zh-tw/posts/kubernetes/resourcelock/</link>
         <pubDate>Thu, 12 Nov 2020 16:07:21 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Thu, 12 Nov 2020 16:07:21 +0800</atom:modified>
         <guid>https://jjmengze.github.io/zh-tw/posts/kubernetes/resourcelock/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/resource-lock.jpg&#34;/&gt;
-&lt;/figure&gt;</description>
-        
-        <dc:creator>Meng Ze Li</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
-        <title>kubernetes 分散式資源鎖</title>
-        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/resourcelock/</link>
-        <pubDate>Thu, 12 Nov 2020 16:07:21 +0800</pubDate>
-        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
-        <atom:modified>Thu, 12 Nov 2020 16:07:21 +0800</atom:modified>
-        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/resourcelock/</guid>
         <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/resource-lock.jpg&#34;/&gt;
 &lt;/figure&gt;</description>
         
@@ -3042,74 +1547,12 @@
       </item>
       
       <item>
-        <title>kubernetes ssh tunnel debug pratice</title>
-        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/debug/kt-connection/</link>
-        <pubDate>Mon, 26 Oct 2020 16:07:21 +0800</pubDate>
-        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
-        <atom:modified>Mon, 26 Oct 2020 16:07:21 +0800</atom:modified>
-        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/debug/kt-connection/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kc-connection.jpg&#34;/&gt;
-&lt;/figure&gt;</description>
-        
-        <dc:creator>Meng Ze Li</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
         <title>Hey ! Kubernetes finalizers 不再煩惱</title>
         <link>https://jjmengze.github.io/zh-tw/posts/kubernetes/finalizers/</link>
         <pubDate>Fri, 16 Oct 2020 16:07:21 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Fri, 16 Oct 2020 16:07:21 +0800</atom:modified>
         <guid>https://jjmengze.github.io/zh-tw/posts/kubernetes/finalizers/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/finalizers.jpg&#34;/&gt;
-&lt;/figure&gt;</description>
-        
-        <dc:creator>Meng Ze Li</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
-        <title>Hey ! Kubernetes finalizers 不再煩惱</title>
-        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/finalizers/</link>
-        <pubDate>Fri, 16 Oct 2020 16:07:21 +0800</pubDate>
-        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
-        <atom:modified>Fri, 16 Oct 2020 16:07:21 +0800</atom:modified>
-        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/finalizers/</guid>
         <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/finalizers.jpg&#34;/&gt;
 &lt;/figure&gt;</description>
         
@@ -3168,76 +1611,12 @@ ref:&lt;a href=&#34;https://kubernetes.io/docs/concepts/scheduling-eviction/sche
       </item>
       
       <item>
-        <title>Kubernetes Scheduler context流水線略窺一二</title>
-        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/scheduler/kubernetes-scheduler-context/</link>
-        <pubDate>Sat, 01 Aug 2020 10:29:32 +0800</pubDate>
-        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
-        <atom:modified>Sat, 01 Aug 2020 10:29:32 +0800</atom:modified>
-        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/scheduler/kubernetes-scheduler-context/</guid>
-        <description>&lt;p&gt;&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/Kubernetes-Scheduler-context.png&#34;/&gt;
-&lt;/figure&gt;
-&lt;br /&gt;
-ref:&lt;a href=&#34;https://kubernetes.io/docs/concepts/scheduling-eviction/scheduling-framework/&#34;&gt;kubernetes scheduler&lt;/a&gt;&lt;/p&gt;</description>
-        
-        <dc:creator>Meng Ze Li</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
         <title>Kubernetes Scheduler 探討 source code 前的準備</title>
         <link>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/scheduler/kubernetes-scheduler/</link>
         <pubDate>Sat, 25 Jul 2020 10:29:32 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Sat, 25 Jul 2020 10:29:32 +0800</atom:modified>
         <guid>https://jjmengze.github.io/zh-tw/posts/kubernetes/source-code/scheduler/kubernetes-scheduler/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-scheduler.jpeg&#34;/&gt;
-&lt;/figure&gt;</description>
-        
-        <dc:creator>Meng Ze Li</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
-        <title>Kubernetes Scheduler 探討 source code 前的準備</title>
-        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/scheduler/kubernetes-scheduler/</link>
-        <pubDate>Sat, 25 Jul 2020 10:29:32 +0800</pubDate>
-        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
-        <atom:modified>Sat, 25 Jul 2020 10:29:32 +0800</atom:modified>
-        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/source-code/scheduler/kubernetes-scheduler/</guid>
         <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-scheduler.jpeg&#34;/&gt;
 &lt;/figure&gt;</description>
         
@@ -3296,76 +1675,12 @@ ref:&lt;a href=&#34;https://kubernetes.io/docs/concepts/scheduling-eviction/sche
       </item>
       
       <item>
-        <title>使用reset api 存取 Kubernetes </title>
-        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/reset-api-server/</link>
-        <pubDate>Mon, 20 Jul 2020 16:07:21 +0800</pubDate>
-        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
-        <atom:modified>Mon, 20 Jul 2020 16:07:21 +0800</atom:modified>
-        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/reset-api-server/</guid>
-        <description>&lt;p&gt;&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/reset-api-server.png&#34;/&gt;
-&lt;/figure&gt;
-&lt;br /&gt;
-&lt;a href=&#34;https://phoenixnap.com/kb/understanding-kubernetes-architecture-diagrams&#34;&gt;圖片來源&lt;/a&gt;&lt;/p&gt;</description>
-        
-        <dc:creator>Meng Ze Li</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
         <title>kubernetes Audit 查起來</title>
         <link>https://jjmengze.github.io/zh-tw/posts/kubernetes/audit/</link>
         <pubDate>Mon, 29 Jun 2020 16:07:21 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Mon, 29 Jun 2020 16:07:21 +0800</atom:modified>
         <guid>https://jjmengze.github.io/zh-tw/posts/kubernetes/audit/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/audit.png&#34;/&gt;
-&lt;/figure&gt;</description>
-        
-        <dc:creator>Meng Ze Li</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
-        <title>kubernetes Audit 查起來</title>
-        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/audit/</link>
-        <pubDate>Mon, 29 Jun 2020 16:07:21 +0800</pubDate>
-        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
-        <atom:modified>Mon, 29 Jun 2020 16:07:21 +0800</atom:modified>
-        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/audit/</guid>
         <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/audit.png&#34;/&gt;
 &lt;/figure&gt;</description>
         
@@ -3424,39 +1739,6 @@ ref:&lt;a href=&#34;https://kubernetes.io/docs/concepts/scheduling-eviction/sche
       </item>
       
       <item>
-        <title>Azure Kubernetes Service pull unssl  image registry</title>
-        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/azure/private-image/</link>
-        <pubDate>Tue, 26 May 2020 15:07:18 +0800</pubDate>
-        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
-        <atom:modified>Tue, 26 May 2020 15:07:18 +0800</atom:modified>
-        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/azure/private-image/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/azure-private-image.jpg&#34;/&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;記錄一下之前在工作上遇到的 Gitlab domain 沒有簽憑證，但是外部服務(Azure Kubernetes Service)又需要存取 Gitlab Container Registry 會遇到的問題。&lt;/p&gt;</description>
-        
-        <dc:creator>Meng Ze Li</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
         <title>學習Kubernetes Garbage Collection機制</title>
         <link>https://jjmengze.github.io/zh-tw/posts/kubernetes/kubernetes-garbage-collection/</link>
         <pubDate>Mon, 02 Mar 2020 18:08:12 +0800</pubDate>
@@ -3488,82 +1770,12 @@ ref:&lt;a href=&#34;https://kubernetes.io/docs/concepts/scheduling-eviction/sche
       </item>
       
       <item>
-        <title>學習Kubernetes Garbage Collection機制</title>
-        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/kubernetes-garbage-collection/</link>
-        <pubDate>Mon, 02 Mar 2020 18:08:12 +0800</pubDate>
-        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
-        <atom:modified>Mon, 02 Mar 2020 18:08:12 +0800</atom:modified>
-        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/kubernetes-garbage-collection/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-garbage-collection.jpg&#34;/&gt;
-&lt;/figure&gt;</description>
-        
-        <dc:creator>Meng Ze Li</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
         <title>service mesh 之 Istio 1.0 安裝及極度簡易操作</title>
         <link>https://jjmengze.github.io/zh-tw/posts/istio/istio1.0-install/</link>
         <pubDate>Sat, 04 Aug 2018 17:39:26 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Sat, 04 Aug 2018 17:39:26 +0800</atom:modified>
         <guid>https://jjmengze.github.io/zh-tw/posts/istio/istio1.0-install/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/istio.png&#34;/&gt;
-&lt;/figure&gt;</description>
-        
-        <dc:creator>Meng Ze Li</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>servicemesh</category>
-            
-          
-            
-              <category>kubernetes</category>
-            
-          
-        
-        
-          
-            
-              <category>servicemesh</category>
-            
-          
-            
-              <category>kubernetes</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
-        <title>service mesh 之 Istio 1.0 安裝及極度簡易操作</title>
-        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/istio/istio1.0-install/</link>
-        <pubDate>Sat, 04 Aug 2018 17:39:26 +0800</pubDate>
-        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
-        <atom:modified>Sat, 04 Aug 2018 17:39:26 +0800</atom:modified>
-        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/istio/istio1.0-install/</guid>
         <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/istio.png&#34;/&gt;
 &lt;/figure&gt;</description>
         
@@ -3636,82 +1848,12 @@ ref:&lt;a href=&#34;https://kubernetes.io/docs/concepts/scheduling-eviction/sche
       </item>
       
       <item>
-        <title>FAAS之kubeless的新滋味</title>
-        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubeless/kubeless/</link>
-        <pubDate>Fri, 04 May 2018 17:39:26 +0800</pubDate>
-        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
-        <atom:modified>Fri, 04 May 2018 17:39:26 +0800</atom:modified>
-        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubeless/kubeless/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubeless.png&#34;/&gt;
-&lt;/figure&gt;</description>
-        
-        <dc:creator>Meng Ze Li</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>serverless</category>
-            
-          
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>serverless</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
         <title>Kubernetes Control Plane 這件小小事(controller-manger)</title>
         <link>https://jjmengze.github.io/zh-tw/posts/kubernetes/kubernetes-controller-manger-overview/</link>
         <pubDate>Mon, 12 Feb 2018 15:56:36 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Mon, 12 Feb 2018 15:56:36 +0800</atom:modified>
         <guid>https://jjmengze.github.io/zh-tw/posts/kubernetes/kubernetes-controller-manger-overview/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-controller-manger-overview.jpg&#34;/&gt;
-&lt;/figure&gt;</description>
-        
-        <dc:creator>Meng Ze Li</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
-        <title>Kubernetes Control Plane 這件小小事(controller-manger)</title>
-        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/kubernetes-controller-manger-overview/</link>
-        <pubDate>Mon, 12 Feb 2018 15:56:36 +0800</pubDate>
-        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
-        <atom:modified>Mon, 12 Feb 2018 15:56:36 +0800</atom:modified>
-        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/kubernetes-controller-manger-overview/</guid>
         <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-controller-manger-overview.jpg&#34;/&gt;
 &lt;/figure&gt;</description>
         
@@ -3768,74 +1910,12 @@ ref:&lt;a href=&#34;https://kubernetes.io/docs/concepts/scheduling-eviction/sche
       </item>
       
       <item>
-        <title>Kubernetes Control Plane 這件小小事(api-server)</title>
-        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/kubernetes-apiserver-overview/</link>
-        <pubDate>Sat, 10 Feb 2018 13:51:44 +0800</pubDate>
-        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
-        <atom:modified>Sat, 10 Feb 2018 13:51:44 +0800</atom:modified>
-        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/kubernetes-apiserver-overview/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes-apiserver-overview.jpeg&#34;/&gt;
-&lt;/figure&gt;</description>
-        
-        <dc:creator>Meng Ze Li</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
         <title>etcd 那回事</title>
         <link>https://jjmengze.github.io/zh-tw/posts/kubernetes/etcd/</link>
         <pubDate>Thu, 18 Jan 2018 11:24:52 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Thu, 18 Jan 2018 11:24:52 +0800</atom:modified>
         <guid>https://jjmengze.github.io/zh-tw/posts/kubernetes/etcd/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/etcd.png&#34;/&gt;
-&lt;/figure&gt;</description>
-        
-        <dc:creator>Meng Ze Li</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
-        <title>etcd 那回事</title>
-        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/etcd/</link>
-        <pubDate>Thu, 18 Jan 2018 11:24:52 +0800</pubDate>
-        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
-        <atom:modified>Thu, 18 Jan 2018 11:24:52 +0800</atom:modified>
-        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/etcd/</guid>
         <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/etcd.png&#34;/&gt;
 &lt;/figure&gt;</description>
         
@@ -3892,74 +1972,12 @@ ref:&lt;a href=&#34;https://kubernetes.io/docs/concepts/scheduling-eviction/sche
       </item>
       
       <item>
-        <title>Kubernetes 淺入淺出</title>
-        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/kubernetes/</link>
-        <pubDate>Fri, 05 Jan 2018 02:12:05 +0800</pubDate>
-        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
-        <atom:modified>Fri, 05 Jan 2018 02:12:05 +0800</atom:modified>
-        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/kubernetes/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubernetes.png&#34;/&gt;
-&lt;/figure&gt;</description>
-        
-        <dc:creator>Meng Ze Li</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
         <title>來看看Container</title>
         <link>https://jjmengze.github.io/zh-tw/posts/kubernetes/container/</link>
         <pubDate>Mon, 01 Jan 2018 02:12:05 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Mon, 01 Jan 2018 02:12:05 +0800</atom:modified>
         <guid>https://jjmengze.github.io/zh-tw/posts/kubernetes/container/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/container.png&#34;/&gt;
-&lt;/figure&gt;</description>
-        
-        <dc:creator>Meng Ze Li</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
-        <title>來看看Container</title>
-        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/container/</link>
-        <pubDate>Mon, 01 Jan 2018 02:12:05 +0800</pubDate>
-        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
-        <atom:modified>Mon, 01 Jan 2018 02:12:05 +0800</atom:modified>
-        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubernetes/container/</guid>
         <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/container.png&#34;/&gt;
 &lt;/figure&gt;</description>
         

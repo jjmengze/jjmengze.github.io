@@ -59,45 +59,6 @@
         
       </item>
       
-      <item>
-        <title>FAAS之kubeless的新滋味</title>
-        <link>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubeless/kubeless/</link>
-        <pubDate>Fri, 04 May 2018 17:39:26 +0800</pubDate>
-        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
-        <atom:modified>Fri, 04 May 2018 17:39:26 +0800</atom:modified>
-        <guid>https://jjmengze.github.io/zh-tw/zh-tw/posts/kubeless/kubeless/</guid>
-        <description>&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/kubeless.png&#34;/&gt;
-&lt;/figure&gt;</description>
-        
-        <dc:creator>Meng Ze Li</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>serverless</category>
-            
-          
-        
-        
-          
-            
-              <category>kubernetes</category>
-            
-          
-            
-              <category>serverless</category>
-            
-          
-        
-        
-      </item>
-      
 
     
   </channel>
