@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>openshift on MengZe Blog</title>
+    <link>https://blog.jjmengze.website/zh-tw/tags/openshift/</link>
+    <description>Recent content in openshift on MengZe Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <managingEditor>jason.meng.lee@gmail.com (Meng Ze Li)</managingEditor>
+    <webMaster>jason.meng.lee@gmail.com (Meng Ze Li)</webMaster>
+    <copyright>©2024, All Rights Reserved</copyright>
+    <lastBuildDate>Tue, 21 Jul 2020 16:06:29 +0800</lastBuildDate>
+    
+        <atom:link href="https://blog.jjmengze.website/zh-tw/tags/openshift/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>Cluster Monitoring Operator</title>
+        <link>https://blog.jjmengze.website/zh-tw/posts/ocp/cluster-monitoring-operator/</link>
+        <pubDate>Tue, 21 Jul 2020 16:06:29 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        <atom:modified>Tue, 21 Jul 2020 16:06:29 +0800</atom:modified>
+        <guid>https://blog.jjmengze.website/zh-tw/posts/ocp/cluster-monitoring-operator/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/Cluster-Monitoring-Operator-talk.png&#34;/&gt;
+&lt;/figure&gt;</description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>openshift</category>
+            
+          
+            
+              <category>talk</category>
+            
+          
+        
+        
+          
+            
+              <category>openshift</category>
+            
+          
+            
+              <category>talk</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>簡單理解 Operator Lifecycle Manager - 2 (OLM)</title>
+        <link>https://blog.jjmengze.website/zh-tw/posts/ocp/operator-lifecycle-manager-2/</link>
+        <pubDate>Mon, 13 Jul 2020 16:06:29 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        <atom:modified>Mon, 13 Jul 2020 16:06:29 +0800</atom:modified>
+        <guid>https://blog.jjmengze.website/zh-tw/posts/ocp/operator-lifecycle-manager-2/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/olm-2.png&#34;/&gt;
+&lt;/figure&gt;</description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>openshift</category>
+            
+          
+        
+        
+          
+            
+              <category>openshift</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>簡單理解 Operator Lifecycle Manager - 1 (OLM)</title>
+        <link>https://blog.jjmengze.website/zh-tw/posts/ocp/operator-lifecycle-manager-1/</link>
+        <pubDate>Tue, 07 Jul 2020 16:06:29 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        <atom:modified>Tue, 07 Jul 2020 16:06:29 +0800</atom:modified>
+        <guid>https://blog.jjmengze.website/zh-tw/posts/ocp/operator-lifecycle-manager-1/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/olm-1.png&#34;/&gt;
+&lt;/figure&gt;</description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>openshift</category>
+            
+          
+        
+        
+          
+            
+              <category>openshift</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>OpenShift 燈紅酒綠與 Gitlab identity</title>
+        <link>https://blog.jjmengze.website/zh-tw/posts/ocp/gitlab-ocp/</link>
+        <pubDate>Wed, 06 May 2020 15:26:47 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        <atom:modified>Wed, 06 May 2020 15:26:47 +0800</atom:modified>
+        <guid>https://blog.jjmengze.website/zh-tw/posts/ocp/gitlab-ocp/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/ocp-gitlab-identity.jpeg&#34;/&gt;
+&lt;/figure&gt;</description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>openshift</category>
+            
+          
+        
+        
+          
+            
+              <category>openshift</category>
+            
+          
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

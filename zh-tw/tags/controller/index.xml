@@ -1,0 +1,684 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>controller on MengZe Blog</title>
+    <link>https://blog.jjmengze.website/zh-tw/tags/controller/</link>
+    <description>Recent content in controller on MengZe Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <managingEditor>jason.meng.lee@gmail.com (Meng Ze Li)</managingEditor>
+    <webMaster>jason.meng.lee@gmail.com (Meng Ze Li)</webMaster>
+    <copyright>©2024, All Rights Reserved</copyright>
+    <lastBuildDate>Fri, 19 Feb 2021 10:29:32 +0800</lastBuildDate>
+    
+        <atom:link href="https://blog.jjmengze.website/zh-tw/tags/controller/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>Kubernetes Reflector 我在盯著你 （ III  ）</title>
+        <link>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/controller/redlector/reflector-3/</link>
+        <pubDate>Fri, 19 Feb 2021 10:29:32 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        <atom:modified>Fri, 19 Feb 2021 10:29:32 +0800</atom:modified>
+        <guid>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/controller/redlector/reflector-3/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-reflector-3.jpg&#34;/&gt;
+&lt;/figure&gt;</description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>controller</category>
+            
+          
+            
+              <category>source-code</category>
+            
+          
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>controller</category>
+            
+          
+            
+              <category>source-code</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Kubernetes Reflector 我在盯著你 （ II  ）</title>
+        <link>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/controller/redlector/reflector-2/</link>
+        <pubDate>Thu, 18 Feb 2021 10:29:32 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        <atom:modified>Thu, 18 Feb 2021 10:29:32 +0800</atom:modified>
+        <guid>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/controller/redlector/reflector-2/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-reflector-2.jpg&#34;/&gt;
+&lt;/figure&gt;</description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>controller</category>
+            
+          
+            
+              <category>source-code</category>
+            
+          
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>controller</category>
+            
+          
+            
+              <category>source-code</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Kubernetes Reflector 我在盯著你 （ I ）</title>
+        <link>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/controller/redlector/reflector-1/</link>
+        <pubDate>Sun, 14 Feb 2021 10:29:32 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        <atom:modified>Sun, 14 Feb 2021 10:29:32 +0800</atom:modified>
+        <guid>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/controller/redlector/reflector-1/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/Kubernetes-Reflector-1.jpg&#34;/&gt;
+&lt;/figure&gt;</description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>controller</category>
+            
+          
+            
+              <category>source-code</category>
+            
+          
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>controller</category>
+            
+          
+            
+              <category>source-code</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Kubernetes DeltaFIFO 承上啟下</title>
+        <link>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/controller/deltafifo/kubernetes-delta-fifo-queue/</link>
+        <pubDate>Wed, 13 Jan 2021 09:29:32 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        <atom:modified>Wed, 13 Jan 2021 09:29:32 +0800</atom:modified>
+        <guid>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/controller/deltafifo/kubernetes-delta-fifo-queue/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-delta-fifo.jpg&#34;/&gt;
+&lt;/figure&gt;</description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>controller</category>
+            
+          
+            
+              <category>source-code</category>
+            
+          
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>controller</category>
+            
+          
+            
+              <category>source-code</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Kubernetes Indexers localcache 之美（II）</title>
+        <link>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/controller/indexer/kubernetes-indexers-local-cache-2/</link>
+        <pubDate>Wed, 06 Jan 2021 09:29:32 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        <atom:modified>Wed, 06 Jan 2021 09:29:32 +0800</atom:modified>
+        <guid>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/controller/indexer/kubernetes-indexers-local-cache-2/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-indexer-1.jpg&#34;/&gt;
+&lt;/figure&gt;</description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>controller</category>
+            
+          
+            
+              <category>source-code</category>
+            
+          
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>controller</category>
+            
+          
+            
+              <category>source-code</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Kubernetes Indexers local cache 之美 （I）</title>
+        <link>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/controller/indexer/kubernetes-indexers-local-cache-1/</link>
+        <pubDate>Sun, 03 Jan 2021 09:29:32 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        <atom:modified>Sun, 03 Jan 2021 09:29:32 +0800</atom:modified>
+        <guid>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/controller/indexer/kubernetes-indexers-local-cache-1/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-indexer-1.jpg&#34;/&gt;
+&lt;/figure&gt;</description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>controller</category>
+            
+          
+            
+              <category>source-code</category>
+            
+          
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>controller</category>
+            
+          
+            
+              <category>source-code</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Kubernetes Controller 設計挖掘之路</title>
+        <link>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/controller/dig-kubernetes-controller/</link>
+        <pubDate>Wed, 23 Dec 2020 10:29:32 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        <atom:modified>Wed, 23 Dec 2020 10:29:32 +0800</atom:modified>
+        <guid>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/controller/dig-kubernetes-controller/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-dig-controller.jpg&#34;/&gt;
+&lt;/figure&gt;</description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>controller</category>
+            
+          
+            
+              <category>source-code</category>
+            
+          
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>controller</category>
+            
+          
+            
+              <category>source-code</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Kubernetes Bucket Rate Limiter 設計真d不錯</title>
+        <link>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/controller/queue/bucket-ratelimiter/</link>
+        <pubDate>Mon, 21 Dec 2020 10:29:32 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        <atom:modified>Mon, 21 Dec 2020 10:29:32 +0800</atom:modified>
+        <guid>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/controller/queue/bucket-ratelimiter/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-Bucket-Rate-Limiter.jpg&#34;/&gt;
+&lt;/figure&gt;</description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>controller</category>
+            
+          
+            
+              <category>source-code</category>
+            
+          
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>controller</category>
+            
+          
+            
+              <category>source-code</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Kubernetes Max Of Rate Limiter 設計真d不錯</title>
+        <link>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/controller/queue/item-max-of-ratelimiter/</link>
+        <pubDate>Sat, 19 Dec 2020 12:29:32 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        <atom:modified>Sat, 19 Dec 2020 12:29:32 +0800</atom:modified>
+        <guid>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/controller/queue/item-max-of-ratelimiter/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-Item-Max-of-RateLimiter.jpg&#34;/&gt;
+&lt;/figure&gt;</description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>controller</category>
+            
+          
+            
+              <category>source-code</category>
+            
+          
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>controller</category>
+            
+          
+            
+              <category>source-code</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Kubernetes Item Fast Slow RateLimiter work queue 設計真d不錯</title>
+        <link>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/controller/queue/item-fast-slow-ratelimiter/</link>
+        <pubDate>Thu, 17 Dec 2020 12:29:32 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        <atom:modified>Thu, 17 Dec 2020 12:29:32 +0800</atom:modified>
+        <guid>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/controller/queue/item-fast-slow-ratelimiter/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-Item-Fast-Slow-RateLimiter.jpg&#34;/&gt;
+&lt;/figure&gt;</description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>controller</category>
+            
+          
+            
+              <category>source-code</category>
+            
+          
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>controller</category>
+            
+          
+            
+              <category>source-code</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Kubernetes Item Exponential Failure RateLimiter work queue 設計真d不錯</title>
+        <link>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/controller/queue/item-exponential-failure-ratelimiter/</link>
+        <pubDate>Tue, 15 Dec 2020 12:29:32 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        <atom:modified>Tue, 15 Dec 2020 12:29:32 +0800</atom:modified>
+        <guid>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/controller/queue/item-exponential-failure-ratelimiter/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-Item-Exponential-Failure-RateLimiter.jpg&#34;/&gt;
+&lt;/figure&gt;</description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>controller</category>
+            
+          
+            
+              <category>source-code</category>
+            
+          
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>controller</category>
+            
+          
+            
+              <category>source-code</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Kubernetes RateLimite work queue 設計真d不錯</title>
+        <link>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/controller/queue/rating/</link>
+        <pubDate>Mon, 14 Dec 2020 12:29:32 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        <atom:modified>Mon, 14 Dec 2020 12:29:32 +0800</atom:modified>
+        <guid>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/controller/queue/rating/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-rating-work-queue.jpg&#34;/&gt;
+&lt;/figure&gt;</description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>controller</category>
+            
+          
+            
+              <category>source-code</category>
+            
+          
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>controller</category>
+            
+          
+            
+              <category>source-code</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Kubernetes delaying work queue 設計真d不錯</title>
+        <link>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/controller/queue/delaying/</link>
+        <pubDate>Fri, 11 Dec 2020 12:29:32 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        <atom:modified>Fri, 11 Dec 2020 12:29:32 +0800</atom:modified>
+        <guid>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/controller/queue/delaying/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-delaying-queue.jpg&#34;/&gt;
+&lt;/figure&gt;</description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>controller</category>
+            
+          
+            
+              <category>source-code</category>
+            
+          
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>controller</category>
+            
+          
+            
+              <category>source-code</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Kubernetes common work queue 設計真d不錯</title>
+        <link>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/controller/queue/common/</link>
+        <pubDate>Thu, 10 Dec 2020 10:29:32 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        <atom:modified>Thu, 10 Dec 2020 10:29:32 +0800</atom:modified>
+        <guid>https://blog.jjmengze.website/zh-tw/posts/kubernetes/source-code/controller/queue/common/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubernetes-common-work-queue.jpg&#34;/&gt;
+&lt;/figure&gt;</description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>controller</category>
+            
+          
+            
+              <category>source-code</category>
+            
+          
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>controller</category>
+            
+          
+            
+              <category>source-code</category>
+            
+          
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

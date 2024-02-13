@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>serverless on MengZe Blog</title>
+    <link>https://blog.jjmengze.website/zh-tw/categories/serverless/</link>
+    <description>Recent content in serverless on MengZe Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <managingEditor>jason.meng.lee@gmail.com (Meng Ze Li)</managingEditor>
+    <webMaster>jason.meng.lee@gmail.com (Meng Ze Li)</webMaster>
+    <copyright>©2024, All Rights Reserved</copyright>
+    <lastBuildDate>Fri, 04 May 2018 17:39:26 +0800</lastBuildDate>
+    
+        <atom:link href="https://blog.jjmengze.website/zh-tw/categories/serverless/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>FAAS之kubeless的新滋味</title>
+        <link>https://blog.jjmengze.website/zh-tw/posts/kubeless/kubeless/</link>
+        <pubDate>Fri, 04 May 2018 17:39:26 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        <atom:modified>Fri, 04 May 2018 17:39:26 +0800</atom:modified>
+        <guid>https://blog.jjmengze.website/zh-tw/posts/kubeless/kubeless/</guid>
+        <description>&lt;figure&gt;&lt;img src=&#34;https://blog.jjmengze.website/images/theme/kubeless.png&#34;/&gt;
+&lt;/figure&gt;</description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>serverless</category>
+            
+          
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>serverless</category>
+            
+          
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>
