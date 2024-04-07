@@ -1338,9 +1338,9 @@
 
 <meta name="keywords" content="posts">
 
-<meta name="created" content="2022-12-26T20:48:52&#43;0800">
-<meta name="modified" content="2022-12-26T20:48:52&#43;0800">
-<meta property="article:published_time" content="2022-12-26T20:48:52&#43;0800">
+<meta name="created" content="2023-01-04T17:39:26&#43;0800">
+<meta name="modified" content="2023-01-04T17:39:26&#43;0800">
+<meta property="article:published_time" content="2023-01-04T17:39:26&#43;0800">
 
 <meta name="author" content="Hugo Authors">
 <meta property="article:author" content="https://jjmengze.github.io/zh-tw/posts/@Hugo Authors">
@@ -1672,27 +1672,18 @@
 
     <div class="summary-classic__content">
       <header>
-        <h5 class="title h5"><a href='https://jjmengze.github.io/zh-tw/posts/db/isolation-level/'>再複習一次 Isolation Level</a> </h5>
+        <h5 class="title h5"><a href='https://jjmengze.github.io/zh-tw/posts/nosql/lsm/'>種下一顆 LSM Tree </a> </h5>
         <h6 class="subtitle caption">
-          <time title="" dir="ltr">📅&nbsp;2022年 12月 26日 </time>
+          <time title="" dir="ltr">📅&nbsp;2023年 01月 04日 </time>
           
-          <span title="" dir="ltr"> &middot; ☕&nbsp;11&nbsp; </span>
+          <span title="" dir="ltr"> &middot; ☕&nbsp;15&nbsp; </span>
           
         </h6>
       </header>
       <div>
         <div class="summary-classic__text p2">
           
-            <p>在 1992 年的 SQL 標準中，對於資料庫交易的隔離級別做了定義，這些定義是基於能夠防止某些不正常現象的來區分。不正常現象包括</p>
-<ul>
-<li>髒讀 (Dirty Read)</li>
-<li>不可重复讀(Non-Repeatable Read/read skew)</li>
-<li>幻讀（Phantom Read）</li>
-</ul>
-<p>這些定義在當時被認為是有點模糊的，也有專家如Jim Gray指出這些定義是不合理的。當時，多版本並發控制（MVCC）和快照隔離（Snapshot<br />
-Isolation）這些技術還未被發明。這些技術的出現使得隔離級別的定義變得更加清晰。</p>
-<p>以下文章將簡要的說明 Isolation Level 的定義以及整理想關的知識體系如 ACID 、Transaction 、 Lock等&hellip;。</p>
-<figure><img src="/images/theme/db-isolation.png"/>
+            <figure><img src="/images/theme/lsm-tree-cover.png"/>
 </figure>
           
         </div>
@@ -2203,7 +2194,7 @@ Isolation）這些技術還未被發明。這些技術的出現使得隔離級�
     
         
         <li class="sidebar-recent">
-            <a href="/zh-tw/posts/db/isolation-level/" class="sidebar-recent__title p1">再複習一次 Isolation Level</a>
+            <a href="/zh-tw/posts/nosql/lsm/" class="sidebar-recent__title p1">種下一顆 LSM Tree </a>
         </li>
         
         <li class="sidebar-recent">
@@ -2270,19 +2261,6 @@ Isolation）這些技術還未被發明。這些技術的出現使得隔離級�
                     </span>
                     <span class="taxo__num" dir="auto">
                         14
-                    </span>
-                </a>
-            </span>
-        
-        
-        
-            <span class="tag">
-                <a href="/zh-tw/tags/db/" class="is-tags taxo__link" data-dir="ltr">
-                    <span class="taxo__text">
-                        db
-                    </span>
-                    <span class="taxo__num" dir="auto">
-                        1
                     </span>
                 </a>
             </span>
@@ -2374,6 +2352,19 @@ Isolation）這些技術還未被發明。這些技術的出現使得隔離級�
                     </span>
                     <span class="taxo__num" dir="auto">
                         2
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/zh-tw/tags/nosql/" class="is-tags taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        nosql
+                    </span>
+                    <span class="taxo__num" dir="auto">
+                        1
                     </span>
                 </a>
             </span>
@@ -2602,19 +2593,6 @@ Isolation）這些技術還未被發明。這些技術的出現使得隔離級�
         
         
             <span class="tag">
-                <a href="/zh-tw/categories/db/" class="is-categories taxo__link" data-dir="ltr">
-                    <span class="taxo__text">
-                        db
-                    </span>
-                    <span class="taxo__num" dir="auto">
-                        1
-                    </span>
-                </a>
-            </span>
-        
-        
-        
-            <span class="tag">
                 <a href="/zh-tw/categories/devops/" class="is-categories taxo__link" data-dir="ltr">
                     <span class="taxo__text">
                         devops
@@ -2722,6 +2700,19 @@ Isolation）這些技術還未被發明。這些技術的出現使得隔離級�
                 <a href="/zh-tw/categories/networking/" class="is-categories taxo__link" data-dir="ltr">
                     <span class="taxo__text">
                         Networking
+                    </span>
+                    <span class="taxo__num" dir="auto">
+                        1
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/zh-tw/categories/nosql/" class="is-categories taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        nosql
                     </span>
                     <span class="taxo__num" dir="auto">
                         1
