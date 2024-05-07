@@ -14,11 +14,44 @@
     <managingEditor>jason.meng.lee@gmail.com (Meng Ze Li)</managingEditor>
     <webMaster>jason.meng.lee@gmail.com (Meng Ze Li)</webMaster>
     <copyright>©2024, All Rights Reserved</copyright>
-    <lastBuildDate>Thu, 30 Apr 2020 12:07:34 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 30 Apr 2024 12:07:34 +0800</lastBuildDate>
     
         <atom:link href="https://jjmengze.github.io/zh-tw/categories/devops/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>How to Debug Shell Scripts Efficiently?</title>
+        <link>https://jjmengze.github.io/zh-tw/posts/go/shell-debug/</link>
+        <pubDate>Tue, 30 Apr 2024 12:07:34 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        <atom:modified>Tue, 30 Apr 2024 12:07:34 +0800</atom:modified>
+        <guid>https://jjmengze.github.io/zh-tw/posts/go/shell-debug/</guid>
+        <description>&lt;p&gt;In a recent tutorial, CIH introduced a powerful technique for debugging Shell scripts that eliminates the need for inserting numerous echo statements into the code.&lt;br /&gt;
+&lt;figure&gt;&lt;img src=&#34;https://i.imgur.com/sJRUXhX.png&#34;/&gt;
+&lt;/figure&gt;
+&lt;/p&gt;</description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>devops</category>
+            
+          
+        
+        
+          
+            
+              <category>devops</category>
+            
+          
+        
+        
+      </item>
       
       <item>
         <title>前方高能之Opentracing</title>
