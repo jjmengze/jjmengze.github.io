@@ -1388,7 +1388,7 @@
     "datePublished": "2022-12-26T20:48:52+08:00",
     "dateModified": "2022-12-26T20:48:52+08:00",
     "url" : "https://jjmengze.github.io/zh-tw/posts/db/innodb/lru-cache/",
-    "description": "The LRU (Least Recently Used) list is a common data structure. In simple terms, it arranges each piece of data in a sequence, placing the most recently used data at the …",
+    "description": "\u003cp\u003eThe LRU (Least Recently Used) list is a common data structure.\u003cbr /\u003e \u003cfigure\u003e\u003cimg src=\"/images/theme/INNODB-LRU-Cache.png\"/\u003e \u003c/figure\u003e \u003c/p\u003e",
     "keywords": ["db"],
     "mainEntityOfPage": {
       "@type": "WebPage",
@@ -1690,8 +1690,11 @@
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      <p>The LRU (Least Recently Used) list is a common data structure. In simple terms, it arranges each piece of data in a sequence, placing the most recently used data at the front and the least used data at the back.<br />
-typically implemented using a linked list.</p>
+      <p>The LRU (Least Recently Used) list is a common data structure.<br />
+<figure><img src="/images/theme/INNODB-LRU-Cache.png"/>
+</figure>
+</p>
+<p>In simple terms, it arranges each piece of data in a sequence, placing the most recently used data at the front and the least used data at the back.typically implemented using a linked list.</p>
 <p>The LRU list has a wide range of applications, and its main purpose is to <code>reduce the operational cost of data retrieval.</code> The specific approach is to place data retrieved from the disk into a cache, where the cached data is ordered in an LRU manner, with frequently used data at the front for easy access.</p>
 <h2 id="example">example</h2>
 <p><code>Ranking list</code>(in the game or music chart e.t.c) can apply the LRU concept. Ranked that were popular a few hours ago may still be popular in the next hour, meaning those are likely to be repeatedly accessed and displayed on the page.<br />
@@ -1740,7 +1743,6 @@ InnoDB provides the <code>innodb_old_blocks_time</code> parameter, setting the m
 <p>The hit rate is a critical consideration when designing caches.</p>
 <p>InnoDB&rsquo;s design philosophy, we see that it improves the LRU algorithm by adjusting <code>frequency</code> and <code>time</code>, redefining what <code>most used</code> data means, thereby enhancing the cache hit rate.</p>
 <p>ref: <a href="https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_old_blocks_time">MySQL 8.0 Reference Manual</a></p>
-
     </article>
     
     

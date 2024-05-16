@@ -112,9 +112,10 @@
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
         <atom:modified>Mon, 26 Dec 2022 20:48:52 +0800</atom:modified>
         <guid>https://jjmengze.github.io/zh-tw/posts/db/innodb/lru-cache/</guid>
-        <description>The LRU (Least Recently Used) list is a common data structure. In simple terms, it arranges each piece of data in a sequence, placing the most recently used data at the front and the least used data at the back.
-typically implemented using a linked list.
-The LRU list has a wide range of applications, and its main purpose is to reduce the operational cost of data retrieval. The specific approach is to place data retrieved from the disk into a cache, where the cached data is ordered in an LRU manner, with frequently used data at the front for easy access.</description>
+        <description>&lt;p&gt;The LRU (Least Recently Used) list is a common data structure.&lt;br /&gt;
+&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/INNODB-LRU-Cache.png&#34;/&gt;
+&lt;/figure&gt;
+&lt;/p&gt;</description>
         
         <dc:creator>Meng Ze Li</dc:creator>
         
