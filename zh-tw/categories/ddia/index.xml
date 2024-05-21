@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>DDIA on MengZe Blog</title>
+    <link>https://jjmengze.github.io/zh-tw/categories/ddia/</link>
+    <description>Recent content in DDIA on MengZe Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <managingEditor>jason.meng.lee@gmail.com (Meng Ze Li)</managingEditor>
+    <webMaster>jason.meng.lee@gmail.com (Meng Ze Li)</webMaster>
+    <copyright>©2024, All Rights Reserved</copyright>
+    <lastBuildDate>Mon, 26 Dec 2022 20:48:52 +0800</lastBuildDate>
+    
+        <atom:link href="https://jjmengze.github.io/zh-tw/categories/ddia/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>The Trouble with Distributed Systems-(Unreliable Clocks)</title>
+        <link>https://jjmengze.github.io/zh-tw/posts/ddia/unreliable_clocks/</link>
+        <pubDate>Mon, 26 Dec 2022 20:48:52 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        <atom:modified>Mon, 26 Dec 2022 20:48:52 +0800</atom:modified>
+        <guid>https://jjmengze.github.io/zh-tw/posts/ddia/unreliable_clocks/</guid>
+        <description>&lt;p&gt;Notes from Chapter 8 of Martin Kleppmann&amp;rsquo;s &amp;lsquo;Designing Data-Intensive Applications&amp;rsquo; book&lt;/p&gt;
+&lt;p&gt;Clocks and time are crucial in distributed systems&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/ddia-Unreliable-Clocks.png&#34;/&gt;
+&lt;/figure&gt;</description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>DDIA</category>
+            
+          
+        
+        
+          
+            
+              <category>DDIA</category>
+            
+          
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>
