@@ -14,21 +14,21 @@
     <managingEditor>jason.meng.lee@gmail.com (Meng Ze Li)</managingEditor>
     <webMaster>jason.meng.lee@gmail.com (Meng Ze Li)</webMaster>
     <copyright>©2024, All Rights Reserved</copyright>
-    <lastBuildDate>Mon, 26 Dec 2022 20:48:52 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 28 Feb 2023 20:48:52 +0800</lastBuildDate>
     
         <atom:link href="https://jjmengze.github.io/zh-tw/categories/ddia/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
-        <title>The Trouble with Distributed Systems-(Unreliable Clocks)</title>
-        <link>https://jjmengze.github.io/zh-tw/posts/ddia/unreliable_clocks/</link>
-        <pubDate>Mon, 26 Dec 2022 20:48:52 +0800</pubDate>
+        <title>The Trouble with Distributed Systems-(Truth, and Lies) DDIA CH8</title>
+        <link>https://jjmengze.github.io/zh-tw/posts/ddia/ch8-unreliable_clocks/</link>
+        <pubDate>Tue, 28 Feb 2023 20:48:52 +0800</pubDate>
         <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
-        <atom:modified>Mon, 26 Dec 2022 20:48:52 +0800</atom:modified>
-        <guid>https://jjmengze.github.io/zh-tw/posts/ddia/unreliable_clocks/</guid>
+        <atom:modified>Tue, 28 Feb 2023 20:48:52 +0800</atom:modified>
+        <guid>https://jjmengze.github.io/zh-tw/posts/ddia/ch8-unreliable_clocks/</guid>
         <description>&lt;p&gt;Notes from Chapter 8 of Martin Kleppmann&amp;rsquo;s &amp;lsquo;Designing Data-Intensive Applications&amp;rsquo; book&lt;/p&gt;
-&lt;p&gt;Clocks and time are crucial in distributed systems&lt;/p&gt;
+&lt;p&gt;Various challenges in distributed systems, such as unreliable networks, clocks, and nodes, as well as processing pauses.&lt;/p&gt;
 &lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/ddia-Unreliable-Clocks.png&#34;/&gt;
 &lt;/figure&gt;</description>
         

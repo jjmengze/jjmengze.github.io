@@ -23,6 +23,24 @@
     <loc>https://jjmengze.github.io/zh-tw/tags/</loc>
     <lastmod>2024-04-30T12:07:34+08:00</lastmod>
   </url><url>
+    <loc>https://jjmengze.github.io/zh-tw/tags/bigquery/</loc>
+    <lastmod>2024-01-28T20:48:52+08:00</lastmod>
+  </url><url>
+    <loc>https://jjmengze.github.io/zh-tw/categories/bigquery/</loc>
+    <lastmod>2024-01-28T20:48:52+08:00</lastmod>
+  </url><url>
+    <loc>https://jjmengze.github.io/zh-tw/posts/db/bigquery/pagination-query-go/</loc>
+    <lastmod>2024-01-28T20:48:52+08:00</lastmod>
+  </url><url>
+    <loc>https://jjmengze.github.io/zh-tw/tags/ddia/</loc>
+    <lastmod>2023-02-28T20:48:52+08:00</lastmod>
+  </url><url>
+    <loc>https://jjmengze.github.io/zh-tw/categories/ddia/</loc>
+    <lastmod>2023-02-28T20:48:52+08:00</lastmod>
+  </url><url>
+    <loc>https://jjmengze.github.io/zh-tw/posts/ddia/ch8-unreliable_clocks/</loc>
+    <lastmod>2023-02-28T20:48:52+08:00</lastmod>
+  </url><url>
     <loc>https://jjmengze.github.io/zh-tw/tags/nosql/</loc>
     <lastmod>2023-01-04T17:39:26+08:00</lastmod>
   </url><url>
@@ -38,16 +56,7 @@
     <loc>https://jjmengze.github.io/zh-tw/categories/db/</loc>
     <lastmod>2022-12-26T20:48:52+08:00</lastmod>
   </url><url>
-    <loc>https://jjmengze.github.io/zh-tw/tags/ddia/</loc>
-    <lastmod>2022-12-26T20:48:52+08:00</lastmod>
-  </url><url>
-    <loc>https://jjmengze.github.io/zh-tw/categories/ddia/</loc>
-    <lastmod>2022-12-26T20:48:52+08:00</lastmod>
-  </url><url>
     <loc>https://jjmengze.github.io/zh-tw/posts/db/innodb/lru-cache/</loc>
-    <lastmod>2022-12-26T20:48:52+08:00</lastmod>
-  </url><url>
-    <loc>https://jjmengze.github.io/zh-tw/posts/ddia/unreliable_clocks/</loc>
     <lastmod>2022-12-26T20:48:52+08:00</lastmod>
   </url><url>
     <loc>https://jjmengze.github.io/zh-tw/posts/record/2021/</loc>
