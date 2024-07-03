@@ -106,6 +106,42 @@
       </item>
       
       <item>
+        <title>GQL 學習筆記</title>
+        <link>https://jjmengze.github.io/zh-tw/posts/gql/gql-1/</link>
+        <pubDate>Sat, 30 Dec 2023 12:07:34 +0800</pubDate>
+        <author>jason.meng.lee@gmail.com (Meng Ze Li)</author>
+        <atom:modified>Sat, 30 Dec 2023 12:07:34 +0800</atom:modified>
+        <guid>https://jjmengze.github.io/zh-tw/posts/gql/gql-1/</guid>
+        <description>&lt;p&gt;在目前的公司裡，後端 API 是使用 GraphQL 來設計的，因此我開始學習這項技術，並決定記錄這段學習的歷程和心得。在這系列文章中，我會介紹 GraphQL 的技術細節、設計理念，並分享一些實際使用的經驗和踩雷心得。&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&#34;https://jjmengze.github.io/images/theme/gql-note1.png&#34;/&gt;
+&lt;/figure&gt;</description>
+        
+        <dc:creator>Meng Ze Li</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>gql</category>
+            
+          
+        
+        
+          
+            
+              <category>gql</category>
+            
+          
+            
+              <category>api</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
         <title>The Trouble with Distributed Systems-(Truth, and Lies) DDIA CH8</title>
         <link>https://jjmengze.github.io/zh-tw/posts/ddia/ch8-unreliable_clocks/</link>
         <pubDate>Tue, 28 Feb 2023 20:48:52 +0800</pubDate>
